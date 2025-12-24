@@ -8,7 +8,7 @@
 
 层级面板是一个树形视图，它反映了当前选中的画板 (Artboard) 或组件 (Component) 的结构和顺序。当你选择不同的画板或对象时，层级面板会相应更新。
 
-![层级概览](editor/interface-overview/images/hierarchy_overview.png)
+![层级概览](images/hierarchy_overview.png)
 
 ## 切换视图 (Switching Views)
 
@@ -17,7 +17,7 @@
 *   **资源 (Assets)**：显示项目中的图片、字体等资源
 *   **数据 (Data)**：显示状态机使用的数据、枚举等
 
-![切换视图演示](editor/interface-overview/images/SwitchView.gif)
+![切换视图演示](images/SwitchView.gif)
 
 ## 父子关系 (Parent-child relationships)
 
@@ -29,7 +29,7 @@ Rive 中的对象可以通过父子关系（Parenting）相互连接。这种关
 
 你可以创建无限层级的嵌套结构。组 (Groups)、骨骼 (Bones) 和图形都可以作为父对象。
 
-![父子关系示例](editor/interface-overview/images/parent_child.png)
+![父子关系示例](images/parent_child.png)
 
 ### 修改父子关系 (Change parent-child relationships)
 
@@ -46,7 +46,7 @@ Rive 中的对象可以通过父子关系（Parenting）相互连接。这种关
 
 注意：绘制顺序是一个重要的概念，特别是在处理复杂的角色绑定和 UI 布局时。
 
-![绘制顺序示例](editor/interface-overview/images/draw_order.png)
+![绘制顺序示例](images/draw_order.png)
 
 ### 修改绘制顺序 (Change Draw Order)
 
@@ -64,7 +64,7 @@ Rive 中的对象可以通过父子关系（Parenting）相互连接。这种关
 *   **显示/隐藏 (Show/Hide)**
 *   **锁定/解锁 (Lock/Unlock)**
 
-![右键菜单](editor/interface-overview/images/right_click.png)
+![右键菜单](images/right_click.png)
 
 ## 资源面板 (Assets Panel)
 
@@ -77,7 +77,7 @@ Rive 中的对象可以通过父子关系（Parenting）相互连接。这种关
 
 你可以直接将文件拖入 Rive 编辑器以添加到资源面板。
 
-![资源面板](editor/interface-overview/images/Assets.png)
+![资源面板](images/Assets.png)
 
 ## 数据面板 (Data Panel)
 
@@ -88,4 +88,4 @@ Rive 中的对象可以通过父子关系（Parenting）相互连接。这种关
 
 数据面板是 Rive 强大的数据绑定功能的核心入口。
 
-![数据面板](editor/interface-overview/images/Data.png)
+![数据面板](images/Data.png)
