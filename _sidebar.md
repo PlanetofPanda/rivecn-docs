@@ -6,6 +6,8 @@
     * [Inspector (检查器)](editor/interface-overview/inspector.md)
     * [Stage (舞台)](editor/interface-overview/stage.md)
   * **Fundamentals (基础概念)**
+    * [Overview (概览)](editor/fundamentals/overview.md)
+    * [Design vs Animate Mode (设计与动画模式)](editor/fundamentals/design-vs-animate-mode.md)
     * [Artboards (画板)](editor/fundamentals/artboards.md)
     * [Components (组件)](editor/fundamentals/components.md)
     * [Groups (分组)](editor/fundamentals/groups.md)

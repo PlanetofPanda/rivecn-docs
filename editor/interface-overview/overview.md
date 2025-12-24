@@ -8,7 +8,7 @@ Rive 的界面仅在需要时显示所需内容。它被划分为几个主要面
 
 ![工具栏](images/toolbar.png)
 
-了解更多：[工具栏页面](/docs/editor/interface-overview/toolbar)。
+了解更多：[工具栏页面](editor/interface-overview/toolbar)。
 
 ## 层级面板
 
@@ -24,7 +24,7 @@ Rive 的界面仅在需要时显示所需内容。它被划分为几个主要面
 
 ![属性检查器](images/inspector.png)
 
-了解更多：[属性检查器页面](/docs/editor/interface-overview/inspector)。
+了解更多：[属性检查器页面](editor/interface-overview/inspector)。
 
 ## 舞台
 
@@ -32,7 +32,7 @@ Rive 的界面仅在需要时显示所需内容。它被划分为几个主要面
 
 ![舞台](images/stage.png)
 
-了解更多：[舞台页面](/docs/editor/interface-overview/stage)。
+了解更多：[舞台页面](editor/interface-overview/stage)。
 
 ## 时间轴
 
@@ -48,4 +48,4 @@ Rive 的界面仅在需要时显示所需内容。它被划分为几个主要面
 
 ![状态机图表截图](images/CleanShot2025-06-26at11.33.28@2x.png)
 
-了解更多：[状态机页面](/docs/editor/fundamentals/state-machines/introduction)。
+了解更多：[状态机页面](editor/fundamentals/state-machines/introduction)。

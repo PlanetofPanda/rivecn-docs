@@ -1,0 +1,21 @@
+# 基础概念 (Fundamentals)
+
+探索 Rive 编辑器的核心概念。
+
+*   [**设计与动画模式 (Design vs Animate Mode)**](editor/fundamentals/design-vs-animate-mode.md)
+*   [**画板 (Artboards)**](editor/fundamentals/artboards.md)
+*   [**组件 (Components)**](editor/fundamentals/components.md)
+*   [**钢笔工具概览 (Pen Tool Overview)**](editor/fundamentals/pen-tool-overview.md)
+*   [**形状与路径概览 (Shapes and Paths Overview)**](editor/fundamentals/shapes-and-paths-overview.md)
+*   [**程序化形状 (Procedural Shapes)**](editor/fundamentals/procedural-shapes.md)
+*   [**分组 (Groups)**](editor/fundamentals/groups.md)
+*   [**选择与导航分组 (Selecting and Navigating Groups)**](editor/fundamentals/selecting-and-navigating-groups.md)
+*   [**变换空间 (Transform Spaces)**](editor/fundamentals/transform-spaces.md)
+*   [**分组技巧 (Group Tips)**](editor/fundamentals/group-tips.md)
+*   [**填充与描边 (Fill and Stroke)**](editor/fundamentals/fill-and-stroke.md)
+*   [**编辑顶点 (Edit Vertices)**](editor/fundamentals/edit-vertices.md)
+*   [**编辑顶点技巧 (Edit Vertices Tips)**](editor/fundamentals/edit-vertices-tips.md)
+*   [**冻结与原点 (Freeze and Origin)**](editor/fundamentals/freeze-and-origin.md)
+*   [**导入资源 (Importing Assets)**](editor/fundamentals/importing-assets.md)
+*   [**导出 (Exporting)**](editor/fundamentals/exporting.md)
+*   [**修订历史 (Revision History)**](editor/fundamentals/revision-history.md)
