@@ -1,25 +1,23 @@
-Manipulating Shapes
+操纵形状
 
-# Meshes
+# 网格 (Meshes)
 
-Meshes are an excellent way to add natural and organic deformations to raster graphics. Make skin flex, fabric ripple, hair flow, and more.
+网格是为位图图形添加自然且有机变形的绝佳方式。让皮肤活动、织物起伏、头发飘动等等。
 
-## [​](#add-mesh) Add Mesh
+## [​](#add-mesh) 添加网格 (Add Mesh)
 
-Before you can create any deformations, you’ll need to add a mesh.
-With the image selected, either hit the Enter key or navigate to the Deform section of the inspector, hit the plus button, then select mesh. You’ll notice that a simple mesh is automatically generated for you.
-![New Mesh Gi](images/NewMesh.gif)
-Use the New Contour button in the Inspector to begin creating a custom mesh for your object. Place vertices for your mesh with the Pen tool. Continuously click with the pen tool active to create forced edges (represented by a blue line connecting the two vertices), or hit escape between clicks to unlink the vertices.
-![New Contour Gi](images/NewContour.gif)
+在创建任何变形之前，你需要先添加一个网格。
+选中图像后，按 Enter 键或导航到检查器的“变形 (Deform)”部分，点击加号按钮，然后选择“网格 (Mesh)”。你会注意到系统会自动为你生成一个简单的网格。
+![新建网格演示 Gi](images/NewMesh.gif)
+使用检查器中的“新建轮廓 (New Contour)”按钮开始为对象创建自定义网格。使用钢笔工具放置网格的顶点。在钢笔工具激活的情况下持续点击以创建强制边（由连接两个顶点的蓝线表示），或者在点击之间按下 Esc 键以取消顶点之间的连接。
+![新建轮廓演示 Gi](images/NewContour.gif)
 
-## [​](#edit-mesh) Edit Mesh
+## [​](#edit-mesh) 编辑网格 (Edit Mesh)
 
-You can edit a mesh at any time by using the Edit Mesh button in the Inspector or by hitting enter with the asset selected. Use the Pen tool to add, subtract, or move vertices.
-![Edit Mesh Gi](images/EditMesh.gif)
+你可以随时使用检查器中的“编辑网格 (Edit Mesh)”按钮，或在选中资产的情况下按 Enter 键来编辑网格。使用钢笔工具添加、删除或移动顶点。
+![编辑网格演示 Gi](images/EditMesh.gif)
 
-## [​](#mesh-deform) Mesh Deform
+## [​](#mesh-deform) 网格变形 (Mesh Deform)
 
-In both Design and Edit modes, you can deform your mesh by entering edit mesh mode, and moving a vertex with the select tool. For a more natural experience, consider using [bones](https://rive.app/docs/editor/manipulating-shapes/bones).
-![Mesh Deform Gi](images/MeshDeform.gif)
-
-[Bone Tips](/docs/editor/manipulating-shapes/bone-tips)[Clipping](/docs/editor/manipulating-shapes/clipping)
+在设计 (Design) 和编辑 (Edit) 模式下，你都可以通过进入编辑网格模式并使用选择工具移动顶点来让网格变形。为了获得更自然的体验，请考虑使用 [骨骼 (Bones)](https://rive.app/docs/editor/manipulating-shapes/bones)。
+![网格变形演示 Gi](images/MeshDeform.gif)

@@ -1,177 +1,175 @@
-Fundamentals
+基础知识
 
-# Fill and Stroke
+# 填充和描边 (Fill and Stroke)
 
-The Fill and Stroke section of the Inspector allows you to add and modify the Fill and Stroke properties of the currently selected object. You can create as many fills or strokes as you’d like.
+检查器的填充 (Fill) 和描边 (Stroke) 部分允许你添加和修改当前选中对象的填充和描边属性。你可以根据需要创建任意数量的填充或描边。
 
-# [​](#fill) Fill
+# [​](#fill) 填充 (Fill)
 
-### [​](#create-a-new-fill) **Create a new Fill**
+### [​](#create-a-new-fill) **创建新填充**
 
-To create a fill, select a shape, then use the plus button under the Fill and Stroke section of the Inspector. Be sure to select Fill from the new menu. You’ll be able to tell that a layer is a fill by looking at the color box on the left side.
-![New Fill Gi](images/newFill.gif)
+要创建填充，请选择一个形状，然后点击检查器中“填充和描边”部分下的加号按钮。务必从出现的菜单中选择“填充 (Fill)”。通过查看左侧的颜色方块，你可以辨别出一个图层是否为填充。
+![新建填充演示 Gi](images/newFill.gif)
 
-### [​](#changing-fill-color) **Changing Fill color**
+### [​](#changing-fill-color) **更改填充颜色**
 
-To change the color of a Fill, select the color box on the left side of the Fill layer. This will open the Color Picker. From there, you can use the various sliders to choose which color you’d like for the Fill.
-![Changecolor Gi](images/changecolor.gif)
+要更改填充颜色，请点击填充图层左侧的颜色方块。这将打开颜色选择器 (Color Picker)。从那里，你可以使用各种滑块选择你想要的填充颜色。
+![更改颜色演示 Gi](images/changecolor.gif)
 
-### [​](#changing-fill-type) **Changing Fill Type**
+### [​](#changing-fill-type) **更改填充类型**
 
-When a new shape is created, by defualt the shape will have a solid fill. When a new fill is added, by default the fill type is set to linear. We often need to change the fill type between the different types. This can be done by selecting the color box.
-![Changefilltype Gi](images/changefilltype.gif)
-Once the Fill has been opened, you’ll find the Fill Selector dropdown in the top of the option box.
-The different fills that can be selected are:
+创建新形状时，默认情况下形状将具有纯色填充。添加新填充时，默认情况下填充类型设置为线性渐变 (linear)。我们经常需要在不同类型之间切换填充类型。这可以通过点击颜色方块来完成。
+![更改填充类型演示 Gi](images/changefilltype.gif)
+打开填充设置后，你会在选项框顶部找到填充选择下拉菜单。
+可以选择的不同填充类型包括：
 
-- **Solid**
-- **Linear Gradient**
-- **Radial Gradient**
+- **纯色 (Solid)**
+- **线性渐变 (Linear Gradient)**
+- **径向渐变 (Radial Gradient)**
 
-### [​](#changing-fill-color-gradient) **Changing Fill color (Gradient)**
+### [​](#changing-fill-color-gradient) **更改填充颜色（渐变）**
 
-To change the color of a Fill, select the color box on the left side of the Fill layer. This will open the Color Picker.
-![Changestopper Gi](images/changestopper.gif)
-When a gradient is selected, you’ll notice a new bar appear above the color picker. This repersents the color of the gradient at different points.
-By default, a gradient has two points.
+要更改填充颜色，请点击填充图层左侧的颜色方块。这将打开颜色选择器。
+![更改渐变控制点演示 Gi](images/changestopper.gif)
+选中渐变时，你会注意到颜色选择器上方出现一个新条。这代表渐变在不同点的颜色。
+默认情况下，渐变有两个控制点 (stoppers)。
 
-### [​](#changing-the-color-of-a-stopper) **Changing the color of a stopper**
+### [​](#changing-the-color-of-a-stopper) **更改控制点颜色**
 
-To change the color of a particular color stopper, start by selecting the stopper you’d like to change.
-Next, use the various sliders to choose which color that stopper should be.
+要更改特定颜色控制点的颜色，请先选择你想要更改的控制点。
+接下来，使用各种滑块选择该控制点应有的颜色。
 
-### [​](#adding-and-removing-stoppers) **Adding and removing stoppers**
+### [​](#adding-and-removing-stoppers) **添加和删除控制点**
 
-To add a new color stopper, click any space along the long that isn’t currently occupied by another stopper. This will generate an additional color stopper.
-![Add Remove Gi](images/add_remove.gif)
-To delete a color stopper, select the stopper you’d like to delete, then hit the Delete or Backspace key.
+要添加新的颜色控制点，请点击色条上当前没有其他控制点的任何位置。这将生成一个额外的颜色控制点。
+![添加删除控制点演示 Gi](images/add_remove.gif)
+要删除颜色控制点，请选择要删除的控制点，然后按下 Delete 或 Backspace 键。
 
-### [​](#change-fill-order) **Change Fill Order**
+### [​](#change-fill-order) **更改填充顺序**
 
-The order in which fills are organized in the fill determine their render order with fills on top being rendered in the front and fills at the bottom being rendered at the back.
-![Fill Order Gi](images/fillOrder.gif)
-This order can be changed at any time my clicking and dragging on an empty area within the layer.
+填充在列表中的组织顺序决定了它们的渲染顺序，顶部的填充渲染在前面，底部的填充渲染在后面。
+![填充顺序演示 Gi](images/fillOrder.gif)
+通过在图层内的空白区域点击并拖动，可以随时更改此顺序。
 
-### [​](#fill-properties) **Fill Properties**
+### [​](#fill-properties) **填充属性**
 
-Each Fill has its own properties which can be edited and keyed on the timeline. Some of these properties can be found by using the fill option button.
-![Fill Prop Pn](images/fillProp.png)
-**Fill Name -** You can edit the name of a fill using this property.
-**Blend -** This option can be used to change the Blend Mode of an individual Fill. By default, this mode will be set to inherit, which inherits the blend mode from the shape layer.
-**Fill Rule -** This option can be used to change the fill rule for the Fill. This must be set to clock-wise if you want the fill to be feathered.
-\*\*Feather - \*\*This option can be toggled to feather the chosen Fill. Read more about Feathering below.
+每个填充都有自己的属性，可以在时间轴上进行编辑和设置关键帧。其中一些属性可以通过填充选项按钮找到。
+![填充属性 Pn](images/fillProp.png)
+**填充名称 (Fill Name) -** 你可以使用此属性编辑填充的名称。
+**混合模式 (Blend) -** 此选项可用于更改单个填充的混合模式。默认情况下，此模式将设置为“继承 (inherit)”，即继承形状图层的混合模式。
+**填充规则 (Fill Rule) -** 此选项可用于更改填充的填充规则。如果你希望填充羽化，则必须将其设置为“顺时针 (clock-wise)”。
+**羽化 (Feather) -** 可以启用此选项来羽化选中的填充。在下文阅读有关羽化的更多信息。
 
-### [​](#deleting-and-hiding-a-fill) **Deleting and hiding a Fill**
+### [​](#deleting-and-hiding-a-fill) **删除和隐藏填充**
 
-Often times we’ll need to delete or hide a particular Fill. This can be done by selecting the shape, then using the eye icon to hide the Fill, or the minus icon to delete the fill.
-![Delete Gi](images/delete.gif)
+很多时候我们需要删除或隐藏特定的填充。这可以通过选择形状，然后使用眼睛图标隐藏填充，或使用减号图标删除填充来完成。
+![删除填充演示 Gi](images/delete.gif)
 
-### [​](#fill-rule) Fill Rule
+### [​](#fill-rule) 填充规则 (Fill Rule)
 
-The Fill Rule determines how overlapping paths in a shape will be filled:
+填充规则决定了形状中重叠路径的填充方式：
 
-- **Non-Zero** assigns a +1 value to clockwise paths and a -1 value to counter clock wise paths. Areas that equal a value other than 0 will be filled.
-- **Even-Odd** assignes a +1 value to clockwise paths and a -1 value to counter clock wise paths. Areas that equal an even value will be filled while odd values wont be.
-- **Clockwise** a Fill Rule exlusive to Rive. This fill rule enables manual subtraction of paths which can be found in edit vertices mode. This fill rule is also required for shapes where you’d like to enable vector feathering.
+- **非零 (Non-Zero)** 为顺时针路径分配 +1 值，为逆时针路径分配 -1 值。合计值不等于 0 的区域将被填充。
+- **奇偶 (Even-Odd)** 为顺时针路径分配 +1 值，为逆时针路径分配 -1 值。合计值为偶数的区域将被填充，而奇数值则不会。
+- **顺时针 (Clockwise)** 是 Rive 特有的填充规则。此填充规则支持手动减去路径，该功能可在编辑顶点模式下找到。该填充规则也是启用矢量羽化 (vector feathering) 的形状所必需的。
 
-# [​](#stroke) Stroke
+# [​](#stroke) 描边 (Stroke)
 
-### [​](#create-a-new-stroke) Create a new Stroke
+### [​](#create-a-new-stroke) 创建新描边
 
-To create a Stroke, select a shape, then use the plus button under the Fill and Stroke section of the Inspector. Be sure to select Stroke from the new menu. You’ll be able to tell that a layer is a Stroke by looking at the color box on the left side. Strokes are represented by an outlined box.
-![New Stroke Gi](images/NewStroke.gif)
+要创建描边，请选择一个形状，然后点击检查器中“填充和描边”部分下的加号按钮。务必从出现的菜单中选择“描边 (Stroke)”。通过查看左侧的颜色方块，你可以辨别出一个图层是否为描边。描边由带轮廓的方框表示。
+![新建描边演示 Gi](images/NewStroke.gif)
 
-### [​](#changing-stroke-color-solid) **Changing stroke color (solid)**
+### [​](#changing-stroke-color-solid) **更改描边颜色（纯色）**
 
-To change the color of a Stroke, select the color box on the left side of the Stroke layer. This will open the Color Picker. From there, you can use the various sliders to choose which color you’d like for the Stroke.
-![Stroke Color Gi](images/StrokeColor.gif)
+要更改描边的颜色，请点击描边图层左侧的颜色方块。这将打开颜色选择器。从那里，你可以使用各种滑块选择你想要的描边颜色。
+![描边颜色设置演示 Gi](images/StrokeColor.gif)
 
-### [​](#changing-stroke-type) **Changing Stroke type**
+### [​](#changing-stroke-type) **更改描边类型**
 
-By default, strokes are set to a solid color, but various stroke types are avaiable from the Color Picker menu.
-![Change Stroke Type Gi](images/ChangeStrokeType.gif)
-The different strokes that can be selected are:
+默认情况下，描边被设置为纯色，但可以从颜色选择器菜单中选择各种描边类型。
+![更改描边类型演示 Gi](images/ChangeStrokeType.gif)
+可以选择的不同描边类型包括：
 
-- **Solid**
-- **Linear Gradient**
-- **Radial Gradient**
+- **纯色 (Solid)**
+- **线性渐变 (Linear Gradient)**
+- **径向渐变 (Radial Gradient)**
 
-### [​](#changing-stroke-color-gradient) **Changing Stroke color (Gradient)**
+### [​](#changing-stroke-color-gradient) **更改描边颜色（渐变）**
 
-To change the color of a Stroke, select the color box on the left side of the Stroke layer. This will open the Color Picker.
-When a gradient is selected, you’ll notice a new bar appear above the color picker. This repersents the color of the gradient at different points.
-By default, a gradient has two points.
+要更改描边的颜色，请点击描边图层左侧的颜色方块。这将打开颜色选择器。
+选中渐变时，你会注意到颜色选择器上方出现一个新条。这代表渐变在不同点的颜色。
+默认情况下，渐变有两个控制点。
 
-### [​](#changing-the-color-of-a-stopper-2) **Changing the color of a stopper**
+### [​](#changing-the-color-of-a-stopper-2) **更改控制点颜色**
 
-To change the color of a particular color stopper, start by selecting the stopper you’d like to change.
-![Change Gradient Color Gi](images/ChangeGradientColor.gif)
-Next, use the various sliders to choose which color that stopper should be.
+要更改特定颜色控制点的颜色，请先选择你想要更改的控制点。
+![更改渐变颜色演示 Gi](images/ChangeGradientColor.gif)
+接下来，使用各种滑块选择该控制点应有的颜色。
 
-### [​](#adding-and-removing-stoppers-2) **Adding and removing stoppers**
+### [​](#adding-and-removing-stoppers-2) **添加和删除控制点**
 
-To add a new color stopper, click any space along the long that isn’t currently occupied by another stopper. This will generate an additional color stopper.
-![Add Remove Stroke Stopper Gi](images/add_removeStroke_Stopper.gif)
-To delete a color stopper, select the stopper you’d like to delete, then hit the Delete or Backspace key.
+要添加新的颜色控制点，请点击色条上当前没有其他控制点的任何位置。这将生成一个额外的颜色控制点。
+![添加删除描边控制点演示 Gi](images/add_removeStroke_Stopper.gif)
+要删除颜色控制点，请选择要删除的控制点，然后按下 Delete 或 Backspace 键。
 
-### [​](#deleting-and-hiding-a-stroke) **Deleting and hiding a Stroke**
+### [​](#deleting-and-hiding-a-stroke) **删除和隐藏描边**
 
-Often times we’ll need to delete or hide a particular Stroke. This can be done by selecting the shape, then using the eye icon to hide the Stroke, or the minus icon to delete the Stroke.
+很多时候我们需要删除或隐藏特定的描边。这可以通过选择形状，然后使用眼睛图标隐藏描边，或使用减号图标删除描边来完成。
 
-# [​](#stroke-properties) Stroke Properties
+# [​](#stroke-properties) 描边属性 (Stroke Properties)
 
-Each Stroke has its own properties which can be edited and keyed on the timeline. Some of these properties can be found by using the Stroke option button.
-**Stroke Name -** You can edit the name of a Stroke using this property.
-**Blend -** This option can be used to change the Blend Mode of an individual Stroke. By default, this mode will be set to inherit, which inherits the blend mode from the shape layer.
-**Cap -** This option changes the end cap of a Stroke. Read more about the different Caps below.
+每个描边都有自己的属性，可以在时间轴上进行编辑和设置关键帧。其中一些属性可以通过描边选项按钮找到。
+**描边名称 (Stroke Name) -** 你可以使用此属性编辑描边的名称。
+**混合模式 (Blend) -** 此选项可用于更改单个描边的混合模式。默认情况下，此模式将设置为“继承 (inherit)”，即继承形状图层的混合模式。
+**线帽 (Cap) -** 此选项更改描边的末端样式。在下文阅读有关不同线帽的信息。
 
-- **Butt** The end of the stroke is a straight line and does not extend beyond the end vertices. On a zero-length path, the stroke will not be rendered at all.
-- **Round** The ends of a stroke are rounded. On a zero-length path, the stroke is a full circle.
-- **Square** The ends of a stroke are squared off and extend beyond the end vertices. On a zero-length path, the stroke is a square.
+- **平头 (Butt)** 描边末端是直线，且不超出末端顶点。在零长度路径上，描边根本不会被渲染。
+- **圆头 (Round)** 描边末端是圆形的。在零长度路径上，描边是一个完整的圆。
+- **方头 (Square)** 描边末端是方形的，且延伸到末端顶点之外。在零长度路径上，描边是一个正方形。
 
-**Join -** This option changes how the corners of a Stroke are rendered. Read more about the different Join options below.
+**连接 (Join) -** 此选项更改描边转角的渲染方式。在下文阅读有关不同连接选项的信息。
 
-- **Round** creates a rounded corner.
-- **Bevel** creates a beveled corner.
-- **Miter** creates a mitered corner.
+- **圆角 (Round)** 创建圆滑的转角。
+- **斜切 (Bevel)** 创建切平的转角。
+- **尖角 (Miter)** 创建尖锐的转角。
 
-**Apply Transformations -** The Apply Transformations toggle determines whether the shape layers scale will affect the thickness of the stroke. When this is toggled off, the thickness of the stroke will stay the same regardless of scale.
-**Feather -** This option can be toggled to feather the chosen stroke. Read more about Feathering below.
-**Stroke Type** - At the bottom of the Stroke Options Panel, you’ll find options to change your stroke between a solid, trim, dashed stroke.
+**应用变换 (Apply Transformations) -** “应用变换”开关决定了形状图层的缩放是否会影响描边的粗细。当此开关关闭时，无论缩放如何，描边的粗细都将保持不变。
+**羽化 (Feather) -** 可以启用此选项来羽化选中的描边。在下文阅读有关羽化的更多内容。
+**描边类型 (Stroke Type)** - 在描边选项面板底部，你可以找到将描边在纯色、修剪、虚线描边之间切换的选项。
 
-- **Solid -** Renders the stroke as a solid stroke. This is the default stroke type for each new stroke created.
-- **Trim -** Lets you animate the start, end, and offset of a line segment. Read more [here](https://rive.app/docs/editor/manipulating-shapes/trim-path).
-- **Dashed -** Lets you create dashed strokes with animateable property like the length of the dashed segment and offest. Read more [here.](https://rive.app/docs/editor/manipulating-shapes/trim-path)
+- **实线 (Solid) -** 将描边渲染为实线。这是每个新创建描边的默认描边类型。
+- **修剪 (Trim) -** 允许你为线段的起点、终点和偏移值制作动画。在此处阅读更多：[此处](https://rive.app/docs/editor/manipulating-shapes/trim-path)。
+- **虚线 (Dashed) -** 允许你创建具有诸如虚线线段长度和偏移量等可动画属性的虚线描边。在此处阅读更多：[此处。](https://rive.app/docs/editor/manipulating-shapes/trim-path)
 
-# [​](#vector-feathering) Vector Feathering
+# [​](#vector-feathering) 矢量羽化 (Vector Feathering)
 
-Vector feathering is a new way to feather both Fills and Strokes. Vector Feathering is a technique we invented at Rive that can soften the edge of vector paths without the typical performance impact of traditional blur effects.
+矢量羽化是一种为填充和描边设置羽化的新方式。矢量羽化是我们在 Rive 发明的一种技术，它可以柔化矢量路径的边缘，而不会产生传统模糊效果那样的性能影响。
 
-### [​](#enabling-vector-feathering) **Enabling Vector Feathering**
+### [​](#enabling-vector-feathering) **启用矢量羽化**
 
-There are two main ways to enable vector feathering on any Stroke of Fill.
-![Enable Feather Gi](images/EnableFeather.gif)
+有两种主要方法可以在任何描边或填充上启用矢量羽化。
+![启用羽化演示 Gi](images/EnableFeather.gif)
 
-- **Feather Icon -** The feathering icon can be used on any Fill or Stroke layer to enable vector feathering.
-- **Feather Toggle -** The feather toggle can be found in the Fill / Stroke options panel.
+- **羽化图标 (Feather Icon) -** 羽化图标可用于任何填充或描边图层，以启用矢量羽化。
+- **羽化开关 (Feather Toggle) -** 羽化开关可以在填充/描边选项面板中找到。
 
-### [​](#feathering-options) Feathering Options
+### [​](#feathering-options) 羽化选项 (Feathering Options)
 
-Feathers can be customized in a number of ways. The Feathering options can be found in the options panel once Feathering has been enabled on a Fill or Stroke.
-**Direction** - This option lets you choose which direction the path will feather as you increase the feather amount.
-![Direction Gi](images/Direction.gif)
+羽化可以以多种方式进行自定义。一旦在填充或描边上启用了羽化，就可以在选项面板中找到羽化选项。
+**方向 (Direction)** - 此选项允许你选择随着增加羽化量，路径将向哪个方向羽化。
+![方向演示 Gi](images/Direction.gif)
 
-- Outter - This option creates a feather that will feather outward from the path.
-- Inner - This option creates a feather that will feather inward from the path.
+- 外部 (Outer) - 此选项创建从路径向外羽化的效果。
+- 内部 (Inner) - 此选项创建从路径向内羽化的效果。
 
-**Amount** - This option lets you increase or decrease the amount of feather applied.
-![Amount Gi](images/amount.gif)
-**Space -** Determines how the feathered fill or stroke will apply transforms from the parent if any offset is present on the feather.
-![Space Gi](images/space.gif)
+**数量 (Amount)** - 此选项允许你增加或减少应用的羽化量。
+![数量演示 Gi](images/amount.gif)
+**空间 (Space) -** 决定了如果羽化存在任何位移，羽化填充或描边将如何应用来自父级的变换。
+![空间演示 Gi](images/space.gif)
 
-- World - Transforms will be applied from the world transform. Feather will now act as a drop shadow.
-- Local - Transforms will be applied from the local transform. This mode will have the feather work with transforms as you’d expect.
+- 世界 (World) - 变换将从世界变换中应用。羽化现在的行为类似于投影 (drop shadow)。
+- 局部 (Local) - 变换将从局部变换中应用。此模式将使羽化的变换符合你的预期。
 
-**Offset** - The Offset properties let you move the feather away from the path by increasing or decreasing the X and Y numbers.
-![Amount Gi](images/amount.gif)
-
-[Group Tips](/docs/editor/fundamentals/group-tips)[Edit Vertices](/docs/editor/fundamentals/edit-vertices)
+**偏移 (Offset)** - 偏移属性允许你通过增加或减少 X 和 Y 数值来使羽化远离路径。
+![数量演示 Gi](images/amount.gif)

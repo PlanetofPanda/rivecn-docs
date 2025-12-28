@@ -1,86 +1,86 @@
-Fundamentals
+基础知识
 
-# Artboards
+# 画板 (Artboards)
 
-Artboards are the foundation of a file.
+画板是文件的基石。
 
-Artboards are the foundation of your composition across both design and animate mode. They act as the root of every hierarchy and let you define a scene’s dimensions and background color. You can create infinite artboards on the [Stage](../interface-overview/stage), but each Rive file has at least one artboard.
-![Artboard Pn](images/artboard.png)
+画板是你在设计模式 (Design Mode) 和动画模式 (Animate Mode) 下进行创作的基础。它们是每个层级结构的根节点，允许你定义场景的尺寸和背景颜色。你可以在 [舞台 (Stage)](../interface-overview/stage) 上创建无限个画板，但每个 Rive 文件都至少包含一个画板。
+![画板示例 Pn](images/artboard.png)
 
-## [​](#​active-artboard) ​Active artboard
+## [​](#​active-artboard) ​活动画板 (Active artboard)
 
-The active artboard is represented with an Active tag next to its name on the stage. You can activate an artboard by clicking on it or any of its children within the stage. Note that sections of the editor will only surface content associated with the active artboard. For instance, only the active artboard’s hierarchy is displayed in the tree. Similarly, only animations referenced to the active artboard will surface within the timeline.
-![Active Gi](images/active.gif)
-The active artboard is represented with a dot next to its name on the stage. You can activate an artboard by clicking on it or any of its children within the stage. Note that sections of the editor will only surface content associated with the active artboard. For instance, only the active artboard’s hierarchy is displayed in the tree. Similarly, only animations referenced to the active artboard will surface within the timeline.
+活动画板在舞台上其名称旁有一个“活动 (Active)”标签（或是一个圆点）。你可以通过点击画板本身或舞台上它的任何子级来激活画板。请注意，编辑器各版块将仅显示与活动画板相关的内容。例如，树状结构中仅显示活动画板的层级；同样地，时间轴 (Timeline) 中也仅会显示引用自活动画板的动画。
+![活动画板演示 Gi](images/active.gif)
 
-## [​](#default-state-machine) Default State Machine
+## [​](#default-state-machine) 默认状态机 (Default State Machine)
 
-The default state machine is the state machine that will be played when using the play button in the Toolbar. In addition to setting the default state machine, this also sets the default artboard that a developer will see when using this file outside of Rive.
-![Default SM Gi](images/defaultSM.gif)
-To change the default state machine, use the dropdown to select the one you want to use.
-You can quickly play the selected state machine from Design Mode by holding shift and hitting the space bar.
-![Play Default Gi](images/playDefault.gif)
+默认状态机是你在工具栏 (Toolbar) 中使用播放按钮时将播放的状态机。除了设置默认状态机外，这还设置了开发人员在 Rive 之外使用此文件时将看到的默认画板。
+![默认状态机演示 Gi](images/defaultSM.gif)
+要更改默认状态机，请使用下拉菜单选择你想要使用的状态机。
+你可以通过按住 Shift 键并点击空格键，在设计模式下快速播放所选状态机。
+![播放默认状态机演示 Gi](images/playDefault.gif)
 
-## [​](#​creating-an-artboard) ​Creating an artboard
+## [​](#​creating-an-artboard) ​创建画板
 
-Before creating any graphics, you’ll first need to create an artboard. There are two ways to create an artboard.
-In a new file, you’ll find options on the stage to define an artboards dimentions or to select from a few defined presets. Once you’ve decided on the properties, you can then hit the Create Artboard button.
-![Create AB Gi](images/create_AB.gif)
-Alternitively, you can use the​ Artboard tool which is found in the Artboard menu, or by using the shotcut A. With the tool active, click and drag to define the bounds. You can always adjust the size and position by selecting the artboard in the [Hierarchy](../interface-overview/hierarchy) to surface its properties in the [Inspector](../interface-overview/inspector).
+在创建任何图形之前，你首先需要创建一个画板。有两种方法可以创建画板：
 
-## [​](#artboard-properties) Artboard properties
+1. 在一个新文件中，你会在舞台上看到用于定义画板尺寸或从几个预设中进行选择的选项。确定属性后，点击“创建画板 (Create Artboard)”按钮。
+![创建画板演示 Gi](images/create_AB.gif)
+2. 或者，你可以使用位于画板菜单中的“画板工具”，或者使用快捷键 `A`。启用该工具后，通过点击并拖动来定义边界。你随时可以通过在 [层级面板 (Hierarchy)](../interface-overview/hierarchy) 中选中画板来在 [检查器 (Inspector)](../interface-overview/inspector) 中调整其大小和位置。
 
-Every artboard has various properties that can be changed in the [Inspector](../interface-overview/inspector). Some of the attributes that can be changed include an artboard’s position on the [Stage](../interface-overview/stage), its size, layout properties, fill color, origin point, and render presets.
-![Artboard Prop Pn](images/artboard_prop.png)
+## [​](#artboard-properties) 画板属性 (Artboard properties)
 
-## [​](#position) **Position**
+每个画板都有各种属性可以在 [检查器 (Inspector)](../interface-overview/inspector) 中更改。可以更改的一些属性包括画板在 [舞台 (Stage)](../interface-overview/stage) 上的位置、大小、布局属性、填充颜色、原点 (Origin Point) 以及渲染预设。
+![画板属性 Pn](images/artboard_prop.png)
 
-The position of the artboard on the stage is controlled by the position properties of the artboard.
+## [​](#position) **位置 (Position)**
 
-## [​](#size-and-size-type) Size and Size Type
+画板在舞台上的位置由画板的位置属性控制。
 
-By default, artboards are set to a fixed size with that size being determined by the Width and Height properties.
-![Wand H Pn](images/WandH.png)
-**Link Icon**
-Like other properties where the link icon is found, it can be used to lock the current ratio of the size properties.
-![Link Pn](images/link.png)
-**Size Type**
-There are two sizing modes an artboard can have; Fixed, and Hug. These can be changed by using the dropdown under both the Width and Height properties.
-![Size Type Pn](images/size_type.png)
-As the name suggests, the Fixed type allows you to define and animate the artboards size properties.
-The Hug type will let the artboard automatically size its height, width, or both to fit it’s children. Note that this option is only available if the artboard has at least one child layout object.
+## [​](#size-and-size-type) 大小与尺寸类型 (Size and Size Type)
 
-## [​](#origin) Origin
+默认情况下，画板被设置为固定大小，该大小由宽度 (Width) 和高度 (Height) 属性决定。
+![宽高设置 Pn](images/WandH.png)
+**链接图标 (Link Icon)**
+与其他标有链接图标的属性一样，它可用于锁定当前尺寸属性的比例。
+![链接图标 Pn](images/link.png)
 
-The origin of an artboard determines the point from which all objects associated with the artboard will be measured. By default, the origin of an artboard is X:0%, Y:0%. These values place the origin at the top left of the artboard.
-![Origin Pn](images/origin.png)
-As you increase the value of either the X or Y, that shifts the origin point to the right (on the X), and down (on the Y).
-You won’t typically be changing the origin of an artboard, but if you plan on changing the origin, it’s best done before any animation work is done. Changing the origin after animation keys are added can cause objects to appear out of position due to the origin shifting to a new position.
-**Component Origin**
-It’s important to remember that a Component shares the origin of its source artboard. If you plan to do things like scale or rotate the Component, changing the origin will help make that process easier.
-If you forget to change the origin after adding animations, you can always add the Component to a group, which will give you the same level of control.
+**尺寸类型 (Size Type)**
+画板有两种尺寸模式：固定 (Fixed) 和包裹 (Hug)。可以通过宽度和高度属性下方的下拉菜单进行更改。
+![尺寸类型 Pn](images/size_type.png)
+顾名思义，“固定 (Fixed)”类型允许你定义并为画板尺寸属性制作动画。
+“包裹 (Hug)”类型会让画板自动调整其高度、宽度或两者以适应其子级。请注意，仅当画板至少包含一个子布局 (Layout) 对象时，此选项才可用。
 
-## [​](#layout-settings) Layout Settings
+## [​](#origin) 原点 (Origin)
 
-Since an Artboard is the root object that all other objects are added to, Artboards allow you to add and adjust their layout properties. Read more about layouts [here](https://rive.app/docs/editor/layouts/layouts-overview).
-![Layout Pn](images/layout.png)
-Note that these properties only take effect when one or more layouts have been added to the artboard.
+画板的原点决定了与该画板关联的所有对象的测量起点。默认情况下，画板的原点是 X:0%, Y:0%。这些值将原点置于画板的左上角。
+![原点设置 Pn](images/origin.png)
+随着增加 X 或 Y 的值，原点会向右（在 X 轴上）和向下（在 Y 轴上）移动。
+通常你不需要更改画板的原点，但如果你计划更改原点，最好在进行任何动画工作之前完成。在添加了动画关键帧之后更改原点可能会导致对象因为原点移动到新位置而显得错位。
 
-## [​](#fill-and-stroke) Fill and Stroke
+**组件原点 (Component Origin)**
+重要的是要记住，组件 (Component) 与其源画板共用原点。如果你计划执行诸如缩放或旋转组件的操作，更改原点将有助于简化该流程。
+如果你在添加动画后才想起更改原点，你随时可以将组件添加到一个分组 (Group) 中，这会给你带来同级别的控制力。
 
-Like other objects in Rive, Artboards can have one or more fills or strokes added to them. The process of adding and customizing fills and strokes is the same for both artboards and objects in the hierarchy.
-![Fillandstroke Pn](images/fillandstroke.png)
-Read more about fills and strokes [here](https://rive.app/docs/editor/fundamentals/fill-and-stroke).
+## [​](#layout-settings) 布局设置 (Layout Settings)
 
-## [​](#render-presets) Render Presets
+由于画板是所有其他对象添加到的根对象，画板允许你添加和调整它们的布局属性。在此处了解更多关于布局的信息：[此处](https://rive.app/docs/editor/layouts/layouts-overview)。
+![布局设置 Pn](images/layout.png)
+请注意，这些属性仅在画板中添加了一个或多个布局后才会生效。
 
-Selecting an artboard allows you to create Render Presets that can be used to render out static graphics such as PNGs and SVGs, as well as video and motion files like PNG sequences and MP4s.
-![Render Pn](images/render.png)
-Read more about creating render presets [here](https://rive.app/docs/editor/exporting/exporting-for-video-and-static-design).
+## [​](#fill-and-stroke) 填充和描边 (Fill and Stroke)
 
-## [​](#selected-colors) Selected Colors
+与 Rive 中的其他对象一样，画板可以添加一个或多个填充 (Fills) 或描边 (Strokes)。添加和自定义填充及描边的过程对于画板和层级面板中的对象是相同的。
+![填充和描边 Pn](images/fillandstroke.png)
+在此处阅读有关填充和描边的更多信息：[此处](https://rive.app/docs/editor/fundamentals/fill-and-stroke)。
 
-When an artboard is selected, you can see, target, and adjust all colors associated with every object on the artboard.
-![Select Color Pn](images/selectColor.png)
+## [​](#render-presets) 渲染预设 (Render Presets)
 
-[Design vs Animate Mode](/docs/editor/fundamentals/design-vs-animate-mode)[Components](/docs/editor/fundamentals/components)
+选中画板后可以创建渲染预设，用于渲染出静态图形（如 PNG 和 SVG），以及视频和动态文件（如 PNG 序列和 MP4）。
+![渲染设置 Pn](images/render.png)
+在此处阅读有关创建渲染预设的更多信息：[此处](https://rive.app/docs/editor/exporting/exporting-for-video-and-static-design)。
+
+## [​](#selected-colors) 选中颜色 (Selected Colors)
+
+选中画板时，你可以查看、定位并调整与画板上每个对象关联的所有颜色。
+![选中颜色 Pn](images/selectColor.png)

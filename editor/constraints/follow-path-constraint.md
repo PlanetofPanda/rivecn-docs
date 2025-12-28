@@ -1,42 +1,40 @@
-Constraints
+约束
 
-# Follow Path Constraint
+# 路径跟随约束 (Follow Path Constraint)
 
-The Follow Path Constraint makes complex motion much easier to create by allowing us to constrain an object to a path. Watch the video, or read more below.
+路径跟随约束允许我们将一个对象约束到一条路径上，从而使复杂的运动变得更加容易创建。通过观看视频或阅读下文了解更多。
 
-## [​](#setting-up-a-follow-path-constraint) Setting up a Follow Path Constraint
+## [​](#setting-up-a-follow-path-constraint) 设置路径跟随约束
 
-First we’ll need both an object to constrain and a path to constrain it to.
-Next, add a new constraint and select the Follow Path Constraint.
-![Image](images/image_0.png)
-Now, use the target button and select the path you want to constrain the object to.
+首先，我们需要一个要约束的对象和一条用于约束该对象的路径。
+接下来，添加一个新约束并选择“路径跟随约束 (Follow Path Constraint)”。
+![添加路径跟随约束示例](images/image_0.png)
+现在，点击目标 (Target) 按钮并选择你想要让对象跟随的路径。
 
-## [​](#follow-path-properties) Follow Path Properties
+## [​](#follow-path-properties) 路径跟随属性 (Follow Path Properties)
 
-Like other Constraints, the Follow Path Constraint has many different properties we can customize.
+与其他约束一样，路径跟随约束具有许多可以自定义的属性。
 
-#### [​](#strength) Strength
+#### [​](#strength) 强度 (Strength)
 
-The strength property dictates how strictly the constrained object will adhere to the constrained property.
+强度属性决定了被约束对象追随目标属性的紧密程度。
 
-#### [​](#target) Target
+#### [​](#target) 目标 (Target)
 
-The Target tells the constraint which path to follow.
+目标属性告诉约束应该跟随哪条路径。
 
-#### [​](#distance) Distance
+#### [​](#distance) 距离 (Distance)
 
-The Distance property moves the object up and down the path. As the percent increases, the constrained object moves along the path. Note that this property can exceed 100%.
-![Image](images/image_1.png)
+距离属性使对象沿路径移动。随着百分比的增加，被约束对象会沿着路径前进。请注意，此属性可以超过 100%。
+![距离属性示例](images/image_1.png)
 
-#### [​](#orient) Orient
+#### [​](#orient) 朝向 (Orient)
 
-The Orient toggle controls the constrained objects rotation.
-When the Orient toggle is on, the object will adjust its rotation according to the path. Note that you can’t make manual rotation changes to the object in this state.
-![Image](images/image_2.png)
-When the Orient toggle is set to off, the rotation of the constrained object does not change. This means you’ll be able to manually change the rotation of the object as you see fit.
+朝向开关控制被约束对象的旋转。
+当朝向开关开启时，对象将根据路径调整其旋转角度。请注意，在这种状态下你无法手动更改对象的旋转。
+![朝向开启示例](images/image_2.png)
+当朝向开关关闭时，被约束对象的旋转不会改变。这意味着你可以根据需要手动调整对象的旋转。
 
-#### [​](#offset) Offset
+#### [​](#offset) 偏移 (Offset)
 
-The Offset toggle allows the constrained object to move along the path, but from its current, offset position.
-
-[Translation Constraint](/docs/editor/constraints/translation-constraint)[Scroll Constraints](/docs/editor/constraints/scroll-constraint)
+偏移开关允许被约束对象基于其当前的偏移位置沿路径移动。

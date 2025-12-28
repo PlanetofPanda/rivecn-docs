@@ -1,74 +1,65 @@
-Constraints
+约束
 
-# IK Constraint
+# IK 约束 (IK Constraint)
 
-Learn how to use Inverse Kinematics in Rive.
+了解如何在 Rive 中使用反向动力学 (Inverse Kinematics)。
 
-## [​](#about-inverse-kinematics-ik) About Inverse Kinematics (IK)
+## [​](#about-inverse-kinematics-ik) 关于反向动力学 (IK)
 
-### [​](#forward-kinematics) Forward Kinematics
+### [​](#forward-kinematics) 正向动力学 (Forward Kinematics)
 
-Most skeletal animation in Rive is done by rotating the angles of bones. The position of a child bone changes according to the rotation of its parent. Positioning a bone at the end of a chain requires rotating multiple parent bones (the bones up the chain) to reach the desired pose. This type of skeletal posing is called Forward Kinematics.
+Rive 中的大多数骨骼动画是通过旋转骨骼角度完成的。子骨骼的位置根据其父骨骼的旋转而改变。要定位链条末端的骨骼，需要旋转多个父骨骼（链条上方的骨骼）以达到所需的姿势。这种类型的骨骼摆动称为“正向动力学 (Forward Kinematics)”。
 
-### [​](#inverse-kinematics) Inverse Kinematics
+### [​](#inverse-kinematics) 反向动力学 (Inverse Kinematics)
 
-Inverse Kinematics allows you to place a target at the end of the chain and the system works backward to find a valid orientation for the parent bones above it.
-![Image](images/image_0.png)
-There are many applications for this technique, but some of the more common examples include making a character point at an item or making a character’s feet stay planted on the ground.
+反向动力学允许你在链条末端放置一个目标 (Target)，系统会自动反向计算出链条上方各父骨骼的有效朝向。
+![反向动力学示例](images/image_0.png)
+这种技术有很多应用，其中一些常见的例子包括让角色指向某个物品，或者让角色的脚固定在地面上。
 
-## [​](#how-to-create-an-ik-constraint) How to create an IK constraint
+## [​](#how-to-create-an-ik-constraint) 如何创建 IK 约束
 
-To use IK, you need a bone chain and a target. The target can be any object, though in most cases you’ll want to use a group with its [Style set to Target](/docs/editor/fundamentals/groups#group-style).
+要使用 IK，你需要一个骨骼链和一个目标。目标可以是任何对象，但在大多数情况下，你会希望使用一个 [样式设为“目标”的分组](/docs/editor/fundamentals/groups#group-style)。
 
-1
+1. **创建骨骼链和目标**
+   使用快捷键 **B** 创建 [骨骼链](/docs/editor/manipulating-shapes/bones#how-to-create-bones)。然后使用快捷键 **G** 创建一个 [分组 (Group)](/docs/editor/fundamentals/groups)。在检查器中将分组的样式 (Style) 选项设置为“目标 (Target)”。
+   ![创建骨骼和目标示例](images/image_1.png)
+   使用 B 和 G 快捷键激活骨骼和分组工具。
 
-Create a bone chain and a target
+2. **添加 IK 约束**
+   选择你想要受影响的最后一个骨骼，并在检查器的“约束 (Constraints)”版块添加一个 IK 约束。
+   ![添加 IK 约束示例](images/image_2.png)
 
-Use the **B** shortcut to create a [bone chain](/docs/editor/manipulating-shapes/bones#how-to-create-bones). Then use the **G** shortcut to create a [group](/docs/editor/fundamentals/groups). Set the group’s Style option in the Inspector to Target.![Image](images/image_1.png)Use the B and G shortcuts to activate the Bone and Group tools
+3. **选择目标**
+   打开约束浮动菜单，使用目标按钮选择在第 1 步中创建的空分组。
+   ![选择目标示例](images/image_3.png)
 
-2
+4. **测试 IK 系统**
+   移动目标分组以测试系统是否正常工作。
+   ![测试 IK 示例](images/image_4.png)
 
-Add an IK constraint
+## [​](#bone-count) 骨骼数量 (Bone Count)
 
-Select the last bone you want to affect and add an IK constraint using the Constraints section of the Inspector.![Image](images/image_2.png)
+使用“骨骼数量 (Bone Count)”属性设置 IK 系统应向链条上方影响多远。请注意，当选中目标时，受 IK 系统影响的骨骼会高亮显示。
+![骨骼数量示例](images/image_5.png)
 
-3
+## [​](#invert-direction) 反转方向 (Invert Direction)
 
-Select a target
+使用“反转方向 (Invert Direction)”开关来交换 IK 系统计算的角度。
+![反转方向示例](images/image_6.png)
 
-Open the constraint fly-out menu and use the target button to select the empty group created in step 1.![Image](images/image_3.png)
+## [​](#strength) 强度 (Strength)
 
-4
+使用“强度 (Strength)”属性来控制受影响的骨骼跟随目标的程度。强度为 0% 意味着目标完全不会影响受控骨骼。
+请注意，与 Rive 中的大多数属性一样，强度是可以制作动画的。使用它来创建独特的效果，或者在两个或多个 IK 约束（每个都有自己的目标）之间进行混合。
+![强度调节示例](images/image_7.png)
 
-Test the IK system
+## [​](#constraints-order) 约束顺序 (Constraints order)
 
-Move the target group to test the system is working.![Image](images/image_4.png)
+约束的顺序非常重要。例如，如果一个骨骼有两个 IK 约束，且两者的强度均为 100%，则第二个约束（最下面的那个）将抵消第一个。如果它们的强度不是 100%，那么 IK 系统将在两者之间进行混合。可以通过点击并拖动来更改约束的顺序。
+![更改约束顺序示例](images/image_8.png)
+通过拖放操作更改约束顺序。
 
-## [​](#bone-count) Bone Count
+## [​](#multiple-ik-constraints-and-nested-targets) 多个 IK 约束和嵌套目标
 
-Use the Bone Count property to set how far up the chain the IK system should work. Note that bones affected by the IK system are highlighted when the target is selected.
-![Image](images/image_5.png)
-
-## [​](#invert-direction) Invert Direction
-
-Use the Invert Direction toggle to swap the angle at which your IK system solves.
-![Image](images/image_6.png)
-
-## [​](#strength) Strength
-
-Use the Strength property to control how much the influenced bones should follow the target. A Strength of 0% means the target won’t affect the influenced bones at all.
-Note that Strength can be animated, like most properties in Rive. Use this to create unique effects or to blend between two or more IK constraints (each with their own target).
-![Image](images/image_7.png)
-
-## [​](#constraints-order) Constraints order
-
-The order of constraints matters. For example, if a bone has two IK constraints, both with a strength of 100%, the second constraint (bottom-most) will cancel out the first one. If they don’t have 100% strength, then the IK system will blend between the two. Use drag and drop to change the order of constraints.
-![Image](images/image_8.png)
-Use drag and drop to change the order of constraints
-
-## [​](#multiple-ik-constraints-and-nested-targets) Multiple IK constraints and nested targets
-
-You can set up multiple IK constraints for more complex rigs. A common setup is to have an IK constraint on the feet of a character (note that in our example below it only affects 1 bone) and another IK constraint for the leg bones (two bones). The leg target is a child of the foot target so that moving the feet will also move the legs.
-![Image](images/image_9.png)
-
-[Overview](/docs/editor/constraints/constraints-overview)[Distance Constraint](/docs/editor/constraints/distance-constraint)
+你可以设置多个 IK 约束来实现更复杂的绑定。一种常见的设置是在角色的脚上设置一个 IK 约束（注意在下面示例中它仅影响 1 根骨骼），并为腿部骨骼（两根骨骼）设置另一个 IK 约束。腿部目标是脚目标的子级，这样移动脚部也会带动腿部移动。
+![多个 IK 设置示例](images/image_9.png)

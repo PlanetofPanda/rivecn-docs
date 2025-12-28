@@ -1,27 +1,25 @@
-Fundamentals
+基础知识
 
-# Fundamentals Overview
+# 基础知识概览 (Fundamentals Overview)
 
-In this section, we’ll step through a typical workflow from creating an artboard all the way to exporting your first Rive file. Before we get started, check out our brief overview of the interface to familiarise yourself with the various sections and modes.
+在本节中，我们将逐步介绍一个典型的流程：从创建画板 (Artboard) 直到导出你的第一个 Rive 文件。在开始之前，请先查看我们的界面简要概览，以熟悉各个版块和模式。
 
-Prefer to watch a series of short videos to follow visually? Check out our [Rive 101](https://www.youtube.com/playlist?list=PLujDTZWVDSsFGonP9kzAnvryowW098-p3) playlist!
+如果你更喜欢观看一系列简短视频来直观地学习，请查看我们的 [Rive 101](https://www.youtube.com/playlist?list=PLujDTZWVDSsFGonP9kzAnvryowW098-p3) 播放列表！
 
-## [​](#explore) Explore
+## [​](#explore) 探索
 
-[## Interface Overview
+[## 界面概览 (Interface Overview)
 
-Take a tour of the Rive editor to familiarize yourself with the various sections and modes.](/docs/editor/interface-overview)
+游览 Rive 编辑器，以熟悉各个版块和模式。](/docs/editor/interface-overview)
 
-[## Artboards
+[## 画板 (Artboards)
 
-Artboards are the foundation of your composition across both design and animate mode. Learn how to create and manage artboards within a file.](/docs/editor/fundamentals/artboards)[## Shapes and Paths
+画板是你在设计模式 (Design Mode) 和动画模式 (Animate Mode) 下进行创作的基础。了解如何在一个文件中创建和管理画板。](/docs/editor/fundamentals/artboards)[## 形状和路径 (Shapes and Paths)
 
-Start creating assets to work with, and learn about the nuances between shapes and paths.](/docs/editor/fundamentals/shapes-and-paths-overview)
+开始创建用于工作的资产，并了解形状 (Shapes) 与路径 (Paths) 之间的细微差别。](/docs/editor/fundamentals/shapes-and-paths-overview)
 
-[## Importing Assets
+[## 导入资产 (Importing Assets)
 
-Import your assets by dragging and dropping them onto the Rive Editor. You can import SVG, JSON, PNG, PSD, and JPG formats.](/docs/editor/fundamentals/importing-assets)[## Exporting
+通过将资产拖放到 Rive 编辑器中来导入它们。你可以导入 SVG、JSON、PNG、PSD 和 JPG 格式。](/docs/editor/fundamentals/importing-assets)[## 导出 (Exporting)
 
-Instructions on exporting your Rive files.](/docs/editor/exporting)
-
-[Stage](/docs/editor/interface-overview/stage)[Design vs Animate Mode](/docs/editor/fundamentals/design-vs-animate-mode)
+关于导出 Rive 文件的说明。](/docs/editor/exporting)

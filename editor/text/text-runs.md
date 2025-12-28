@@ -1,37 +1,35 @@
-Text
+文本
 
-# Text Runs
+# 文本运行 (Text Runs)
 
-Runs allow you break your text up into sections — typically, they’re used to apply a variety of styles to a single block of text. Whilst most tools manage text runs behind the scenes, Rive exposes them for greater control when dynamically changing text at runtime.
-You may want to split your text into multiple runs to apply a different style (such as font, font size, color etc.) to a certain part of your text, where you can then [update your text runs at runtime](/docs/runtimes/text#read-update-text-runs-at-runtime).
+“运行 (Runs)”允许你将文本分割成不同的部分 —— 通常，它们被用于给单个文本块应用多种不同的样式。虽然大多数工具是在后台管理文本运行的，但 Rive 将它们暴露出来，以便在运行时动态更改文本时提供更大的控制力。
+你可能希望将文本分割成多个“运行”，以便为文本的特定部分应用不同的样式（如字体、字号、颜色等），然后你可以 [在运行时更新你的文本运行](/docs/runtimes/text#read-update-text-runs-at-runtime)。
 
-A Text Run may only have one Text Style applied at a time.
+一个“文本运行”一次只能应用一种“文本样式”。
 
-For example, an animation welcoming a user to an app or website may greet them by their name. In the Rive Editor, you may design and animate the text to read “Welcome back, username”. Defining “username” as it’s own run means you can target it with the Rive Runtimes and replace it with the user’s name.
-![Update text for a specific run](images/text-runs-update-run.gif)
-
----
-
-## [​](#creating-a-text-run) Creating a Text Run
-
-To create a Run, select the desired portion of text and select the ‘Run from Selection’ button in the Inspector. You can see Text Runs listed beneath the text object in the hierarchy.
-Double click or press `Enter` with the text box selected to start editing text.
-Toggle the ‘Highlight Text Runs’ option in the inspector for a visual guide of your current Text Runs. Hovering a run in the hierarchy also highlights its location within the text.
-![Split text into multiple runs](images/text-runs-create-run.gif)
+例如，一个欢迎用户访问应用或网站的动画可能会以用户的名字来打招呼。在 Rive 编辑器中，你可能设计并制作一段文字动画，内容为“欢迎回来，用户名”。将“用户名”定义为其专有的“运行”，意味着你可以通过 Rive 运行时定位它，并将其替换为用户的真实姓名。
+![更新特定运行的文字演示 Gi](images/text-runs-update-run.gif)
 
 ---
 
-## [​](#managing-text-runs) Managing Text Runs
+## [​](#creating-a-text-run) 创建文本运行 (Creating a Text Run)
 
-Select a Text Run in the hierarchy for inspector options:
+要创建一个“运行”，请选择目标文本部分，然后点击检查器中的“从选区创建运行 (Run from Selection)”按钮。你可以在层级面板中的文本对象下方看到列出的“文本运行”。
+在选中文本框的情况下双击或按 `Enter` 键即可开始编辑文本。
+勾选检查器中的“高亮文本运行 (Highlight Text Runs)”选项，可以获得当前文本运行的视觉指南。在层级面板中悬停在某个运行上也会在文字中高亮其位置。
+![将文字拆分为多个运行演示 Gi](images/text-runs-create-run.gif)
 
-- **Text Value:** Update the text value for the run. Key this value in animate mode.
-- **Edit Text Run:** Initiate the text editor with the run pre-selected.
-- **Merge with Next:** Combine the selected run with the next run.
-- **Merge with Previous:** Combine the selected run with the previous run.
-- **Delete text Run:** Delete the run and its contents.
-- **Style:** Assign one of the Text Styles defined on the text object. Key this value in animate mode.
+---
 
-![Assign a Text Style to a Text Run](images/text-runs-managing-run.gif)
+## [​](#managing-text-runs) 管理文本运行 (Managing Text Runs)
 
-[Overview](/docs/editor/text/text-overview)[Text Styles](/docs/editor/text/text-styles)
+在层级面板中选择一个“文本运行”以查看检查器选项：
+
+- **文本值 (Text Value):** 更新该运行的文本内容。在动画模式下可以为此值设置关键帧。
+- **编辑文本运行 (Edit Text Run):** 启动文本编辑器并预先选中该运行。
+- **与后一个合并 (Merge with Next):** 将选中的运行与下一个运行合并。
+- **与前一个合并 (Merge with Previous):** 将选中的运行与上一个运行合并。
+- **删除文本运行 (Delete text Run):** 删除该运行及其内容。
+- **样式 (Style):** 分配文本对象上定义的文本样式之一。在动画模式下可以为此属性设置关键帧。
+
+![为文本运行分配文本样式演示 Gi](images/text-runs-managing-run.gif)

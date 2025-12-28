@@ -1,72 +1,70 @@
-Manipulating Shapes
+操纵形状
 
-# Joysticks
+# 摇杆 (Joysticks)
 
-Joysticks make it easy to set up sophisticated rigs with simple controls. You can quickly animate body poses, eyes, mouths, hands, and more. You can even control joysticks with other joysticks.
+摇杆通过简单的控制项，让你轻松设置复杂的绑定 (Rig)。你可以快速制作身体姿势、眼睛、嘴巴、手部等的动画。你甚至可以用摇杆控制其他摇杆。
 
-Joysticks work by allowing you to pan through different timelines that are assigned to either the X or Y axis of the joystick. Once you’ve assigned the timelines, you can use the joystick to set keys to create animations.
-Either watch the video, or read more below.
+摇杆的工作原理是允许你在分配给摇杆 X 轴或 Y 轴的不同时间轴之间平滑切换。分配好时间轴后，你就可以使用摇杆设置关键帧来创建动画。
+请观看视频或阅读下文了解更多。
 
-## [​](#creating-a-new-joystick) Creating a new Joystick
+## [​](#creating-a-new-joystick) 创建新摇杆
 
-To create a new joystick, either find the Joystick Tool in the Bones Menu, or by hitting the J key. Once the tool is activated, click anywhere on the stage to add a new Joystick.
-![Creating a new Joystick](images/image_0.png)
+要创建一个新摇杆，请在骨骼菜单中找到“摇杆工具”，或者按下 `J` 键。激活工具后，在舞台上的任意位置点击即可添加一个新的摇杆。
+![创建新摇杆示例](images/image_0.png)
 
-## [​](#joystick-properties) Joystick Properties
+## [​](#joystick-properties) 摇杆属性 (Joystick Properties)
 
-With the Joystick selected, you’ll see a number of properties that you can use in the Inspector.
+选中摇杆后，你会在检查器中看到许多可以使用的属性。
 
-### [​](#handle) Handle
+### [​](#handle) 手柄 (Handle)
 
-The Handle X and Y property describes the position that the handle is currently in. You’ll notice that these properties update as you move the handle around the Joystick.
-![Handle property](images/image_1.png)
+手柄 X 和 Y 属性描述了手柄当前所处的位置。你会注意到，当你移动摇杆周围的手柄时，这些属性会实时更新。
+![手柄属性示例](images/image_1.png)
 
-### [​](#position) Position
+### [​](#position) 位置 (Position)
 
-The position property describes the position of the Joystick on the stage. For the most part, we won’t need to update this property at all while animating.
-![Position property](images/image_2.png)
+位置属性描述了摇杆在舞台上的位置。在大多数情况下，我们在制作动画时根本不需要更新此属性。
+![位置属性示例](images/image_2.png)
 
-### [​](#size) Size
+### [​](#size) 大小 (Size)
 
-The size property describes the size of the joystick. We can modify this property to fit our needs by making the joystick longer/shorter or wider/skinnier.
-![Image](images/image_3.png)
+大小属性描述了摇杆的尺寸。我们可以根据需要修改此属性，使摇杆变长/变短或变宽/变窄。
+![大小属性示例](images/image_3.png)
 
-### [​](#origin) Origin
+### [​](#origin) 原点 (Origin)
 
-The origin property exists because all objects in Rive that have a position must have an origin. You likely won’t ever change this property.
+原心属性存在是因为 Rive 中所有具有位置的对象都必须有一个原点。你可能永远不会更改此属性。
 
-### [​](#draw-in-world-space) Draw in World Space
+### [​](#draw-in-world-space) 在世界空间绘制 (Draw in World Space)
 
-This toggle tells the joystick whether the joystick will scale with the zoom level or not. This can be a very helpful joystick when we use many different joysticks in a file attached to a character or object.
+此开关告诉摇杆是否随缩放比例一起缩放。当我们在一个文件中使用许多附在角色或对象上的不同摇杆时，这会非常有用。
 
-### [​](#x-&-y-dropdown) X & Y dropdown
+### [​](#x-&-y-dropdown) X 和 Y 下拉菜单
 
-The X & Y dropdowns allow us to assign timelines to the different axis of the Joystick.
-For example, I’ve got a timeline that moves a ball on the Y axis. You can see that the timeline only has two keys which move the balls position and a few others that control the scale.
-![Image](images/image_4.png)
-When the timeline is assigned to the Y axis of the Joystick, notice that the joystick becomes a slider that only allows you to move the handle in the Y direction.
-![Image](images/image_5.png)
-As we move the joystick up and down, you’ll notice that the ball also moves up and down. Keep in mind that we are scrubbing through the assigned timeline. We can now use this joystick to set keys on a new timeline to create animations.
-**Invert Toggle**
-After you add a timeline to an axis, you’ll notice a toggle that appears next to it. This allows you to invert the direction that the joystick scrubs through the timeline.
-![Image](images/image_6.png)
-Invert toggle
+X 和 Y 下拉菜单允许我们将时间轴分配给摇杆的不同轴。
+例如，我有一个在 Y 轴上移动球的时间轴。你可以看到该时间轴只有两个关键帧来移动球的位置，还有几个关键帧控制缩放。
+![下拉菜单示例](images/image_4.png)
+当时间轴分配给摇杆的 Y 轴时，注意摇杆会变成一个仅允许你在 Y 方向移动手柄的滑块。
+![摇杆滑块示例](images/image_5.png)
+当我们上下移动摇杆时，你会注意到球也随之上下移动。请记住，我们实际上是在拖动对应的时间轴。现在我们可以使用这个摇杆在新的时间轴上设置关键帧以创建动画。
 
-### [​](#handle-source) Handle Source
+**反转开关 (Invert Toggle)**
+将时间轴添加到轴后，你会注意到旁边出现了一个开关。这允许你反转摇杆在时间轴上拖动的方向。
+![反转开关示例](images/image_6.png)
 
-The handle source allows you to constrain the position of the handle to another objects position properties. This is useful when you want a control on the artboard to control the panning of a timeline.
+### [​](#handle-source) 手柄源 (Handle Source)
 
-## [​](#joystick-considerations) Joystick considerations
+手柄源允许你将手柄的位置约束到另一个对象的位置属性。当你希望舞台上的某个控制项来控制时间轴的拖动时，这非常有用。
 
-Joysticks are a powerful tool that allows you to create complex deformations, but like with many things in the Rive editor there are a few things to keep in mind as you set up these controls.
+## [​](#joystick-considerations) 摇杆注意事项 (Joystick considerations)
 
-### [​](#conflicting-properties) Conflicting properties
+摇杆是一个强大的工具，可以让你创建复杂的变形，但与 Rive 编辑器中的许多功能一样，在设置这些控制项时有几点需要注意。
 
-The most important consideration is that when you have multiple animations assigned to the joystick, those timelines will blend together. If, for example, both timelines Y property of an object, these joysticks will conflict and prevent that object from moving in the Y direction.
-Be sure to separate animated properties to prevent any conflicts.
+### [​](#conflicting-properties) 属性冲突 (Conflicting properties)
 
-### [​](#creating-complex-deformations) Creating Complex Deformations
+最重要的考虑因素是，当你在摇杆上分配了多个动画时，这些时间轴会混合在一起。例如，如果两个时间轴都涉及一个对象的 Y 属性，这些摇杆就会产生冲突，并阻止该对象在 Y 方向移动。
+请确保将动画属性分开，以防止冲突。
 
-You can add as many keys to a joystick timeline as you’d like. By doing this, we can create incredibly complex deformations, but remember, these deformations will often bloat the size of your file, so use them sparingly.
+### [​](#creating-complex-deformations) 创建复杂的变形 (Creating Complex Deformations)
 
-[Trim Path](/docs/editor/manipulating-shapes/trim-path)[Overview](/docs/editor/text/text-overview)
+你可以向摇杆时间轴添加任意数量的关键帧。通过这种方式，我们可以创建极其复杂的变形，但请记住，这些变形通常会增加文件大小，因此请谨慎使用。

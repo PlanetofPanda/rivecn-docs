@@ -1,60 +1,58 @@
-Interface Overview
+界面概览
 
-# Interface Overview
+# 界面概览 (Interface Overview)
 
-Rive’s interface only shows what is needed when you need it. It is divided into a few main panels, which are described below.
+Rive 的界面精简高效，只在需要时显示必要的内容。它分为几个主要面板，详见下文。
 
-## [​](#toolbar) Toolbar
+## [​](#toolbar) 工具栏 (Toolbar)
 
-The Toolbar displays the tools you have available to create, rig, and manipulate items on the stage. In addition to these tools, the Toolbar houses a variety of options to allow you to customize the look of your file, set your main artboard, and export or share your file.
-![Toolbar Pn](images/toolbar.png)
-Read more on the Toolbar page.
-[## Toolbar
+工具栏显示了你可以在舞台 (Stage) 上用于创建、绑定和操纵项目的工具。除了这些工具外，工具栏还包含各种选项，允许你自定义文件的外观、设置主画板以及导出或分享文件。
+![工具栏 Pn](images/toolbar.png)
+在工具栏页面了解更多信息。
+[## 工具栏 (Toolbar)
 
-Access design and animation tools from the Rive Editor toolbar](/docs/editor/interface-overview/toolbar)
+从 Rive 编辑器工具栏访问设计和动画工具](/docs/editor/interface-overview/toolbar)
 
-## [​](#hierarchy) Hierarchy
+## [​](#hierarchy) 层级面板 (Hierarchy)
 
-All the objects, assets, controls, and animations that make up your file appear in the Hierarchy. You’ll also find the Assets Panel, and Data Panel here.
-![Hierarchy Pn](images/hierarchy.png)
-[## Hierarchy
+组成文件的所有对象、资产、控制和动画都显示在层级面板中。你还可以在这里找到资产面板 (Assets Panel) 和数据面板 (Data Panel)。
+![层级面板 Pn](images/hierarchy.png)
+[## 层级面板 (Hierarchy)
 
-The Hierarchy is a tree view, which shows both the parent-child relationships between objects on the stage as well as the order in which they are rendered. Learn about the Hierarchy by either watching the video or reading more below.](/docs/editor/interface-overview/hierarchy)
+层级面板是一个树状视图，它既显示了舞台上对象之间的父子关系，也显示了它们的渲染顺序。通过观看视频或阅读下文来了解层级面板。](/docs/editor/interface-overview/hierarchy)
 
-## [​](#inspector) Inspector
+## [​](#inspector) 检查器 (Inspector)
 
-The Inspector allows you to adjust the properties for the currently selected object, whether that’s an object on the stage, timeline, or state machine.
-![Inspector Pn](images/inspector.png)
-Read more on the Inspector page.
-[## Inspector
+检查器允许你调整当前选中对象的属性，无论该对象是在舞台上、时间轴 (Timeline) 上还是状态机 (State Machine) 中。
+![检查器 Pn](images/inspector.png)
+在检查器页面了解更多信息。
+[## 检查器 (Inspector)
 
-An object’s editable properties can be found in the Inspector. The Inspector changes dynamically depending on your selected object and where you are in the editor.](/docs/editor/interface-overview/inspector)
+对象的待编辑属性可以在检查器中找到。检查器会根据你选择的对象以及你在编辑器中所处的位置动态变化。](/docs/editor/interface-overview/inspector)
 
-## [​](#stage) Stage
+## [​](#stage) 舞台 (Stage)
 
-The Stage refers to the central area between the Toolbar, the Hierarchy, and the Inspector. Here you can create the artboards that are the foundations of your designs and animations within Rive.
-![Stage Pn](images/stage.png)
-Read more on the Stage page:
-[## Stage
+舞台是指工具栏、层级面板和检查器之间的中央区域。在这里，你可以创建画板 (Artboards)，它是你在 Rive 中进行设计和制作动画的基础。
+![舞台 Pn](images/stage.png)
+在舞台页面了解更多信息：
+[## 舞台 (Stage)
 
-The Stage is an infinite canvas where you can place artboards containing all your graphics.](/docs/editor/interface-overview/stage)
+舞台是一个无限的画布，你可以在其中放置包含所有图形的画板。](/docs/editor/interface-overview/stage)
 
-## [​](#timeline) Timeline
+## [​](#timeline) 时间轴 (Timeline)
 
-![Clean Shot2025 06 26at11 33 04@2x Pn](images/CleanShot2025-06-26at11.33.04@2x.png)
-The Timeline surfaces from the bottom of the screen upon entering animate mode. Here you can create new states, access playback controls, settings, and set keyframes for object parameters. Select an timeline from the left-hand list to switch between the respective timelines.
-Read more on the Timeline page:
-[## Timeline
+![时间轴示例 Pn](images/CleanShot2025-06-26at11.33.04@2x.png)
+进入动画模式 (Animate Mode) 后，时间轴会从屏幕底部升起。在这里，你可以创建新的动画状态、访问播放控制、设置以及为对象参数设置关键帧 (Keyframes)。从左侧列表中选择一个时间轴，可以在各个时间轴之间切换。
+在时间轴页面了解更多信息：
+[## 时间轴 (Timeline)
 
-The Rive interface displays a timeline with playback controls and options for the current animation in Animate mode. A list of all animations is displayed to the left of the Timeline. Keep in mind that these are animations for the currently active artboard.](/docs/editor/animate-mode/timeline)
+Rive 界面显示了一个带有播放控制的时间轴，以及用于在动画模式下进行当前动画配置的选项。时间轴左侧显示了所有动画的列表。请记住，这些都是当前活动画板的动画。](/docs/editor/animate-mode/timeline)
 
-## [​](#state-machine-graph) State Machine graph
+## [​](#state-machine-graph) 状态机图表 (State Machine Graph)
 
-![Clean Shot2025 06 26at11 33 28@2x Pn](images/CleanShot2025-06-26at11.33.28@2x.png)
-When a state machine is selected, the Timeline is replaced by a graph. This is where you’ll be working on the state machine.
-Read more on the State Machine page.
-[## State Machine
+![状态机示例 Pn](images/CleanShot2025-06-26at11.33.28@2x.png)
+当选中状态机时，时间轴会被图表取代。这就是你进行状态机工作的地方。
+在状态机页面了解更多信息。
+[## 状态机 (State Machine)
 
-State Machines are a visual way to connect animations together and define the logic that drives the transitions.](/docs/editor/state-machine/state-machine)
-
-[Toolbar](/docs/editor/interface-overview/toolbar)
+状态机是一种直观地将动画连接在一起并定义驱动过渡逻辑的方式。](/docs/editor/state-machine/state-machine)

@@ -1,90 +1,92 @@
-State Machines
+状态机 (State Machines)
 
-# States
+# 状态 (States)
 
-States are simply timeline animations that can play at any point in your state machine. A state could be as simple as changing the color and position of an object, or as complex as blending multiple timelines together.
-There are a few types of states that you’ll end up using as you work with the State Machine, including Default States, Single animations, and Blend States. We’ll explore each of these below.
+状态实际上就是可以在状态机中任意时刻播放的时间轴动画。一个状态可以简单到仅仅改变对象的颜色和位置，也可以复杂到混合多个时间轴。
+在使用状态机时，你最终会用到几种类型的状态，包括默认状态 (Default States)、单一动画状态 (Single animations) 和混合状态 (Blend States)。我们在下面逐一探讨。
 
-## [​](#default-states) Default States
+## [​](#default-states) 默认状态 (Default States)
 
-The Default States are the states that, by default, are added to every State Machine.
-![Default States](images/42815967-dd47-4da1-ba8a-4fc12f64d972.webp)
+默认状态是默认添加到每个状态机的状态。
+![默认状态](images/42815967-dd47-4da1-ba8a-4fc12f64d972.webp)
 
-### [​](#entry-state) Entry State
+### [​](#entry-state) 入口状态 (Entry State)
 
-The Entry State is the state that your State Machine will start from. You’ll notice that by default, your state machine will already have an animation attached to the Entry State, but you can change this animation at any time. Note that you can connect multiple animations to the Entry State if you need I.E. you want to build a switch that can start in either the on or off state.
-![Using the Entry state](images/image_1.png)
+入口状态是状态机启动时的起始状态。你会注意到，默认情况下，你的状态机已经在入口状态上连接了一个动画，但你可以随时更改此动画。请注意，如果需要，你可以将多个动画连接到入口状态，例如你想构建一个既可以在“开”也可以在“关”状态下启动的开关。
+![使用入口状态](images/image_1.png)
 
-### [​](#exit-state) Exit State
+### [​](#exit-state) 出口状态 (Exit State)
 
-The Exit State tells the State Machine layer to stop playing. This niche state has uses when multiple layers are being used.
+出口状态告诉状态机图层停止播放。这种特殊状态在使用多图层时会有用武之地。
 
-### [​](#any-state) Any State
+### [​](#any-state) 任意状态 (Any State)
 
-Unlike normal states, states connected to the Any State can be played at any time, regardless of which state your state machine is in. Any States are great to use when you want to create an array of states that can be activated at any time, such as changing the skin of a character.
-![Rating system using the Any state](images/image_2.png)
+与普通状态不同，连接到任意状态的状态可以随时播放，无论你的状态机当前处于哪个状态。当你想要创建一组可以随时激活的状态（例如更改角色的皮肤）时，任意状态非常有用。
+![使用任意状态的评分系统](images/image_2.png)
 
-## [​](#animation-states) Animation States
+## [​](#animation-states) 动画状态 (Animation States)
 
-Animation states include all states other than the default states added to a State Machine. These states will control the look and motion of your interactive content. There are three types of animation states; Single Animation, 1D blend, and Direct blend states.
-To add a State to the Graph, you can drag and drop an animation from the Animations List directly onto the Graph. Notice that this will create a Single Animation state. You can change the state type using the inspector.
-![Drop and drop State onto the Graph](images/image_3.png)
-Additionally, you can right-click on the graph and create a blank state of any type with no associated timelines.
-![Image](images/image_4.png)
-Right-click to add State
-To assign a timeline to a state, use the timeline dropdown in the inspector.
+动画状态包括添加到状态机的所有非默认状态。这些状态将控制你交互式内容的外观和动作。动画状态有三种类型：单一动画、1D 混合和直接混合状态。
+要向图表添加状态，你可以将动画列表中的动画直接拖放到图表上。注意这将创建一个单一动画状态。你可以使用检查器更改状态类型。
+![拖放状态到图表](images/image_3.png)
+此外，你可以在图表上右键单击并创建任何类型的空白状态，不关联任何时间轴。
+![右键添加状态](images/image_4.png)
+要将时间轴分配给状态，请使用检查器中的时间轴下拉菜单。
 
-### [​](#single-animation-state) Single animation state
+### [​](#single-animation-state) 单一动画状态 (Single animation state)
 
-Any timeline that we create can be used as a single animation state. Depending on the type of animation we are using, the single animation state could be a one-shot, looping, or ping-pong state. In most cases, you’ll be using single animation states to create most of your state machines.
+我们创建的任何时间轴都可以用作单一动画状态。根据我们使用的动画类型，单一动画状态可以是一次性播放、循环播放或往复播放 (ping-pong) 状态。在大多数情况下，你将使用单一动画状态来创建大部分状态机。
 
-### [​](#blend-states) Blend states
+### [​](#blend-states) 混合状态 (Blend states)
 
-A Blend State is any state that blends together two or more timeline animations. We use these states for content like loading bars, health systems, scrolling interactions, and dynamic face rigs.
-There are two types of blend states; 1D and Direct Blend states.
+混合状态是将两个或更多时间轴动画混合在一起的任何状态。我们将这些状态用于加载条、生命值系统、滚动交互和动态面部绑定等内容。
+混合状态有两种类型：1D 混合和直接混合状态。
 
-#### [​](#1d-blend-state:) 1D Blend state:
+#### [​](#1d-blend-state:) 1D 混合状态 (1D Blend state):
 
-A 1D Blend State allows us to mix multiple timelines together with a single numerical input. This state works by ramping up one animation and ramping down the other while you increase or decrease a number input. Note that this mixing is not linear, but is additive and could give you unexpected results.
-![Health bar using Blend state](images/image_5.png)
-**Configuring a 1D Blend State:**
-You’ll want to start by creating a few timelines for your Blend state. Keep in mind that it’s often best to use timelines with only a few properties keyed. In this health bar example, only the X scale is keyed.
-![Image](images/image_6.png)
-Timelines for health bar
-After adding a 1D Blend State to the graph, use the Inspector to configure the state.
-![Add Blend state](images/image_7.png)
-First, add the number input you want to drive the blend using the dropdown. If you haven’t created one yet, you’ll notice that nothing appears here.
-![Create and add number input to Blend state](images/image_8.png)
-The plus button that appears below the number input allows you to add timelines to your blend state. Use the dropdown to assign a specific timeline. Note that you can add as many timelines as you’d like.
-![Add timelines to the Blend state](images/image_9.png)
-Next, you need to define a numerical range that your blend state will work between. This particular blend works between 0 and 100.
-![Image](images/image_10.png)
-Notice that once you define the range, a graphic appears above the input dropdown, visually representing how your animations will mix. When the state machine is active, as you increase or decrease your input within the defined range, you’ll see a visual representation move across that graph, showing you the mix of your timelines.
-![Blend State in action](images/image_11.png)
+1D 混合状态允许我们通过单个数值输入将多个时间轴混合在一起。这种状态的工作原理是在你增加或减少数字输入时，增强一个动画并减弱另一个动画。请注意，这种混合不是线性的，而是叠加的，可能会产生意想不到的结果。
+![使用混合状态的生命值条](images/image_5.png)
 
-#### [​](#additive-blend-state:) Additive Blend state:
+**配置 1D 混合状态：**
+首先为你的混合状态创建几个时间轴。请记住，最好使用仅对几个属性设置关键帧的时间轴。在这个生命值条示例中，只有 X 轴缩放设置了关键帧。
+![生命值条的时间轴](images/image_6.png)
+将 1D 混合状态添加到图表后，使用检查器配置该状态。
+![添加混合状态](images/image_7.png)
+首先，使用下拉菜单添加你想要用来驱动混合的数字输入。如果你还没有创建，你会注意到这里什么也显示不出来。
+![创建并添加数字输入](images/image_8.png)
+数字输入下方出现的加号按钮允许你向混合状态添加时间轴。使用下拉菜单分配特定时间轴。请注意，你可以添加任意数量的时间轴。
+![向混合状态添加时间轴](images/image_9.png)
+接下来，你需要定义混合状态工作的数值范围。此特定混合在 0 到 100 之间工作。
+![数值范围设置](images/image_10.png)
+注意，一旦定义了范围，输入下拉菜单上方会出现一个图表，直观地表示你的动画将如何混合。当状态机处于活动状态时，随着你在定义范围内增加或减少输入，你会看到一个视觉指示器在图表上移动，向你展示时间轴的混合情况。
+![混合状态运行中](images/image_11.png)
 
-An Additive Blend state allows you to blend together multiple timelines using multiple number inputs. This allows us to create unique poses and facial positions by mixing multiple animations together. While working with an Additive Blend, you’ll either be mixing an animation by value or input. Read more below.
-![Using Additive Blend for facial animations](images/image_12.png)
-**Value vs Input blend**
-When adding animations to an Additive blend state, you’ll be prompted to either add a Blend by Value animation or a Blend by Input animation.
-![Adding timeline to Additive Blend](images/image_13.png)
-A Blend by Value timeline can be thought of as the baseline animation, or default pose. This value is not tied to an input, so it can’t be used to control the state machine. Instead, this value describes its mix weighting.
-An Input blend is an animation that is mixed with the default pose or motion via a number input. Each of your different Input blends should have their own number input.
+#### [​](#additive-blend-state:) 叠加混合状态 (Additive Blend state):
 
-## [​](#additional-state-options) Additional State Options
+叠加混合状态允许你使用多个数字输入将多个时间轴混合在一起。这允许我们通过混合多个动画来创建独特的姿势和面部位置。使用叠加混合时，你要么按值混合动画，要么按输入混合。请阅读下文了解更多。
+![用于面部动画的叠加混合](images/image_12.png)
 
-When you select a state on the State Machine Graph, you’ll have a number of options that you can change.
-**Change state type**
-The top three icons allow you to change the type of state. You can select from single animation, 1D blend, and Additive blend.
-![Convert state type](images/image_14.png)
-**Change animation**
-You can use the dropdown to change which animation is assigned to the current state.
-![Changing animation on a state](images/image_15.png)
-**Speed**
-You can alter the playback speed of a state by changing this value. Note that you can play animations forward with a positive value, and backward with a negative value.
-![Change animation speed](images/image_16.png)
-**Transitions**
-You can see any transitions that leave from the selected state. You also have the option to ignore specific transitions by turning off the eye icon.
+**数值混合 vs 输入混合**
+向叠加混合状态添加动画时，系统会提示你添加“按值混合 (Blend by Value)”动画或“按输入混合 (Blend by Input)”动画。
+![向叠加混合添加时间轴](images/image_13.png)
+按值混合的时间轴可以被视为基线动画或默认姿势。此值不与输入绑定，因此无法用于控制状态机。相反，此值描述了其混合权重。
+输入混合是通过数字输入与默认姿势或运动混合的动画。每个不同的输入混合都应该有自己的数字输入。
 
-[Overview](/docs/editor/state-machine/state-machine)[Inputs](/docs/editor/state-machine/inputs)
+## [​](#additional-state-options) 其他状态选项 (Additional State Options)
+
+当你在状态机图表上选择一个状态时，你可以更改许多选项。
+
+**更改状态类型**
+顶部的三个图标允许你更改状态的类型。你可以选择单一动画、1D 混合和叠加混合。
+![转换状态类型](images/image_14.png)
+
+**更改动画**
+你可以使用下拉菜单更改当前状态分配的动画。
+![更改状态上的动画](images/image_15.png)
+
+**速度 (Speed)**
+你可以通过更改此值来改变状态的播放速度。请注意，正值表示向前播放动画，负值表示向后播放。
+![更改动画速度](images/image_16.png)
+
+**过渡 (Transitions)**
+你可以看到从选定状态出发的所有过渡。你也通过关闭眼睛图标来忽略特定过渡。

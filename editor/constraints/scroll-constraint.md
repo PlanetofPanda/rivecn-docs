@@ -1,9 +1,7 @@
-Constraints
+约束
 
-# Scroll Constraints
+# 滚动约束 (Scroll Constraints)
 
-Scroll Constraints are special types of Constraints that apply to Layout objects and allow their children to scroll. This supports building content that scrolls as well as scroll bars.
-Learn more about [Layouts](/docs/editor/layouts/layouts-overview).
-Learn more about [Scrolling](/docs/editor/layouts/scrolling).
-
-[Follow Path Constraint](/docs/editor/constraints/follow-path-constraint)[Overview](/docs/editor/animate-mode/animate-mode-overview)
+滚动约束是应用于布局 (Layout) 对象的特殊类型约束，允许其子级进行滚动。它支持构建可滚动的内容以及滚动条。
+在此处了解更多相关内容：[布局 (Layouts)](/docs/editor/layouts/layouts-overview)。
+在此处了解更多相关内容：[滚动 (Scrolling)](/docs/editor/layouts/scrolling)。

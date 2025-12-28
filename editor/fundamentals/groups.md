@@ -1,28 +1,27 @@
-Fundamentals
+基础知识
 
-# Groups
+# 分组 (Groups)
 
-Use groups to organize your graphics or to add extra transform spaces.
+使用分组来组织你的图形或添加额外的变换空间。
 
-Activate the Group tool with the `G` shortcut. Click anywhere in an artboard to add a new group. Now drag and drop objects into the group in the Hierarchy.
-You can also wrap a selection of shapes into a group with `⌘`+`G` in macOS or `Ctrl`+`G` in Windows.
-Unwrap a group with `⌘`+`Shift`+`G` in macOS or `Ctrl`+`Shift` +`G` in Windows.
+通过快捷键 `G` 激活分组合工具。在画板中的任何位置点击以添加一个新分组。现在可以在层级面板 (Hierarchy) 中将对象拖放到该分组中。
+你也可以在 macOS 中使用 `⌘`+`G` 或在 Windows 中使用 `Ctrl`+`G` 将选中的形状包装到一个分组中。
+在 macOS 中使用 `⌘`+`Shift`+`G` 或在 Windows 中使用 `Ctrl`+`Shift`+`G` 来解构分组。
 
-## [​](#group-style) Group Style
+## [​](#group-style) 分组样式 (Group Style)
 
-The Style property of a group can be set to Group or Target.
+分组的样式 (Style) 属性可以设置为“普通 (Group)”或“目标 (Target)”。
 
-### [​](#group) Group
+### [​](#group) 普通分组 (Group)
 
-Group is the default behavior, which behaves as described in the [Selecting and Navigating Groups](/docs/editor/fundamentals/selecting-and-navigating-groups).
+“普通 (Group)”是默认行为，其表现如 [选择和浏览分组](/docs/editor/fundamentals/selecting-and-navigating-groups) 中所述。
 
-### [​](#target) Target
+### [​](#target) 目标 (Target)
 
-The Target option draws a different icon on the Stage that is always visible, regardless of whether the group has children (usually a group only displays an icon if it is empty). When a group displays as a Target, it also disables the functionality described in [Selecting and Navigating Groups](/docs/editor/fundamentals/selecting-and-navigating-groups) section. This means you can immediately click through to any child of the group (no need to double-click, enter/esc, or Deep Select).
-![Groups change Target](images/groups-targets.gif)
-The Target option is particularly useful when working with Constraints.
-[## Constraints
+“目标 (Target)”选项在舞台上绘制一个不同的图标，该图标始终可见，无论该分组是否有子级（通常分组只有在为空时才显示图标）。当一个分组显示为“目标”时，它也会禁用 [选择和浏览分组](/docs/editor/fundamentals/selecting-and-navigating-groups) 章节中描述的功能。这意味着你可以直接点击进入该分组的任何子级（无需双击、Enter/Esc 或深层选择）。
+![分组更改目标演示](images/groups-targets.gif)
+“目标”选项在处理约束 (Constraints) 时特别有用。
 
-Constraints are a way to control the properties of an object through another target object. Some constraints can set limits on these properties (and their hierarchical relationships), while others can copy properties from one object to another.](/docs/editor/constraints)
+[## 约束 (Constraints)
 
-[Procedural Shapes](/docs/editor/fundamentals/procedural-shapes)[Selecting and Navigating Groups](/docs/editor/fundamentals/selecting-and-navigating-groups)
+约束是通过另一个目标对象来控制一个对象属性的一种方式。某些约束可以对这些属性（及其层级关系）设置限制，而另一些约束则可以将属性从一个对象复制到另一个对象。](/docs/editor/constraints)

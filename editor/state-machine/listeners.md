@@ -1,102 +1,103 @@
-State Machines
+状态机 (State Machines)
 
-# Listeners
+# 监听器 (Listeners)
 
-Listeners let designers create interactive behavior without the use of code.
+监听器让设计师无需编写代码即可创建交互行为。
 
-Listeners let designers create interactive behaviors—like clicks, hovers, and drags—directly within Rive, without needing code. For example, you can attach Pointer Enter, Pointer Exit, and Click listeners to a button. When triggered, these listeners can update data bindings, set inputs, fire events, and more—enabling dynamic, interactive experiences at runtime.
+监听器让设计师可以直接在 Rive 中创建交互行为——如点击、悬停和拖动——而无需代码。例如，你可以为按钮附加指针进入 (Pointer Enter)、指针移出 (Pointer Exit) 和点击 (Click) 监听器。触发时，这些监听器可以更新数据绑定、设置输入、触发事件等，从而在运行时实现动态的交互体验。
 
-#### [​](#creating-a-new-listener) Creating a new Listener
+#### [​](#creating-a-new-listener) 创建新监听器
 
-1. In the Animations tab, select your State Machine.
-2. In the Listeners tab, click the plus icon.
+1. 在动画 (Animations) 选项卡中，选择你的状态机。
+2. 在监听器 (Listeners) 选项卡中，点击加号图标。
 
-If you have an object selected when creating a listener, it will automatically be designated as the target.
+如果在创建监听器时选择了一个对象，它将自动被指定为目标。
 
-![Clean Shot2025 06 12at14 46 58 Gi](images/CleanShot2025-06-12at14.46.58.gif)
-With the new listener selected, you’ll see its options displayed in a new panel at the bottom of the State Machine Graph and to the right of the Graph.
+![创建监听器演示 Gi](images/CleanShot2025-06-12at14.46.58.gif)
+选中新监听器后，你会在状态机图表底部和图表右侧的新面板中看到显示的选项。
 
-# [​](#elements-of-a-listener) Elements of a Listener
+# [​](#elements-of-a-listener) 监听器的要素 (Elements of a Listener)
 
-A listener consists of three parts: a Target, a User Action, and a Listener Action.
+监听器由三部分组成：目标 (Target)、用户动作 (User Action) 和监听器动作 (Listener Action)。
 
-### [​](#target) Target
+### [​](#target) 目标 (Target)
 
-The Target determines where to listen for the user action.
-**Hit Areas**
-In most cases the Target defines the interactive area that responds to user actions—similar to a hitbox in game development. When a user interacts with this area (e.g., by clicking or hovering), the associated listener is triggered.
-It’s usually best to use shapes as targets—for example, an ellipse or rectangle with 0% opacity. If you use a Group as a target, the shapes within the group will serve as the interactive area.
-To select a target, click the Target icon and choose an object from the artboard or the Hierarchy panel.
-![Clean Shot2025 06 12at14 52 27 Gi](images/CleanShot2025-06-12at14.52.27.gif)
-Note that having an object selected when you create a listener will automatically assign the selected object as the target of the listener.
-**Listening to Events on Components**
+目标决定了在哪里监听用户动作。
 
-We strongly recommend using data binding to communicate between artboards, rather than relying on nested Events.
+**点击区域 (Hit Areas)**
+在大多数情况下，目标定义了响应用户动作的交互区域——类似于游戏开发中的碰撞箱 (hitbox)。当用户与此区域交互（例如点击或悬停）时，关联的监听器就会被触发。
+通常最好使用形状作为目标——例如，不透明度为 0% 的椭圆或矩形。如果你使用分组 (Group) 作为目标，分组内的形状将充当交互区域。
+要选择目标，请点击目标图标，然后从画板或层级面板中选择一个对象。
+![选择目标演示 Gi](images/CleanShot2025-06-12at14.52.27.gif)
+请注意，在创建监听器时选中对象会自动将选中的对象分配为监听器的目标。
 
-Setting an Artboard or Component as the target allows you to listen for Events fired from that Artboard.
-**Opaque Target**
-The Opaque Target option determines whether or not pointer events will pass through the hit area, potentially triggering multiple Listeners at once.
-![Clean Shot2025 06 12at15 11 08 Gi](images/CleanShot2025-06-12at15.11.08.gif)
+**监听组件上的事件**
+我们强烈建议使用数据绑定在画板之间进行通信，而不是依赖嵌套事件。
 
-# [​](#user-action) User Action
+将画板或组件设置为目标允许你监听从该画板触发的事件。
 
-User Actions are the interactions the listener is listening for. The drop-down menu below the Target button allows you to change which User Action the Listener checks for.
-![Clean Shot2025 06 12at15 14 19 Gi](images/CleanShot2025-06-12at15.14.19.gif)
-Available actions include:
-**Pointer Down** – Mouse down or finger press.
-**Pointer Up** – Releasing a mouse click or finger press.
-**Pointer Enter** – A mouse or finger entering the target area.
-**Pointer Exit** – A mouse or finger exiting the target area.
-**Pointer Move** – Any mouse or finger movement within the target area.
-**Click** – A combination of pointer down and pointer up within the same target area.
-**Listen for Event** – Only visible if the target is an Artboard or Component. If multiple events exist, use the dropdown to select the specific one.
+**不透明目标 (Opaque Target)**
+不透明目标选项决定了指针事件是否会穿过点击区域，从而可能一次触发多个监听器。
+![不透明目标演示 Gi](images/CleanShot2025-06-12at15.11.08.gif)
 
-# [​](#listener-action) Listener Action
+# [​](#user-action) 用户动作 (User Action)
 
-A Listener Action defines what happens when the user interaction occurs.
-To add a Listener Action, click the plus icon in the panel below the State Machine Graph. You can add multiple actions to a single listener.
-![Clean Shot2025 06 12at15 16 20 Gi](images/CleanShot2025-06-12at15.16.20.gif)
+用户动作是监听器正在监听的交互。目标按钮下方的下拉菜单允许你更改监听器检查的用户动作。
+![用户动作菜单演示 Gi](images/CleanShot2025-06-12at15.14.19.gif)
+可用的动作包括：
+**指针按下 (Pointer Down)** – 鼠标按下或手指按下。
+**指针抬起 (Pointer Up)** – 释放鼠标点击或手指按下。
+**指针进入 (Pointer Enter)** – 鼠标或手指进入目标区域。
+**指针移出 (Pointer Exit)** – 鼠标或手指离开目标区域。
+**指针移动 (Pointer Move)** – 鼠标或手指在目标区域内的任何移动。
+**点击 (Click)** – 在同一目标区域内结合了指针按下和指针抬起。
+**监听事件 (Listen for Event)** – 仅当目标是画板或组件时可见。如果存在多个事件，请使用下拉菜单选择特定事件。
 
-## [​](#view-model-change) **View Model Change**
+# [​](#listener-action) 监听器动作 (Listener Action)
 
-Updates values within your View Model Instance. This is the preferred way to communicate from your Rive file to your runtime code. By default, listeners are set to View Model Change, unless an artboard or component instance is the target of the Listener.
+监听器动作定义了发生用户交互时会发生什么。
+要添加监听器动作，请点击状态机图表下方控制面板中的加号图标。你可以向单个监听器添加多个动作。
+![添加监听器动作演示 Gi](images/CleanShot2025-06-12at15.16.20.gif)
 
-### [​](#view-model-drop-down) **View Model Drop Down**
+## [​](#view-model-change) **视图模型更改 (View Model Change)**
 
-The View Model Dropdown lets you select which View Model Property you want the Listener to change.
-![Clean Shot2025 06 12at15 18 21 Gi](images/CleanShot2025-06-12at15.18.21.gif)
-Note that listeners can change the properties of any View Model in the file, even if it isn’t assigned to the Artboard.
+更新视图模型实例中的值。这是从 Rive 文件与运行时代码通信的首选方式。默认情况下，监听器设置为“视图模型更改”，除非监听器的目标是画板或组件实例。
 
-### [​](#value-vs-property) **Value vs Property**
+### [​](#view-model-drop-down) **视图模型下拉菜单**
 
-Once you’ve selected which property you’d like the Listener to modify, you can set it to a specific Value or to equal a different view model property.
-**Value**
-If you select Value, you can use the input field to change the specific value you’d like the property set to. The value type changes depending on the property.
-![Clean Shot2025 06 12at15 24 51 Gi](images/CleanShot2025-06-12at15.24.51.gif)
-**View Model Property**
-Selecting a property will set the View Model Property in the listener equal to another.
-![Clean Shot2025 06 12at15 31 06 Gi](images/CleanShot2025-06-12at15.31.06.gif)
-Note that we can set the View Model Property to be equal to itself.
-**Adding a Converter**
-If we choose to set a View Model Property equal to another View Model Property, the converter icon appears to the right of the View Model Property. This lets us apply a converter to a property.
-![Clean Shot2025 06 12at15 37 13 Gi](images/CleanShot2025-06-12at15.37.13.gif)
-  
-For example, we can set Number to Number, but attach an add one converter. Every time this listener fires, we can increase our Number property by one.
+视图模型下拉菜单允许你选择希望监听器更改哪个视图模型属性。
+![视图模型下拉菜单演示 Gi](images/CleanShot2025-06-12at15.18.21.gif)
+请注意，监听器可以更改文件中任何视图模型的属性，即使该模型未分配给画板。
 
-### [​](#report-event) **Report Event**
+### [​](#value-vs-property) **值 vs 属性 (Value vs Property)**
 
-Fires an event each time the user action is triggered. This is the default option when an artboard or component instance is the target of a listener.
+选择要让监听器修改的属性后，你可以将其设置为特定值 (Value) 或使其等于另一个视图模型属性 (View Model Property)。
 
-### [​](#align-target) **Align Target**
+**值 (Value)**
+如果选择“值”，你可以使用输入字段更改你希望属性设置的具体值。值的类型根据属性而变化。
+![设置值演示 Gi](images/CleanShot2025-06-12at15.24.51.gif)
 
-The Align Target action positions a target object to follow the pointer when the specified user action occurs within the listener area.
-Use the Target Picker to select the object you want to align.
-Enable Preserve Offset to maintain the original distance between the object and the pointer when the action was triggered. When unchecked, the object will align directly to the pointer’s center.
+**视图模型属性 (View Model Property)**
+选择属性会将监听器中的视图模型属性设置为等于另一个属性。
+![设置属性演示 Gi](images/CleanShot2025-06-12at15.31.06.gif)
+请注意，我们可以设置视图模型属性等于其自身。
 
-### [​](#input-change) **Input Change**
+**添加转换器 (Adding a Converter)**
+如果我们选择将一个视图模型属性设置为等于另一个视图模型属性，视图模型属性右侧会出现转换器图标。这允许我们对属性应用转换器。
+![添加转换器演示 Gi](images/CleanShot2025-06-12at15.37.13.gif)
+例如，我们可以将 Number 设置为 Number，但附加一个“加一”转换器。每当此监听器触发时，我们可以将 Number 属性增加 1。
 
-Allows the listener to change a defined input—such as toggling a boolean, firing a trigger, or setting a number input to a specific value.
-  
-This is useful for creating interactive behaviors like hover states or click effects directly on the Artboard.
+### [​](#report-event) **报告事件 (Report Event)**
 
-[Transitions](/docs/editor/state-machine/transitions)[Layers](/docs/editor/state-machine/layers)
+每次触发用户动作时触发一个事件。当画板或组件实例是监听器的目标时，这是默认选项。
+
+### [​](#align-target) **对齐目标 (Align Target)**
+
+对齐目标动作在监听器区域内发生指定的用户动作时，将目标对象定位为跟随指针。
+使用目标拾取器选择要对齐的对象。
+启用“保持偏移 (Preserve Offset)”以维持触发动作时对象与指针之间的原始距离。如果取消选中，对象将直接对齐到指针中心。
+
+### [​](#input-change) **输入更改 (Input Change)**
+
+允许监听器更改已定义的输入——例如切换布尔值、触发触发器 (trigger) 或将数字输入设置为特定值。
+这对于直接在画板上创建交互行为（如悬停状态或点击效果）非常有用。

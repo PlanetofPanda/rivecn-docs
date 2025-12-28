@@ -1,78 +1,79 @@
-Interface Overview
+界面概览
 
-# Inspector
+# 检查器 (Inspector)
 
-The Inspector is located on the right side of the Editor. It shows all of the editable properties of all objects in the Rive editor.
+检查器位于编辑器的右侧。它显示了 Rive 编辑器中所有对象的所有可编辑属性。
 
-# [​](#inspector) Inspector
+# [​](#inspector) 检查器 (Inspector)
 
-An object’s editable properties can be found in the Inspector. The Inspector changes dynamically depending on your selected object and where you are in the editor.
-![Inspector Pn](images/inspector.png)
+对象的待编辑属性可以在检查器中找到。检查器会根据你选择的对象以及你在编辑器中所处的位置动态变化。
+![检查器示例 Pn](images/inspector.png)
 
-## [​](#background-color,-tags,-default-interpolation) Background Color, Tags, Default Interpolation
+## [​](#background-color,-tags,-default-interpolation) 背景颜色、标签、默认插值
 
-When nothing is selected, the Inspector has three sections: Backgrounds, Tags, and Default Interpolation.
-**Background color**
-Found at the top of the Inspector, this section allows you to change the background color of the editor for both Animate and Design modes. This is a helpful way to remind yourself which mode you are currently in.
-![Backgrounds Pn](images/backgrounds.png)
-**Tags**
-Below the background color, you can see, edit, and add new tags to your file. Learn more about tags [here](https://rive.app/docs/editor/tagging).
-![Tags Pn](images/tags.png)
-**Default Interpolation**
-Below Tags is the Default Interpolation for your file.
-![Default Int Pn](images/default_Int.png)
-When you set a key on the timeline, it will use the file’s default interpolation until it’s changed on the timeline. By changing the default interpolation, you can control which interpolation curve is applied to new keys.
+当没有选中任何内容时，检查器包含三个部分：背景、标签和默认插值 (Default Interpolation)。
 
-## [​](#align-and-distribute-tools) Align and Distribute tools
+**背景颜色 (Background color)**
+该部分位于检查器顶部，允许你更改动画 (Animate) 和设计 (Design) 模式下编辑器的背景颜色。这是一个提醒你当前处于哪种模式的有用方法。
+![背景颜色设置 Pn](images/backgrounds.png)
 
-When one or more objects, such as shapes or groups, are selected, the Align tools appear at the top of the inspector. Use them to align or distribute the selected objects. Read more about the Align tools here.
-![Align Pn](images/Align.png)
+**标签 (Tags)**
+在背景颜色下方，你可以查看、编辑和向文件添加新标签。在此处了解更多关于标签的信息：[此处](https://rive.app/docs/editor/tagging)。
+![标签管理 Pn](images/tags.png)
 
-## [​](#layout-and-n-slicing) Layout and N-Slicing
+**默认插值 (Default Interpolation)**
+标签下方是文件的默认插值设置。
+![默认插值设置 Pn](images/default_Int.png)
+当你在时间轴上设置一个关键帧时，它将使用文件的默认插值，直到在时间轴上再次更改。通过更改默认插值，你可以控制应用于新关键帧的插值曲线。
 
-When one or more objects, such as shapes or groups, are selected, the inspector gives the option to layout or n-slice the current selection.
-![L Oand N Pn](images/LOandN.png)
+## [​](#align-and-distribute-tools) 对齐和分布工具 (Align and Distribute tools)
 
-[## Layouts
+当选中一个或多个对象（如形状或分组）时，对齐工具会出现在检查器顶部。使用它们来对齐或分布所选对象。在“对齐工具”页面了解更多。
+![对齐工具 Pn](images/Align.png)
 
-Layouts let you build responsive designs.](https://rive.app/docs/editor/layouts/layouts-overview)[## N-Slicing
+## [​](#layout-and-n-slicing) 布局和 N-切片 (Layout and N-Slicing)
 
-N-slicing lets you stretch or repeat parts of raster and vector designs.](https://rive.app/docs/editor/layouts/n-slicing)
+当选中一个或多个对象（如形状或分组）时，检查器提供对当前选择进行布局 (Layout) 或 N-切片 (N-Slice) 的选项。
+![布局和切片选项 Pn](images/LOandN.png)
 
-## [​](#transform-properties) Transform properties
+[## 布局 (Layouts)
 
-The transform properties of an object appear below the Align tools. Generally, these properties include position, scale, and rotation, but they can also include width and height if you have a path layer selected.
-![Transform Pn](images/Transform.png)
+布局让你能够构建响应式设计。](https://rive.app/docs/editor/layouts/layouts-overview)[## N-切片 (N-Slicing)
 
-## [​](#layer-properties) Layer properties
+N-切片让你能够拉伸或重复位图和矢量设计的某些部分。](https://rive.app/docs/editor/layouts/n-slicing)
 
-Below the transform properties, you’ll find several properties that allow you to customize the look of some objects on the stage. These properties include blend mode, opacity, fill, and stroke.
-![Layer Pn](images/Layer.png)
+## [​](#transform-properties) 变换属性 (Transform properties)
 
-## [​](#additional-properties) Additional properties
+对象的变换属性出现在对齐工具下方。通常，这些属性包括位置 (Position)、缩放 (Scale) 和旋转 (Rotation)，但如果你选中了路径层，它们还可能包括宽度 (Width) 和高度 (Height)。
+![变换属性 Pn](images/Transform.png)
 
-Below the Layer properties, you’ll find many additional properties that you can add such as Clipping, Constraints, Custom Draw Order, and Selection Colors
-![Additional Pn](images/additional.png)
+## [​](#layer-properties) 图层属性 (Layer properties)
 
-[## Manipulating Shapes
+变换属性下方有几个属性，允许你自定义舞台上某些对象的外观。这些属性包括混合模式 (Blend mode)、不透明度 (Opacity)、填充 (Fill) 和描边 (Stroke)。
+![图层属性 Pn](images/Layer.png)
 
-The Rive editor gives you multiple ways to manipulate your graphics to create the animation that you want. I](../manipulating-shapes/manipulating-shapes)[## Constraints
+## [​](#additional-properties) 其他属性 (Additional properties)
 
-Constraints are a way to control the properties of an object through another target object.](../constraints/)[## Animate Mode
+在图层属性下方，你会发现许多可以添加的其他属性，例如剪裁 (Clipping)、约束 (Constraints)、自定义绘制顺序 (Custom Draw Order) 和选择颜色 (Selection Colors)。
+![其他属性 Pn](images/additional.png)
 
-Rive has two distinct modes, Design and Animate.](../animate-mode/)
+[## 操纵形状 (Manipulating Shapes)
 
-### [​](#motion-and-state-properties) Motion and State Properties
+Rive 编辑器提供了多种方式来操纵图形，以创建所需的动画。](../manipulating-shapes/manipulating-shapes)[## 约束 (Constraints)
 
-This section shows customizable properties when Keys, Transitions, or States are selected.
-![Motioninspector Pn](images/motioninspector.png)
+约束是通过另一个目标对象来控制一个对象属性的一种方式。](../constraints/)[## 动画模式 (Animate Mode)
 
-[## Interpolation Panel
+Rive 有两种不同的模式：设计 (Design) 和动画 (Animate)。](../animate-mode/)
 
-Selecting a key brings up the interpolation panel.](https://rive.app/docs/editor/animate-mode/interpolation-easing)[## Transition Properties
+### [​](#motion-and-state-properties) 运动和状态属性 (Motion and State Properties)
 
-Selecting a transition will show customizable transition properties.](https://rive.app/docs/editor/state-machine/transitions)[## State Properties
+当选中关键帧、过渡 (Transitions) 或状态 (States) 时，此部分会显示可自定义的属性。
+![运动检查器 Pn](images/motioninspector.png)
 
-State properties are customizable by selecting a state.](https://rive.app/docs/editor/state-machine/states)
+[## 插值面板 (Interpolation Panel)
 
-[Hierarchy](/docs/editor/interface-overview/hierarchy)[Stage](/docs/editor/interface-overview/stage)
+选中关键帧会弹出插值面板。](https://rive.app/docs/editor/animate-mode/interpolation-easing)[## 过渡属性 (Transition Properties)
+
+选择一个过渡将显示可自定义的过渡属性。](https://rive.app/docs/editor/state-machine/transitions)[## 状态属性 (State Properties)
+
+通过选择一个状态可以自定义状态属性。](https://rive.app/docs/editor/state-machine/states)

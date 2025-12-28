@@ -1,28 +1,26 @@
-Fundamentals
+基础知识
 
-# Design vs Animate Mode
+# 设计 vs 动画模式 (Design vs Animate Mode)
 
-The Rive Editor has two distinct modes, Design and Animate. Switching between modes changes the interface to show the appropriate tools and options.
+Rive 编辑器有两种不同的模式：设计 (Design) 和动画 (Animate)。在模式之间切换会更改界面，以显示相应的工具和选项。
 
-## [​](#design-mode) Design Mode
+## [​](#design-mode) 设计模式 (Design Mode)
 
-Use Design Mode to prepare your graphics for animation. This is where you can design your own graphics with Rive’s [tools](../interface-overview/toolbar), [import graphics from other software](./importing-assets), or rig your graphics with [bones](../manipulating-shapes/bones), [transform spaces](./transform-spaces), [layouts](https://rive.app/docs/editor/layouts/layouts-overview), [joysticks](https://rive.app/docs/editor/manipulating-shapes/joysticks), and [constraints](../constraints/).
-![Image](images/Design_Mode.png)
-Design Mode is the default mode for any file that doesn’t have any animations created. The mode exists because Rive allows you to attach multiple animations to a single artboard, so you need a place to set up and create those graphics.
+使用设计模式为动画准备图形。在这里，你可以使用 Rive 的 [工具](../interface-overview/toolbar) 设计自己的图形、[从其他软件导入图形](./importing-assets)，或者使用 [骨骼 (Bones)](../manipulating-shapes/bones)、[变换空间 (Transform Spaces)](./transform-spaces)、[布局 (Layouts)](https://rive.app/docs/editor/layouts/layouts-overview)、[摇杆 (Joysticks)](https://rive.app/docs/editor/manipulating-shapes/joysticks) 和 [约束 (Constraints)](../constraints/) 来绑定 (Rig) 你的图形。
+![设计模式示例](images/Design_Mode.png)
+设计模式是任何尚未创建动画的文件的默认模式。该模式存在的原因是 Rive 允许你为一个画板附加多个动画，因此你需要一个地方来设置和创建这些图形。
 
-## [​](#animate-mode) Animate Mode
+## [​](#animate-mode) 动画模式 (Animate Mode)
 
-Use [Animate Mode](../animate-mode/) to create all of the [States](https://rive.app/docs/editor/state-machine/states) and [State Machine](../state-machine/) for your artboard.
-When you switch to Animate Mode, the UI updates to display a list of Timelines and State Machine associated with the [active artboard](./artboards#active-artboard). The [Inspector](https://rive.app/docs/editor/interface-overview/inspector) also updates to show key buttons next to any property that can be animated.
-![Animate Mode Pn](images/Animate_Mode.png)
-Selecting any Animation from the Animations list will bring up a timeline view, while selecting a state machine will replace the timeline with the graph view.
-![State Machine Pn](images/State_Machine.png)
+使用 [动画模式](../animate-mode/) 为你的画板创建所有的 [状态 (States)](https://rive.app/docs/editor/state-machine/states) 和 [状态机 (State Machine)](../state-machine/)。
+当你切换到动画模式时，UI 会更新以显示与 [活动画板 (Active Artboard)](./artboards#active-artboard) 关联的时间轴 (Timelines) 和状态机列表。[检查器 (Inspector)](https://rive.app/docs/editor/interface-overview/inspector) 也会更新，在任何可以制作动画的属性旁边显示关键帧按钮。
+![动画模式 Pn](images/Animate_Mode.png)
+从动画列表中选择任何动画将调出时间轴视图，而选择状态机将用图表视图取代时间轴。
+![状态机视图 Pn](images/State_Machine.png)
 
-## [​](#creating-assets-in-animate-mode) Creating Assets in Animate Mode
+## [​](#creating-assets-in-animate-mode) 在动画模式下创建资产
 
-While there are separate modes, graphics can be created and changed in both modes, but it’s important to keep a few things in mind.
+虽然模式是分开的，但图形可以在两种模式下创建和修改，但记住以下几点很重要：
 
-1. If a Timeline is selected, graphics, both procedural and custom paths, can be created. While graphics can be created, any changes to the path, shape, or its properties will automatically be keyed on the timeline. Because of this, we recommend not making any assets when a timeline is selected.
-2. Animate Mode works like Design Mode if a State Machine is selected. Asset creation, rigging, and other design changes will not be automatically keyed. This lets you make any design changes you want without switching between the different modes, though you do lose some screen real estate due to the graph. We recommend making vast changes in Design mode while using Animate mode only to add quick adjustments like hitboxes or layouts.
-
-[Overview](/docs/editor/fundamentals/overview)[Artboards](/docs/editor/fundamentals/artboards)
+1. 如果选中了“时间轴 (Timeline)”，则可以创建图形（包括参数化路径和自定义路径）。虽然可以创建图形，但对路径、形状或其属性的任何更改都会在时间轴上自动记录关键帧。因此，我们建议在选中时间轴时不要创建任何资产。
+2. 如果选中了“状态机 (State Machine)”，动画模式的工作方式就像设计模式一样。资产创建、绑定和其他设计更改不会自动记录关键帧。这让你可以直接进行任何想要的更改，而不必在不同模式之间切换，尽管由于图表的存在，你会损失一些屏幕空间。我们建议在设计模式下进行大规模更改，而仅在动画模式下添加诸如点击区域 (Hitboxes) 或布局等快速调整。

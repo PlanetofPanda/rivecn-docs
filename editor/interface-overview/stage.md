@@ -1,46 +1,44 @@
-Interface Overview
+界面概览
 
-# Stage
+# 舞台 (Stage)
 
-The Stage is an infinite canvas where you can place artboards containing all your graphics.
+舞台是一个无限的画布，你可以在其中放置包含所有图形的画板 (Artboards)。
 
-## [​](#selection) Selection
+## [​](#selection) 选择 (Selection)
 
-Select an object by simply clicking on it, or click and drag over a number of shapes to perform a marquee selection. Hold the `Shift` modifier key to add or remove from an existing selection (by either single clicking or marqueeing).
+只需点击即可选择一个对象，或者在多个形状上点击并拖动进行框选。按住 `Shift` 键可以在现有选区中添加或移除对象（通过单击或框选）。
 
-### [​](#double-click) Double-click
+### [​](#double-click) 双击 (Double-click)
 
-To select an object in a group, double-click on the object you want to select. This takes you down one level in the hierarchy and allows you to select any object on that level.
+要选择分组 (Group) 中的对象，请双击你想选择的对象。这会带你进入层级结构的下一层，并允许你选择该层级上的任何对象。
 
-### [​](#deep-select) Deep select
+### [​](#deep-select) 深层选择 (Deep select)
 
-In order to select an object within a group, hold `⌘` (macOS) or `Ctrl` (Windows) and click directly on it. This is a quick way to cut through multiple layers of nested groups and directly select a shape. This can be a very fast way to navigate a complex file, especially when used together with the Select behind technique and the Enter and Esc shortcuts described below.
+为了选择分组内的对象，请按住 `⌘` (macOS) 或 `Ctrl` (Windows) 并直接点击该对象。这是一个穿透多层嵌套分组并直接选择形状的快速方法。这在导航复杂文件时非常快，尤其是结合下文描述的“选择底层 (Select behind)”技巧以及 Enter 和 Esc 快捷键使用时。
 
-### [​](#select-behind) Select behind
+### [​](#select-behind) 选择底层 (Select behind)
 
-When you hover over an object on the stage, Rive draws an outline around it. This is a hint to let you know that if you click, this object will be selected. Sometimes multiple objects can overlap one another, making it difficult to select the exact one you want. In this case, press `Alt` to cycle to the next object under your cursor. You can continue to press `Alt` until the object you want is outlined. Now click to select it.
+当你将鼠标悬停在舞台上的某个对象上时，Rive 会在其周围绘制一个轮廓。这是一个提示，告诉你如果点击，该对象将被选中。有时多个对象会重叠在一起，难以准确选中你想要的那一个。在这种情况下，按住 `Alt` 键可在光标下的下一个对象之间循环。你可以持续按下 `Alt` 键，直到你想选择的对象被轮廓框出。此时点击即可选中它。
 
-### [​](#enter-and-esc-shortcuts) Enter and Esc shortcuts
+### [​](#enter-and-esc-shortcuts) Enter 和 Esc 快捷键
 
-Use the `Enter` key to quickly navigate down the Hierarchy. If you have a group selected, this allows you to quickly select the first child.
-Use the `Esc` key to quickly navigate up the Hierarchy. This allows you to quickly select the parent of your current selection.
+使用 `Enter` 键快速向下导航层级结构 (Hierarchy)。如果你选中了一个分组，这允许你快速选择其中的第一个子级。
+使用 `Esc` 键快速向上导航层级结构。这允许你快速选择当前选中项的父级。
 
-## [​](#navigating) Navigating
+## [​](#navigating) 导航 (Navigating)
 
-### [​](#panning) Panning
+### [​](#panning) 平移 (Panning)
 
-![Image](images/image_0.png)
-To pan the Stage, right-click and drag your mouse. If you have a trackpad, scroll left and right. Alternatively, hold `Spacebar` to trigger the Pan Tool. With the Pan Tool enabled, click and drag to move to your desired point on the Stage.
+![平移示例](images/image_0.png)
+要平移舞台，请点击鼠标右键并拖动鼠标。如果你使用的是触控板，请左右滚动。此外，按住 `空格键 (Spacebar)` 可触发平移工具 (Pan Tool)。在启用平移工具的情况下，点击并拖动即可移动到舞台上你想要的位置。
 
-### [​](#zooming) Zooming
+### [​](#zooming) 缩放 (Zooming)
 
-![Image](images/image_1.png)
-With your cursor positioned over the Stage, hold `⌘` / `Ctrl` and scroll your mouse or trackpad to zoom in and out. Alternatively, use the `+` / `-` keys to zoom between preset points. You can quickly revert back to 100% with `⌘` / `Ctrl` and `0`.
+![缩放示例](images/image_1.png)
+将光标置于舞台上方，按住 `⌘` / `Ctrl` 并滚动鼠标或触控板即可进行放大和缩小。此外，使用 `+` / `-` 键可在预设点之间缩放。你可以通过 `⌘` / `Ctrl` + `0` 快速恢复到 100%。
 
-### [​](#fit) Fit
+### [​](#fit) 适应屏幕 (Fit)
 
-![Image](images/image_2.png)
-Tap `F` to simultaneously zoom and position your active artboard to fit within the viewable Stage area. Note that if you have an object within the Hierarchy selected this action will be performed on the object as opposed to the artboard.
-> There are a few scenarios where you may have “lost” an artboard, while still seeing the hierarchy. This typically happens when the position of an artboard is accidentially keyed or the zoom level is too far out. Using the `F`shortcut will help you fix the issue by Filling the stage with the selected object or artboard.
-
-[Inspector](/docs/editor/interface-overview/inspector)[Overview](/docs/editor/fundamentals/overview)
+![适应屏幕示例](images/image_2.png)
+按下 `F` 键可同时缩放并调整活动画板的位置，使其填充可视图台区域。请注意，如果你在层级面板中选中了一个对象，此操作将针对该对象而非画板执行。
+> 在某些情况下，你可能会在仍能看到层级结构的情况下“丢失”了画板。这通常发生在画板位置被意外设置了关键帧或缩放级别太远时。使用 `F` 快捷键将通过让选中对象或画板充满舞台来帮你解决此问题。
