@@ -15,12 +15,12 @@
 - Events
 - Data Binding
 - Layouts
-- [Libraries](/docs/editor/libraries)
-- [Keyboard Shortcuts](/docs/editor/keyboard-shortcuts)
+- [Libraries](/editor/libraries)
+- [Keyboard Shortcuts](/editor/keyboard-shortcuts)
 - Exporting
 - Share Links
 - MCP
-- [Tagging](/docs/editor/tagging)
+- [Tagging](/editor/tagging)
 
 404
 
@@ -28,6 +28,6 @@
 
 We couldn't find the page. Maybe you were looking for one of these pages below?
 
-[Text Modifiers](/docs/editor/text/text-modifiers#)[Text Overview](/docs/editor/text/text-overview#)[Text Runs](/docs/editor/text/text-runs#)
+[Text Modifiers](/editor/text/text-modifiers#)[Text Overview](/editor/text/overview.md#)[Text Runs](/editor/text/text-runs.md#)
 
 ⌘I

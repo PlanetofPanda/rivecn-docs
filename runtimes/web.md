@@ -4,7 +4,7 @@ Web (JS)
 
 Rive 的 JavaScript/WASM 运行时。
 
-请注意，某些 Rive 功能可能尚未在特定运行时中受支持，或者可能需要使用 Rive 渲染器。有关更多详细信息，请参阅 [功能支持](/docs/feature-support) 和 [选择渲染器](/docs/runtimes/choose-a-renderer) 页面。
+请注意，某些 Rive 功能可能尚未在特定运行时中受支持，或者可能需要使用 Rive 渲染器。有关更多详细信息，请参阅 [功能支持](/feature-support.md) 和 [选择渲染器](/runtimes/choose-a-renderer) 页面。
 
 ## [​](#overview) 概览
 
@@ -18,7 +18,7 @@ Rive 的 JavaScript/WASM 运行时。
 
 按照以下步骤将 Rive 集成到你的 Web 应用程序中。
 
-以下说明描述了如何使用 `@rive-app/canvas` 包。Rive 提供了基于 Web 的包，如 WebGL、Canvas 和 Lite 版本。请参阅 [Canvas vs WebGL](/docs/runtimes/web/canvas-vs-webgl) 以获取有关哪种包是适合你用例的指导。
+以下说明描述了如何使用 `@rive-app/canvas` 包。Rive 提供了基于 Web 的包，如 WebGL、Canvas 和 Lite 版本。请参阅 [Canvas vs WebGL](/runtimes/web/canvas-vs-webgl) 以获取有关哪种包是适合你用例的指导。
 
 1.  **安装依赖**
 
@@ -74,7 +74,7 @@ Rive 的 JavaScript/WASM 运行时。
     import { Rive } from "@rive-app/canvas";
     ```
 
-    不使用 [Rive 文本](/docs/editor/text) 和 [Rive 音频](/docs/editor/events/audio-events)？考虑使用 [@rive-app/canvas-lite](/docs/runtimes/web/canvas-vs-webgl#rive-app-canvas-lite)，这是一个更小的包变体。
+    不使用 [Rive 文本](/editor/text/overview.md) 和 [Rive 音频](/editor/events/audio-events)？考虑使用 [@rive-app/canvas-lite](/runtimes/web/canvas-vs-webgl#rive-app-canvas-lite)，这是一个更小的包变体。
 
 2.  **创建 Canvas**
 
@@ -88,7 +88,7 @@ Rive 的 JavaScript/WASM 运行时。
 
     要创建 Rive 对象的新实例，请提供以下属性：
 
-    -   `src`: 代表托管的 `.riv` 文件 URL 的字符串（如下例所示）或公共资产 `.riv` 文件的路径。有关如何正确使用此属性的更多详细信息，请参阅 [Rive 参数](/docs/runtimes/web/rive-parameters)。
+    -   `src`: 代表托管的 `.riv` 文件 URL 的字符串（如下例所示）或公共资产 `.riv` 文件的路径。有关如何正确使用此属性的更多详细信息，请参阅 [Rive 参数](/runtimes/web/rive-parameters)。
     -   `artboard`: (可选) 代表你要显示的画板的字符串。如果未提供，则选择默认画板。
     -   `stateMachines`: 代表你希望播放的状态机名称的字符串。
     -   `canvas`: 将渲染动画的 canvas 元素。
@@ -172,9 +172,9 @@ Rive 的 JavaScript/WASM 运行时。
 1.  **托管 URL**: 使用代表托管 `.riv` 文件位置的 URL 字符串。在创建新 Rive 实例时将其设置为 `src` 属性。
 2.  **包中的静态资产**: 提供指向 Web 项目中可公开访问的 `.riv` 文件的路径字符串。像处理项目中的任何其他静态资产（如图像或字体）一样处理 `.riv` 文件。
 3.  **获取文件**: 不使用 `src` 属性，而是在获取文件时使用 `buffer` 属性加载 `ArrayBuffer`。当在多个 Rive 实例中复用同一个 `.riv` 文件时，这非常有用，允许你只加载一次。
-4.  **复用已加载文件**: 使用 `rivFile` 参数复用先前加载的 Rive 运行时文件对象，避免通过 `src` URL 再次获取或从 `buffer` 重新加载。这可以通过消除冗余的网络请求和加载时间来显着提高性能，尤其是在从同一源创建多个 Rive 实例时。与需要底层解析以创建运行时文件对象的 `src` 和 `buffer` 参数不同，`rivFile` 参数使用已解析的对象，包括任何已加载的资产。请参阅 [缓存 Rive 文件](/docs/runtimes/caching-a-rive-file)。
+4.  **复用已加载文件**: 使用 `rivFile` 参数复用先前加载的 Rive 运行时文件对象，避免通过 `src` URL 再次获取或从 `buffer` 重新加载。这可以通过消除冗余的网络请求和加载时间来显着提高性能，尤其是在从同一源创建多个 Rive 实例时。与需要底层解析以创建运行时文件对象的 `src` 和 `buffer` 参数不同，`rivFile` 参数使用已解析的对象，包括任何已加载的资产。请参阅 [缓存 Rive 文件](/runtimes/caching-a-rive-file)。
 
-有关更多详细信息，请参阅 [Rive 参数](/docs/runtimes/web/rive-parameters) 中关于 `src` 属性的部分。
+有关更多详细信息，请参阅 [Rive 参数](/runtimes/web/rive-parameters) 中关于 `src` 属性的部分。
 
 ## [​](#4-clean-up-rive) 4. 清理 Rive
 
@@ -201,17 +201,17 @@ riveInstance.cleanup();
 
 [## 画板 (Artboards)
 
-在运行时控制显示哪个画板。](/docs/runtimes/artboards)[## 布局 (Layout)
+在运行时控制显示哪个画板。](/runtimes/artboards)[## 布局 (Layout)
 
-在运行时控制画板的布局（适应和对齐）。](/docs/runtimes/layout)[## 状态机播放 (State Machine Playback)
+在运行时控制画板的布局（适应和对齐）。](/runtimes/layout)[## 状态机播放 (State Machine Playback)
 
-在运行时控制状态机播放并与状态机输入交互。](/docs/runtimes/state-machines)[## 数据绑定 (Data Binding)
+在运行时控制状态机播放并与状态机输入交互。](/runtimes/state-machines.md)[## 数据绑定 (Data Binding)
 
-在运行时使用双向数据绑定动态更新文本、颜色、图像、列表等内容。](/docs/runtimes/data-binding)[## 加载资产 (Loading Assets)
+在运行时使用双向数据绑定动态更新文本、颜色、图像、列表等内容。](/runtimes/data-binding)[## 加载资产 (Loading Assets)
 
-在运行时加载引用的资产（图像、字体、音频）。也称为带外资产 (out-of-band assets)。](/docs/runtimes/loading-assets)[## 缓存 Rive 文件 (Caching a Rive File)
+在运行时加载引用的资产（图像、字体、音频）。也称为带外资产 (out-of-band assets)。](/runtimes/loading-assets.md)[## 缓存 Rive 文件 (Caching a Rive File)
 
-在多个 Rive 实例之间缓存并复用 Rive 文件对象以提高性能。](/docs/runtimes/caching-a-rive-file)
+在多个 Rive 实例之间缓存并复用 Rive 文件对象以提高性能。](/runtimes/caching-a-rive-file)
 
 # [​](#additional-rive-web-resources) 其他 Rive Web 资源
 
@@ -219,15 +219,15 @@ riveInstance.cleanup();
 
 [## Rive 参数 (Rive Parameters)
 
-Rive 实例的 API 文档。](/docs/runtimes/web/rive-parameters)[## Canvas vs WebGL
+Rive 实例的 API 文档。](/runtimes/web/rive-parameters)[## Canvas vs WebGL
 
-Rive Web 包及其不同版本的指南](/docs/runtimes/web/canvas-vs-webgl)[## 常见问题 (FAQ)
+Rive Web 包及其不同版本的指南](/runtimes/web/canvas-vs-webgl)[## 常见问题 (FAQ)
 
-常见问题](/docs/runtimes/web/faq)[## 预加载 WASM (Preloading WASM)
+常见问题](/runtimes/web/faq)[## 预加载 WASM (Preloading WASM)
 
-关于如何预加载和自托管 rive WASM 库的说明。](/docs/runtimes/web/preloading-wasm)[## 低级 API 使用 (Low-level API Usage)
+关于如何预加载和自托管 rive WASM 库的说明。](/runtimes/web/preloading-wasm)[## 低级 API 使用 (Low-level API Usage)
 
-控制 Rive 渲染循环和布局，并将多个画板绘制到同一个 canvas。](/docs/runtimes/web/low-level-api-usage)
+控制 Rive 渲染循环和布局，并将多个画板绘制到同一个 canvas。](/runtimes/web/low-level-api-usage)
 
 # [​](#examples) 示例
 
@@ -236,4 +236,4 @@ Rive Web 包及其不同版本的指南](/docs/runtimes/web/canvas-vs-webgl)[## 
 -   [连接到页面滚动](https://codesandbox.io/p/sandbox/rive-page-scroll-h4msqw?file=%2Fsrc%2Findex.ts%3A27%2C45)
 -   [仅当滚动到用户视口时播放状态机](https://codesandbox.io/p/sandbox/rive-wait-for-scroll-into-view-y9wg8d?file=%2Fsrc%2Findex.ts)
 
-[Rive 事件](/docs/runtimes/rive-events)[Rive 参数](/docs/runtimes/web/rive-parameters)
+[Rive 事件](/runtimes/rive-events)[Rive 参数](/runtimes/web/rive-parameters)

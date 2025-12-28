@@ -18,10 +18,10 @@ Rive 中的大多数骨骼动画是通过旋转骨骼角度完成的。子骨骼
 
 ## [​](#how-to-create-an-ik-constraint) 如何创建 IK 约束
 
-要使用 IK，你需要一个骨骼链和一个目标。目标可以是任何对象，但在大多数情况下，你会希望使用一个 [样式设为“目标”的分组](/docs/editor/fundamentals/groups#group-style)。
+要使用 IK，你需要一个骨骼链和一个目标。目标可以是任何对象，但在大多数情况下，你会希望使用一个 [样式设为“目标”的分组](/editor/fundamentals/groups.md#group-style)。
 
 1. **创建骨骼链和目标**
-   使用快捷键 **B** 创建 [骨骼链](/docs/editor/manipulating-shapes/bones#how-to-create-bones)。然后使用快捷键 **G** 创建一个 [分组 (Group)](/docs/editor/fundamentals/groups)。在检查器中将分组的样式 (Style) 选项设置为“目标 (Target)”。
+   使用快捷键 **B** 创建 [骨骼链](/editor/manipulating-shapes/bones.md#how-to-create-bones)。然后使用快捷键 **G** 创建一个 [分组 (Group)](/editor/fundamentals/groups.md)。在检查器中将分组的样式 (Style) 选项设置为“目标 (Target)”。
    ![创建骨骼和目标示例](images/image_1.png)
    使用 B 和 G 快捷键激活骨骼和分组工具。
 

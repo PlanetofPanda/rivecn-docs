@@ -21,4 +21,4 @@ Defold 原生继承了 [Rive 渲染器](https://rive.app/renderer)，这意味�
 
 如果你对 Defold 中的 Rive 有任何疑问，请随时探索他们的 [社区论坛](https://forum.defold.com/) 或联系他们的支持团队。如果你认为问题出在 Rive，请通过 [我们的社区](https://community.rive.app/c/support/) 联系我们。
 
-[Rive 事件](/docs/game-runtimes/unity/rive-events)
+[Rive 事件](/game-runtimes/unity/rive-events)

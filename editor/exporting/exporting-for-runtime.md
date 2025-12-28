@@ -4,7 +4,7 @@
 
 导出运行时使用的功能适用于付费方案。[了解更多关于我们的方案和定价的信息](https://rive.app/pricing)。
 
-要导出运行时使用的文件，请选择工具栏右侧的蓝色导出动作，或通过左侧工具栏菜单导航至 `Export` > `For runtime`。你可以通过任何我们的 [开源运行时](/docs/runtimes) 将导出的 `.riv` 文件加载到你的应用、游戏或网站中。
+要导出运行时使用的文件，请选择工具栏右侧的蓝色导出动作，或通过左侧工具栏菜单导航至 `Export` > `For runtime`。你可以通过任何我们的 [开源运行时](/runtimes/overview.md) 将导出的 `.riv` 文件加载到你的应用、游戏或网站中。
 ![导出运行时示例](images/94fc0d7c-cc7e-4b17-a6f7-0a00c98db70e.webp)
 
 ## [​](#changes-to-exporting-object-names) 导出对象名称的变更

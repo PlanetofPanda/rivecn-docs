@@ -3,14 +3,14 @@
 随着我们的 Rive 编辑器增加用于制作 Rive 资产的功能，有时我们的运行时需要更新以支持这些改进。这可能意味着新的或更改的 API。
 请查看下面以了解你的 Rive 资产使用的给定功能是否已在运行时受支持。我们通常建议你的项目使用最新版本的运行时，以利用后续的错误修复和新功能。
 
-某些功能需要在运行时使用 Rive 渲染器。请参阅我们关于 [选择渲染器](/docs/runtimes/choose-a-renderer) 的文档。
+某些功能需要在运行时使用 Rive 渲染器。请参阅我们关于 [选择渲染器](/runtimes/choose-a-renderer) 的文档。
 目前，唯一需要 Rive 渲染器的功能是 **[矢量羽化 (Vector Feathering)](https://rive.app/blog/introducing-vector-feathering)**。
 
 如果新功能需要最近的 API 更改，我们可能会包含有关迁移到较新版本的说明。
 
 ## 数据绑定 - 列表、图像和画板 (Data Binding - Lists, Images, and Artboards)
 
-数据绑定列表、图像和画板是在初始数据绑定支持之后添加的。请参阅 [数据绑定概览](/docs/editor/data-binding/overview) 和 [运行时的数据绑定](/docs/runtimes/data-binding)。
+数据绑定列表、图像和画板是在初始数据绑定支持之后添加的。请参阅 [数据绑定概览](/editor/data-binding/overview) 和 [运行时的数据绑定](/runtimes/data-binding)。
 
 | **Runtime** | **Version** |
 | --- | --- |
@@ -57,7 +57,7 @@
 
 ## 数据绑定 (Data Binding)
 
-请参阅 [数据绑定概览](/docs/editor/data-binding/overview) 和 [运行时的数据绑定](/docs/runtimes/data-binding)。
+请参阅 [数据绑定概览](/editor/data-binding/overview) 和 [运行时的数据绑定](/runtimes/data-binding)。
 
 | **Runtime** | **Version** |
 | --- | --- |
@@ -74,7 +74,7 @@
 
 ## 矢量羽化 (Vector Feathering)
 
-此功能仅在使用 Rive 渲染器时受支持。请参阅 [选择渲染器](/docs/runtimes/choose-a-renderer)。
+此功能仅在使用 Rive 渲染器时受支持。请参阅 [选择渲染器](/runtimes/choose-a-renderer)。
 
 | **Runtime** | **Version** |
 | --- | --- |
@@ -93,7 +93,7 @@
 
 ## N-Slicing
 
-请参阅 [N-Slicing](/docs/editor/layouts/n-slicing)。
+请参阅 [N-Slicing](/editor/layouts/n-slicing.md)。
 
 | **Runtime** | **Version** |
 | --- | --- |
@@ -110,7 +110,7 @@
 
 ## 布局 (Layouts)
 
-允许 Rive 随着底层视图/画布/组件/纹理大小的变化自动更新画板大小。请参阅 [布局](/docs/editor/layouts/layouts-overview)。
+允许 Rive 随着底层视图/画布/组件/纹理大小的变化自动更新画板大小。请参阅 [布局](/editor/layouts/overview.md)。
 
 | **Runtime** | **Version** |
 | --- | --- |
@@ -127,7 +127,7 @@
 
 ## 回退字体 (Fallback Fonts)
 
-允许 Rive 在字形不可用时使用回退字体。默认字体会自动选择，或者你可以根据各种选项选择配置所需的回退字体。请参阅 [回退字体](/docs/runtimes/text#fallback-fonts)。
+允许 Rive 在字形不可用时使用回退字体。默认字体会自动选择，或者你可以根据各种选项选择配置所需的回退字体。请参阅 [回退字体](/runtimes/text#fallback-fonts)。
 
 | **Runtime** | **Version** |
 | --- | --- |
@@ -144,7 +144,7 @@
 
 ## 嵌套文本 (Nested Text)
 
-启用在组件实例上设置文本。请参阅 [嵌套文本](/docs/runtimes/text#read-update-nested-text-runs-at-runtime).
+启用在组件实例上设置文本。请参阅 [嵌套文本](/runtimes/text#read-update-nested-text-runs-at-runtime).
 
 | **Runtime** | **Version** |
 | --- | --- |
@@ -161,7 +161,7 @@
 
 ## 嵌套输入 (Nested Inputs)
 
-启用在组件实例上设置输入。请参阅 [嵌套输入](/docs/runtimes/inputs#nested-inputs)。
+启用在组件实例上设置输入。请参阅 [嵌套输入](/runtimes/inputs#nested-inputs)。
 
 | **Runtime** | **Version** |
 | --- | --- |
@@ -195,7 +195,7 @@
 
 ## 音频 (Audio)
 
-请参阅 [Rive 事件](/docs/runtimes/rive-events) 和 [音频事件](/docs/editor/events/audio-events)。
+请参阅 [Rive 事件](/runtimes/rive-events) 和 [音频事件](/editor/events/audio-events)。
 
 | **Runtime** | **Version** |
 | --- | --- |
@@ -212,7 +212,7 @@
 
 ## 嵌套输入和嵌套事件 (Nested Inputs and Nested Events)
 
-请参阅 [组件](/docs/editor/fundamentals/components)。
+请参阅 [组件](/editor/fundamentals/components.md)。
 
 | **Runtime** | **Version** |
 | --- | --- |
@@ -228,7 +228,7 @@
 
 ## 带外资产 (Out-of-band Assets)
 
-请参阅 [加载资产](/docs/runtimes/loading-assets)。
+请参阅 [加载资产](/runtimes/loading-assets.md)。
 
 | **Runtime** | **Version** |
 | --- | --- |
@@ -245,7 +245,7 @@
 
 ## 事件 (Events)
 
-请参阅 [Rive 事件](/docs/runtimes/rive-events)。
+请参阅 [Rive 事件](/runtimes/rive-events)。
 
 | **Runtime** | **Version** |
 | --- | --- |
@@ -262,7 +262,7 @@
 
 ## 文本 (Text)
 
-请参阅 [文本](/docs/runtimes/text)。
+请参阅 [文本](/runtimes/text)。
 
 | **Runtime** | **Version** |
 | --- | --- |

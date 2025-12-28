@@ -13,21 +13,21 @@
 - Animate Mode
 - State Machines
 
-  - [Overview](/docs/editor/state-machine/state-machine)
-  - [States](/docs/editor/state-machine/states)
-  - [Inputs](/docs/editor/state-machine/inputs)
-  - [Transitions](/docs/editor/state-machine/transitions)
-  - [Listeners](/docs/editor/state-machine/listeners)
-  - [Layers](/docs/editor/state-machine/layers)
+  - [Overview](/editor/state-machine/overview.md)
+  - [States](/editor/state-machine/states.md)
+  - [Inputs](/editor/state-machine/inputs.md)
+  - [Transitions](/editor/state-machine/transitions.md)
+  - [Listeners](/editor/state-machine/listeners.md)
+  - [Layers](/editor/state-machine/layers)
 - Events
 - Data Binding
 - Layouts
-- [Libraries](/docs/editor/libraries)
-- [Keyboard Shortcuts](/docs/editor/keyboard-shortcuts)
+- [Libraries](/editor/libraries)
+- [Keyboard Shortcuts](/editor/keyboard-shortcuts)
 - Exporting
 - Share Links
 - MCP
-- [Tagging](/docs/editor/tagging)
+- [Tagging](/editor/tagging)
 
 On this page
 
@@ -44,7 +44,7 @@ State Machines
 ⚠️ DEPRECATED: Use Data Binding instead of Inputs for controlling Rive graphics
 
 **DEPRECATION NOTICE:** This entire page documents the legacy Inputs system.
-**For new projects:** Use [Data Binding](/docs/editor/data-binding) instead. **For
+**For new projects:** Use [Data Binding](/editor/data-binding) instead. **For
 existing projects:** Plan to migrate from Inputs to Data Binding as soon as
 possible. **This content is provided for legacy support only.**
 
@@ -81,6 +81,6 @@ YesNo
 
 [Suggest edits](https://github.com/rive-app/rive-docs/edit/main/editor/state-machine/inputs.mdx)[Raise issue](https://github.com/rive-app/rive-docs/issues/new?title=Issue on docs&body=Path: /editor/state-machine/inputs)
 
-[States](/docs/editor/state-machine/states)[Transitions](/docs/editor/state-machine/transitions)
+[States](/editor/state-machine/states.md)[Transitions](/editor/state-machine/transitions.md)
 
 ⌘I

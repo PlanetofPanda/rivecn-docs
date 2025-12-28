@@ -19,7 +19,7 @@
 
 ## [​](#introduction) 介绍
 
-在 Rive 添加布局功能之前，画板上的所有对象都以通过自由形式定位，几乎没有规则限制（[约束](/docs/editor/constraints/constraints-overview) 是一个例外）。布局提供了一种基于规则的方式，使用行 (Rows) 和列 (Columns) 来定位和调整内容大小。
+在 Rive 添加布局功能之前，画板上的所有对象都以通过自由形式定位，几乎没有规则限制（[约束](/editor/constraints/constraints-overview) 是一个例外）。布局提供了一种基于规则的方式，使用行 (Rows) 和列 (Columns) 来定位和调整内容大小。
 
 布局是一个容器，其位置和大小受规则约束（相对于其父布局或子级）。当 Rive 对象（文本、形状、路径、分组、图像、组件，甚至摇杆或骨骼）被放置在布局中时，它们会继承布局的定位规则（**参与布局**），但如果需要，它们也可以在布局容器内独立行动。如果你需要在布局内制作对象动画，这提供了额外的自由度。
 
@@ -29,7 +29,7 @@
 
 ## [​](#layout-parents-and-children) 布局父级和子级 (Layout Parents and Children)
 
-为了创建能够响应屏幕或浏览器大小的更复杂 UI，重要的是要理解布局可以放置在其他布局内部。我们将外部布局称为父级 (Parent)，内部布局称为子级 (Child)。布局子级通常相对于其布局父级定位（类似于 [分组](/docs/editor/fundamentals/groups) 的工作方式）。此外，父级可以根据子级调整大小（[包裹 Hug](editor/layouts/layout-parameters#scale-types)），或者子级可以根据父级调整大小（[填充 Fill](editor/layouts/layout-parameters#scale-types)）。下面是一个例子，帮助直观地理解这些关系是如何工作的。
+为了创建能够响应屏幕或浏览器大小的更复杂 UI，重要的是要理解布局可以放置在其他布局内部。我们将外部布局称为父级 (Parent)，内部布局称为子级 (Child)。布局子级通常相对于其布局父级定位（类似于 [分组](/editor/fundamentals/groups.md) 的工作方式）。此外，父级可以根据子级调整大小（[包裹 Hug](editor/layouts/layout-parameters#scale-types)），或者子级可以根据父级调整大小（[填充 Fill](editor/layouts/layout-parameters#scale-types)）。下面是一个例子，帮助直观地理解这些关系是如何工作的。
 
 在下图中，我们将关注虚线包含的区域。外部的绿色虚线是最外层的布局，设置为将其子级在单列 (Column) 中布局。在该列的第二行，红色虚线是一个子布局，包含各种设备的电池指示器。此布局定义为行 (Row)。此布局有 4 个子布局（蓝色虚线），设置为均匀填充 (Fill) 其父级的宽度（因此当父级调整大小时，子布局也会调整大小，每个填充可用空间的 25%）。这 4 个布局中的每一个都被设置为列 (Column)，并有 2 个子布局（粉色虚线），包含剩余电池的可视化修剪路径和百分比标签。通过创建这些简单的父子布局，我们可以使用 Rive 创建无限响应的内容！
 ![布局可视化示例](images/layout-visualized.png)
@@ -60,7 +60,7 @@
 - 组件实例 (Component instances)（叶节点和布局模式）
 - 其他布局 (Other Layouts)
 
-所有其他对象仅由布局设置其位置。[N-切片 (N-Slicing)](/docs/editor/layouts/n-slicing) 功能提供了更高级的选项来控制更高级形状和分组的布局/缩放行为。
+所有其他对象仅由布局设置其位置。[N-切片 (N-Slicing)](/editor/layouts/n-slicing.md) 功能提供了更高级的选项来控制更高级形状和分组的布局/缩放行为。
 与其他一些工具不同，Rive 提供了一个额外的层级项来表示对象的布局容器。这有助于区分 Rive 的自由形式本质与结构化布局系统。例如，布局容器内的对象仍然可以应用额外的变换，如位置、缩放和旋转，以允许它脱离布局。当与约束结合使用时，这变得特别强大。此外，一个布局容器可以容纳多个可以相互重叠放置的对象。
 
 ---

@@ -4,7 +4,7 @@ Runtime Fundamentals
 
 在运行时动态加载和替换资产
 
-如果你想动态替换图像，请使用 [图像数据绑定 (image data binding)](/docs/runtimes/data-binding#images)。
+如果你想动态替换图像，请使用 [图像数据绑定 (image data binding)](/runtimes/data-binding#images)。
 
 一些 Rive 文件可能包含可以嵌入到实际文件二进制文件中的资产，例如字体、图像或音频文件。Rive 运行时可以在加载 Rive 文件时加载这些资产。虽然这使得 Rive 文件/运行时的使用变得容易，但也可能有机会在运行时加载甚至替换这些资产，而不是将它们嵌入到文件二进制文件中。
 这种方法有几个好处：
@@ -25,7 +25,7 @@ Runtime Fundamentals
 ### [​](#embedded-assets) 嵌入式资产 (Embedded Assets)
 
 在 Rive 编辑器中，可以通过选择 *“Embedded”* 导出类型将静态资产包含在 `.riv` 文件中。如本页开头所述，当加载 Rive 文件时，运行时也将隐式尝试加载嵌入在 `.riv` 中的资产，你无需担心手动加载任何资产。
-**警告：** 嵌入式资产可能会增加文件大小，尤其是在使用 Rive 文本 ([文本概览](/docs/editor/text/text-overview)) 时的字体。
+**警告：** 嵌入式资产可能会增加文件大小，尤其是在使用 Rive 文本 ([文本概览](/editor/text/overview.md)) 时的字体。
 
 **Embedded 是默认选项。**
 
@@ -621,4 +621,4 @@ function RiveContent({ imageUrl }: { imageUrl: string }) {
 
 ## [​](#additional-resources) 其他资源
 
-[数据绑定 (Data Binding)](/docs/runtimes/data-binding)[字体 (Fonts)](/docs/runtimes/fonts)
+[数据绑定 (Data Binding)](/runtimes/data-binding)[字体 (Fonts)](/runtimes/fonts)

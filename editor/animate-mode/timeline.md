@@ -4,4 +4,4 @@
 
 We couldn't find the page. Maybe you were looking for one of these pages below?
 
-[Animate Mode Overview](/docs/editor/animate-mode/animate-mode-overview#animate-mode-overview)[Design vs Animate Mode](/docs/editor/fundamentals/design-vs-animate-mode#)[Timeline](/docs/editor/animate-mode/timeline#timeline)
+[Animate Mode Overview](/editor/animate-mode/animate-mode-overview#animate-mode-overview)[Design vs Animate Mode](/editor/fundamentals/design-vs-animate-mode.md#)[Timeline](/editor/animate-mode/timeline.md#timeline)

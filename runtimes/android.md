@@ -4,7 +4,7 @@ Android
 
 Rive 的 Android 运行时。
 
-请注意，某些 Rive 功能可能尚未在特定运行时中受支持，或者可能需要使用 Rive 渲染器。有关更多详细信息，请参阅 [功能支持](/docs/feature-support) 和 [选择渲染器](/docs/runtimes/choose-a-renderer) 页面。
+请注意，某些 Rive 功能可能尚未在特定运行时中受支持，或者可能需要使用 Rive 渲染器。有关更多详细信息，请参阅 [功能支持](/feature-support.md) 和 [选择渲染器](/runtimes/choose-a-renderer) 页面。
 
 ## [​](#overview) 概览
 
@@ -202,4 +202,4 @@ setContentView(R.layout.my_layout)
 [GitHub](https://github.com/rive-app/rive-android)
 [示例](https://github.com/rive-app/rive-android/tree/master/app/src/main/java/app/rive/runtime/example)
 
-[资源使用](/docs/runtimes/apple/resource-usage)[C#](/docs/runtimes/community-runtimes/c-sharp)
+[资源使用](/runtimes/apple/resource-usage)[C#](/runtimes/community-runtimes/c-sharp)

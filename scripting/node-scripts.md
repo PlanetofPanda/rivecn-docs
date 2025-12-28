@@ -6,8 +6,8 @@ Node 脚本可用于渲染形状、图像、文本、画板等。
 
 ## [​](#creating-a-node-script) 创建 Node 脚本
 
-1.  [创建一个新脚本](/docs/scripting/creating-scripts) 并选择 **Node** 作为类型。
-2.  [将其添加到场景中](/docs/scripting/creating-scripts#adding-scripts-to-your-scene)。
+1.  [创建一个新脚本](/scripting/creating-scripts) 并选择 **Node** 作为类型。
+2.  [将其添加到场景中](/scripting/creating-scripts#adding-scripts-to-your-scene)。
 
 ## [​](#anatomy-of-a-node-script) Node 脚本剖析
 
@@ -81,13 +81,13 @@ function draw(self: Rectangle, renderer: Renderer)
 end
 ```
 
-查看 [API 参考](/docs/scripting/api-reference/path) 获取完整的绘图工具列表。
+查看 [API 参考](/scripting/api-reference/path) 获取完整的绘图工具列表。
 
 ## [​](#common-patterns) 常见模式 (Common Patterns)
 
 ### [​](#instantiating-components) 实例化组件 (Instantiating Components)
 
-为了能够在运行时实例化组件，你需要对 [数据绑定](/docs/editor/data-binding/overview)、[组件](/docs/editor/fundamentals/components) 和 [脚本输入](/docs/scripting/script-inputs) 有基本的了解。
+为了能够在运行时实例化组件，你需要对 [数据绑定](/editor/data-binding/overview)、[组件](/editor/fundamentals/components.md) 和 [脚本输入](/scripting/script-inputs) 有基本的了解。
 请看下面的例子，展示了如何设置你的组件、视图模型和脚本：
 
 ```lua

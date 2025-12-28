@@ -13,21 +13,21 @@
 - Animate Mode
 - State Machines
 
-  - [Overview](/docs/editor/state-machine/state-machine)
-  - [States](/docs/editor/state-machine/states)
-  - [Inputs](/docs/editor/state-machine/inputs)
-  - [Transitions](/docs/editor/state-machine/transitions)
-  - [Listeners](/docs/editor/state-machine/listeners)
-  - [Layers](/docs/editor/state-machine/layers)
+  - [Overview](/editor/state-machine/overview.md)
+  - [States](/editor/state-machine/states.md)
+  - [Inputs](/editor/state-machine/inputs.md)
+  - [Transitions](/editor/state-machine/transitions.md)
+  - [Listeners](/editor/state-machine/listeners.md)
+  - [Layers](/editor/state-machine/layers)
 - Events
 - Data Binding
 - Layouts
-- [Libraries](/docs/editor/libraries)
-- [Keyboard Shortcuts](/docs/editor/keyboard-shortcuts)
+- [Libraries](/editor/libraries)
+- [Keyboard Shortcuts](/editor/keyboard-shortcuts)
 - Exporting
 - Share Links
 - MCP
-- [Tagging](/docs/editor/tagging)
+- [Tagging](/editor/tagging)
 
 On this page
 
@@ -89,7 +89,7 @@ As we discussed in the duration section, when a transition happens, properties f
 
 ### [​](#conditions) Conditions
 
-Conditions are the rules for our transitions. Without conditions, our transitions would continuously fire and our state machine would likely look either glitchy, or only play a single animation. Conditions require us to define some inputs, which you can read more about [here](/docs/editor/state-machine/inputs).
+Conditions are the rules for our transitions. Without conditions, our transitions would continuously fire and our state machine would likely look either glitchy, or only play a single animation. Conditions require us to define some inputs, which you can read more about [here](/editor/state-machine/inputs.md).
 ![Conditions](images/a5336985-e1d4-4892-a04a-deee93e6a8b1.webp)
 
 #### [​](#adding-a-new-condition) Adding a new condition
@@ -113,7 +113,7 @@ When you add a trigger input to a transition, you are telling the transition to 
 
 You can add interpolation to your transition at the bottom of the Transitions Panel. By default, the interpolation is set to linear, but you can use the cubic and hold interpolations.
 Note that the interpolation between states is most effective when your transition duration is longer.
-If you are unfamiliar with the basics of Interpolation, read more [Interpolation (Easing)](/docs/editor/animate-mode/interpolation-easing).
+If you are unfamiliar with the basics of Interpolation, read more [Interpolation (Easing)](/editor/animate-mode/interpolation-easing).
 
 Was this page helpful?
 
@@ -121,6 +121,6 @@ YesNo
 
 [Suggest edits](https://github.com/rive-app/rive-docs/edit/main/editor/state-machine/transitions.mdx)[Raise issue](https://github.com/rive-app/rive-docs/issues/new?title=Issue on docs&body=Path: /editor/state-machine/transitions)
 
-[Inputs](/docs/editor/state-machine/inputs)[Listeners](/docs/editor/state-machine/listeners)
+[Inputs](/editor/state-machine/inputs.md)[Listeners](/editor/state-machine/listeners.md)
 
 ⌘I

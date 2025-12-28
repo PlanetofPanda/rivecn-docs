@@ -11,7 +11,7 @@ Rive 的界面精简高效，只在需要时显示必要的内容。它分为几
 在工具栏页面了解更多信息。
 [## 工具栏 (Toolbar)
 
-从 Rive 编辑器工具栏访问设计和动画工具](/docs/editor/interface-overview/toolbar)
+从 Rive 编辑器工具栏访问设计和动画工具](/editor/interface-overview/toolbar.md)
 
 ## [​](#hierarchy) 层级面板 (Hierarchy)
 
@@ -19,7 +19,7 @@ Rive 的界面精简高效，只在需要时显示必要的内容。它分为几
 ![层级面板 Pn](images/hierarchy.png)
 [## 层级面板 (Hierarchy)
 
-层级面板是一个树状视图，它既显示了舞台上对象之间的父子关系，也显示了它们的渲染顺序。通过观看视频或阅读下文来了解层级面板。](/docs/editor/interface-overview/hierarchy)
+层级面板是一个树状视图，它既显示了舞台上对象之间的父子关系，也显示了它们的渲染顺序。通过观看视频或阅读下文来了解层级面板。](/editor/interface-overview/hierarchy.md)
 
 ## [​](#inspector) 检查器 (Inspector)
 
@@ -28,7 +28,7 @@ Rive 的界面精简高效，只在需要时显示必要的内容。它分为几
 在检查器页面了解更多信息。
 [## 检查器 (Inspector)
 
-对象的待编辑属性可以在检查器中找到。检查器会根据你选择的对象以及你在编辑器中所处的位置动态变化。](/docs/editor/interface-overview/inspector)
+对象的待编辑属性可以在检查器中找到。检查器会根据你选择的对象以及你在编辑器中所处的位置动态变化。](/editor/interface-overview/inspector.md)
 
 ## [​](#stage) 舞台 (Stage)
 
@@ -37,7 +37,7 @@ Rive 的界面精简高效，只在需要时显示必要的内容。它分为几
 在舞台页面了解更多信息：
 [## 舞台 (Stage)
 
-舞台是一个无限的画布，你可以在其中放置包含所有图形的画板。](/docs/editor/interface-overview/stage)
+舞台是一个无限的画布，你可以在其中放置包含所有图形的画板。](/editor/interface-overview/stage.md)
 
 ## [​](#timeline) 时间轴 (Timeline)
 
@@ -46,7 +46,7 @@ Rive 的界面精简高效，只在需要时显示必要的内容。它分为几
 在时间轴页面了解更多信息：
 [## 时间轴 (Timeline)
 
-Rive 界面显示了一个带有播放控制的时间轴，以及用于在动画模式下进行当前动画配置的选项。时间轴左侧显示了所有动画的列表。请记住，这些都是当前活动画板的动画。](/docs/editor/animate-mode/timeline)
+Rive 界面显示了一个带有播放控制的时间轴，以及用于在动画模式下进行当前动画配置的选项。时间轴左侧显示了所有动画的列表。请记住，这些都是当前活动画板的动画。](/editor/animate-mode/timeline.md)
 
 ## [​](#state-machine-graph) 状态机图表 (State Machine Graph)
 
@@ -55,4 +55,4 @@ Rive 界面显示了一个带有播放控制的时间轴，以及用于在动画
 在状态机页面了解更多信息。
 [## 状态机 (State Machine)
 
-状态机是一种直观地将动画连接在一起并定义驱动过渡逻辑的方式。](/docs/editor/state-machine/state-machine)
+状态机是一种直观地将动画连接在一起并定义驱动过渡逻辑的方式。](/editor/state-machine/overview.md)

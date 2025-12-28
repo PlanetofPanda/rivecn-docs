@@ -4,8 +4,8 @@ Runtime Fundamentals
 
 播放状态机
 
-有关在 Rive 中设计和构建状态机的更多信息，请参阅：[状态机 (State Machine)](/docs/editor/state-machine)。
-Rive 的状态机提供了一种方法来组合一组动画状态并管理它们之间的过渡，这些过渡可以使用 [数据绑定 (Data Binding)](/docs/runtimes/data-binding) 进行编程控制。
+有关在 Rive 中设计和构建状态机的更多信息，请参阅：[状态机 (State Machine)](/editor/state-machine/overview.md)。
+Rive 的状态机提供了一种方法来组合一组动画状态并管理它们之间的过渡，这些过渡可以使用 [数据绑定 (Data Binding)](/runtimes/data-binding) 进行编程控制。
 
 ## [​](#playing-state-machines) 播放状态机
 
@@ -111,7 +111,7 @@ return (
 -   New Runtime (推荐)
 -   Legacy Runtime
 
-默认情况下，`RiveView` 自动使用 [在编辑器中配置](https://rive.app/docs/editor/fundamentals/artboards#default-state-machine) 的默认画板和状态机。在大多数情况下，你只需要提供 `file` 属性。为了进行编程控制，你可以选择指定 `artboardName` 和 `stateMachineName` 属性来使用不同的画板或状态机。
+默认情况下，`RiveView` 自动使用 [在编辑器中配置](/editor/fundamentals/artboards.md#default-state-machine) 的默认画板和状态机。在大多数情况下，你只需要提供 `file` 属性。为了进行编程控制，你可以选择指定 `artboardName` 和 `stateMachineName` 属性来使用不同的画板或状态机。
 
 ```javascript
 export default function PlaybackExample() {
@@ -410,4 +410,4 @@ animationView.stop(
 )
 ```
 
-[布局 (Layout)](/docs/runtimes/layout)[数据绑定 (Data Binding)](/docs/runtimes/data-binding)
+[布局 (Layout)](/runtimes/layout)[数据绑定 (Data Binding)](/runtimes/data-binding)

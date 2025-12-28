@@ -14,7 +14,7 @@
 
 ### [​](#anatomy-of-a-state-machine) 状态机剖析
 
-一个基本的状态机由图表 (Graph)、[状态 (States)](/docs/editor/state-machine/states)、[过渡 (Transitions)](/docs/editor/state-machine/transitions)、[输入 (Inputs)](/docs/editor/state-machine/inputs) 和 [图层 (Layers)](/docs/editor/state-machine/layers) 组成。我们将在本节中探索每一部分以及更多内容。
+一个基本的状态机由图表 (Graph)、[状态 (States)](/editor/state-machine/states.md)、[过渡 (Transitions)](/editor/state-machine/transitions.md)、[输入 (Inputs)](/editor/state-machine/inputs.md) 和 [图层 (Layers)](/editor/state-machine/layers) 组成。我们将在本节中探索每一部分以及更多内容。
 
 **图表** 是你添加状态和连接过渡的空间。当在动画列表中选中状态机时，它会代替时间轴显示。
 ![状态机图表](images/307461c0-2006-4fdf-bdc3-61875d40f422.webp)
@@ -26,7 +26,7 @@
 ![创建过渡](images/image_2.png)
 
 **弃用通知：** 本节关于旧版输入系统。
-**对于新项目：** 请改用 [数据绑定 (Data Binding)](/docs/editor/data-binding)。
+**对于新项目：** 请改用 [数据绑定 (Data Binding)](/editor/data-binding)。
 **对于现有项目：** 计划尽快从 Inputs 迁移到 Data Binding。
 **此内容仅用于支持遗留项目。**
 

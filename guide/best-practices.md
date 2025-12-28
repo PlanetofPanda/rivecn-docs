@@ -20,7 +20,7 @@ Rive 旨在应用和游戏中高效地播放编辑器内创建的交互式图形
 
 #### [​](#fonts) 字体 (Fonts)
 
-字体文件通常包含数千个你可能不需要的字形，如希腊字母、数学运算符和图标。为了减小导出的字体或 .riv 文件的大小，可以 [选择包含哪些字形](/docs/editor/text/fonts#glyph-%2F-script-selection)。
+字体文件通常包含数千个你可能不需要的字形，如希腊字母、数学运算符和图标。为了减小导出的字体或 .riv 文件的大小，可以 [选择包含哪些字形](/editor/text/fonts#glyph-%2F-script-selection)。
 
 #### [​](#raster-image-sizes-&-dimensions) 位图大小与尺寸 (Raster Image Sizes & Dimensions)
 
@@ -66,7 +66,7 @@ Rive 旨在应用和游戏中高效地播放编辑器内创建的交互式图形
 
 ### [​](#using-solos) 使用 Solo (Using Solos)
 
-[Solo](/docs/editor/manipulating-shapes/solos) 类似于分组合 (Group)，但增加了切换嵌套对象渲染的功能。它的功能类似于单选按钮，会禁用同一层级上的其他对象。
+[Solo](/editor/manipulating-shapes/solos.md) 类似于分组合 (Group)，但增加了切换嵌套对象渲染的功能。它的功能类似于单选按钮，会禁用同一层级上的其他对象。
 Solo 的一个常见用法是为角色创建可以轻松切换的不同皮肤。使用 Solo 比单独为每个对象的不透明度制作动画要快得多。此外，它允许编辑器和运行时通过不计算/渲染禁用的 Solo 来优化你的动画。
 
 ### [​](#blend-states) 混合状态 (Blend States)
@@ -79,7 +79,7 @@ Solo 的一个常见用法是为角色创建可以轻松切换的不同皮肤。
 
 ### [​](#out-of-band-assets) 带外资产 (Out-of-band Assets)
 
-参阅我们的 [加载资产 (Loading Assets)](/docs/runtimes/loading-assets) 文档。此功能允许你在运行时通过代码动态加载和替换资产（如字体、图像和音频），并将资源提供给你的 Rive 图形。这具有以下好处：
+参阅我们的 [加载资产 (Loading Assets)](/runtimes/loading-assets.md) 文档。此功能允许你在运行时通过代码动态加载和替换资产（如字体、图像和音频），并将资源提供给你的 Rive 图形。这具有以下好处：
 
 - 减小导出的 `.riv` 二进制文件大小。
 - 资产可以在多个 Rive 文件或应用程序的其他区域复用。
@@ -88,7 +88,7 @@ Solo 的一个常见用法是为角色创建可以轻松切换的不同皮肤。
 
 ### [​](#caching-your-riv) 缓存你的 .riv (Caching your .riv)
 
-如果你在页面或应用程序的多处使用相同的 Rive 文件，可以 [缓存 .riv 文件](/docs/runtimes/caching-a-rive-file) 以提高性能。缓存的关键好处是文件只需要解析和解码一次。从已缓存、已解码的文件中创建新的画板实例，比每次实例化画板前都解码文件要快得多。
+如果你在页面或应用程序的多处使用相同的 Rive 文件，可以 [缓存 .riv 文件](/runtimes/caching-a-rive-file) 以提高性能。缓存的关键好处是文件只需要解析和解码一次。从已缓存、已解码的文件中创建新的画板实例，比每次实例化画板前都解码文件要快得多。
 
 ### [​](#pausing-programmatically) 通过编程方式暂停 (Pausing Programmatically)
 

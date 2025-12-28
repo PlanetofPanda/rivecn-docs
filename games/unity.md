@@ -39,20 +39,20 @@ rive-unity 运行时使用 [Rive 渲染器](https://rive.app/renderer) 并且与
 
 ## [​](#feature-support) 功能支持
 
-rive-unity 运行时使用最新的 Rive C++ 运行时。有关运行时支持的更多详细信息，请参阅 [功能支持](/docs/feature-support) 页面。请参阅下表了解 Unity 运行时当前支持的内容。
+rive-unity 运行时使用最新的 Rive C++ 运行时。有关运行时支持的更多详细信息，请参阅 [功能支持](/feature-support.md) 页面。请参阅下表了解 Unity 运行时当前支持的内容。
 
 | **功能** | **支持** |
 | --- | --- |
-| [动画播放](/docs/runtimes/animation-playback) | ✅ |
-| [适应与对齐 (Fit & Alignment)](/docs/runtimes/layout#fit) | ✅ |
-| [监听器 (Listeners)](/docs/game-runtimes/unity/listeners) | ✅ |
-| [设置状态机输入 (Setting State Machine Inputs)](/docs/runtimes/inputs) | ✅ |
-| [监听事件 (Listening to Events)](/docs/runtimes/rive-events) | ✅ |
-| [运行时更新文本 (Updating text at runtime)](/docs/runtimes/text) | ✅ |
-| [带外资产 (Out-of-band assets)](/docs/runtimes/loading-assets) | ✅ |
-| [程序化渲染 (Procedural rendering)](/docs/game-runtimes/unity/procedural-rendering) | ✅ |
+| [动画播放](/runtimes/animation-playback) | ✅ |
+| [适应与对齐 (Fit & Alignment)](/runtimes/layout#fit) | ✅ |
+| [监听器 (Listeners)](/game-runtimes/unity/listeners) | ✅ |
+| [设置状态机输入 (Setting State Machine Inputs)](/runtimes/inputs) | ✅ |
+| [监听事件 (Listening to Events)](/runtimes/rive-events) | ✅ |
+| [运行时更新文本 (Updating text at runtime)](/runtimes/text) | ✅ |
+| [带外资产 (Out-of-band assets)](/runtimes/loading-assets.md) | ✅ |
+| [程序化渲染 (Procedural rendering)](/game-runtimes/unity/procedural-rendering) | ✅ |
 | PNG 图像 | ✅ |
 | JPEG 图像 | ✅ |
 | WEBP 图像 | ✅ |
 
-[常见用例](/docs/game-runtimes/unreal/common-use-cases)[快速开始](/docs/game-runtimes/unity/getting-started)
+[常见用例](/game-runtimes/unreal/common-use-cases)[快速开始](/game-runtimes/unity/getting-started)

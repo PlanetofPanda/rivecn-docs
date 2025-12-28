@@ -19,5 +19,5 @@
 
 ## [​](#mesh-deform) 网格变形 (Mesh Deform)
 
-在设计 (Design) 和编辑 (Edit) 模式下，你都可以通过进入编辑网格模式并使用选择工具移动顶点来让网格变形。为了获得更自然的体验，请考虑使用 [骨骼 (Bones)](https://rive.app/docs/editor/manipulating-shapes/bones)。
+在设计 (Design) 和编辑 (Edit) 模式下，你都可以通过进入编辑网格模式并使用选择工具移动顶点来让网格变形。为了获得更自然的体验，请考虑使用 [骨骼 (Bones)](/editor/manipulating-shapes/bones.md)。
 ![网格变形演示 Gi](images/MeshDeform.gif)

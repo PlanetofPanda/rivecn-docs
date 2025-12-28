@@ -9,14 +9,14 @@
 - Fundamentals
 - Manipulating Shapes
 
-  - [Overview](/docs/editor/manipulating-shapes/manipulating-shapes)
-  - [Bones](/docs/editor/manipulating-shapes/bones)
-  - [Bone Tips](/docs/editor/manipulating-shapes/bone-tips)
-  - [Meshes](/docs/editor/manipulating-shapes/meshes)
-  - [Clipping](/docs/editor/manipulating-shapes/clipping)
-  - [Solos](/docs/editor/manipulating-shapes/solos)
-  - [Trim Path](/docs/editor/manipulating-shapes/trim-path)
-  - [Joysticks](/docs/editor/manipulating-shapes/joysticks)
+  - [Overview](/editor/manipulating-shapes/manipulating-shapes)
+  - [Bones](/editor/manipulating-shapes/bones.md)
+  - [Bone Tips](/editor/manipulating-shapes/bone-tips.md)
+  - [Meshes](/editor/manipulating-shapes/meshes.md)
+  - [Clipping](/editor/manipulating-shapes/clipping.md)
+  - [Solos](/editor/manipulating-shapes/solos.md)
+  - [Trim Path](/editor/manipulating-shapes/trim-path.md)
+  - [Joysticks](/editor/manipulating-shapes/joysticks.md)
 - Text
 - Constraints
 - Animate Mode
@@ -24,12 +24,12 @@
 - Events
 - Data Binding
 - Layouts
-- [Libraries](/docs/editor/libraries)
-- [Keyboard Shortcuts](/docs/editor/keyboard-shortcuts)
+- [Libraries](/editor/libraries)
+- [Keyboard Shortcuts](/editor/keyboard-shortcuts)
 - Exporting
 - Share Links
 - MCP
-- [Tagging](/docs/editor/tagging)
+- [Tagging](/editor/tagging)
 
 On this page
 
@@ -78,6 +78,6 @@ YesNo
 
 [Suggest edits](https://github.com/rive-app/rive-docs/edit/main/editor/manipulating-shapes/solos.mdx)[Raise issue](https://github.com/rive-app/rive-docs/issues/new?title=Issue on docs&body=Path: /editor/manipulating-shapes/solos)
 
-[Clipping](/docs/editor/manipulating-shapes/clipping)[Trim Path](/docs/editor/manipulating-shapes/trim-path)
+[Clipping](/editor/manipulating-shapes/clipping.md)[Trim Path](/editor/manipulating-shapes/trim-path.md)
 
 ⌘I

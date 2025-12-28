@@ -4,7 +4,7 @@ Apple
 
 Rive 的 Apple 运行时。
 
-请注意，某些 Rive 功能可能尚未在特定运行时中受支持，或者可能需要使用 Rive 渲染器。有关更多详细信息，请参阅 [功能支持](/docs/feature-support) 和 [选择渲染器](/docs/runtimes/choose-a-renderer) 页面。
+请注意，某些 Rive 功能可能尚未在特定运行时中受支持，或者可能需要使用 Rive 渲染器。有关更多详细信息，请参阅 [功能支持](/feature-support.md) 和 [选择渲染器](/runtimes/choose-a-renderer) 页面。
 
 ## [​](#overview) 概览
 
@@ -122,4 +122,4 @@ Github: <https://github.com/rive-app/rive-ios> 示例:
 -   <https://github.com/rive-app/rive-ios/tree/main/Demo-App>
 -   Meng To 的免费课程: <https://designcode.io/swiftui-rive>
 
-[迁移指南](/docs/runtimes/flutter/migration-guide)[从 1.x.x 迁移到 2.x.x](/docs/runtimes/apple/migrating-from-1.x.x-to-2.x.x)
+[迁移指南](/runtimes/flutter/migration-guide)[从 1.x.x 迁移到 2.x.x](/runtimes/apple/migrating-from-1.x.x-to-2.x.x)

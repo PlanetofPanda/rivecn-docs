@@ -11,26 +11,26 @@
 - Text
 - Constraints
 
-  - [Overview](/docs/editor/constraints/constraints-overview)
-  - [IK Constraint](/docs/editor/constraints/ik-constraint)
-  - [Distance Constraint](/docs/editor/constraints/distance-constraint)
-  - [Scale Constraint](/docs/editor/constraints/scale-constraint)
-  - [Rotation Constraint](/docs/editor/constraints/rotation-constraint)
-  - [Transform Constraint](/docs/editor/constraints/transform-constraint)
-  - [Translation Constraint](/docs/editor/constraints/translation-constraint)
-  - [Follow Path Constraint](/docs/editor/constraints/follow-path-constraint)
-  - [Scroll Constraints](/docs/editor/constraints/scroll-constraint)
+  - [Overview](/editor/constraints/constraints-overview)
+  - [IK Constraint](/editor/constraints/ik-constraint.md)
+  - [Distance Constraint](/editor/constraints/distance-constraint)
+  - [Scale Constraint](/editor/constraints/scale-constraint)
+  - [Rotation Constraint](/editor/constraints/rotation-constraint)
+  - [Transform Constraint](/editor/constraints/transform-constraint)
+  - [Translation Constraint](/editor/constraints/translation-constraint)
+  - [Follow Path Constraint](/editor/constraints/follow-path-constraint.md)
+  - [Scroll Constraints](/editor/constraints/scroll-constraint.md)
 - Animate Mode
 - State Machines
 - Events
 - Data Binding
 - Layouts
-- [Libraries](/docs/editor/libraries)
-- [Keyboard Shortcuts](/docs/editor/keyboard-shortcuts)
+- [Libraries](/editor/libraries)
+- [Keyboard Shortcuts](/editor/keyboard-shortcuts)
 - Exporting
 - Share Links
 - MCP
-- [Tagging](/docs/editor/tagging)
+- [Tagging](/editor/tagging)
 
 Constraints
 
@@ -56,12 +56,12 @@ Examples of where to use constraints:
 
 Types of constraints in Rive:
 
-- [IK Constraint](/docs/editor/constraints/ik-constraint)​
-- [Distance Constraint](/docs/editor/constraints/distance-constraint)
-- [Transform Constraint](/docs/editor/constraints/transform-constraint)​
-- [Translation Constraint](/docs/editor/constraints/translation-constraint)
-- [Scale Constraint](/docs/editor/constraints/scale-constraint)
-- [Rotation Constraint](/docs/editor/constraints/rotation-constraint)
+- [IK Constraint](/editor/constraints/ik-constraint.md)​
+- [Distance Constraint](/editor/constraints/distance-constraint)
+- [Transform Constraint](/editor/constraints/transform-constraint)​
+- [Translation Constraint](/editor/constraints/translation-constraint)
+- [Scale Constraint](/editor/constraints/scale-constraint)
+- [Rotation Constraint](/editor/constraints/rotation-constraint)
 
 Was this page helpful?
 
@@ -69,6 +69,6 @@ YesNo
 
 [Suggest edits](https://github.com/rive-app/rive-docs/edit/main/editor/constraints/constraints-overview.mdx)[Raise issue](https://github.com/rive-app/rive-docs/issues/new?title=Issue on docs&body=Path: /editor/constraints/constraints-overview)
 
-[Fonts](/docs/editor/text/fonts)[IK Constraint](/docs/editor/constraints/ik-constraint)
+[Fonts](/editor/text/fonts)[IK Constraint](/editor/constraints/ik-constraint.md)
 
 ⌘I

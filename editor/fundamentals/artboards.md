@@ -4,7 +4,7 @@
 
 画板是文件的基石。
 
-画板是你在设计模式 (Design Mode) 和动画模式 (Animate Mode) 下进行创作的基础。它们是每个层级结构的根节点，允许你定义场景的尺寸和背景颜色。你可以在 [舞台 (Stage)](../interface-overview/stage) 上创建无限个画板，但每个 Rive 文件都至少包含一个画板。
+画板是你在设计模式 (Design Mode) 和动画模式 (Animate Mode) 下进行创作的基础。它们是每个层级结构的根节点，允许你定义场景的尺寸和背景颜色。你可以在 [舞台 (Stage)](../interface-overview/stage.md) 上创建无限个画板，但每个 Rive 文件都至少包含一个画板。
 ![画板示例 Pn](images/artboard.png)
 
 ## [​](#​active-artboard) ​活动画板 (Active artboard)
@@ -26,11 +26,11 @@
 
 1. 在一个新文件中，你会在舞台上看到用于定义画板尺寸或从几个预设中进行选择的选项。确定属性后，点击“创建画板 (Create Artboard)”按钮。
 ![创建画板演示 Gi](images/create_AB.gif)
-2. 或者，你可以使用位于画板菜单中的“画板工具”，或者使用快捷键 `A`。启用该工具后，通过点击并拖动来定义边界。你随时可以通过在 [层级面板 (Hierarchy)](../interface-overview/hierarchy) 中选中画板来在 [检查器 (Inspector)](../interface-overview/inspector) 中调整其大小和位置。
+2. 或者，你可以使用位于画板菜单中的“画板工具”，或者使用快捷键 `A`。启用该工具后，通过点击并拖动来定义边界。你随时可以通过在 [层级面板 (Hierarchy)](../interface-overview/hierarchy.md) 中选中画板来在 [检查器 (Inspector)](../interface-overview/inspector.md) 中调整其大小和位置。
 
 ## [​](#artboard-properties) 画板属性 (Artboard properties)
 
-每个画板都有各种属性可以在 [检查器 (Inspector)](../interface-overview/inspector) 中更改。可以更改的一些属性包括画板在 [舞台 (Stage)](../interface-overview/stage) 上的位置、大小、布局属性、填充颜色、原点 (Origin Point) 以及渲染预设。
+每个画板都有各种属性可以在 [检查器 (Inspector)](../interface-overview/inspector.md) 中更改。可以更改的一些属性包括画板在 [舞台 (Stage)](../interface-overview/stage.md) 上的位置、大小、布局属性、填充颜色、原点 (Origin Point) 以及渲染预设。
 ![画板属性 Pn](images/artboard_prop.png)
 
 ## [​](#position) **位置 (Position)**
@@ -64,7 +64,7 @@
 
 ## [​](#layout-settings) 布局设置 (Layout Settings)
 
-由于画板是所有其他对象添加到的根对象，画板允许你添加和调整它们的布局属性。在此处了解更多关于布局的信息：[此处](https://rive.app/docs/editor/layouts/layouts-overview)。
+由于画板是所有其他对象添加到的根对象，画板允许你添加和调整它们的布局属性。在此处了解更多关于布局的信息：[此处](/editor/layouts/overview.md)。
 ![布局设置 Pn](images/layout.png)
 请注意，这些属性仅在画板中添加了一个或多个布局后才会生效。
 
@@ -72,13 +72,13 @@
 
 与 Rive 中的其他对象一样，画板可以添加一个或多个填充 (Fills) 或描边 (Strokes)。添加和自定义填充及描边的过程对于画板和层级面板中的对象是相同的。
 ![填充和描边 Pn](images/fillandstroke.png)
-在此处阅读有关填充和描边的更多信息：[此处](https://rive.app/docs/editor/fundamentals/fill-and-stroke)。
+在此处阅读有关填充和描边的更多信息：[此处](/editor/fundamentals/fill-and-stroke.md)。
 
 ## [​](#render-presets) 渲染预设 (Render Presets)
 
 选中画板后可以创建渲染预设，用于渲染出静态图形（如 PNG 和 SVG），以及视频和动态文件（如 PNG 序列和 MP4）。
 ![渲染设置 Pn](images/render.png)
-在此处阅读有关创建渲染预设的更多信息：[此处](https://rive.app/docs/editor/exporting/exporting-for-video-and-static-design)。
+在此处阅读有关创建渲染预设的更多信息：[此处](/editor/exporting/exporting-for-video-and-static-design)。
 
 ## [​](#selected-colors) 选中颜色 (Selected Colors)
 

@@ -4,7 +4,7 @@ React Native
 
 Rive 的 React Native 运行时。
 
-请注意，某些 Rive 功能可能尚未在特定运行时中受支持，或者可能需要使用 Rive 渲染器。有关更多详细信息，请参阅 [功能支持](/docs/feature-support) 和 [选择渲染器](/docs/runtimes/choose-a-renderer) 页面。
+请注意，某些 Rive 功能可能尚未在特定运行时中受支持，或者可能需要使用 Rive 渲染器。有关更多详细信息，请参阅 [功能支持](/feature-support.md) 和 [选择渲染器](/runtimes/choose-a-renderer) 页面。
 
 🚀 **新的 Rive React Native 运行时现已推出！** 基于 Nitro 构建，性能更佳，React Native 集成更好。**现在开始：**
 
@@ -114,15 +114,15 @@ Rive 的 React Native 运行时。
 
     [## Props
 
-    `RiveView` 可用的 view props](/docs/runtimes/react-native/props)[## 加载 Rive 文件
+    `RiveView` 可用的 view props](/runtimes/react-native/props)[## 加载 Rive 文件
 
-    如何在你的应用中加载 Rive 文件](/docs/runtimes/react-native/loading-rive-files)[## 缓存 Rive 文件
+    如何在你的应用中加载 Rive 文件](/runtimes/react-native/loading-rive-files)[## 缓存 Rive 文件
 
-    缓存 Rive 文件以获得更好的性能](/docs/runtimes/caching-a-rive-file)
+    缓存 Rive 文件以获得更好的性能](/runtimes/caching-a-rive-file)
 
 4.  **布局**
 
-    配置图形如何适应其容器。对于此示例，我们将 `fit` 设置为 `Layout`，这会自动调整画板大小以匹配视图大小。这对于使用 [布局 (Layouts)](/docs/editor/layouts/layouts-overview) 构建的响应式 Rive 图形非常理想。
+    配置图形如何适应其容器。对于此示例，我们将 `fit` 设置为 `Layout`，这会自动调整画板大小以匹配视图大小。这对于使用 [布局 (Layouts)](/editor/layouts/overview.md) 构建的响应式 Rive 图形非常理想。
 
     **布局**
 
@@ -138,7 +138,7 @@ Rive 的 React Native 运行时。
 
     [## 运行时布局
 
-    控制 Rive 图形在其容器内的适应和对齐方式](/docs/runtimes/layout)
+    控制 Rive 图形在其容器内的适应和对齐方式](/runtimes/layout)
 
 5.  **视图引用 (View Reference)**
 
@@ -172,7 +172,7 @@ Rive 的 React Native 运行时。
 
     [## 视图方法
 
-    查看所有可用的视图引用方法。](/docs/runtimes/react-native/rive-ref-methods)[## Hybrid Views
+    查看所有可用的视图引用方法。](/runtimes/react-native/rive-ref-methods)[## Hybrid Views
 
     阅读更多关于 Nitro Hybrid Views 的信息。](https://nitro.margelo.com/docs/hybrid-views)
 
@@ -276,7 +276,7 @@ Rive 的 React Native 运行时。
 
     [## 数据绑定
 
-    查看运行时数据绑定文档以获取更多信息。](/docs/runtimes/data-binding)
+    查看运行时数据绑定文档以获取更多信息。](/runtimes/data-binding)
 
     查看我们的 [示例应用](https://github.com/rive-app/rive-nitro-react-native/tree/main/example) 获取更多使用示例。
 
@@ -292,7 +292,7 @@ Rive 的 React Native 运行时。
 />
 ```
 
-查看可用的 [props](/docs/runtimes/react-native/props) 和 [methods](/docs/runtimes/react-native/rive-ref-methods)。
+查看可用的 [props](/runtimes/react-native/props) 和 [methods](/runtimes/react-native/rive-ref-methods)。
 
 ### [​](#userivefile) `useRiveFile`
 
@@ -306,7 +306,7 @@ const { riveFile } = useRiveFile({
 });
 ```
 
-查看 [加载 Rive 文件](/docs/runtimes/react-native/loading-rive-files) 和 [缓存 Rive 文件](/docs/runtimes/caching-a-rive-file) 获取更多信息。
+查看 [加载 Rive 文件](/runtimes/react-native/loading-rive-files) 和 [缓存 Rive 文件](/runtimes/caching-a-rive-file) 获取更多信息。
 
 ### [​](#userive) `useRive`
 
@@ -321,7 +321,7 @@ const { riveViewRef, setHybridRef } = useRive();
 />
 ```
 
-这是一个 [Nitro Hybrid View](https://nitro.margelo.com/docs/hybrid-views)。查看可用的 [视图引用方法](/docs/runtimes/react-native/rive-ref-methods)。
+这是一个 [Nitro Hybrid View](https://nitro.margelo.com/docs/hybrid-views)。查看可用的 [视图引用方法](/runtimes/react-native/rive-ref-methods)。
 
 ### [​](#useviewmodelinstance) `useViewModelInstance`
 
@@ -378,7 +378,7 @@ const { riveViewRef, setHybridRef } = useRive();
 const instance = useViewModelInstance(riveViewRef);
 ```
 
-查看 [运行时数据绑定文档](/docs/runtimes/data-binding) 获取更多信息。
+查看 [运行时数据绑定文档](/runtimes/data-binding) 获取更多信息。
 
 ## [​](#resources) 资源
 
@@ -388,7 +388,7 @@ const instance = useViewModelInstance(riveViewRef);
 
 本指南记录了如何开始使用旧版 React Native 运行时库。源代码可在其 [GitHub 仓库](https://github.com/rive-app/rive-react-native) 中找到。此库包含一个 API，供 React Native 应用轻松集成 Rive 资产。最低 iOS 目标版本为 **14.0**。
 
-请参阅 [我们的文档](/docs/runtimes/react-native/adding-rive-to-expo) 以将 Rive 添加到 Expo 应用中。
+请参阅 [我们的文档](/runtimes/react-native/adding-rive-to-expo) 以将 Rive 添加到 Expo 应用中。
 
 ## [​](#getting-started) 快速开始 (旧版)
 
@@ -438,4 +438,4 @@ const instance = useViewModelInstance(riveViewRef);
 
 [## GitHub](https://github.com/rive-app/rive-react-native)[## 示例应用](https://github.com/rive-app/rive-react-native/tree/main/example)
 
-[从 v3 迁移到 v4](/docs/runtimes/react/migrating-from-v3-to-v4)[运行时概念](/docs/runtimes/react-native/runtime-concepts)
+[从 v3 迁移到 v4](/runtimes/react/migrating-from-v3-to-v4)[运行时概念](/runtimes/react-native/runtime-concepts)

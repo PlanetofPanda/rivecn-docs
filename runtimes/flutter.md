@@ -4,7 +4,7 @@ Flutter
 
 Rive 的 Flutter 运行时。
 
-请注意，某些 Rive 功能可能尚未在特定运行时中受支持，或者可能需要使用 Rive 渲染器。有关更多详细信息，请参阅 [功能支持](/docs/feature-support) 和 [选择渲染器](/docs/runtimes/choose-a-renderer) 页面。
+请注意，某些 Rive 功能可能尚未在特定运行时中受支持，或者可能需要使用 Rive 渲染器。有关更多详细信息，请参阅 [功能支持](/feature-support.md) 和 [选择渲染器](/runtimes/choose-a-renderer) 页面。
 
 ## [​](#overview) 概览
 
@@ -12,7 +12,7 @@ Rive 的 Flutter 运行时。
 
 Rive Flutter 的最新版本目前作为开发版本 `0.14.0-dev.x` 发布。这意味着虽然该包是稳定的并可用于生产，但我们仍在积极开发新功能和改进。我们建议使用最新的开发版本以利用最新的功能和修复。
 
-已经在用 Rive Flutter 了？请参阅我们的 [迁移指南](/docs/runtimes/flutter/migration-guide) 以获取有关采用最新 `0.14.x` 版本的信息。
+已经在用 Rive Flutter 了？请参阅我们的 [迁移指南](/runtimes/flutter/migration-guide) 以获取有关采用最新 `0.14.x` 版本的信息。
 
 ## [​](#quick-start) 快速开始
 
@@ -465,7 +465,7 @@ void dispose() {
 -   如果你要显示复杂的图形，请考虑使用 `Factory.rive` 以利用 Rive 渲染器的优化。
 -   矢量羽化 (Vector Feathering) 仅在 `Factory.rive` 中可用，因此如果你需要该功能，请使用 Rive 渲染器。
 
-有关更多信息，请参阅 [选择渲染器](/docs/runtimes/choose-a-renderer)。
+有关更多信息，请参阅 [选择渲染器](/runtimes/choose-a-renderer)。
 
 Rive 渲染器目前尚未通过 Flutter 在 Linux 上受支持。在 Linux 上，它会自动回退到 `Factory.flutter`。
 
@@ -498,12 +498,12 @@ Rive 渲染器目前尚未通过 Flutter 在 Linux 上受支持。在 Linux 上�
 -   你的 `pubspec.yaml` 中有正确版本的 Rive 包。
 -   你已经运行 `flutter pub get` 来获取最新的依赖项。
 
-如果你仍然遇到问题，请参阅 Rive Native 文档中的 [故障排除部分](/docs/runtimes/flutter/rive-native#troubleshooting)。
+如果你仍然遇到问题，请参阅 Rive Native 文档中的 [故障排除部分](/runtimes/flutter/rive-native#troubleshooting)。
 
 ## [​](#manually-building-rive-native-libraries) 手动构建 Rive 原生库
 
 Rive 会自动为你下载原生库作为 `rive_native` 插件的一部分。
-但是，如果你需要手动构建原生库，请参阅 Rive Native 文档中的 [构建部分](/docs/runtimes/flutter/rive-native#building-rive-native)。
+但是，如果你需要手动构建原生库，请参阅 Rive Native 文档中的 [构建部分](/runtimes/flutter/rive-native#building-rive-native)。
 
 ## [​](#next-steps) 下一步
 
@@ -511,17 +511,17 @@ Rive 会自动为你下载原生库作为 `rive_native` 插件的一部分。
 
 [## 画板 (Artboards)
 
-在运行时控制显示哪个画板。](/docs/runtimes/artboards)[## 布局 (Layout)
+在运行时控制显示哪个画板。](/runtimes/artboards)[## 布局 (Layout)
 
-在运行时控制画板的布局（适应和对齐）。](/docs/runtimes/layout)[## 状态机播放 (State Machine Playback)
+在运行时控制画板的布局（适应和对齐）。](/runtimes/layout)[## 状态机播放 (State Machine Playback)
 
-在运行时控制状态机播放并与状态机输入交互。](/docs/runtimes/state-machines)[## 数据绑定 (Data Binding)
+在运行时控制状态机播放并与状态机输入交互。](/runtimes/state-machines.md)[## 数据绑定 (Data Binding)
 
-在运行时使用双向数据绑定动态更新文本、颜色、图像、列表等内容。](/docs/runtimes/data-binding)[## 加载资产 (Loading Assets)
+在运行时使用双向数据绑定动态更新文本、颜色、图像、列表等内容。](/runtimes/data-binding)[## 加载资产 (Loading Assets)
 
-在运行时加载引用的资产（图像、字体、音频）。也称为带外资产 (out-of-band assets)。](/docs/runtimes/loading-assets)[## 缓存 Rive 文件 (Caching a Rive File)
+在运行时加载引用的资产（图像、字体、音频）。也称为带外资产 (out-of-band assets)。](/runtimes/loading-assets.md)[## 缓存 Rive 文件 (Caching a Rive File)
 
-在多个 Rive 实例之间缓存并复用 Rive 文件对象以提高性能。](/docs/runtimes/caching-a-rive-file)
+在多个 Rive 实例之间缓存并复用 Rive 文件对象以提高性能。](/runtimes/caching-a-rive-file)
 
 ## [​](#resources) 资源
 
@@ -533,7 +533,7 @@ Rive Flutter:
 
 Rive Native:
 
--   [Rive Native 概览](/docs/runtimes/flutter/rive-native)
+-   [Rive Native 概览](/runtimes/flutter/rive-native)
 -   [pub.dev](https://pub.dev/packages/rive_native)
 
-[迁移指南](/docs/runtimes/react-native/migration-guide)[Rive Native for Flutter](/docs/runtimes/flutter/rive-native)
+[迁移指南](/runtimes/react-native/migration-guide)[Rive Native for Flutter](/runtimes/flutter/rive-native)

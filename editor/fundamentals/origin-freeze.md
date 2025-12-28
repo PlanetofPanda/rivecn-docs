@@ -15,12 +15,12 @@
 - Events
 - Data Binding
 - Layouts
-- [Libraries](/docs/editor/libraries)
-- [Keyboard Shortcuts](/docs/editor/keyboard-shortcuts)
+- [Libraries](/editor/libraries)
+- [Keyboard Shortcuts](/editor/keyboard-shortcuts)
 - Exporting
 - Share Links
 - MCP
-- [Tagging](/docs/editor/tagging)
+- [Tagging](/editor/tagging)
 
 404
 
@@ -28,6 +28,6 @@
 
 We couldn't find the page. Maybe you were looking for one of these pages below?
 
-[Freeze and Origin](/docs/editor/fundamentals/freeze-and-origin#freeze-and-origin)[Fundamentals](/docs/game-runtimes/unreal/fundamentals#)[Fundamentals Overview](/docs/editor/fundamentals/overview#)
+[Freeze and Origin](/editor/fundamentals/freeze-and-origin#freeze-and-origin)[Fundamentals](/game-runtimes/unreal/fundamentals#)[Fundamentals Overview](/editor/fundamentals/overview.md#)
 
 ⌘I

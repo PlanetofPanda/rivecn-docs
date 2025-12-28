@@ -32,11 +32,11 @@
 
 ### [​](#withtranslation) `withTranslation`
 
-从给定的 x 和 y 值或从 [向量 (Vector)](/docs/scripting/api-reference/vector) 位置创建一个平移矩阵。
+从给定的 x 和 y 值或从 [向量 (Vector)](/scripting/api-reference/vector) 位置创建一个平移矩阵。
 
 ### [​](#withscale) `withScale`
 
-从给定的 x 和 y 值或从 [向量 (Vector)](/docs/scripting/api-reference/vector) 创建一个缩放矩阵。
+从给定的 x 和 y 值或从 [向量 (Vector)](/scripting/api-reference/vector) 创建一个缩放矩阵。
 
 ### [​](#withscaleandtranslation) `withScaleAndTranslation`
 

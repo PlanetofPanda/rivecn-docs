@@ -12,19 +12,19 @@
 Rive 会自动保存你的版本历史记录。你可以通过版本历史记录选项查看或恢复文件版本历史中的任何实例。
 ![版本历史 Pn](images/revision.png)
 此外，你还可以使用“创建版本 (Create Revision)”选项创建一个新的自定义版本。
-在此处阅读有关版本历史记录的更多信息：[此处](http://rive.app/docs/editor/fundamentals/revision-history)。
+在此处阅读有关版本历史记录的更多信息：[此处](/editor/fundamentals/revision-history)。
 
 **导出 (Export)**
 导出部分允许你导出 Rive 文件，以及为导出的文件导出或删除所有名称。
 ![导出选项 Pn](images/export_Options.png)
-在此处阅读有关导出 Rive 文件及其内容的更多信息：[此处](https://rive.app/docs/editor/exporting/exporting-for-runtime)。
+在此处阅读有关导出 Rive 文件及其内容的更多信息：[此处](/editor/exporting/exporting-for-runtime.md)。
 
 **生成分享链接 (Generate Share Link)**
 生成分享链接功能适用于 Voyager 和 Enterprise 方案。[了解更多关于我们的方案和定价的信息](https://rive.app/pricing)。
 分享链接是一种快速的无代码方式，可以让你的 Rive 文件在网站上运行，或者向客户展示你的图形作品。
 ![分享链接 Gi](images/sharelink.gif)
 通过分享链接分享你当前正在处理的文件版本。请注意，这并不等同于让某人访问包含所有版本历史记录的实时文件。此链接将是文件当前状态的冻结版本。如果你对文件进行了更改，则需要生成一个新的分享链接。
-在此处了解更多关于分享链接的信息：[此处](https://rive.app/docs/editor/share-links/overview)。
+在此处了解更多关于分享链接的信息：[此处](/editor/share-links/overview)。
 
 **发布到市场 (Publish to Marketplace)**
 市场 (Marketplace) 是你可以向整个 Rive 社区分享文件的地方。
@@ -34,12 +34,12 @@ Rive 会自动保存你的版本历史记录。你可以通过版本历史记录
 **云渲染器 (Cloud Renderer)**
 文件菜单提供了一种查看动画并将新动画或预设添加到渲染队列的方法。
 ![渲染 Pn](images/render.png)
-在此处了解更多关于使用我们的云渲染器的信息：[此处](https://rive.app/docs/editor/exporting/exporting-for-video-and-static-design)。
+在此处了解更多关于使用我们的云渲染器的信息：[此处](/editor/exporting/exporting-for-video-and-static-design)。
 
 **浏览声音 (Browse Sounds)**
 Rive 允许你通过事件 (Events) 在文件中添加和播放不同的音效。此选项允许你浏览我们的声音库。
 ![声音 Pn](images/sounds.png)
-在此处阅读更多关于在 Rive 文件中添加声音的信息：[此处](https://rive.app/docs/editor/events/audio-events)。
+在此处阅读更多关于在 Rive 文件中添加声音的信息：[此处](/editor/events/audio-events)。
 
 **显示快捷键 (Show Shortcuts)**
 “显示快捷键”选项允许你查看并搜索 Rive 编辑器中的所有快捷键。
@@ -53,7 +53,7 @@ Rive 允许你通过事件 (Events) 在文件中添加和播放不同的音效�
 
 ## [​](#transform-tools-menu) 变换工具菜单 (Transform Tools menu)
 
-变换工具菜单包含了允许你更改 [舞台 (Stage)](/docs/editor/interface-overview/stage) 上对象变换属性的工具。
+变换工具菜单包含了允许你更改 [舞台 (Stage)](/editor/interface-overview/stage.md) 上对象变换属性的工具。
 ![选择 Pn](images/select.png)
 **选择工具 (Select Tool)**
 选择工具允许你选择对象，并使用出现的 Gizmo 操纵它们的所有变换属性。你还可以在空白区域点击并拖动，通过框选来选择多个对象。
@@ -72,7 +72,7 @@ Gizmo 允许你操纵所选内容的平移、旋转和缩放属性。
 
 **冻结模式 (Freeze Mode)**
 冻结模式允许你修改原点 (Origins)、分组 (Groups) 和骨骼 (Bones) 的位置，而不影响与其关联的基础对象。
-在此处了解更多关于原点和冻结模式的信息：[此处](https://rive.app/docs/editor/fundamentals/freeze-and-origin)。
+在此处了解更多关于原点和冻结模式的信息：[此处](/editor/fundamentals/freeze-and-origin)。
 
 ## [​](#artboard,-layout,-and-groups-menu) 画板、布局和分组菜单 (Artboard, Layout, and Groups menu)
 
@@ -81,22 +81,22 @@ Gizmo 允许你操纵所选内容的平移、旋转和缩放属性。
 
 [## 画板 (Artboards)
 
-画板是你在设计模式和动画模式下进行创作的基础。](../fundamentals/artboards)[## 组件 (Components)
+画板是你在设计模式和动画模式下进行创作的基础。](../fundamentals/artboards.md)[## 组件 (Components)
 
-组件可以通过允许你复用动画和状态机来加快你的工作流程。](../fundamentals/components)[## 分组 (Groups)
+组件可以通过允许你复用动画和状态机来加快你的工作流程。](../fundamentals/components.md)[## 分组 (Groups)
 
-使用分组来组织你的图形或添加额外的变换空间。](../fundamentals/groups)[## 布局 (Layouts)
+使用分组来组织你的图形或添加额外的变换空间。](../fundamentals/groups.md)[## 布局 (Layouts)
 
-布局让你能够创建响应式设计。](https://rive.app/docs/editor/layouts/layouts-overview)
+布局让你能够创建响应式设计。](/editor/layouts/overview.md)
 
 ## [​](#vector-tools-menu) 矢量工具菜单 (Vector Tools menu)
 
-使用 [钢笔工具 (Pen Tool)](/docs/editor/fundamentals/pen-tool-overview) 和 [参数化图形 (procedural shapes)](/docs/editor/fundamentals/procedural-shapes) 在 Rive 中进行设计。矢量工具菜单包含了创建矢量作品所需的所有工具。
+使用 [钢笔工具 (Pen Tool)](/editor/fundamentals/pen-tool-overview.md) 和 [参数化图形 (procedural shapes)](/editor/fundamentals/procedural-shapes.md) 在 Rive 中进行设计。矢量工具菜单包含了创建矢量作品所需的所有工具。
 ![创建工具 Pn](images/createtools.png)
 
 ## [​](#bones-menu) 骨骼菜单 (Bones menu)
 
-访问 [骨骼 (Bone)](/docs/editor/manipulating-shapes/bones) 和权重工具（绑定时）。
+访问 [骨骼 (Bone)](/editor/manipulating-shapes/bones.md) 和权重工具（绑定时）。
 ![骨骼 Pn](images/bones.png)
 
 ## [​](#events-and-joystick-menu) 事件和摇杆菜单 (Events and Joystick Menu)
@@ -106,9 +106,9 @@ Gizmo 允许你操纵所选内容的平移、旋转和缩放属性。
 
 [## 事件 (Events)
 
-事件允许你向运行时和编辑器提供额外信息。](https://rive.app/docs/editor/events/overview)[## 摇杆 (Joysticks)
+事件允许你向运行时和编辑器提供额外信息。](/editor/events/overview)[## 摇杆 (Joysticks)
 
-摇杆是一个绑定工具，它能提供舞台控制项，让你能够平滑地切换已连接的时间轴。](https://rive.app/docs/editor/manipulating-shapes/joysticks)
+摇杆是一个绑定工具，它能提供舞台控制项，让你能够平滑地切换已连接的时间轴。](/editor/manipulating-shapes/joysticks.md)
 
 ## [​](#view-options-menu) 视图选项菜单 (View Options menu)
 
@@ -161,7 +161,7 @@ Gizmo 是屏幕上的视觉对象，可以让我们更改对象的位置、缩�
 
 ## [​](#export-button) 导出按钮 (Export Button)
 
-导出按钮允许你创建 [分享链接 (Share Links)](/docs/editor/share-links/overview)、[发布文件到市场 (Marketplace)](/docs/community/marketplace-overview#marketplace-overview)、[下载 `.riv` 文件](/docs/editor/exporting/exporting-for-runtime) 以及 [发布库 (Library)](/docs/editor/libraries)。
+导出按钮允许你创建 [分享链接 (Share Links)](/editor/share-links/overview)、[发布文件到市场 (Marketplace)](/community/marketplace-overview.md#marketplace-overview)、[下载 `.riv` 文件](/editor/exporting/exporting-for-runtime.md) 以及 [发布库 (Library)](/editor/libraries)。
 ![导出按钮 Pn](images/export.png)
 
 ## [​](#mode-toggle) 模式切换 (Mode toggle)

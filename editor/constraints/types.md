@@ -15,12 +15,12 @@
 - Events
 - Data Binding
 - Layouts
-- [Libraries](/docs/editor/libraries)
-- [Keyboard Shortcuts](/docs/editor/keyboard-shortcuts)
+- [Libraries](/editor/libraries)
+- [Keyboard Shortcuts](/editor/keyboard-shortcuts)
 - Exporting
 - Share Links
 - MCP
-- [Tagging](/docs/editor/tagging)
+- [Tagging](/editor/tagging)
 
 404
 
@@ -28,6 +28,6 @@
 
 We couldn't find the page. Maybe you were looking for one of these pages below?
 
-[Constraints Overview](/docs/editor/constraints/constraints-overview#)[Scroll Constraints](/docs/editor/constraints/scroll-constraint#)[Translation Constraint](/docs/editor/constraints/translation-constraint#translation-constraint)
+[Constraints Overview](/editor/constraints/constraints-overview#)[Scroll Constraints](/editor/constraints/scroll-constraint.md#)[Translation Constraint](/editor/constraints/translation-constraint#translation-constraint)
 
 ⌘I

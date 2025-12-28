@@ -29,6 +29,6 @@ rive-unreal 运行时使用 [Rive 渲染器](https://rive.app/renderer) 并支�
 
 ## [​](#feature-support) 功能支持
 
-rive-unreal 运行时使用 [Rive C++ 运行时](https://github.com/rive-app/rive-cpp)。有关运行时支持的更多详细信息，请参阅 [功能支持](/docs/feature-support) 页面。
+rive-unreal 运行时使用 [Rive C++ 运行时](https://github.com/rive-app/rive-cpp)。有关运行时支持的更多详细信息，请参阅 [功能支持](/feature-support.md) 页面。
 
-[快速开始](/docs/game-runtimes/unreal/getting-started)
+[快速开始](/game-runtimes/unreal/getting-started)

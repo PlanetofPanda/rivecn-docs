@@ -21,7 +21,7 @@ Rive 中的矢量是在形状图层上渲染的。形状图层通过允许你自
 
 ### [​](#path-layer-properties) 路径图层属性 (Path layer properties)
 
-路径图层会显示与路径类型相关的属性。了解更多关于 [参数化图形 (Procedural Shapes)](/docs/editor/fundamentals/procedural-shapes) 的信息。
+路径图层会显示与路径类型相关的属性。了解更多关于 [参数化图形 (Procedural Shapes)](/editor/fundamentals/procedural-shapes.md) 的信息。
 ![路径图层属性示例](images/shape-and-path-properties.png)
 
 ## [​](#enter-and-esc-shortcuts) Enter 和 Esc 快捷键

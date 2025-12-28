@@ -94,6 +94,6 @@ Rive 不仅仅是一个动画工具，它是一个**实时的交互设计运行�
 
 ### 📚 接下来该学什么？
 
-* 👉 [编辑器界面概览](editor/interface-overview/overview.md)
-* 👉 [画板（Artboards）的概念](editor/fundamentals/artboards.md)
-* 👉 [状态机入门](editor/state-machine/overview.md)
+* 👉 [编辑器界面概览](/editor/interface-overview/overview.md)
+* 👉 [画板（Artboards）的概念](/editor/fundamentals/artboards.md)
+* 👉 [状态机入门](/editor/state-machine/overview.md)

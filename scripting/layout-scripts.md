@@ -2,14 +2,14 @@
 
 # Layout 脚本 (Layout Scripts)
 
-Layout 脚本扩展了 [Node 脚本](/docs/scripting/protocols/node-scripts) 的行为，为你提供了对 Layout 组件的编程控制。它们允许你测量、调整大小并响应 Layout 几何形状的变化。它们非常适合构建自定义布局行为，如瀑布流网格、轮播图、间距逻辑等。
+Layout 脚本扩展了 [Node 脚本](/scripting/node-scripts.md) 的行为，为你提供了对 Layout 组件的编程控制。它们允许你测量、调整大小并响应 Layout 几何形状的变化。它们非常适合构建自定义布局行为，如瀑布流网格、轮播图、间距逻辑等。
 
 ## [​](#examples) 示例
 
 ## [​](#adding-a-layout-script-to-a-layout) 向 Layout 添加 Layout 脚本
 
-1.  向场景添加一个新的 [Layout](/docs/editor/layouts/layouts-overview)。
-2.  [创建一个新脚本](/docs/scripting/creating-scripts) 并选择 **Layout** 作为类型。
+1.  向场景添加一个新的 [Layout](/editor/layouts/overview.md)。
+2.  [创建一个新脚本](/scripting/creating-scripts) 并选择 **Layout** 作为类型。
 3.  将你的脚本添加为 Layout 的子级。
 
 ## [​](#lifecycle) 生命周期 (Lifecycle)

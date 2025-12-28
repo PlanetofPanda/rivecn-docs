@@ -52,7 +52,7 @@ end
 
 ### [​](#bounds) `bounds`
 
-将画板的边界框作为两个 [向量 (Vector)](/docs/scripting/api-reference/vector) 值返回：最小点和最大点。
+将画板的边界框作为两个 [向量 (Vector)](/scripting/api-reference/vector) 值返回：最小点和最大点。
 
 ```lua
 local minPt, maxPt = self.myArtboard:bounds()

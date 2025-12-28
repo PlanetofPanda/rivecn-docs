@@ -18,7 +18,7 @@
 ![背景颜色设置 Pn](images/backgrounds.png)
 
 **标签 (Tags)**
-在背景颜色下方，你可以查看、编辑和向文件添加新标签。在此处了解更多关于标签的信息：[此处](https://rive.app/docs/editor/tagging)。
+在背景颜色下方，你可以查看、编辑和向文件添加新标签。在此处了解更多关于标签的信息：[此处](/editor/tagging)。
 ![标签管理 Pn](images/tags.png)
 
 **默认插值 (Default Interpolation)**
@@ -38,9 +38,9 @@
 
 [## 布局 (Layouts)
 
-布局让你能够构建响应式设计。](https://rive.app/docs/editor/layouts/layouts-overview)[## N-切片 (N-Slicing)
+布局让你能够构建响应式设计。](/editor/layouts/overview.md)[## N-切片 (N-Slicing)
 
-N-切片让你能够拉伸或重复位图和矢量设计的某些部分。](https://rive.app/docs/editor/layouts/n-slicing)
+N-切片让你能够拉伸或重复位图和矢量设计的某些部分。](/editor/layouts/n-slicing.md)
 
 ## [​](#transform-properties) 变换属性 (Transform properties)
 
@@ -72,8 +72,8 @@ Rive 有两种不同的模式：设计 (Design) 和动画 (Animate)。](../anima
 
 [## 插值面板 (Interpolation Panel)
 
-选中关键帧会弹出插值面板。](https://rive.app/docs/editor/animate-mode/interpolation-easing)[## 过渡属性 (Transition Properties)
+选中关键帧会弹出插值面板。](/editor/animate-mode/interpolation-easing)[## 过渡属性 (Transition Properties)
 
-选择一个过渡将显示可自定义的过渡属性。](https://rive.app/docs/editor/state-machine/transitions)[## 状态属性 (State Properties)
+选择一个过渡将显示可自定义的过渡属性。](/editor/state-machine/transitions.md)[## 状态属性 (State Properties)
 
-通过选择一个状态可以自定义状态属性。](https://rive.app/docs/editor/state-machine/states)
+通过选择一个状态可以自定义状态属性。](/editor/state-machine/states.md)

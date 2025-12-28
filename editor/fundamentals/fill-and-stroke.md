@@ -139,8 +139,8 @@
 **描边类型 (Stroke Type)** - 在描边选项面板底部，你可以找到将描边在纯色、修剪、虚线描边之间切换的选项。
 
 - **实线 (Solid) -** 将描边渲染为实线。这是每个新创建描边的默认描边类型。
-- **修剪 (Trim) -** 允许你为线段的起点、终点和偏移值制作动画。在此处阅读更多：[此处](https://rive.app/docs/editor/manipulating-shapes/trim-path)。
-- **虚线 (Dashed) -** 允许你创建具有诸如虚线线段长度和偏移量等可动画属性的虚线描边。在此处阅读更多：[此处。](https://rive.app/docs/editor/manipulating-shapes/trim-path)
+- **修剪 (Trim) -** 允许你为线段的起点、终点和偏移值制作动画。在此处阅读更多：[此处](/editor/manipulating-shapes/trim-path.md)。
+- **虚线 (Dashed) -** 允许你创建具有诸如虚线线段长度和偏移量等可动画属性的虚线描边。在此处阅读更多：[此处。](/editor/manipulating-shapes/trim-path.md)
 
 # [​](#vector-feathering) 矢量羽化 (Vector Feathering)
 

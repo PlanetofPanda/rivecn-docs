@@ -12,4 +12,4 @@ To Remix a file from the Marketplace, find one you like, click on the thumbnail,
 ![Image](images/4dd14236-0f3c-4394-a4da-155ac72cea3f.webp)
 The file will open in the editor, and a new copy is added to your file browser.
 
-[Community Overview](/docs/community/community-overview)[Rive Experts](/docs/community/rive-experts)
+[Community Overview](/community/community-overview)[Rive Experts](/community/rive-experts)

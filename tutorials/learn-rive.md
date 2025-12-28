@@ -16,4 +16,4 @@ Rive Academy: Volume 1 是使用 Rive 构建交互式动画世界的终极介绍
 **Rive: Interactive Motion**
 发现彻底改变交互式体验的基于 Web 的软件。构建 2 个充满令人敬畏的交互式设置的大型伪 3d 空间。在实践中学习所有 Rive 技术并充分利用它。](https://motiondesign.school/courses/rive-interactive-motion/)
 
-[Awesome Rive](/docs/tutorials/awesome-rive)
+[Awesome Rive](/tutorials/awesome-rive)
