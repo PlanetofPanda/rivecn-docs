@@ -1,91 +1,58 @@
-# 层级面板 (Hierarchy)
+Interface Overview
 
-层级面板位于 Rive 编辑器的左侧区域。
+# Hierarchy
 
-<iframe width="100%" height="400" src="https://www.youtube.com/embed/FnnZV57Dp3c" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+The Hierarchy shows you all of the objects, assets, and view models in your file. This view changes based on the artboard, component, or tab you have selected.
 
-## 概览 (Overview)
+# [​](#switching-views) Switching Views
 
-层级面板是一个树形视图，它反映了当前选中的画板 (Artboard) 或组件 (Component) 的结构和顺序。当你选择不同的画板或对象时，层级面板会相应更新。
+To switch between the different panels, click on the desired panel.
+![Switch View Gi](images/SwitchView.gif)
 
-![层级概览](images/hierarchy_overview.png)
+# [​](#hierarchy) Hierarchy
 
-## 切换视图 (Switching Views)
+The Hierarchy is a tree view, which shows both the parent-child relationships between objects on the stage as well as the order in which they are rendered. Learn about the Hierarchy by either watching the video or reading more below.Parent-child relationships are a core concept in Rive, which allows you to create complex layered animations with minimal effort. [Groups](/docs/editor/fundamentals/groups) and [Bones](/docs/editor/manipulating-shapes/bones) can have children in Rive.
+Each row in the Hierarchy represents an item on the stage. A circle button with an arrow appears next to items that have children nested underneath them. This button allows you to expand and collapse the list of children.
 
-通过点击层级面板左上角的图标，你可以在以下三个视图之间切换：
-*   **层级 (Hierarchy)**：显示舞台上的对象结构
-*   **资源 (Assets)**：显示项目中的图片、字体等资源
-*   **数据 (Data)**：显示状态机使用的数据、枚举等
+## [​](#parent-child-relationships) **Parent-child relationships**
 
-![切换视图演示](images/SwitchView.gif)
+Any type of object can be a parent or a child of another type of object. When an object is a child of another object, it inherits all the transformations of its parent. For example, changing a parent objects scale will affect the child object. These transformations take place from the parents origin, not the local origin.
+![Image](images/image_1.png)
+The depth of these parent/child relationships is infinite, so you can keep stacking (or nesting) items to create grandchildren, great-grandchildren, and so on.
 
-## 父子关系 (Parent-child relationships)
+### [​](#change-parent-child-relationships) **Change parent-child relationships**
 
-Rive 中的对象可以通过父子关系（Parenting）相互连接。这种关系不仅组织了文件结构，还决定了变换属性（位置、旋转、缩放）如何继承。
+To change the relationship between objects, drag and drop the object onto or out of another.
+![Image](images/image_2.png)
 
-子对象会继承其父对象的变换。这意味着：
-*   当移动父对象时，子对象会随之移动。
-*   所有的变换都是相对于父对象的原点进行的。
+## [​](#draw-order) **Draw Order**
 
-你可以创建无限层级的嵌套结构。组 (Groups)、骨骼 (Bones) 和图形都可以作为父对象。
+In addition to displaying the relationships between objects, the Hierarchy shows you the Draw Order of a file, with the objects at the top being rendered in front and the objects at the bottom being rendered at the back.
 
-![父子关系示例](images/parent_child.png)
+### [​](#change-draw-order) **Change Draw Order**
 
-### 修改父子关系 (Change parent-child relationships)
+![Image](images/image_3.png)
+To change the Draw Order of objects on the stage, drag and drop the shape, or group of shapes above or below another in the list. Note that draw order also affects how objects are placed and treated in a layout. Read more about that [here](https://rive.app/docs/editor/layouts/layouts-overview).
+The Draw Order can be animated, but the process is a bit more in-depth. Read about it on the [Animating Draw Order](https://rive.app/docs/editor/animate-mode/animating-draw-order) page.
 
-你可以通过在层级面板中拖拽对象来改变它们的父子关系：
-1.  **选中**一个或多个对象。
-2.  **拖拽**并将它们**放置**到目标父对象上。
+## [​](#right-click-menu) **Right Click Menu**
 
-## 绘制顺序 (Draw Order)
+Right clicking any object in the hierarchy will bring up a menu with different options for each object. In the menu you’ll find the ability to copy and paste both objects and styles, delete objects, wrap objects in [layouts](https://rive.app/docs/editor/layouts/layouts-overview) and [solos](https://rive.app/docs/editor/manipulating-shapes/solos), show the dependency graph, add a [tag](https://rive.app/docs/editor/tagging), reverse the draw order, and [export a name](https://rive.app/docs/editor/exporting/exporting-for-runtime).
+![Right Click Pn](images/right_click.png)
+Many of these options have shortcuts which can either be found next to the option, or in the shortcut menu.
 
-层级面板列表不仅显示父子关系，还决定了对象的绘制顺序（渲染顺序）。
+# [​](#​assets-panel) ​Assets Panel
 
-*   列表**上方**的对象会绘制在**下方**的对象之上（即图层更靠前）。
-*   在同一父级下的兄弟节点中，位于列表更下方的节点会覆盖上面的节点（*注：Rive 的默认渲染顺序是从上到下，但在某些上下文中，可以通过调整顺序改变覆盖关系*）。
+The assets panel is a list view of your Images, Lottie files, Audio, and Custom fonts. This panel allows you to add, remove, replace, and modify all assets added in the file. Read more about importing and modifying assets below.
+![Assets Pn](images/Assets.png)
 
-注意：绘制顺序是一个重要的概念，特别是在处理复杂的角色绑定和 UI 布局时。
+[## Importing Assets](https://rive.app/docs/editor/fundamentals/importing-assets)[## Audio Events](https://rive.app/docs/editor/events/audio-events)
 
-![绘制顺序示例](images/draw_order.png)
+# [​](#data-panel) Data Panel
 
-### 修改绘制顺序 (Change Draw Order)
+The Data Panel is where all View Models, Enums, and Coverters for a file are created, organized, and viewed. The panel is broken into three seperate spaces; View Models, Enums, and Converters. Read more about Data Binding [here](https://rive.app/docs/editor/data-binding/overview).
+![Data Pn](images/Data.png)
+The plus button on the right of each section allows you to add a new View Model, Enum, or Converter.
+If any section has elements associated with it, the list can be expanded or collapsed using the arrow icon on the left.
 
-与修改父子关系类似，你可以通过在层级面板中**拖拽**对象来改变它们在列表中的位置，从而改变绘制顺序。
-
-## 右键菜单 (Right Click Menu)
-
-在层级面板中右键点击对象，可以打开上下文菜单，提供该对象的常用操作选项：
-
-*   **复制/粘贴 (Copy/Paste)**
-*   **删除 (Delete)**
-*   **重命名 (Rename)**
-*   **编组 (Group selection)**
-*   **单独显示 (Solo)**
-*   **显示/隐藏 (Show/Hide)**
-*   **锁定/解锁 (Lock/Unlock)**
-
-![右键菜单](images/right_click.png)
-
-## 资源面板 (Assets Panel)
-
-点击层级面板顶部的 **Assets** 图标切换到资源视图。在这里你可以管理所有导入到项目中的外部文件：
-
-*   图片 (Images)
-*   字体 (Fonts)
-*   音频 (Audio)
-*   Lottie 动画文件
-
-你可以直接将文件拖入 Rive 编辑器以添加到资源面板。
-
-![资源面板](images/Assets.png)
-
-## 数据面板 (Data Panel)
-
-点击层级面板顶部的 **Data** 图标切换到数据视图。这个面板用于管理与状态机和运行时逻辑相关的数据：
-
-*   **ViewModel**：定义应用程序的数据模型
-*   **Enums**：定义枚举类型
-
-数据面板是 Rive 强大的数据绑定功能的核心入口。
-
-![数据面板](images/Data.png)
+[Toolbar](/docs/editor/interface-overview/toolbar)[Inspector](/docs/editor/interface-overview/inspector)

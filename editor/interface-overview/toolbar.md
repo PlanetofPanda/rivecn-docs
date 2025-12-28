@@ -1,139 +1,148 @@
-# 工具栏 (Toolbar)
+Interface Overview
 
-从 Rive 编辑器的工具栏中，您可以访问文件、设计、绑定、导出等工具和选项。
+# Toolbar
 
-![工具栏概览](images/filemenu.png)
+Access file, design, rigging, and export tools and options from the Rive Editor toolbar.
 
-## 编辑器菜单 (Editor Menu)
+## [​](#editor-menu) Editor menu
 
-编辑器菜单（Editor Menu）位于变换工具的左侧。此菜单为您提供多种**文件级选项**，包括修订历史、导出选项、文件分享方式、渲染选项、声音设置和快捷键列表。
+The Editor menu is located to the left of the Transform Tools menu. This menu gives you access to a number of file level options including revision history, export options, ways to share your file, render options, sounds, and shortcuts.
+![Filemenu Pn](images/filemenu.png)
+**Revision History**
+Rive automatically saves your revision history. You can view your view or reinstate any instance of your files revision history through the revision history option.
+![Revision Pn](images/revision.png)
+Additionally, you can create a new, custom revision using the Create Revision option.
+Read more about revision history [here](http://rive.app/docs/editor/fundamentals/revision-history).
+**Export**
+The export section allows you to both export your Rive file, and export or remove all names for the exported file.
+![Export Options Pn](images/export_Options.png)
+Read more about exporting a Rive file and its contents [here](https://rive.app/docs/editor/exporting/exporting-for-runtime).
+**Generate Share Link**
 
-![编辑器菜单](images/filemenu.png)
+Generating share links is available on Voyager and Enterprise plans. [Learn more about our plans and pricing](https://rive.app/pricing).
 
-### 1. 修改历史 (Revision History)
+Share Links are a fast no-code way to get your Rive files running on a website or to present your graphics to a client.
+![Sharelink Gi](images/sharelink.gif)
+Share the current version of the file you’re working with share links. Note that this is not the same as giving someone access to the live file with all its revision history. This link will be a frozen version of the file in its current state. If you make changes to the file, you’ll need to generate a new share link.
+Learn more about share links [here](https://rive.app/docs/editor/share-links/overview).
+**Publish to Marketplace**
+The Marketplace is where you can share files with the entire Rive community.
+![Publish Gi](images/publish.gif)
+Learn more about sharing your file to the Marketplace here.
+**Cloud Renderer**
+The file menu give you a way to both view and add new animation or presets to the render queue.
+![Render Pn](images/render.png)
+Learn more about using our Cloud renderer [here](https://rive.app/docs/editor/exporting/exporting-for-video-and-static-design).
+**Browse Sounds**
+Rive allows you to add and play different sound effects in your file through Events. This option allows you to browse through our sound library.
+![Sounds Pn](images/sounds.png)
+Read more about adding sound to your Rive file [here](https://rive.app/docs/editor/events/audio-events).
+**Show Shortcuts**
+The Show Shortcuts option allows you to view and search through all shortcuts in the Rive editor.
+![Shortcuts Pn](images/shortcuts.png)
+**Documentation**
+The Documentation option brings you directly to the Rive documentation.
+**Send Feedback**
+If you have thoughts on ways for us to improve Rive, the Send Feedback button will link you directly to our Requests page on our Community.
 
-查看文件的完整修改历史。您可以浏览并恢复到之前保存的任何版本。
+## [​](#transform-tools-menu) Transform Tools menu
 
-![修改历史](images/revision.png)
+The Transform Tools menu houses tools that allow you to alter the transform properties of an object on the [Stage](/docs/editor/interface-overview/stage).
+![Select Pn](images/select.png)
+**Select Tool**
+The Select tool allows you to select objects and manipulate all their transform properties with the gizmo that appears. You can also click and drag in an empty space to select multiple objects with a marquee.
+In most cases, you’ll probably be using the Select tool, though we also currently offer a dedicated Translate, Scale and Rotation tools.
+![Image](images/5cfc252a-8d52-4751-9064-4c6a1acb6f34.webp)
+The gizmo allows you to manipulate the position, rotation, and scale properties of a selection.
+**Translate Tool**
+The Translate tool allows you to click on the gizmo or in an empty space to modify the position of your selected object without losing selection.
+**Rotate Tool**
+The Rotate tool allows you to click on the gizmo or in an empty space to modify the rotation of your selected object without losing selection.
+**Scale Tool**
+The Scale tool allows you to click on the gizmo or in an empty space to modify the Scale of your selected object without losing selection.
+**Freeze Mode**
+Freeze mode allows you to modify the position of origins, groups, and bones without affecting the underlying objects associated with them.
+Learn more about Origin and Freeze mode [here](https://rive.app/docs/editor/fundamentals/freeze-and-origin).
 
-### 2. 导出 (Export)
+## [​](#artboard,-layout,-and-groups-menu) Artboard, Layout, and Groups menu
 
-打开导出菜单，下载当前文件的备份。导出类型包括：
-*   **Rive 原生文件 (.riv)**: 用于运行时的优化二进制文件。
-*   **备份 (.rev)**: 包含编辑器数据的完整源文件。
+Learn about Artboards, Components, Layouts and Groups.
+![Artboard Pn](images/artboard.png)
 
-![导出选项](images/export_Options.png)
+[## Artboards
 
-### 3. 分享链接 (Share Link)
+Artboards are the foundation of your composition across both design and animate mode.](../fundamentals/artboards)[## Components
 
-生成一个唯一的 URL，以便与他人分享您的文件。任何拥有此链接的人都可以查看文件，甚至可以将其“混音 (Remix)”成一个新文件供自己使用。
+Components can speed up your workflow by allowing you to reuse animations and State Machines.](../fundamentals/components)[## Groups
 
-![分享链接演示](images/sharelink.gif)
+Use groups to organize your graphics or to add extra transform spaces.](../fundamentals/groups)[## Layouts
 
-### 4. 发布到社区 (Publish to Community)
+Layouts let you make responsive designs.](https://rive.app/docs/editor/layouts/layouts-overview)
 
-将您的文件发布到 Rive 社区。您可以添加标题、描述和标签，让全世界都能看到您的作品。
+## [​](#vector-tools-menu) Vector Tools menu
 
-![发布演示](images/publish.gif)
+Design in Rive using the [Pen Tool](/docs/editor/fundamentals/pen-tool-overview) and [procedural shapes](/docs/editor/fundamentals/procedural-shapes). The Vector Tools menu houses all of the tools you’ll need to create vector artwork.
+![Createtools Pn](images/createtools.png)
 
-### 5. 渲染设置 (Render)
+## [​](#bones-menu) Bones menu
 
-更改编辑器的渲染设置。目前主要用于启用或禁用抗锯齿 (Anti-aliasing)。
+Access the [Bone](/docs/editor/manipulating-shapes/bones) and Weight tool (when binding).
+![Bones Pn](images/bones.png)
 
-![渲染设置](images/render.png)
+## [​](#events-and-joystick-menu) Events and Joystick Menu
 
-### 6. 声音 (Sounds)
+The Events and Joysticks menu lets you add new Events and Joysticks to your File
+![Events Pn](images/events.png)
 
-查看并管理文件中的所有音频资产。您可以单独控制每个音频剪辑的音量。
+[## Events
 
-![声音设置](images/sounds.png)
+Events let you provide additional information to both the runtimes and in the editor.](https://rive.app/docs/editor/events/overview)[## Joysticks
 
-### 7. 快捷键 (Shortcuts)
+Joysticks are a rigging tool that gives you stage controls that allow you to pan through connected timelines.](https://rive.app/docs/editor/manipulating-shapes/joysticks)
 
-查看 Rive 编辑器的完整键盘快捷键列表。
+## [​](#view-options-menu) View Options menu
 
-![快捷键列表](images/shortcuts.png)
+The View options menu allows to control many different view options on the Rive Stage.
+![Viewoptions Pn](images/viewoptions.png)
+**Zoom**
+This option allows you both view and change the zoom level of the Rive editor.
+**Snapping**
+The Snapping option allows the Rive editor to help you contextually snap and align objects to one another. This can be disabled by either toggling the option off, or by holding CMD or CTRL while dragging an object.
+**Snap to pixel**
+Snap to pixel forces the Rive editor to snap an objects position to the nearest half pixel. When disabled, objects can be placed on any fraction of a pixle.
+**User Cursors**
+When multiple users are present in a file, we are able to visulize their mouse cursor. By disabling this option, we can hide other user cursors in our file.
+**Gizmo**
+The Gizmo is the visual object on the screen which lets us change the position, scale, or rotation of an object. By disabling this option, the Gizmo will no longer appear when selecting an object.
+**Bones**
+Disabling the Bones, the editor will hide any bones on the stage.
+**Targets**
+Disabling Targets will hide any Groups set to Target mode.
+**Motion Paths**
+When an objects X or Y property is selected on the Timeline a visulization of how the object will move over time appears as a motion path. We can disable this visulization by toggling off this option.
+**Joysticks**
+Disabling Joysticks will hide any Joysticks on the Stage.
+**Events**
+Disabling this option will hide any Events on the Stage.
+**Layouts**
+Layouts inherently have a skeleton visualization on the Stage to see the bounds of a layout container. Disabling this option will hide all visualizations of the layouts on the Stage.
+**Layout Animations**
+Layouts can automatically animate when various properties of a layout container change. Disabling this option will disable playback of all layout animations.
+**Modifier Range**
+This option visualizes a Text Modifiers Range when it is within view of the text object. Disabling this option hides the visualization.
+**Modifier Range Values**
+The Modifier Range Values visualize how the range is applied using little pips below each letter, word, or line. Disabling this option hides the visualization.
+**Show Final Playback**
+Show Final Playback automatically hides all elements and visualizations that would normally be hidden at runtime. For example, Bones and are not visible at runtime, so with this option enabled, the bones would automatically be hidden when a State Machine or Timeline plays. Disabling this option keeps things like bones visible during playback in the editor. Note that this has no effect at runtime.
 
-## 变换工具菜单 (Transform Tools menu)
+## [​](#export-button) Export Button
 
-您可以通过点击图标或使用键盘快捷键来快速切换变换工具。
+The Export button allows you to create [Share Links](/docs/editor/share-links/overview), [publish a file to the Marketplace](/docs/community/marketplace-overview#marketplace-overview), [download a `.riv` file](/docs/editor/exporting/exporting-for-runtime), and [publish a library](/docs/editor/libraries).
+![Export Pn](images/export.png)
 
-![变换工具](images/select.png)
+## [​](#mode-toggle) Mode toggle
 
-1.  **选择 (Select)** (快捷键: `V`): 选择对象。
-2.  **平移 (Translate)** (快捷键: `T`): 移动对象。
-3.  **旋转 (Rotate)** (快捷键: `R`): 旋转对象。
-4.  **缩放 (Scale)** (快捷键: `S`): 缩放对象。
-5.  **冻结模式 (Freeze Mode)** (快捷键: `Y`): 允许在不改变对象变换属性值的情况下，修改其轴心点或骨骼位置。
+The mode toggle allows you to switch between Design and Animate mode. Press `Tab` to quickly switch modes.
+![Switch Gi](images/switch.gif)
 
-当选择平移、旋转或缩放工具时，**变换 Gizmo**（操作手柄）会出现在所选对象上。
-
-![Gizmo 演示](images/gizmo.webp)
-
-## 画板、布局和组菜单 (Artboard, Layout, and Groups menu)
-
-用于创建容器类对象：画板、布局或组。
-
-![画板和组工具](images/artboard.png)
-
-*   **画板 (Artboard)** (快捷键: `A`): 创建一个新的画板（设计区域）。
-*   **组 (Group)** (快捷键: `Cmd + G` / `Ctrl + G`): 将选中的对象放入一个新组中。
-*   **布局 (Layout)**: 创建 Flex 布局容器（行、列等）。
-
-## 矢量工具菜单 (Vector Tools menu)
-
-用于绘制形状和路径的核心设计工具。
-
-![矢量工具](images/createtools.png)
-
-*   **钢笔 (Pen)** (快捷键: `P`): 绘制自定义路径。
-*   **矩形 (Rectangle)** (快捷键: `R`)
-*   **椭圆 (Ellipse)** (快捷键: `O`)
-*   **三角形 (Triangle)**
-*   **星形 (Star)**
-*   **多边形 (Polygon)**
-
-## 骨骼菜单 (Bones menu)
-
-创建骨骼以构建角色或物体的骨骼绑定系统。
-
-![骨骼工具](images/bones.png)
-
-*   **骨骼 (Bone)** (快捷键: `B`): 创建一个新的骨骼关节。
-
-## 事件与操纵杆菜单 (Events and Joystick Menu)
-
-![事件工具](images/events.png)
-
-*   **事件 (Events)** (快捷键: `Shift + E`): 创建用于状态机交互的事件触发器。
-*   **操纵杆 (Joystick)**: 创建用于控制混合状态 (Blend State) 的操纵杆控件。
-
-## 视图选项菜单 (View Options menu)
-
-控制舞台上的辅助显示选项。
-
-![视图选项](images/viewoptions.png)
-
-*   **显示骨骼 (Show Bones)**: 开启/关闭骨骼可见性。
-*   **显示网格 (Show Mesh)**: 开启/关闭网格变形顶点的可见性。
-*   **主要/次要网格 (Primary/Secondary Grid)**: 显示背景参考网格。
-*   **吸附到网格 (Snap to Grid)**: 开启/关闭对齐网格。
-*   **像素预览 (Pixel Preview)**: 预览导出后的光栅化像素效果。
-
-## 导出按钮 (Export Button)
-
-位于工具栏右上角的快捷导出按钮，功能与编辑器菜单中的导出选项完全相同。
-
-![导出按钮](images/export.png)
-
-## 模式切换 (Mode Toggle)
-
-使用此开关在 **设计 (Design)** 模式和 **动画 (Animate)** 模式之间切换。
-
-![模式切换演示](images/switch.gif)
-
-*   **设计模式**: 用于设置图形、骨骼、约束和初始状态 (Setup State)。
-*   **动画模式**: 用于创建时间轴动画和编写状态机逻辑。
-
-> [!TIP]
-> 使用快捷键 `Tab` 可以快速在两个模式间切换。
+[Overview](/docs/editor/interface-overview/overview)[Hierarchy](/docs/editor/interface-overview/hierarchy)

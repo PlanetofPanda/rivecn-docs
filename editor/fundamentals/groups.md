@@ -1,47 +1,28 @@
-# 分组 (Groups)
+Fundamentals
 
-<div class="video-container">
-  <iframe width="100%" height="400" src="https://www.youtube.com/embed/FnnZV57Dp3c" title="Rive 101 - Hierarchy and Groups" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+# Groups
 
-组 (Groups) 是在层级面板 (Hierarchy) 中用来包含其他图形或子层级的一种对象。它们本身没有可视化的属性（如填充、描边或形状），但它们拥有变换属性（位置、旋转、缩放）。
+Use groups to organize your graphics or to add extra transform spaces.
 
-使用组的主要目的是：
-1.  **组织管理**: 保持层级面板整洁有序。
-2.  **辅助变换**: 为子对象提供额外的父级变换空间，这在制作复杂动画（如骨骼绑定）时非常有用。
+Activate the Group tool with the `G` shortcut. Click anywhere in an artboard to add a new group. Now drag and drop objects into the group in the Hierarchy.
+You can also wrap a selection of shapes into a group with `⌘`+`G` in macOS or `Ctrl`+`G` in Windows.
+Unwrap a group with `⌘`+`Shift`+`G` in macOS or `Ctrl`+`Shift` +`G` in Windows.
 
-## 创建分组 (Creating Groups)
+## [​](#group-style) Group Style
 
-您可以通过以下快捷键将选中的对象快速分组：
-*   **macOS**: `Cmd + G`
-*   **Windows**: `Ctrl + G`
+The Style property of a group can be set to Group or Target.
 
-要取消分组，请使用 `Cmd + Shift + G` (Mac) 或 `Ctrl + Shift + G` (Windows)。
+### [​](#group) Group
 
-此外，您也可以在层级面板中通过拖拽图层，将它们手动嵌套到现有的组中，改变它们的绘制顺序和父子关系。
+Group is the default behavior, which behaves as described in the [Selecting and Navigating Groups](/docs/editor/fundamentals/selecting-and-navigating-groups).
 
-## 分组样式 (Group Style)
+### [​](#target) Target
 
-在属性检查器中，您可以更改组的样式 (Style) 选项。
+The Target option draws a different icon on the Stage that is always visible, regardless of whether the group has children (usually a group only displays an icon if it is empty). When a group displays as a Target, it also disables the functionality described in [Selecting and Navigating Groups](/docs/editor/fundamentals/selecting-and-navigating-groups) section. This means you can immediately click through to any child of the group (no need to double-click, enter/esc, or Deep Select).
+![Groups change Target](images/groups-targets.gif)
+The Target option is particularly useful when working with Constraints.
+[## Constraints
 
-![Groups Targets](images/groups-targets.gif)
+Constraints are a way to control the properties of an object through another target object. Some constraints can set limits on these properties (and their hierarchical relationships), while others can copy properties from one object to another.](/docs/editor/constraints)
 
-### Group (默认)
-
-这是标准的组行为。它作为一个不可见的容器，仅影响子对象的变换。在编辑器视口中，除非选中它，否则您看不到它的外观。
-
-### Target (目标)
-
-当样式设置为 **Target** 时，该组在编辑器中将显示为一个十字准星图标。
-
-Target 并没有渲染上的区别（导出后同样不可见），但它在编辑器中有特殊的用途：
-1.  **始终可见**: 十字准星图标即便未被选中也能在视口中看到（如果启用了骨骼/Target显示）。
-2.  **约束目标**: 它们通常被用作 **Constraints (约束)** 系统中的目标点。例如，您可以使用一个 Target 组来控制反向动力学 (IK) 约束的末端效应器。
-
-因为 Target 具有可视化的图标，所以在复杂的绑定系统中，它们比普通的组更容易被选中和操作。
-
-## 约束 (Constraints)
-
-组（特别是设置为 Target 样式的组）是构建 Rive 高级绑定系统的基石。通过将约束应用于组，或者让组作为约束的目标，您可以创建复杂的机械运动、跟随效果和角色骨骼系统。
-
-有关更多详细信息，请参阅[约束 (Constraints)](/editor/constraints/overview) 章节（稍后推出）。
+[Procedural Shapes](/docs/editor/fundamentals/procedural-shapes)[Selecting and Navigating Groups](/docs/editor/fundamentals/selecting-and-navigating-groups)

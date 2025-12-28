@@ -1,62 +1,46 @@
-# 舞台 (Stage)
+Interface Overview
 
-舞台（Stage）是 Rive 的无限画布，你可以在这里放置画板和图形。
+# Stage
 
-## 选择 (Selection)
+The Stage is an infinite canvas where you can place artboards containing all your graphics.
 
-在舞台上选择图形有多种方式：
+## [​](#selection) Selection
 
-*   **点击 (Click)** 图形以选中它。
-*   **拖拽框选 (Marquee select)** 以选中多个对象。
-*   按住 **Shift** 键并点击可添加或移除选中项（多选）。
+Select an object by simply clicking on it, or click and drag over a number of shapes to perform a marquee selection. Hold the `Shift` modifier key to add or remove from an existing selection (by either single clicking or marqueeing).
 
-<iframe width="100%" height="400" src="https://www.youtube.com/embed/xQK498Y1J8M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+### [​](#double-click) Double-click
 
-### 双击 (Double-click)
+To select an object in a group, double-click on the object you want to select. This takes you down one level in the hierarchy and allows you to select any object on that level.
 
-默认情况下，当你点击一个对象组（Group）时，你会选中最顶层的组。你可以**双击**该组，向下钻取一级并选中其中的子对象。你可以重复此操作以深入层级结构。
+### [​](#deep-select) Deep select
 
-双击舞台空白处可向上返回一级（或取消选择）。
+In order to select an object within a group, hold `⌘` (macOS) or `Ctrl` (Windows) and click directly on it. This is a quick way to cut through multiple layers of nested groups and directly select a shape. This can be a very fast way to navigate a complex file, especially when used together with the Select behind technique and the Enter and Esc shortcuts described below.
 
-### 深度选择 (Deep select)
+### [​](#select-behind) Select behind
 
-如果你想忽略所有组层级，直接选中光标下的特定形状或路径，可以按住 **Cmd** (macOS) / **Ctrl** (Windows) 并点击该对象。
+When you hover over an object on the stage, Rive draws an outline around it. This is a hint to let you know that if you click, this object will be selected. Sometimes multiple objects can overlap one another, making it difficult to select the exact one you want. In this case, press `Alt` to cycle to the next object under your cursor. You can continue to press `Alt` until the object you want is outlined. Now click to select it.
 
-![深度选择演示](images/deep_select.gif)
+### [​](#enter-and-esc-shortcuts) Enter and Esc shortcuts
 
-### 后方选择 (Select behind)
+Use the `Enter` key to quickly navigate down the Hierarchy. If you have a group selected, this allows you to quickly select the first child.
+Use the `Esc` key to quickly navigate up the Hierarchy. This allows you to quickly select the parent of your current selection.
 
-如果多个对象重叠，你可以按住 **Alt** 键并未移动鼠标，Rive 会循环高亮显示光标下方的所有对象。点击即可选中当前高亮的对象。
+## [​](#navigating) Navigating
 
-![后方选择演示](images/select_behind.gif)
+### [​](#panning) Panning
 
-### 键盘导航 (Enter / Esc)
+![Image](images/image_0.png)
+To pan the Stage, right-click and drag your mouse. If you have a trackpad, scroll left and right. Alternatively, hold `Spacebar` to trigger the Pan Tool. With the Pan Tool enabled, click and drag to move to your desired point on the Stage.
 
-当你选中一个对象时，可以使用键盘在层级结构中快速移动：
-*   **Enter**: 选中第一个子对象（向下钻取）。
-*   **Esc**: 选中父对象（向上返回）。
+### [​](#zooming) Zooming
 
-![键盘层级导航演示](images/enter_esc.gif)
+![Image](images/image_1.png)
+With your cursor positioned over the Stage, hold `⌘` / `Ctrl` and scroll your mouse or trackpad to zoom in and out. Alternatively, use the `+` / `-` keys to zoom between preset points. You can quickly revert back to 100% with `⌘` / `Ctrl` and `0`.
 
-## 导航 (Navigating)
+### [​](#fit) Fit
 
-你可以使用鼠标或触控板轻松在舞台上移动和查看内容。
+![Image](images/image_2.png)
+Tap `F` to simultaneously zoom and position your active artboard to fit within the viewable Stage area. Note that if you have an object within the Hierarchy selected this action will be performed on the object as opposed to the artboard.
+> There are a few scenarios where you may have “lost” an artboard, while still seeing the hierarchy. This typically happens when the position of an artboard is accidentially keyed or the zoom level is too far out. Using the `F`shortcut will help you fix the issue by Filling the stage with the selected object or artboard.
 
-<iframe width="100%" height="400" src="https://www.youtube.com/embed/osp_et6q7o8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-### 平移 (Panning)
-
-*   **右键**点击并拖拽以移动画布。
-*   或者按住 **空格键**，然后**左键**点击并拖拽。
-
-### 缩放 (Zooming)
-
-*   按住 **Cmd** (macOS) / **Ctrl** (Windows) 并使用鼠标滚轮进行缩放。
-*   使用键盘上的 **+** 和 **-** 键进行缩放。
-*   按 **Cmd + 0** (macOS) / **Ctrl + 0** (Windows) 将缩放重置为 100%。
-
-### 适配视图 (Fit)
-
-当你迷失方向或想快速查看整体效果时，按 **F** 键可以：
-*   如果有选中对象，缩放并移动视图以填满该对象。
-*   如果没有选中对象，缩放并移动视图以填满当前的活动画板。
+[Inspector](/docs/editor/interface-overview/inspector)[Overview](/docs/editor/fundamentals/overview)

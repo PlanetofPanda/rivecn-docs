@@ -1,44 +1,28 @@
-# 设计与动画模式 (Design vs Animate Mode)
+Fundamentals
 
-Rive 编辑器有两种主要模式：**设计模式 (Design Mode)** 和 **动画模式 (Animate Mode)**。
+# Design vs Animate Mode
 
-您可以通过点击编辑器左上角的 [切换按钮](editor/interface-overview/toolbar)，或者使用 **Tab** 键来在这两种模式之间切换。
+The Rive Editor has two distinct modes, Design and Animate. Switching between modes changes the interface to show the appropriate tools and options.
 
-## 设计模式 (Design Mode)
+## [​](#design-mode) Design Mode
 
-设计模式是您的默认起始位置。Rive 将设计与动画分离，因此您无需在设计模式下担心时间轴或关键帧。
+Use Design Mode to prepare your graphics for animation. This is where you can design your own graphics with Rive’s [tools](../interface-overview/toolbar), [import graphics from other software](./importing-assets), or rig your graphics with [bones](../manipulating-shapes/bones), [transform spaces](./transform-spaces), [layouts](https://rive.app/docs/editor/layouts/layouts-overview), [joysticks](https://rive.app/docs/editor/manipulating-shapes/joysticks), and [constraints](../constraints/).
+![Image](images/Design_Mode.png)
+Design Mode is the default mode for any file that doesn’t have any animations created. The mode exists because Rive allows you to attach multiple animations to a single artboard, so you need a place to set up and create those graphics.
 
-在这个模式下，您可以：
-*   **设置场景**：绘制图形、导入资源（SVG, PSD 等）。
-*   **创建层次结构**：通过分组（Groups）和约束（Constraints）组织对象。
-*   **构建骨骼 (Rigging)**：添加骨骼（Bones）并绑定图形网格。
+## [​](#animate-mode) Animate Mode
 
-您在设计模式下所做的一切都是为了给动画做准备。这就像是定格动画中的“制作木偶”阶段。
+Use [Animate Mode](../animate-mode/) to create all of the [States](https://rive.app/docs/editor/state-machine/states) and [State Machine](../state-machine/) for your artboard.
+When you switch to Animate Mode, the UI updates to display a list of Timelines and State Machine associated with the [active artboard](./artboards#active-artboard). The [Inspector](https://rive.app/docs/editor/interface-overview/inspector) also updates to show key buttons next to any property that can be animated.
+![Animate Mode Pn](images/Animate_Mode.png)
+Selecting any Animation from the Animations list will bring up a timeline view, while selecting a state machine will replace the timeline with the graph view.
+![State Machine Pn](images/State_Machine.png)
 
-![设计模式界面](images/design_mode.png)
+## [​](#creating-assets-in-animate-mode) Creating Assets in Animate Mode
 
-## 动画模式 (Animate Mode)
+While there are separate modes, graphics can be created and changed in both modes, but it’s important to keep a few things in mind.
 
-准备好让您的设计动起来了吗？切换到动画模式。
+1. If a Timeline is selected, graphics, both procedural and custom paths, can be created. While graphics can be created, any changes to the path, shape, or its properties will automatically be keyed on the timeline. Because of this, we recommend not making any assets when a timeline is selected.
+2. Animate Mode works like Design Mode if a State Machine is selected. Asset creation, rigging, and other design changes will not be automatically keyed. This lets you make any design changes you want without switching between the different modes, though you do lose some screen real estate due to the graph. We recommend making vast changes in Design mode while using Animate mode only to add quick adjustments like hitboxes or layouts.
 
-在动画模式下，您所做的任何更改（例如移动形状位置、改变颜色或不透明度）都会被记录为**关键帧 (Keyframes)**。
-
-这个模式解锁了两个新面板：
-1.  **时间轴 (Timeline)**：用于创建传统的线性动画。
-2.  **状态机 (State Machine)**：用于创建交互式动画逻辑。
-
-注意，当您处于动画模式时，所选的时间轴或状态机会以蓝色高亮显示，以提醒您当前的更改将被记录。
-
-![动画模式界面](images/animate_mode.png)
-
-### 在动画模式下创建资源
-
-虽然大多数资源创建是在设计模式下完成的，但您也可以在动画模式下添加某些对象，例如**事件 (Events)** 和 **监听器 (Listeners)**。这些通常直接属于状态机逻辑的一部分。
-
-![状态机界面](images/state_machine.png)
-
-## 快捷键切换
-
-只有当舞台（Stage）获得焦点时，即您最近一次是在舞台上点击或操作时，使用 **Tab** 键切换模式才会生效。
-
-*   **Tab**: 在设计模式和上次使用的动画/状态机之间切换。
+[Overview](/docs/editor/fundamentals/overview)[Artboards](/docs/editor/fundamentals/artboards)

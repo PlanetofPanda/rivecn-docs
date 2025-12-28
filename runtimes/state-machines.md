@@ -1,0 +1,510 @@
+Runtime Fundamentals
+
+# State Machine Playback
+
+Playing a state machine
+
+For more information on designing and building state machines in Rive, please refer to: [State Machine](/docs/editor/state-machine).
+Rive’s state machines provide a way to combine a set of animation states and manage the transition between them that can be programmatically controlled with [Data Binding](/docs/runtimes/data-binding).
+
+## [​](#playing-state-machines) Playing state machines
+
+- Web
+- React
+- React Native
+- Flutter
+- Apple
+- Android
+
+#### [​](#autoplay-the-state-machine) Autoplay the State Machine
+
+To autoplay a state machine immediately after it loads, simply set `autoplay` to `true`.
+
+Copy
+
+Ask AI
+
+```
+const r = new rive.Rive({
+    src: 'https://cdn.rive.app/animations/vehicles.riv',
+    canvas: document.getElementById('canvas'),
+    autoplay: true,
+    stateMachines: 'bumpy',
+    onLoad: () => {}
+});
+```
+
+#### [​](#controlling-state-machine-playback) Controlling State Machine Playback
+
+You can manually play and pause the State Machine using the `play`, `pause`, and `stop` methods.
+
+Copy
+
+Ask AI
+
+```
+const r = new rive.Rive({
+    src: 'https://cdn.rive.app/animations/vehicles.riv',
+    canvas: document.getElementById('canvas'),
+    stateMachines: 'bumpy',
+    onLoad: () => {}
+});
+
+const handlePlay = () => {
+  r.play()
+}
+
+const handlePause = () => {
+  r.pause()
+}
+
+const handleStop = () => {
+  r.stop()
+}
+```
+
+#### [​](#autoplay-the-state-machine-2) Autoplay the State Machine
+
+To auto-play a state machine by default, simply set `autoPlay` to `true`.
+
+Copy
+
+Ask AI
+
+```
+export default function Simple() {
+  const { RiveComponent } = useRive({
+    src: 'https://cdn.rive.app/animations/vehicles.riv',
+    stateMachines: "bumpy",
+    autoplay: true,
+  });
+
+  return <RiveComponent />;
+}
+```
+
+#### [​](#controlling-state-machine-playback-2) Controlling State Machine Playback
+
+You can manually play and pause the State Machine using the `play`, `pause`, and `stop` methods.
+
+Copy
+
+Ask AI
+
+```
+export default function Simple() {
+const { rive, RiveComponent } = useRive({
+  src: "https://cdn.rive.app/animations/vehicles.riv",
+  stateMachines: "bumpy",
+  autoplay: true,
+});
+
+const handlePlay = useCallback(() => {
+  rive?.play();
+}, [rive]);
+
+const handlePause = useCallback(() => {
+  rive?.pause();
+}, [rive]);
+
+const handleStop = useCallback(() => {
+  rive?.stop();
+}, [rive]);
+
+return (
+  <div>
+    <RiveComponent />
+    <div style={{ marginTop: 12 }}>
+      <button onClick={handlePlay}>Play</button>
+      <button onClick={handlePause}>Pause</button>
+      <button onClick={handleStop}>Stop</button>
+    </div>
+  </div>
+);
+}
+```
+
+- New Runtime (Recommended)
+- Legacy Runtime
+
+By default, `RiveView` automatically uses the default artboard and state machine [configured in the Editor](https://rive.app/docs/editor/fundamentals/artboards#default-state-machine). In most cases, you only need to provide the `file` prop.For programmatic control, you can optionally specify `artboardName` and `stateMachineName` props to use a different artboard or state machine.
+
+Copy
+
+Ask AI
+
+```
+export default function PlaybackExample() {
+  const { riveFile } = useRiveFile({
+    uri: 'https://cdn.rive.app/animations/vehicles.riv',
+  });
+
+  return (
+    <View style={styles.container}>
+      <View style={styles.riveContainer}>
+        {riveFile ? <RiveView file={riveFile} style={styles.rive} /> : null}
+      </View>
+    </View>
+  );
+}
+```
+
+#### [​](#controlling-state-machine-playback-3) Controlling State Machine Playback
+
+For more control, you can manage playback and set the **arboard**/**state-machine** combination:
+
+[​](#param-auto-play)
+
+autoPlay
+
+boolean
+
+default:"true"
+
+Automatically start playing the state machine.
+
+[​](#param-artboard-name)
+
+artboardName
+
+String
+
+The name of the artboard to display.*If not set, the default artboard will be used, as configured in the Editor.*
+
+[​](#param-state-machine-name)
+
+stateMachineName
+
+String
+
+The name of the state machine to play.*If not set, the default state machine will be used, as configured in the Editor.*
+
+And manage `play`, `pause`, and `reset` on the Rive view reference.
+
+Copy
+
+Ask AI
+
+```
+import { Fit, RiveView, useRive, useRiveFile } from '@rive-app/react-native';
+
+export default function PlaybackExample() {
+  const { riveViewRef, setHybridRef } = useRive();
+  const { riveFile } = useRiveFile({
+    uri: 'https://cdn.rive.app/animations/vehicles.riv',
+  });
+
+  const play = () => {
+    riveViewRef?.play();
+  };
+
+  const pause = () => {
+    riveViewRef?.pause();
+  };
+
+  const reset = () => {
+    riveViewRef?.reset();
+  };
+
+  return (
+    <View style={styles.container}>
+      <View style={styles.riveContainer}>
+        {riveFile ? (
+          <RiveView
+            file={riveFile}
+            hybridRef={setHybridRef}
+            autoPlay={false}
+            artboardName="Truck" // specify the artboard to play
+            stateMachineName="bumpy" // specify the state machine to play
+            style={styles.rive}
+          />
+        ) : null}
+      </View>
+      <Button onPress={play} title="Play" />
+      <Button onPress={pause} title="Pause" />
+      <Button onPress={reset} title="Reset" />
+    </View>
+  );
+}
+```
+
+#### [​](#autoplay-the-state-machine-3) Autoplay the State Machine
+
+To auto-play a state machine by default, simply set `autoPlay` to `true`.
+
+Copy
+
+Ask AI
+
+```
+  <Rive
+    resourceName={'vehicles'}
+    autoplay={true}
+    stateMachineName="bumpy"
+  />
+```
+
+#### [​](#controlling-state-machine-playback-4) Controlling State Machine Playback
+
+You can manually play and pause the State Machine using the `play` and `pause` methods.
+
+Copy
+
+Ask AI
+
+```
+import Rive, { RiveRef } from 'rive-react-native'
+
+export default function App() {
+  const riveRef = React.useRef<RiveRef>(null);
+
+  const handlePlayPress = () => {
+    riveRef?.current?.play();
+  };
+
+  const handlePausePress = () => {
+    riveRef?.current?.pause();
+  };
+
+  return (
+    <View>
+      <Rive
+        resourceName="truck_v7"
+        stateMachineName="bumpy"
+        ref={riveRef}
+      />
+      <Button onPress={handlePlayPress} title="play">
+      <Button onPress={handlePausePress} title="pause">
+    </View>
+  );
+}
+```
+
+There are a number of ways to play/select a state machine in Flutter.
+
+#### [​](#when-using-rivewidgetcontroller-recommended) When using `RiveWidgetController` (recommended)
+
+When you create a `RiveWidgetController` it will use the default state machine, or you can specify a state machine by name or index.
+
+Copy
+
+Ask AI
+
+```
+// Default state machine
+var controller = RiveWidgetController(riveFile);
+// By name
+controller = RiveWidgetController(
+  riveFile,
+  stateMachineSelector: StateMachineSelector.byName("State Machine 1"),
+);
+// By index
+controller = RiveWidgetController(
+  riveFile,
+  stateMachineSelector: StateMachineSelector.byIndex(0),
+);
+```
+
+Passing this controller to a `RiveWidget` will automatically play the state machine.
+
+Copy
+
+Ask AI
+
+```
+@override
+Widget build(BuildContext context) {
+  return RiveWidget(controller: controller);
+}
+```
+
+You can mark the controller as `active` to play/pause the state machine (advancing and drawing):
+
+Copy
+
+Ask AI
+
+```
+final controller = RiveWidgetController(riveFile);
+controller.active = false;
+```
+
+The `StateMachineSelector` can also be passed to `RiveWidgetBuilder` to specify which state machine to use:
+
+Copy
+
+Ask AI
+
+```
+return RiveWidgetBuilder(
+  fileLoader: fileLoader,
+  stateMachineSelector: StateMachineSelector.byIndex(0),
+  builder: (context, state) => switch (state) {
+    /// ...
+  },
+);
+```
+
+#### [​](#when-using-statemachinepainter) When using `StateMachinePainter`
+
+When using `StateMachinePainter`, you can specify the state machine to use by passing an optional name.
+
+Copy
+
+Ask AI
+
+```
+// Default state machine
+final painter = rive.StateMachinePainter(withStateMachine: _withStateMachine);
+// By name
+painter = rive.StateMachinePainter(
+  withStateMachine: _withStateMachine,
+  stateMachineName: 'State Machine 1  ',
+);
+```
+
+#### [​](#creating-a-state-machine-directly) Creating a state machine directly
+
+Create the state machine directly from an `Artboard`:
+
+Copy
+
+Ask AI
+
+```
+final artboard = riveFile.defaultArtboard()!;
+// Default state machine
+var stateMachine = artboard.defaultStateMachine();
+// By name
+stateMachine = artboard.stateMachine('State Machine 1');
+// By index
+stateMachine = artboard.stateMachineAt(0);
+```
+
+#### [​](#autoplay-the-state-machine-4) Autoplay the State Machine
+
+By default, RiveViewModel will automatically play the state machine you’ve given it.
+
+### [​](#swiftui) SwiftUI
+
+Copy
+
+Ask AI
+
+```
+var stateChanger = RiveViewModel(
+    fileName: "skills",
+    stateMachineName: "Designer's Test",
+    artboardName: "Banana"
+)
+```
+
+### [​](#uikit) UIKit
+
+Copy
+
+Ask AI
+
+```
+class StateMachineViewController: UIViewController {
+    var viewModel = RiveViewModel(
+        fileName: "skills",
+        stateMachineName: "Designer's Test",
+        artboardName: "Banana"
+    )
+
+    override public func loadView() {
+        super.loadView()
+
+        guard let stateMachineView = view as? StateMachineView else {
+            fatalError("Could not find StateMachineView")
+        }
+
+        viewModel.setView(stateMachineView.riveView)
+    }
+}
+```
+
+### [​](#play) Play
+
+If you set autoplay to false you can play the active animation or state machine very simply.
+
+Copy
+
+Ask AI
+
+```
+simpleVM.play()
+```
+
+### [​](#pause/stop/reset) Pause/Stop/Reset
+
+Based on certain events in your app you may want to adjust the playback further.
+
+Copy
+
+Ask AI
+
+```
+simpleVM.pause()
+simpleVM.stop()
+simpleVM.reset()
+```
+
+#### [​](#android) Android
+
+### [​](#via-xml) Via XML
+
+Copy
+
+Ask AI
+
+```
+<app.rive.runtime.kotlin.RiveAnimationView
+    android:id="@+id/simple_state_machine"
+    android:layout_width="match_parent"
+    android:layout_height="400dp"
+    app:riveResource="@raw/skills"
+    app:riveStateMachine="Designer's Test" />
+```
+
+### [​](#via-kotlin) Via Kotlin
+
+Copy
+
+Ask AI
+
+```
+animationView.setRiveResource(
+    R.raw.simple_state_machine,
+    autoplay = true,
+    stateMachineName = "Designer's Test"
+)
+```
+
+Additionally, you can use the same APIs from animation playback (i.e `play`, `pause`, and `stop`) to control state machine playback, as long as you set the `isStateMachine` attribute to `true`.
+
+Copy
+
+Ask AI
+
+```
+animationView.play(
+    "Designer's Test",
+    Loop.AUTO,
+    Direction.AUTO,
+    isStateMachine = true
+)
+
+animationView.pause(
+    "Designer's Test",
+    isStateMachine = true
+)
+
+animationView.stop(
+    "Designer's Test",
+    isStateMachine = true
+)
+```
+
+[Layout](/docs/runtimes/layout)[Data Binding](/docs/runtimes/data-binding)

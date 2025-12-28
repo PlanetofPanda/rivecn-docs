@@ -1,51 +1,60 @@
-# 界面概览
+Interface Overview
 
-Rive 的界面仅在需要时显示所需内容。它被划分为几个主要面板，下文将详细介绍。
+# Interface Overview
 
-## 工具栏
+Rive’s interface only shows what is needed when you need it. It is divided into a few main panels, which are described below.
 
-工具栏显示了您可用于在舞台上创建、绑定和操作项目的工具。除了这些工具外，工具栏还提供各种选项，允许您自定义文件的外观、设置主画板以及导出或共享文件。
+## [​](#toolbar) Toolbar
 
-![工具栏](images/toolbar.png)
+The Toolbar displays the tools you have available to create, rig, and manipulate items on the stage. In addition to these tools, the Toolbar houses a variety of options to allow you to customize the look of your file, set your main artboard, and export or share your file.
+![Toolbar Pn](images/toolbar.png)
+Read more on the Toolbar page.
+[## Toolbar
 
-了解更多：[工具栏页面](/editor/interface-overview/toolbar.md)。
+Access design and animation tools from the Rive Editor toolbar](/docs/editor/interface-overview/toolbar)
 
-## 层级面板
+## [​](#hierarchy) Hierarchy
 
-组成文件的所有对象、资产、控件和动画都会出现在层级面板中。您还可以在这里找到资产面板和数据面板。
+All the objects, assets, controls, and animations that make up your file appear in the Hierarchy. You’ll also find the Assets Panel, and Data Panel here.
+![Hierarchy Pn](images/hierarchy.png)
+[## Hierarchy
 
-![层级面板](images/hierarchy.png)
+The Hierarchy is a tree view, which shows both the parent-child relationships between objects on the stage as well as the order in which they are rendered. Learn about the Hierarchy by either watching the video or reading more below.](/docs/editor/interface-overview/hierarchy)
 
-层级面板是一个树形视图，显示舞台上对象之间的父子关系以及它们的渲染顺序。
+## [​](#inspector) Inspector
 
-## 属性检查器
+The Inspector allows you to adjust the properties for the currently selected object, whether that’s an object on the stage, timeline, or state machine.
+![Inspector Pn](images/inspector.png)
+Read more on the Inspector page.
+[## Inspector
 
-属性检查器允许您调整当前所选对象的属性，无论该对象是舞台上、时间轴上还是状态机中的对象。
+An object’s editable properties can be found in the Inspector. The Inspector changes dynamically depending on your selected object and where you are in the editor.](/docs/editor/interface-overview/inspector)
 
-![属性检查器](images/inspector.png)
+## [​](#stage) Stage
 
-了解更多：[属性检查器页面](/editor/interface-overview/inspector.md)。
+The Stage refers to the central area between the Toolbar, the Hierarchy, and the Inspector. Here you can create the artboards that are the foundations of your designs and animations within Rive.
+![Stage Pn](images/stage.png)
+Read more on the Stage page:
+[## Stage
 
-## 舞台
+The Stage is an infinite canvas where you can place artboards containing all your graphics.](/docs/editor/interface-overview/stage)
 
-舞台是指工具栏、层级面板和属性检查器之间的中央区域。在这里，您可以创建画板，它们是 Rive 中设计和动画的基础。
+## [​](#timeline) Timeline
 
-![舞台](images/stage.png)
+![Clean Shot2025 06 26at11 33 04@2x Pn](images/CleanShot2025-06-26at11.33.04@2x.png)
+The Timeline surfaces from the bottom of the screen upon entering animate mode. Here you can create new states, access playback controls, settings, and set keyframes for object parameters. Select an timeline from the left-hand list to switch between the respective timelines.
+Read more on the Timeline page:
+[## Timeline
 
-了解更多：[舞台页面](/editor/interface-overview/stage.md)。
+The Rive interface displays a timeline with playback controls and options for the current animation in Animate mode. A list of all animations is displayed to the left of the Timeline. Keep in mind that these are animations for the currently active artboard.](/docs/editor/animate-mode/timeline)
 
-## 时间轴
+## [​](#state-machine-graph) State Machine graph
 
-时间轴在进入动画模式时从屏幕底部浮现。在这里，您可以创建新状态、访问播放控制和设置，以及为对象参数设置关键帧。从左侧列表中选择一个时间轴即可在各个时间轴之间切换。
+![Clean Shot2025 06 26at11 33 28@2x Pn](images/CleanShot2025-06-26at11.33.28@2x.png)
+When a state machine is selected, the Timeline is replaced by a graph. This is where you’ll be working on the state machine.
+Read more on the State Machine page.
+[## State Machine
 
-![时间轴截图](images/CleanShot2025-06-26at11.33.04@2x.png)
+State Machines are a visual way to connect animations together and define the logic that drives the transitions.](/docs/editor/state-machine/state-machine)
 
-了解更多：时间轴页面。
-
-## 状态机图表
-
-当选择状态机时，时间轴将被图表替换。您将在此处编辑状态机。
-
-![状态机图表截图](images/CleanShot2025-06-26at11.33.28@2x.png)
-
-了解更多：[状态机页面](/editor/state-machine/overview.md)。
+[Toolbar](/docs/editor/interface-overview/toolbar)

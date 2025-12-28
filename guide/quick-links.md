@@ -1,8 +1,10 @@
-# 快速链接
+Getting Started
 
-快速访问 Rive 的相关资源和社区：
+# Quick Links
 
-*   [获取运行时](https://rive.app/docs/runtimes/getting-started)
-*   [加入我们的 Discord](https://discord.gg/FGjmaTr)
-*   [在 Twitter 上关注我们](https://twitter.com/rive_app)
-*   [订阅我们的 YouTube 频道](https://www.youtube.com/@Rive_app/featured)
+[Get the runtimes](/docs/runtimes/getting-started)
+​[Join us on Discord](https://discord.gg/FGjmaTr)​
+​[Follow us on Twitter](https://twitter.com/rive_app)
+​[Check out our YouTube page](https://www.youtube.com/@Rive_app/featured)
+
+[Best Practices](/docs/getting-started/best-practices)[Community Overview](/docs/community/community-overview)

@@ -1,91 +1,136 @@
-# 组件 (Components)
+Fundamentals
 
-在 Rive 中，画板 (Artboards) 可以嵌套在其他画板内。当在一个画板中使用另一个画板时，我们将这个包含的画板称为**组件 (Component)**（以前称为嵌套画板）。
+# Components (formerly Nested Artboards)
 
-组件功能强大，因为它允许您创建可复用的图形元素、构建复杂的场景，甚至在角色身上附加道具。
+Components streamline your workflow with reusable artboards and animations. Changes made to the source component are reflected across all of its instances.
 
-![Components Overview](images/components-asset-1.png)
+## [​](#creating-a-component) Creating a Component
 
-## 创建组件 (Creating a Component)
+Any artboard can be converted to a component. To do so, select an artboard on the stage and use the component icon in the inspector to toggle its status.
+Alternatively, you can use the `Shift` + `N` shortcut with an artboard selected. If you’re coming from Figma, then the `Cmd/Ctrl` + `Alt/Option` + `K`, shortcut will also work.
+Select the component toggle in the inspector again to revert your selection back to a regular artboard, or use the `Shift` + `Alt/Option` + `N` shortcut.
+Currently, only artboards that have been flagged as components will be exported to your `.riv` file. If you think you may want to programmatically access an artboard at runtime, you should mark it as a component. More options on specific export behaviors are coming soon.
 
-要创建组件，只需使用画板工具 (A) 将一个画板嵌套到另一个画板中。只要画板包含任意内容，它就可以作为组件使用。
+## [​](#using-components) Using Components
 
-![Creating Component](images/components-add.gif)
+Use the Component Tool — formerly known as the Nested Artboard Tool — to select and place instances of a component on the stage. Select the tool from the toolbar or use the `N` shortcut to enable it.
+Click anywhere on the stage to place the component in the desired location. A menu will display available components to instance. If none show up, you may have no artboards marked as components in your file.
+![Image](images/components-add.gif)
+Alternatively, select the dropdown menu to the right of the toolbar icon to select the component ahead of time. The menu is informed by the sort mode of the assets tab — the ‘Custom’ mode will present components as they’re organised in the asset panel, while the ‘Source/Type’ mode will present components from their source. The latter will become useful with our Libraries feature.
 
-## 使用组件 (Using Components)
+## [​](#configuring-a-component-instance) Configuring a Component Instance
 
-画板一旦创建，就会自动出现在**资产 (Assets)** 面板中。您可以将它们直接从资产面板拖拽到舞台上或其他画板中。
+Once you’ve added an instance of a component, select a timeline or state machine for playback.
 
-![Using Components](images/components-asset-2.png)
+### [​](#state-machines) State Machines
 
-## 配置组件实例 (Configuring a Component Instance)
+After assigning an instance, the default state machine is displayed in the inspector.
+![Image](images/components-statemachine.gif)
+If you’ve exposed any inputs, you can access them using the options menu (when an animation is selected) or via the inputs panel when a state machine is selected.
+![Image](images/components-nested_inputs.gif)
 
-当您在画板中选中一个组件实例时，可以在右侧属性检查器中进行配置。
+### [​](#adding-an-animation) Adding an Animation
 
-### 状态机 (State Machines)
+You can playback any animation associated with a component. You’ll need to add the desired animation to the instance using the plus button in the Inspector.
+![Image](images/components-animations.gif)
+These animations can be used by themselves, mixed with the state machine, or layered with other animations.
+Note that before adding the animation, you must select whether it’s a simple or remapped animation.
 
-组件实例最强大的功能之一是能够播放其内部的状态机。在属性面板的下拉菜单中，您可以选择要在此时运行的特定状态机。
+#### [​](#simple) Simple
 
-![State Machine Configuration](images/components-statemachine.gif)
+Simple animations are an easy way to playback a component’s timeline.
+![Image](images/components-animation-simple.gif)
+A simple animation lets you key its start point on a timeline. You also have the option to change the animation’s playback speed.
 
-### 添加动画 (Adding an Animation)
+#### [​](#remap) Remap
 
-除了状态机，您还可以直接在组件实例上触发现性动画。点击组件属性旁边的 `+` 号可以添加动画槽。
+Remap animations allow you to key time values of an animation on the timeline. This lets you stretch, shrink, or even play an animation in reverse.
+![Image](images/components-animation-remap.gif)
+Note that the time value is in percent, with 0% representing the start of the timeline and 100% representing the end.
 
-![Adding Animation](images/components-animations.gif)
+### [​](#mix-value) Mix Value
 
-Rive 提供两种播放动画的模式：
+As you add additional animations to a Component, animations begin to mix together. This mixing is important, especially when multiple animations share keyed properties. Without adjusting this value, your Component may not playback your animations in the way you want.
+By default, any animation added to a component starts with a mix value of 100%. You can adjust this value in design mode or in a specific animation by setting keys. **Note that an animation that has a non-zero mix value will always be mixing with other animations, regardless if it has a play key set or not.**
+To ensure the correct animation is playing, ensure that you key the mix value for the desired animation to 100%, and all other animations have a mix of 0%.
 
-*   **Simple (简单)**: 就像在 Unity 或 Unreal 等游戏引擎中一样，动画会自动循环播放。
-    ![Simple Animation](images/components-animation-simple.gif)
+## [​](#instance-modes) Instance Modes
 
-*   **Remap (重映射)**: 允许您使用从 0% 到 100% 的数值来手动控制动画的播放进度。这对于将动画进度绑定到滚动条或其他输入非常有用。
-    ![Remap Animation](images/components-animation-remap.gif)
+Component instances can be set to use one of 3 modes which will behave differently based on their contents and the context in which they are used. The Leaf and Layout modes are typically used when the parent artboard needs to layout its contents responsively.
 
-### 混合值 (Mix Value)
+### [​](#node) Node
 
-当应用多个动画或状态机时，您可以使用 **Mix (混合)** 值来控制它们之间的混合程度。这允许您在不同动作之间进行平滑过渡。
+This is the default mode and is used in non-responsive scenarios. Its contents will always appear scaled (via the Scale property).
 
-## 实例模式 (Instance Modes)
+### [​](#leaf) Leaf
 
-组件实例在父画板中有三种存在模式，决定了它的渲染和布局方式。
+![Image](images/components-leaf.png)
+Leaf mode will result in the Component always being positioned and resized relative to its containing Layout or Artboard. This can be useful if the Component contains elements that need to resize to its container, but don’t contain Layouts themselves.
 
-### 节点 (Node)
+#### [​](#leaf-fit) Leaf Fit
 
-在 **Node** 模式下，组件仅作为一个空变换节点存在。它不可见，但保留了位置、旋转和缩放属性。这对于用作占位符或作为骨骼绑定的目标非常有用。
+The Fit type determines how the Component Leaf will scale within it’s allotted area.
 
-### 叶子 (Leaf)
+- **Fill (Default)**: Content will fill the available view. If the aspect ratios differ, then the Rive content will be stretched.
+- **Contain**: Content will be contained within the view, preserving the aspect ratio. If the ratios differ, then a portion of the view will be unused.
+- **Cover**: Rive will cover the view, preserving the aspect ratio. If the content has a different ratio to the view, then the content will be clipped.
+- **Fit Width**: Content will fill to the width of the view. This may result in clipping or unfilled view space.
+- **Fit Height**: Content will fill to the height of the view. This may result in clipping or unfilled view space.
+- **None**: Content will render to the original size of its artboard, which may result in clipping or unfilled view space.
+- **Scale Down**: Content is scaled down to the size of the view, preserving the aspect ratio. This is equivalent to **Contain** when the content is larger than the canvas. If the canvas is larger, then **ScaleDown** will not scale up.
 
-在 **Leaf** 模式下，组件作为一个单一的渲染层存在。Rive 会将其展平为一个纹理，这在性能上有优势，但也意味着您无法单独控制其内部的每个形状。
+#### [​](#leaf-alignment) Leaf Alignment
 
-您可以通过 **Leaf Fit** 和 **Leaf Alignment** 属性来控制组件内容在边界框内的显示方式（类似于 CSS 的 `object-fit`）。
+The Alignment type determines how the contents are aligned within the allotted area. Alignment is set in a 3x3 grid fashion: **Center (Default)**, **Bottom Left**, **Bottom Center**, **Bottom Right**, **Left Center**, **Right Center**, **Top Left**, **Top Center**, **Top Right**.
 
-![Leaf Mode](images/components-leaf.png)
+#### [​](#leaf-alignment-position-x/y) Leaf Alignment Position X/Y
 
-### 布局 (Layout)
+Leaf Alignment Position is a numerical representation of Alignment and can be used in cases where the 9 Alignment options are not desirable. Values can be represented in the following ways: X = -1 (Left), 0 (Center), 1 (Right) and Y = -1 (Top), 0 (Center), 1 (Bottom). Non-integer values can also be used in order to align in various ways, for example, X = 0.5 will position the content half way between Center and Right.
 
-在 **Layout** 模式下，组件参与 Rive 的自动布局系统。它的尺寸和位置将根据父级容器的规则进行计算。
+### [​](#layout) Layout
 
-![Layout Mode](images/components-layout.png)
+![Image](images/components-layout.png)
+Layout mode is used when your Component contains Layouts that need to remain responsive as the size of its parent changes. This is the only mode where the Component contents are not scaled, rather the artboard size changes in order to reflow the Components’s contents.
 
-## 暴露输入和事件 (Exposing Inputs and Events)
+#### [​](#layout-scale-type) Layout Scale Type
 
-组件不仅可以播放动画，还可以通过**输入 (Inputs)** 和**事件 (Events)** 与父级进行双向通信。
+- **Fixed** - A fixed width or height for the layout. The defined value can be either a point or percentage value. Use the unit toggle within the fields to toggle between value types.
+- **Hug** - The width and/or height of the layout shrinks to fit its children. This is useful if your Component contains text or other objects that need to determine it’s size.
+- **Fill** - The width and/or height of the layout expands to fill the available space within the parent layout or artboard.
 
-### 如何暴露输入 (How to Expose an Input)
+#### [​](#layout-size) Layout Size
 
-在子画板的状态机中，勾选输入旁边的 **Expose to Parent (暴露给父级)** 选项。
+When set to Fixed, the width and height of the Component can be set to either pixel or percent values. This is different than the scale property, which changes the Components’s scale. Typically scale should not be used when Layout mode is selected.
 
-现在，当该画板作为组件被嵌套时，您可以在父级的状态机中直接看到并控制这些输入。
+## [​](#exposing-inputs-and-events) Exposing Inputs and Events
 
-![Nested Inputs](images/components-nested_inputs.gif)
+Expose the Inputs and/or Events of a Componet to control them from a parent/host Artboard. This allows you to control one Component with another via a State Machine.
 
-### 在父画板上使用输入
+### [​](#how-to-expose-an-input) How to Expose an Input
 
-一旦输入被暴露，您可以通过以下几种方式在父级画板中控制它们：
+Exposing an Input allows the parent artboard to access and manipulate it. To do this, select the desired input, then check the expose to main artboard option in the inspector.
+![Image](images/image_8.png)
+After creating a Component, you’ll see any exposed inputs in the Inspector via the options panel and in the Inputs panel.
 
-1.  **通过监听器 (Via a Listener)**: 在父级创建一个监听器，将目标设置为组件实例，并修改其输入。
-2.  **使用事件 (Using Events)**: 子组件可以触发事件，父级监听这些事件并做出响应。
-3.  **在状态机上设置关键帧 (Keying on the State Machine)**: 直接在父级的时间轴或状态中对子组件的输入值打关键帧。
+### [​](#using-inputs-on-a-parent-artboard) Using Inputs on a Parent Artboard
 
-这使得构建复杂的交互式 UI 组件（如按钮、滑块、开关）变得非常容易，因为逻辑封装在组件内部，而控制权在父级。
+Exposed inputs can be found in the Inputs panel or in the inspector. You can use them through listeners, an event, or by keying them on a timeline.
+![Image](images/image_9.png)
+
+#### [​](#via-a-listener) Via a Listener
+
+When you create a listener, you’ll find all exposed Inputs as a set input property of a Listener. This option lets you, for example, change the boolean input of multiple artboards simultaneously.
+![Image](images/image_10.png)
+
+#### [​](#using-events) Using Events
+
+Additionally, we can use Listeners to listen for Events firing from our Component, and change inputs accordingly.
+![Image](images/image_11.png)
+To see an Event associated with an Artboard, you’ll need to set the Artboard as a target of the Listener. The Event will now be listed as a listener action.
+
+#### [​](#keying-on-the-state-machine) Keying on the State Machine
+
+You can key exposed inputs on the parent artboard via the options panel in the inspector.
+This is a handy trick when you, for example, want to set the text value within an Instance.
+
+[Artboards](/docs/editor/fundamentals/artboards)[Pen Tool Overview](/docs/editor/fundamentals/pen-tool-overview)

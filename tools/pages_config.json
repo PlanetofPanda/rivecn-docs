@@ -1,0 +1,250 @@
+{
+    "base_url": "https://rive.app/docs",
+    "output_dir": "..",
+    "pages": {
+        "guide": [
+            {
+                "source": "getting-started/introduction",
+                "target": "guide/introduction.md"
+            },
+            {
+                "source": "getting-started/best-practices",
+                "target": "guide/best-practices.md"
+            },
+            {
+                "source": "getting-started/quick-links",
+                "target": "guide/quick-links.md"
+            }
+        ],
+        "community": [
+            {
+                "source": "community/marketplace-overview",
+                "target": "community/marketplace-overview.md"
+            }
+        ],
+        "editor/interface-overview": [
+            {
+                "source": "editor/interface-overview/overview",
+                "target": "editor/interface-overview/overview.md"
+            },
+            {
+                "source": "editor/interface-overview/toolbar",
+                "target": "editor/interface-overview/toolbar.md"
+            },
+            {
+                "source": "editor/interface-overview/hierarchy",
+                "target": "editor/interface-overview/hierarchy.md"
+            },
+            {
+                "source": "editor/interface-overview/inspector",
+                "target": "editor/interface-overview/inspector.md"
+            },
+            {
+                "source": "editor/interface-overview/stage",
+                "target": "editor/interface-overview/stage.md"
+            }
+        ],
+        "editor/fundamentals": [
+            {
+                "source": "editor/fundamentals/overview",
+                "target": "editor/fundamentals/overview.md"
+            },
+            {
+                "source": "editor/fundamentals/design-vs-animate-mode",
+                "target": "editor/fundamentals/design-vs-animate-mode.md"
+            },
+            {
+                "source": "editor/fundamentals/artboards",
+                "target": "editor/fundamentals/artboards.md"
+            },
+            {
+                "source": "editor/fundamentals/components",
+                "target": "editor/fundamentals/components.md"
+            },
+            {
+                "source": "editor/fundamentals/shapes-and-paths-overview",
+                "target": "editor/fundamentals/shapes-and-paths.md"
+            },
+            {
+                "source": "editor/fundamentals/groups",
+                "target": "editor/fundamentals/groups.md"
+            },
+            {
+                "source": "editor/fundamentals/fill-and-stroke",
+                "target": "editor/fundamentals/fill-and-stroke.md"
+            },
+            {
+                "source": "editor/fundamentals/importing-assets",
+                "target": "editor/fundamentals/importing-assets.md"
+            }
+        ],
+        "editor/manipulating-shapes": [
+            {
+                "source": "editor/manipulating-shapes/bones",
+                "target": "editor/manipulating-shapes/bones.md"
+            },
+            {
+                "source": "editor/manipulating-shapes/meshes",
+                "target": "editor/manipulating-shapes/meshes.md"
+            },
+            {
+                "source": "editor/manipulating-shapes/joysticks",
+                "target": "editor/manipulating-shapes/joysticks.md"
+            }
+        ],
+        "editor/text": [
+            {
+                "source": "editor/text/text-overview",
+                "target": "editor/text/overview.md"
+            },
+            {
+                "source": "editor/text/text-runs",
+                "target": "editor/text/text-runs.md"
+            }
+        ],
+        "editor/constraints": [
+            {
+                "source": "editor/constraints/ik-constraint",
+                "target": "editor/constraints/ik-constraint.md"
+            },
+            {
+                "source": "editor/constraints/follow-path-constraint",
+                "target": "editor/constraints/follow-path-constraint.md"
+            },
+            {
+                "source": "editor/constraints/scroll-constraint",
+                "target": "editor/constraints/scroll-constraint.md"
+            }
+        ],
+        "editor/state-machine": [
+            {
+                "source": "editor/state-machine/state-machine",
+                "target": "editor/state-machine/overview.md"
+            },
+            {
+                "source": "editor/state-machine/states",
+                "target": "editor/state-machine/states.md"
+            },
+            {
+                "source": "editor/state-machine/listeners",
+                "target": "editor/state-machine/listeners.md"
+            }
+        ],
+        "editor/layouts": [
+            {
+                "source": "editor/layouts/layouts-overview",
+                "target": "editor/layouts/overview.md"
+            },
+            {
+                "source": "editor/layouts/n-slicing",
+                "target": "editor/layouts/n-slicing.md"
+            }
+        ],
+        "editor/exporting": [
+            {
+                "source": "editor/exporting/exporting-for-runtime",
+                "target": "editor/exporting/exporting-for-runtime.md"
+            }
+        ],
+        "editor/animate-mode": [
+            {
+                "source": "editor/animate-mode/timeline/timeline",
+                "target": "editor/animate-mode/timeline.md"
+            },
+            {
+                "source": "editor/animate-mode/keyframes/keyframes",
+                "target": "editor/animate-mode/keyframes.md"
+            },
+            {
+                "source": "editor/animate-mode/settings",
+                "target": "editor/animate-mode/settings.md"
+            }
+        ],
+        "scripting": [
+            {
+                "source": "scripting/getting-started",
+                "target": "scripting/overview.md"
+            },
+            {
+                "source": "scripting/protocols/node-scripts",
+                "target": "scripting/node-scripts.md"
+            },
+            {
+                "source": "scripting/protocols/layout-scripts",
+                "target": "scripting/layout-scripts.md"
+            },
+            {
+                "source": "scripting/api-reference/artboard",
+                "target": "scripting/api-artboard.md"
+            },
+            {
+                "source": "scripting/api-reference/mat2d",
+                "target": "scripting/api-mat2d.md"
+            }
+        ],
+        "runtimes": [
+            {
+                "source": "runtimes/overview",
+                "target": "runtimes/overview.md"
+            },
+            {
+                "source": "runtimes/web/web-js",
+                "target": "runtimes/web.md"
+            },
+            {
+                "source": "runtimes/react/react",
+                "target": "runtimes/react.md"
+            },
+            {
+                "source": "runtimes/react-native/react-native",
+                "target": "runtimes/react-native.md"
+            },
+            {
+                "source": "runtimes/flutter/flutter",
+                "target": "runtimes/flutter.md"
+            },
+            {
+                "source": "runtimes/apple/apple",
+                "target": "runtimes/apple.md"
+            },
+            {
+                "source": "runtimes/android/android",
+                "target": "runtimes/android.md"
+            },
+            {
+                "source": "runtimes/state-machines",
+                "target": "runtimes/state-machines.md"
+            },
+            {
+                "source": "runtimes/loading-assets",
+                "target": "runtimes/loading-assets.md"
+            }
+        ],
+        "games": [
+            {
+                "source": "game-runtimes/unreal/unreal",
+                "target": "games/unreal.md"
+            },
+            {
+                "source": "game-runtimes/unity/unity",
+                "target": "games/unity.md"
+            },
+            {
+                "source": "game-runtimes/defold",
+                "target": "games/defold.md"
+            }
+        ],
+        "tutorials": [
+            {
+                "source": "tutorials/learn-rive",
+                "target": "tutorials/learn-rive.md"
+            }
+        ],
+        "feature-support": [
+            {
+                "source": "feature-support",
+                "target": "feature-support.md"
+            }
+        ]
+    }
+}

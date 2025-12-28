@@ -1,0 +1,260 @@
+Android
+
+# Android
+
+The Android runtime for Rive.
+
+Note that certain Rive features may not be supported yet for a particular runtime, or may require using the Rive Renderer.For more details, refer to the [feature support](/docs/feature-support) and [choosing a renderer](/docs/runtimes/choose-a-renderer) pages.
+
+## [​](#overview) Overview
+
+Welcome to using Rive on Android. Rive runtime libraries are open-source, with Android available in the [rive-android](https://github.com/rive-app/rive-android) GitHub repository.
+
+### [​](#note-on-android-apis) Note on Android APIs
+
+Rive for Android provides two main APIs for integrating Rive into your application.
+**The Legacy View-based API**
+This API is based on Android Views and XML layouts. It is stable and widely deployed in production applications. It also supports [Compose by using AndroidView](https://github.com/rive-app/rive-android/blob/master/app/src/main/java/app/rive/runtime/example/LegacyComposeActivity.kt), though it does require some boilerplate to set up.
+The entry point for this API is the `RiveAnimationView`, which can be added to your XML layouts or instantiated programmatically.
+We refer to this as the “legacy” API as we are focusing our development efforts on the new Compose API going forward, though this API will continue to be supported and maintained for some time.
+**The New Compose API (Technical Preview)**
+This API is designed for Jetpack Compose, allowing for a more modern and declarative approach to building UIs. It is currently in Technical Preview, meaning it is still under active development and may have breaking changes in future releases. **It is not recommended for production use at this time**. Feedback on this API is highly encouraged to help us improve it.
+The entry point for this API is the `RiveUI` composable function, which can be used directly within your Compose UI code.
+In addition to providing a more idiomatic Compose experience, this API is also powered by a stronger threading model with higher stability and flexibility to spread Rive work across multiple threads.
+
+## [​](#example-app) Example App
+
+To explore the Android API, you can run our Android sample app.
+
+Copy
+
+Ask AI
+
+```
+git clone https://github.com/rive-app/rive-android
+```
+
+Open the cloned folder in Android Studio and select the `app` configuration and target device. Ensure that the build variant is set to `preview (default)` by opening the menu `Build - Select Build Variant...` and selecting the `preview (default)` variant for `app`.
+The other build variants are for development purposes and require additional configuration. See [CONTRIBUTING.MD](https://github.com/rive-app/rive-android/blob/master/CONTRIBUTING.md).
+
+## [​](#getting-started) Getting Started
+
+Follow the steps below to get started integrating Rive into your Android app.
+
+1
+
+Add the Rive dependency
+
+Add the following dependencies to your `build.gradle` file in your project. We recommend using the latest version of the Rive Android runtime, which can be found on [Maven Central](https://central.sonatype.com/artifact/app.rive/rive-android).
+
+Copy
+
+Ask AI
+
+```
+dependencies {
+    ...
+    implementation 'app.rive:rive-android:<Latest Version>'
+    // For initialization, you may want to add a dependency on Jetpack Startup
+    implementation "androidx.startup:startup-runtime:1.1.1"
+}
+```
+
+2
+
+Initializing Rive
+
+Rive needs to link and initialize its C++ runtime for its Kotlin bindings to work.This can be done via an [initializer](https://developer.android.com/topic/libraries/app-startup) which does this automatically at app startup time. The initialization provider can be set up directly in your app’s manifest file:
+
+Copy
+
+Ask AI
+
+```
+<manifest ...>
+  <application ...>
+    <provider
+      android:name="androidx.startup.InitializationProvider"
+      android:authorities="${applicationId}.androidx-startup"
+      android:exported="false"
+      tools:node="merge">
+        <meta-data android:name="app.rive.runtime.kotlin.RiveInitializer"
+          android:value="androidx.startup" />
+    </provider>
+  </application>
+</manifest>
+```
+
+Otherwise this can be achieved by calling the initializer in your code:
+
+Copy
+
+Ask AI
+
+```
+AppInitializer.getInstance(applicationContext)
+  .initializeComponent(RiveInitializer::class.java)
+```
+
+If you want to initialize Rive yourself, this can be done in code using the following. This is the most flexible option, as you can lazily load the native library, but be sure to call it before any Rive functionality is used.
+
+Copy
+
+Ask AI
+
+```
+Rive.init(context)
+```
+
+3
+
+Add RiveAnimation to your layout
+
+You can now add a `RiveAnimationView` to your layout or create it programmatically. See [Building a RiveAnimationView](#building-a-riveanimationview) for more details on the various ways to set it up.
+
+### [​](#building-a-riveanimationview) Building a RiveAnimationView
+
+There are a number of ways to add Rive animations to your Android application.
+Before getting started, ensure your Rive files (.riv) are included in your Android project. The recommended way is to add them to the raw resources (`res/raw`) folder of your project.
+
+#### [​](#using-setriveresource-or-setriveurl) Using setRiveResource or setRiveUrl
+
+For the simplest programmatic initialization, use `setRiveResource` (local) or `setRiveUrl` (networked) methods. They have a number of optional parameters to customize the view.
+
+Copy
+
+Ask AI
+
+```
+class MyActivity : ComponentActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        val riveView = RiveAnimationView(this)
+        riveView.setRiveResource(R.raw.my_rive_file)
+        // or
+        riveView.setRiveUrl("https://mycdn.myorg.com/my_rive_file.riv")
+
+        setContentView(riveView)
+    }
+}
+```
+
+#### [​](#using-riveanimationview-builder) Using RiveAnimationView.Builder
+
+Rive also provides a builder pattern for constructing a `RiveAnimationView` which allows for staggered initialization steps. Note that the `setResource` method can take a raw resource ID, a URL (string), a byte array, or a Rive `File`.
+
+Copy
+
+Ask AI
+
+```
+val riveView = RiveAnimationView.Builder(this)
+    .setResource(R.raw.my_rive_file)
+    // or
+    .setResource("https://mycdn.myorg.com/my_rive_file.riv")
+    .build()
+
+setContentView(riveView)
+```
+
+#### [​](#using-a-rive-file) Using a Rive File
+
+If you have already loaded a Rive `File` instance, you can use that to initialize the view as well. See [Caching a Rive File](../caching-a-rive-file) for more details on how and why to load Rive files.
+
+Copy
+
+Ask AI
+
+```
+// Loads bytes on the main thread for simplicity; consider loading on a background thread for production use.
+val bytes = resources.openRawResource(R.raw.rating).use { res -> res.readBytes() }
+val riveFile = File(bytes)
+val riveView = RiveAnimationView(this)
+riveView.setRiveFile(riveFile)
+// Release the file if you no longer need it, keep if you plan to reuse it.
+riveFile.release()
+
+setContentView(riveView)
+```
+
+#### [​](#using-compose-androidview) Using Compose (AndroidView)
+
+You can also use `RiveAnimationView` inside a Compose UI using the `AndroidView` composable. See also the [LegacyComposeActivity](https://github.com/rive-app/rive-android/blob/master/app/src/main/java/app/rive/runtime/example/LegacyComposeActivity.kt) in the example app.
+
+Copy
+
+Ask AI
+
+```
+setContent {
+    AndroidView(
+        factory = { context ->
+            RiveAnimationView(context).also {
+                it.setRiveResource(R.raw.my_rive_file)
+            }
+        }
+    )
+}
+```
+
+#### [​](#using-xml) Using XML
+
+To use XML, include it as part of your layout. It has a number of optional attributes to customize the view.
+
+Copy
+
+Ask AI
+
+```
+<app.rive.runtime.kotlin.RiveAnimationView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:riveResource="@raw/my_rive_file"
+    ... />
+```
+
+If you would rather load the Rive file from a hosted location, use the `app:riveUrl` attribute. Ensure you have the necessary [internet permissions](#internet-permissions).
+
+Copy
+
+Ask AI
+
+```
+<app.rive.runtime.kotlin.RiveAnimationView
+    app:riveUrl="https://mycdn.myorg.com/my_rive_file.riv"
+    ... />
+```
+
+From your activity you can load it as usual:
+
+Copy
+
+Ask AI
+
+```
+setContentView(R.layout.my_layout)
+```
+
+### [​](#internet-permissions) Internet Permissions
+
+If you’re retrieving Rive files over a network, your app will need permission to access the internet in `AndroidManifest.xml`:
+
+Copy
+
+Ask AI
+
+```
+<uses-permission android:name="android.permission.INTERNET" />
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+```
+
+Note that this isn’t necessary if you include the .riv files in your Android project and load them as raw resources.
+See the pages in the “Runtime Fundamentals” section to learn how to control animation playback, state machines, and more.
+
+## [​](#resources) Resources
+
+[GitHub](https://github.com/rive-app/rive-android)
+[Examples](https://github.com/rive-app/rive-android/tree/master/app/src/main/java/app/rive/runtime/example)
+
+[Resource Usage](/docs/runtimes/apple/resource-usage)[C#](/docs/runtimes/community-runtimes/c-sharp)

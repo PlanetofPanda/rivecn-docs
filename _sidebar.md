@@ -50,11 +50,11 @@
   * [Tagging (标签)](editor/tagging.md)
 
 * **1. Home (入门 / 总览)**
-  * **Getting Started**
+  * **Getting Started (入门指南)**
     * [Introduction (简介)](guide/introduction.md)
     * [Best Practices (最佳实践)](guide/best-practices.md)
     * [Quick Links (快速链接)](guide/quick-links.md)
-  * **Explore Rive**
+  * **Explore Rive (探索 Rive)**
     * [Interface Overview (编辑器概览)](editor/interface-overview/overview.md)
     * [App Runtimes (应用运行时)](runtimes/overview.md)
     * [Game Runtimes (游戏运行时)](games/overview.md)
