@@ -1,30 +1,26 @@
 Runtime Fundamentals
 
-# State Machine Playback
+# 状态机播放 (State Machine Playback)
 
-Playing a state machine
+播放状态机
 
-For more information on designing and building state machines in Rive, please refer to: [State Machine](/docs/editor/state-machine).
-Rive’s state machines provide a way to combine a set of animation states and manage the transition between them that can be programmatically controlled with [Data Binding](/docs/runtimes/data-binding).
+有关在 Rive 中设计和构建状态机的更多信息，请参阅：[状态机 (State Machine)](/docs/editor/state-machine)。
+Rive 的状态机提供了一种方法来组合一组动画状态并管理它们之间的过渡，这些过渡可以使用 [数据绑定 (Data Binding)](/docs/runtimes/data-binding) 进行编程控制。
 
-## [​](#playing-state-machines) Playing state machines
+## [​](#playing-state-machines) 播放状态机
 
-- Web
-- React
-- React Native
-- Flutter
-- Apple
-- Android
+-   Web
+-   React
+-   React Native
+-   Flutter
+-   Apple
+-   Android
 
-#### [​](#autoplay-the-state-machine) Autoplay the State Machine
+#### [​](#autoplay-the-state-machine) 自动播放状态机 (Autoplay the State Machine)
 
-To autoplay a state machine immediately after it loads, simply set `autoplay` to `true`.
+要在加载后立即自动播放状态机，只需将 `autoplay` 设置为 `true`。
 
-Copy
-
-Ask AI
-
-```
+```javascript
 const r = new rive.Rive({
     src: 'https://cdn.rive.app/animations/vehicles.riv',
     canvas: document.getElementById('canvas'),
@@ -34,15 +30,11 @@ const r = new rive.Rive({
 });
 ```
 
-#### [​](#controlling-state-machine-playback) Controlling State Machine Playback
+#### [​](#controlling-state-machine-playback) 控制状态机播放 (Controlling State Machine Playback)
 
-You can manually play and pause the State Machine using the `play`, `pause`, and `stop` methods.
+你可以使用 `play`、`pause` 和 `stop` 方法手动播放和暂停状态机。
 
-Copy
-
-Ask AI
-
-```
+```javascript
 const r = new rive.Rive({
     src: 'https://cdn.rive.app/animations/vehicles.riv',
     canvas: document.getElementById('canvas'),
@@ -63,15 +55,11 @@ const handleStop = () => {
 }
 ```
 
-#### [​](#autoplay-the-state-machine-2) Autoplay the State Machine
+#### [​](#autoplay-the-state-machine-2) 自动播放状态机 (Autoplay the State Machine)
 
-To auto-play a state machine by default, simply set `autoPlay` to `true`.
+要默认自动播放状态机，只需将 `autoPlay` 设置为 `true`。
 
-Copy
-
-Ask AI
-
-```
+```javascript
 export default function Simple() {
   const { RiveComponent } = useRive({
     src: 'https://cdn.rive.app/animations/vehicles.riv',
@@ -83,15 +71,11 @@ export default function Simple() {
 }
 ```
 
-#### [​](#controlling-state-machine-playback-2) Controlling State Machine Playback
+#### [​](#controlling-state-machine-playback-2) 控制状态机播放 (Controlling State Machine Playback)
 
-You can manually play and pause the State Machine using the `play`, `pause`, and `stop` methods.
+你可以使用 `play`、`pause` 和 `stop` 方法手动播放和暂停状态机。
 
-Copy
-
-Ask AI
-
-```
+```javascript
 export default function Simple() {
 const { rive, RiveComponent } = useRive({
   src: "https://cdn.rive.app/animations/vehicles.riv",
@@ -124,16 +108,12 @@ return (
 }
 ```
 
-- New Runtime (Recommended)
-- Legacy Runtime
+-   New Runtime (推荐)
+-   Legacy Runtime
 
-By default, `RiveView` automatically uses the default artboard and state machine [configured in the Editor](https://rive.app/docs/editor/fundamentals/artboards#default-state-machine). In most cases, you only need to provide the `file` prop.For programmatic control, you can optionally specify `artboardName` and `stateMachineName` props to use a different artboard or state machine.
+默认情况下，`RiveView` 自动使用 [在编辑器中配置](https://rive.app/docs/editor/fundamentals/artboards#default-state-machine) 的默认画板和状态机。在大多数情况下，你只需要提供 `file` 属性。为了进行编程控制，你可以选择指定 `artboardName` 和 `stateMachineName` 属性来使用不同的画板或状态机。
 
-Copy
-
-Ask AI
-
-```
+```javascript
 export default function PlaybackExample() {
   const { riveFile } = useRiveFile({
     uri: 'https://cdn.rive.app/animations/vehicles.riv',
@@ -149,43 +129,26 @@ export default function PlaybackExample() {
 }
 ```
 
-#### [​](#controlling-state-machine-playback-3) Controlling State Machine Playback
+#### [​](#controlling-state-machine-playback-3) 控制状态机播放 (Controlling State Machine Playback)
 
-For more control, you can manage playback and set the **arboard**/**state-machine** combination:
+为了获得更多控制，你可以管理播放并设置 **arboard**/**state-machine** 组合：
 
-[​](#param-auto-play)
+`autoPlay`
+`boolean`
+默认: `true`
+自动开始播放状态机。
 
-autoPlay
+`artboardName`
+`String`
+要显示的画板名称。*如果未设置，将使用默认画板，如在编辑器中配置的那样。*
 
-boolean
+`stateMachineName`
+`String`
+要播放的状态机名称。*如果未设置，将使用默认状态机，如在编辑器中配置的那样。*
 
-default:"true"
+并管理 Rive 视图引用上的 `play`、`pause` 和 `reset`。
 
-Automatically start playing the state machine.
-
-[​](#param-artboard-name)
-
-artboardName
-
-String
-
-The name of the artboard to display.*If not set, the default artboard will be used, as configured in the Editor.*
-
-[​](#param-state-machine-name)
-
-stateMachineName
-
-String
-
-The name of the state machine to play.*If not set, the default state machine will be used, as configured in the Editor.*
-
-And manage `play`, `pause`, and `reset` on the Rive view reference.
-
-Copy
-
-Ask AI
-
-```
+```javascript
 import { Fit, RiveView, useRive, useRiveFile } from '@rive-app/react-native';
 
 export default function PlaybackExample() {
@@ -228,15 +191,11 @@ export default function PlaybackExample() {
 }
 ```
 
-#### [​](#autoplay-the-state-machine-3) Autoplay the State Machine
+#### [​](#autoplay-the-state-machine-3) 自动播放状态机 (Autoplay the State Machine)
 
-To auto-play a state machine by default, simply set `autoPlay` to `true`.
+要默认自动播放状态机，只需将 `autoPlay` 设置为 `true`。
 
-Copy
-
-Ask AI
-
-```
+```javascript
   <Rive
     resourceName={'vehicles'}
     autoplay={true}
@@ -244,15 +203,11 @@ Ask AI
   />
 ```
 
-#### [​](#controlling-state-machine-playback-4) Controlling State Machine Playback
+#### [​](#controlling-state-machine-playback-4) 控制状态机播放 (Controlling State Machine Playback)
 
-You can manually play and pause the State Machine using the `play` and `pause` methods.
+你可以使用 `play` 和 `pause` 方法手动播放和暂停状态机。
 
-Copy
-
-Ask AI
-
-```
+```javascript
 import Rive, { RiveRef } from 'rive-react-native'
 
 export default function App() {
@@ -280,17 +235,13 @@ export default function App() {
 }
 ```
 
-There are a number of ways to play/select a state machine in Flutter.
+在 Flutter 中有多种方法播放/选择状态机。
 
-#### [​](#when-using-rivewidgetcontroller-recommended) When using `RiveWidgetController` (recommended)
+#### [​](#when-using-rivewidgetcontroller-recommended) 当使用 `RiveWidgetController` 时 (推荐)
 
-When you create a `RiveWidgetController` it will use the default state machine, or you can specify a state machine by name or index.
+当你创建 `RiveWidgetController` 时，它将使用默认状态机，或者你可以通过名称或索引指定状态机。
 
-Copy
-
-Ask AI
-
-```
+```dart
 // Default state machine
 var controller = RiveWidgetController(riveFile);
 // By name
@@ -305,37 +256,25 @@ controller = RiveWidgetController(
 );
 ```
 
-Passing this controller to a `RiveWidget` will automatically play the state machine.
+将此控制器传递给 `RiveWidget` 将自动播放状态机。
 
-Copy
-
-Ask AI
-
-```
+```dart
 @override
 Widget build(BuildContext context) {
   return RiveWidget(controller: controller);
 }
 ```
 
-You can mark the controller as `active` to play/pause the state machine (advancing and drawing):
+你可以将控制器标记为 `active` 以播放/暂停状态机（推进和绘制）：
 
-Copy
-
-Ask AI
-
-```
+```dart
 final controller = RiveWidgetController(riveFile);
 controller.active = false;
 ```
 
-The `StateMachineSelector` can also be passed to `RiveWidgetBuilder` to specify which state machine to use:
+`StateMachineSelector` 也可以传递给 `RiveWidgetBuilder` 以指定要使用的状态机：
 
-Copy
-
-Ask AI
-
-```
+```dart
 return RiveWidgetBuilder(
   fileLoader: fileLoader,
   stateMachineSelector: StateMachineSelector.byIndex(0),
@@ -345,15 +284,11 @@ return RiveWidgetBuilder(
 );
 ```
 
-#### [​](#when-using-statemachinepainter) When using `StateMachinePainter`
+#### [​](#when-using-statemachinepainter) 当使用 `StateMachinePainter` 时
 
-When using `StateMachinePainter`, you can specify the state machine to use by passing an optional name.
+当使用 `StateMachinePainter` 时，你可以通过传递可选名称来指定要使用的状态机。
 
-Copy
-
-Ask AI
-
-```
+```dart
 // Default state machine
 final painter = rive.StateMachinePainter(withStateMachine: _withStateMachine);
 // By name
@@ -363,15 +298,11 @@ painter = rive.StateMachinePainter(
 );
 ```
 
-#### [​](#creating-a-state-machine-directly) Creating a state machine directly
+#### [​](#creating-a-state-machine-directly) 直接创建状态机
 
-Create the state machine directly from an `Artboard`:
+直接从 `Artboard` 创建状态机：
 
-Copy
-
-Ask AI
-
-```
+```dart
 final artboard = riveFile.defaultArtboard()!;
 // Default state machine
 var stateMachine = artboard.defaultStateMachine();
@@ -381,17 +312,13 @@ stateMachine = artboard.stateMachine('State Machine 1');
 stateMachine = artboard.stateMachineAt(0);
 ```
 
-#### [​](#autoplay-the-state-machine-4) Autoplay the State Machine
+#### [​](#autoplay-the-state-machine-4) 自动播放状态机 (Autoplay the State Machine)
 
-By default, RiveViewModel will automatically play the state machine you’ve given it.
+默认情况下，RiveViewModel 自动播放你给它的状态机。
 
 ### [​](#swiftui) SwiftUI
 
-Copy
-
-Ask AI
-
-```
+```swift
 var stateChanger = RiveViewModel(
     fileName: "skills",
     stateMachineName: "Designer's Test",
@@ -401,11 +328,7 @@ var stateChanger = RiveViewModel(
 
 ### [​](#uikit) UIKit
 
-Copy
-
-Ask AI
-
-```
+```swift
 class StateMachineViewController: UIViewController {
     var viewModel = RiveViewModel(
         fileName: "skills",
@@ -425,27 +348,19 @@ class StateMachineViewController: UIViewController {
 }
 ```
 
-### [​](#play) Play
+### [​](#play) 播放 (Play)
 
-If you set autoplay to false you can play the active animation or state machine very simply.
+如果你将自动播放设置为 false，你可以非常简单地播放活动动画或状态机。
 
-Copy
-
-Ask AI
-
-```
+```swift
 simpleVM.play()
 ```
 
-### [​](#pause/stop/reset) Pause/Stop/Reset
+### [​](#pause/stop/reset) 暂停/停止/重置 (Pause/Stop/Reset)
 
-Based on certain events in your app you may want to adjust the playback further.
+根据应用中的某些事件，你可能希望进一步调整播放。
 
-Copy
-
-Ask AI
-
-```
+```swift
 simpleVM.pause()
 simpleVM.stop()
 simpleVM.reset()
@@ -453,13 +368,9 @@ simpleVM.reset()
 
 #### [​](#android) Android
 
-### [​](#via-xml) Via XML
+### [​](#via-xml) 通过 XML
 
-Copy
-
-Ask AI
-
-```
+```xml
 <app.rive.runtime.kotlin.RiveAnimationView
     android:id="@+id/simple_state_machine"
     android:layout_width="match_parent"
@@ -468,13 +379,9 @@ Ask AI
     app:riveStateMachine="Designer's Test" />
 ```
 
-### [​](#via-kotlin) Via Kotlin
+### [​](#via-kotlin) 通过 Kotlin
 
-Copy
-
-Ask AI
-
-```
+```kotlin
 animationView.setRiveResource(
     R.raw.simple_state_machine,
     autoplay = true,
@@ -482,13 +389,9 @@ animationView.setRiveResource(
 )
 ```
 
-Additionally, you can use the same APIs from animation playback (i.e `play`, `pause`, and `stop`) to control state machine playback, as long as you set the `isStateMachine` attribute to `true`.
+此外，只要将 `isStateMachine` 属性设置为 `true`，你就可以使用与动画播放相同的 API（即 `play`、`pause` 和 `stop`）来控制状态机播放。
 
-Copy
-
-Ask AI
-
-```
+```kotlin
 animationView.play(
     "Designer's Test",
     Loop.AUTO,
@@ -507,4 +410,4 @@ animationView.stop(
 )
 ```
 
-[Layout](/docs/runtimes/layout)[Data Binding](/docs/runtimes/data-binding)
+[布局 (Layout)](/docs/runtimes/layout)[数据绑定 (Data Binding)](/docs/runtimes/data-binding)

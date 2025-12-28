@@ -1,29 +1,24 @@
-Scripting API
+脚本 API
 
-# Artboard
+# 画板 (Artboard)
 
-Represents a Rive artboard instance, providing drawing, advancing,
-interaction handling, and access to named nodes and data.
+表示一个 Rive 画板实例，提供绘制、推进 (advancing)、交互处理以及访问命名节点和数据的功能。
 
-## [​](#fields) Fields
+## [​](#fields) 字段 (Fields)
 
 ### [​](#frameorigin) `frameOrigin`
 
-If true, the artboard’s origin is treated as the frame origin.
+如果为 true，画板的原点被视为帧原点。
 
 ### [​](#data) `data`
 
-The typed data associated with the artboard.
+与画板关联的类型化数据。
 
 ### [​](#width) `width`
 
-The width of the artboard.
+画板的宽度。
 
-Copy
-
-Ask AI
-
-```
+```lua
 self.artboardInstance = self.myArtboard:instance()
 if self.artboardInstance then
    self.artboardInstance.width = 20
@@ -32,44 +27,34 @@ end
 
 ### [​](#height) `height`
 
-The height of the artboard.
+画板的高度。
 
-Copy
-
-Ask AI
-
-```
+```lua
 self.artboardInstance = self.myArtboard:instance()
 if self.artboardInstance then
    self.artboardInstance.height = 20
 end
 ```
 
-## [​](#methods) Methods
+## [​](#methods) 方法 (Methods)
 
 ### [​](#draw) `draw`
 
-Draws the artboard using the provided renderer.
+使用提供的渲染器绘制画板。
 
 ### [​](#advance) `advance`
 
-Advances the artboard by the given time in seconds. Returns true if the
-artboard should continue receiving advance calls.
+按给定的时间（以秒为单位）推进画板。如果画板应继续接收 advance 调用，则返回 true。
 
 ### [​](#instance) `instance`
 
-Creates a new instance of the artboard with independent state.
+创建一个具有独立状态的画板新实例。
 
 ### [​](#bounds) `bounds`
 
-Returns the bounding box of the artboard as two [Vector](/docs/scripting/api-reference/vector) values: the
-minimum point and the maximum point.
+将画板的边界框作为两个 [向量 (Vector)](/docs/scripting/api-reference/vector) 值返回：最小点和最大点。
 
-Copy
-
-Ask AI
-
-```
+```lua
 local minPt, maxPt = self.myArtboard:bounds()
 print("Bounds width", maxPt.x - minPt.x)
 print("Bounds height", maxPt.y - minPt.y)
@@ -77,31 +62,24 @@ print("Bounds height", maxPt.y - minPt.y)
 
 ### [​](#node) `node`
 
-Returns the node with the given name, or nil if no such node exists.
+返回具有给定名称的节点，如果不存在此类节点，则返回 nil。
 
 ### [​](#pointerdown) `pointerDown`
 
-Pointer event down handler. Each returns a hit-test result, where 0
-indicates no hit and non-zero values indicate a hit.
+指针事件按下处理程序。每个都返回一个碰撞测试结果，其中 0 表示未命中，非零值表示命中。
 
 ### [​](#pointerup) `pointerUp`
 
-Pointer event up handler. Each returns a hit-test result, where 0
-indicates no hit and non-zero values indicate a hit.
+指针事件抬起处理程序。每个都返回一个碰撞测试结果，其中 0 表示未命中，非零值表示命中。
 
 ### [​](#pointermove) `pointerMove`
 
-Pointer event move handler. Each returns a hit-test result, where 0
-indicates no hit and non-zero values indicate a hit.
+指针事件移动处理程序。每个都返回一个碰撞测试结果，其中 0 表示未命中，非零值表示命中。
 
 ### [​](#pointerexit) `pointerExit`
 
-Pointer event exit handler. Each returns a hit-test result, where 0
-indicates no hit and non-zero values indicate a hit.
+指针事件退出处理程序。每个都返回一个碰撞测试结果，其中 0 表示未命中，非零值表示命中。
 
 ### [​](#addtopath) `addToPath`
 
-Adds the artboard’s geometry to the given path, optionally transformed
-by the provided matrix.
-
-[Keyboard Shortcuts](/docs/scripting/keyboard-shortcuts)[BlendMode](/docs/scripting/api-reference/blend-mode)
+将画板的几何图形添加到给定路径，可选择通过提供的矩阵进行变换。

@@ -2,186 +2,140 @@ Web (JS)
 
 # Web (JS)
 
-JavaScript/WASM runtime for Rive.
+Rive 的 JavaScript/WASM 运行时。
 
-Note that certain Rive features may not be supported yet for a particular runtime, or may require using the Rive Renderer.For more details, refer to the [feature support](/docs/feature-support) and [choosing a renderer](/docs/runtimes/choose-a-renderer) pages.
+请注意，某些 Rive 功能可能尚未在特定运行时中受支持，或者可能需要使用 Rive 渲染器。有关更多详细信息，请参阅 [功能支持](/docs/feature-support) 和 [选择渲染器](/docs/runtimes/choose-a-renderer) 页面。
 
-## [​](#overview) Overview
+## [​](#overview) 概览
 
-This guide documents how to get started using the Rive web runtime library. The runtime is open source and available in this [GitHub repository](https://github.com/rive-app/rive-wasm). This library has a high-level JavaScript API (with TypeScript support) and a low-level API to load in Web Assembly (WASM) and control the rendering loop yourself. This runtime allows you to:
+本指南记录了如何开始使用 Rive web 运行时库。该运行时是开源的，可在 [GitHub 仓库](https://github.com/rive-app/rive-wasm) 中找到。该库具提供高级 JavaScript API（支持 TypeScript）和低级 API，用于加载 Web Assembly (WASM) 并自行控制渲染循环。此运行时允许你：
 
-- Quickly integrate Rive into all web applications (Webflow, WordPress, etc.)
-- Provides a base API to build other web-based Rive runtime wrappers (React, Svelte, etc.)
-- Support advanced use cases by controlling the render loop (web-based game engines)
+-   快速将 Rive 集成到所有 Web 应用程序（Webflow、WordPress 等）中
+-   提供基础 API 来构建其他基于 Web 的 Rive 运行时封装（React、Svelte 等）
+-   通过控制渲染循环来支持高级用例（基于 Web 的游戏引擎）
 
-## [​](#getting-started) Getting started
+## [​](#getting-started) 快速开始
 
-Follow the steps below to integrate Rive into your web app.
+按照以下步骤将 Rive 集成到你的 Web 应用程序中。
 
-The following instructions describe using the `@rive-app/canvas` package. Rive provides web-based packages like WebGL, Canvas, and Lite versions.See [Canvas vs WebGL](/docs/runtimes/web/canvas-vs-webgl) for guidance on which package is the correct choice for your use case.
+以下说明描述了如何使用 `@rive-app/canvas` 包。Rive 提供了基于 Web 的包，如 WebGL、Canvas 和 Lite 版本。请参阅 [Canvas vs WebGL](/docs/runtimes/web/canvas-vs-webgl) 以获取有关哪种包是适合你用例的指导。
 
-1
+1.  **安装依赖**
 
-Install the dependency
+    我们建议始终使用 [最新版本](https://www.npmjs.com/package/@rive-app/canvas)。下面列出的版本和示例中的版本可能与最新版本不同。
 
-We recommend always using the [latest version](https://www.npmjs.com/package/@rive-app/canvas). The versions listed below and in the examples may differ from the latest.
+    -   **Script 标签**
 
-- Script Tag
-- Package Manager
+        ```html
+        // Add the following script tag to your web page to get the latest version:
+        // 将以下 script 标签添加到你的网页以获取最新版本：
+        <script src="https://unpkg.com/@rive-app/canvas"></script>
 
-Copy
+        // You can also pin to a specific version (See [here](https://www.npmjs.com/package/@rive-app/canvas) for the latest):
+        // 你也可以指定特定版本（查看 [此处](https://www.npmjs.com/package/@rive-app/canvas) 获取最新版本）：
+        <script src="https://unpkg.com/@rive-app/[email protected]"></script>
 
-Ask AI
+        // This will make a global `rive` object available, allowing you to access the Rive API via the `rive` entry point:
+        // 这将使全局 `rive` 对象可用，允许你通过 `rive` 入口点访问 Rive API：
+        new rive.Rive({});
+        ```
 
-```
-// Add the following script tag to your web page to get the latest version:
+    -   **包管理器**
 
-<script src="https://unpkg.com/@rive-app/canvas"></script>
+        **npm**
+        ```bash
+        npm install @rive-app/canvas
+        ```
 
-// You can also pin to a specific version (See [here](https://www.npmjs.com/package/@rive-app/canvas) for the latest):
+        **pnpm**
+        ```bash
+        pnpm add @rive-app/canvas
+        ```
 
-<script src="https://unpkg.com/@rive-app/[email protected]"></script>
+        **yarn**
+        ```bash
+        yarn add @rive-app/canvas
+        ```
 
-// This will make a global `rive` object available, allowing you to access the Rive API via the `rive` entry point:
+        **bun**
+        ```bash
+        bun add @rive-app/canvas
+        ```
 
-new rive.Rive({});
-```
+    **导入**
 
-npm
+    ```javascript
+    // Import the entire module under the global identifier `rive`
+    // 在全局标识符 `rive` 下导入整个模块
+    import * as rive from "@rive-app/canvas";
 
-Copy
+    // Alternatively, import only the specific parts you need
+    // 或者，仅导入你需要的特定部分
+    import { Rive } from "@rive-app/canvas";
+    ```
 
-Ask AI
+    不使用 [Rive 文本](/docs/editor/text) 和 [Rive 音频](/docs/editor/events/audio-events)？考虑使用 [@rive-app/canvas-lite](/docs/runtimes/web/canvas-vs-webgl#rive-app-canvas-lite)，这是一个更小的包变体。
 
-```
-npm install @rive-app/canvas
-```
+2.  **创建 Canvas**
 
-pnpm
+    在你希望显示 Rive 图形的 HTML 中添加一个 canvas 元素：
 
-Copy
+    ```html
+    <canvas id="canvas" width="500" height="500"></canvas>
+    ```
 
-Ask AI
+3.  **创建 Rive 实例**
 
-```
-pnpm add @rive-app/canvas
-```
+    要创建 Rive 对象的新实例，请提供以下属性：
 
-yarn
+    -   `src`: 代表托管的 `.riv` 文件 URL 的字符串（如下例所示）或公共资产 `.riv` 文件的路径。有关如何正确使用此属性的更多详细信息，请参阅 [Rive 参数](/docs/runtimes/web/rive-parameters)。
+    -   `artboard`: (可选) 代表你要显示的画板的字符串。如果未提供，则选择默认画板。
+    -   `stateMachines`: 代表你希望播放的状态机名称的字符串。
+    -   `canvas`: 将渲染动画的 canvas 元素。
+    -   `autoplay`: 指示动画是否应自动播放的布尔值。
 
-Copy
+    ```html
+    <script>
+        const r = new rive.Rive({
+            src: "https://cdn.rive.app/animations/vehicles.riv",
+            // OR the path to a discoverable and public Rive asset
+            // 或者可发现的公共 Rive 资产的路径
+            // src: '/public/example.riv',
+            canvas: document.getElementById("canvas"),
+            autoplay: true,
+            // artboard: "Artboard", // Optional. If not supplied the default is selected
+            // artboard: "Artboard", // 可选。如果未提供，则选择默认画板
+            stateMachines: "bumpy",
+            onLoad: () => {
+              r.resizeDrawingSurfaceToCanvas();
+            },
+        });
+    </script>
+    ```
 
-Ask AI
+    `resizeDrawingSurfaceToCanvas` 方法确保 Rive 动画正确缩放以适应指定 canvas 元素的尺寸。默认情况下，canvas 渲染表面可能与 HTML 中定义的 `<canvas>` 元素的实际大小不匹配，这可能导致图形模糊或缩放不正确，尤其是在高 DPI 或视网膜显示器上。调用此方法会调整内部绘图表面，以便动画以清晰的细节渲染，匹配 canvas 的像素密度。这在以下情况下尤为重要：
 
-```
-yarn add @rive-app/canvas
-```
+    -   Canvas 的大小动态变化（例如，由于响应式布局而调整大小）。
+    -   你希望确保无论设备或屏幕分辨率如何，动画均保持清晰。
 
-bun
+    **最佳实践：**
 
-Copy
+    -   **加载后调用**：建议在 `onLoad` 回调中调用 `resizeDrawingSurfaceToCanvas`，以确保在调整绘图表面之前已完全加载 Rive 资产。这可以防止任何渲染问题。
+    -   **处理窗口调整大小**：如果 canvas 大小在用户交互期间发生变化（例如调整浏览器窗口大小时），你也应该监听窗口调整大小事件并调用 `resizeDrawingSurfaceToCanvas` 以重新调整渲染表面：
 
-Ask AI
-
-```
-bun add @rive-app/canvas
-```
-
-Importing
-
-Copy
-
-Ask AI
-
-```
-// Import the entire module under the global identifier `rive`
-import * as rive from "@rive-app/canvas";
-
-// Alternatively, import only the specific parts you need
-import { Rive } from "@rive-app/canvas";
-```
-
-Not using [Rive Text](/docs/editor/text) and [Rive Audio](/docs/editor/events/audio-events)? Consider using [@rive-app/canvas-lite](/docs/runtimes/web/canvas-vs-webgl#rive-app-canvas-lite) which is a smaller package variant.
-
-2
-
-Create a Canvas
-
-Add a canvas element to your HTML where you want the Rive graphic to be displayed:
-
-Copy
-
-Ask AI
-
-```
-<canvas id="canvas" width="500" height="500"></canvas>
-```
-
-3
-
-Create a Rive instance
-
-To create a new instance of a Rive object, provide the following properties:
-
-- `src`: A string representing the URL of the hosted `.riv` file (as shown in the example below) or the path to the public asset `.riv` file. For more details, refer to [Rive Parameters](/docs/runtimes/web/rive-parameters) on how to properly use this property.
-- `artboard` - (Optional) A string representing the artboard you want to display. If not supplied the default is selected.
-- `stateMachines` - A string representing the name of the state machine you wish to play.
-- `canvas` - The canvas element where the animation will be rendered.
-- `autoplay` - A boolean indicating whether the animation should play automatically.
-
-Copy
-
-Ask AI
-
-```
-<script>
-    const r = new rive.Rive({
-        src: "https://cdn.rive.app/animations/vehicles.riv",
-        // OR the path to a discoverable and public Rive asset
-        // src: '/public/example.riv',
-        canvas: document.getElementById("canvas"),
-        autoplay: true,
-        // artboard: "Artboard", // Optional. If not supplied the default is selected
-        stateMachines: "bumpy",
-        onLoad: () => {
-          r.resizeDrawingSurfaceToCanvas();
-        },
+    ```javascript
+    window.addEventListener("resize", () => {
+        r.resizeDrawingSurfaceToCanvas();
     });
-</script>
-```
+    ```
 
-The `resizeDrawingSurfaceToCanvas` method ensures that the Rive animation is correctly scaled to fit the dimensions of the specified canvas element. By default, the canvas rendering surface might not match the exact size of the `<canvas>` element defined in your HTML, which can lead to blurry or incorrectly scaled graphics, especially on high-DPI or retina displays.Calling this method adjusts the internal drawing surface so that the animation is rendered with crisp detail, matching the pixel density of the canvas. This is particularly important when:
+    通过这种方式，随着 canvas 大小的变化，Rive 动画将继续看起来清晰且缩放正确。
 
-- The size of the canvas changes dynamically (e.g., if it is resized due to responsive layouts).
-- You want to ensure the animation remains sharp, regardless of device or screen resolution.
+### [​](#complete-example) 完整示例
 
-  
-**Best practices:**
+综上所述，这是如何在单个 HTML 文件中加载 Rive 图形的方法。
 
-- **Call after load**: It’s recommended to call `resizeDrawingSurfaceToCanvas` inside the `onLoad` callback to ensure that the Rive asset has been fully loaded before adjusting the drawing surface. This prevents any rendering issues.
-- **Handling window resize**: If your canvas size changes during the user’s interaction (such as when resizing the browser window), you should also listen for window resize events and call `resizeDrawingSurfaceToCanvas` to re-adjust the rendering surface:
-
-Copy
-
-Ask AI
-
-```
-window.addEventListener("resize", () => {
-    r.resizeDrawingSurfaceToCanvas();
-});
-```
-
-This way, the Rive animation will continue to look sharp and correctly scaled as the canvas size changes.
-
-### [​](#complete-example) Complete example
-
-Bringing it all together, here’s how to load a Rive graphic in a single HTML file.
-
-Copy
-
-Ask AI
-
-```
+```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -202,6 +156,7 @@ Ask AI
         stateMachines: "bumpy",
         onLoad: () => {
           // Ensure the drawing surface matches the canvas size and device pixel ratio
+          // 确保绘图表面匹配 canvas 大小和设备像素比
           r.resizeDrawingSurfaceToCanvas();
         },
       });
@@ -210,82 +165,75 @@ Ask AI
 </html>
 ```
 
-### [​](#loading-rive-files) Loading Rive files
+### [​](#loading-rive-files) 加载 Rive 文件
 
-[See this example](https://codesandbox.io/p/sandbox/rive-quick-start-js-xmwcm6?file=%2Fsrc%2Findex.ts) for the different ways to load in a .riv file, the options are:
+[查看此示例](https://codesandbox.io/p/sandbox/rive-quick-start-js-xmwcm6?file=%2Fsrc%2Findex.ts) 了解加载 .riv 文件的不同方法，选项包括：
 
-1. **Hosted URL**: Use a string representing the URL where the `.riv` file is hosted. Set this as the `src` attribute when creating a new Rive instance.
-2. **Static Assets in the bundle**: Provide a string with the path to a publicly accessible `.riv` file within your web project. Handle `.riv` files just like any other static asset (e.g., images or fonts) in your project.
-3. **Fetching a file**: Instead of using the `src` attribute, use the `buffer` attribute to load an `ArrayBuffer` when fetching a file. This is useful when reusing the same `.riv` file across multiple Rive instances, allowing you to load it only once.
-4. **Reusing a Loaded File**: Use the `rivFile` parameter to reuse a previously loaded Rive runtime file object, avoiding the need to fetch it again via the `src` URL or reload it from the `buffer`. This can significantly improve performance by eliminating redundant network requests and loading times, especially when creating multiple Rive instances from the same source. Unlike the `src` and `buffer` parameters, which require parsing under the hood to create a runtime file object, the `riveFile` parameter uses an already parsed object, including any loaded assets. See [Caching a Rive File](/docs/runtimes/caching-a-rive-file).
+1.  **托管 URL**: 使用代表托管 `.riv` 文件位置的 URL 字符串。在创建新 Rive 实例时将其设置为 `src` 属性。
+2.  **包中的静态资产**: 提供指向 Web 项目中可公开访问的 `.riv` 文件的路径字符串。像处理项目中的任何其他静态资产（如图像或字体）一样处理 `.riv` 文件。
+3.  **获取文件**: 不使用 `src` 属性，而是在获取文件时使用 `buffer` 属性加载 `ArrayBuffer`。当在多个 Rive 实例中复用同一个 `.riv` 文件时，这非常有用，允许你只加载一次。
+4.  **复用已加载文件**: 使用 `rivFile` 参数复用先前加载的 Rive 运行时文件对象，避免通过 `src` URL 再次获取或从 `buffer` 重新加载。这可以通过消除冗余的网络请求和加载时间来显着提高性能，尤其是在从同一源创建多个 Rive 实例时。与需要底层解析以创建运行时文件对象的 `src` 和 `buffer` 参数不同，`rivFile` 参数使用已解析的对象，包括任何已加载的资产。请参阅 [缓存 Rive 文件](/docs/runtimes/caching-a-rive-file)。
 
-For more details, refer to the [Rive Parameters](/docs/runtimes/web/rive-parameters) section on the `src` property.
+有关更多详细信息，请参阅 [Rive 参数](/docs/runtimes/web/rive-parameters) 中关于 `src` 属性的部分。
 
-## [​](#4-clean-up-rive) 4. Clean up Rive
+## [​](#4-clean-up-rive) 4. 清理 Rive
 
-When working with a Rive instance, it’s important to properly clean it up when it’s no longer needed. This is especially necessary in scenarios where:
+使用 Rive 实例时，很重要的一点是当不再需要它时正确清理它。在以下场景中这尤其必要：
 
-- The UI containing Rive animations is no longer needed (e.g., when a modal with Rive graphics is closed).
-- The animation or state machine has completed and will not be shown or run again.
+-   包含 Rive 动画的 UI 不再需要（例如，当关闭带有 Rive 图形的模态框时）。
+-   动画或状态机已完成，并且不会再次显示或运行。
 
-Under the hood, Rive creates various low-level objects (such as artboard instances, animation instances, and state machine instances) in C++, which need to be manually deleted to prevent memory leaks. If not cleaned up, these objects can consume unnecessary resources, potentially impacting your application’s performance.
-Fortunately, the high-level JavaScript API simplifies this process. You don’t need to track every object created during the Rive instance lifecycle. Instead, you can clean up all associated objects with a single method call.
-To clean up a Rive instance and free up resources, simply call the following method on your Rive instance:
+在底层，Rive 在 C++ 中创建各种低级对象（如画板实例、动画实例和状态机实例），需要手动删除这些对象以防止内存泄漏。如果不清理，这些对象会消耗不必要的资源，可能会影响应用程序的性能。
+幸运的是，高级 JavaScript API 简化了此过程。你不需要跟踪 Rive 实例生命周期中创建的每个对象。相反，你可以通过单次方法调用清理所有关联对象。
+要清理 Rive 实例并释放资源，只需在你的 Rive 实例上调用以下方法：
 
-Copy
-
-Ask AI
-
-```
+```javascript
 const riveInstance = new Rive({...));
 ...
 // When ready to cleanup
+// 准备清理时
 riveInstance.cleanup();
 ```
 
-# [​](#rive-runtime-concepts) Rive runtime concepts
+# [​](#rive-runtime-concepts) Rive 运行时概念
 
-Learn how to interact with your Rive graphics during runtime.
+了解如何在运行时与 Rive 图形进行交互。
 
-[## Artboards
+[## 画板 (Artboards)
 
-Control which artboard is displayed at runtime.](/docs/runtimes/artboards)[## Layout
+在运行时控制显示哪个画板。](/docs/runtimes/artboards)[## 布局 (Layout)
 
-Control the artboard’s layout (fit and alignment) at runtime.](/docs/runtimes/layout)[## State Machine Playback
+在运行时控制画板的布局（适应和对齐）。](/docs/runtimes/layout)[## 状态机播放 (State Machine Playback)
 
-Control state machine playback at runtime and interact with state machine
-inputs.](/docs/runtimes/state-machines)[## Data Binding
+在运行时控制状态机播放并与状态机输入交互。](/docs/runtimes/state-machines)[## 数据绑定 (Data Binding)
 
-Dynamically update content at runtime using two-way data binding for text,
-colors, images, lists, and more.](/docs/runtimes/data-binding)[## Loading Assets
+在运行时使用双向数据绑定动态更新文本、颜色、图像、列表等内容。](/docs/runtimes/data-binding)[## 加载资产 (Loading Assets)
 
-Load referenced assets (images, fonts, audio) at runtime. Also known as
-out-of-band assets.](/docs/runtimes/loading-assets)[## Caching a Rive File
+在运行时加载引用的资产（图像、字体、音频）。也称为带外资产 (out-of-band assets)。](/docs/runtimes/loading-assets)[## 缓存 Rive 文件 (Caching a Rive File)
 
-Cache and reuse a Rive file object across multiple Rive instances to improve
-performance.](/docs/runtimes/caching-a-rive-file)
+在多个 Rive 实例之间缓存并复用 Rive 文件对象以提高性能。](/docs/runtimes/caching-a-rive-file)
 
-# [​](#additional-rive-web-resources) Additional Rive web resources
+# [​](#additional-rive-web-resources) 其他 Rive Web 资源
 
-More in-depth Rive web documentation and advanced use cases.
+更深入的 Rive Web 文档和高级用例。
 
-[## Rive Parameters
+[## Rive 参数 (Rive Parameters)
 
-API docs for the Rive instance.](/docs/runtimes/web/rive-parameters)[## Canvas vs WebGL
+Rive 实例的 API 文档。](/docs/runtimes/web/rive-parameters)[## Canvas vs WebGL
 
-A guide to the different Rive web packages](/docs/runtimes/web/canvas-vs-webgl)[## FAQ
+Rive Web 包及其不同版本的指南](/docs/runtimes/web/canvas-vs-webgl)[## 常见问题 (FAQ)
 
-Frequently asked questions](/docs/runtimes/web/faq)[## Preloading WASM
+常见问题](/docs/runtimes/web/faq)[## 预加载 WASM (Preloading WASM)
 
-Instructions on how to preload and self-host the rive WASM library.](/docs/runtimes/web/preloading-wasm)[## Low-level API Usage
+关于如何预加载和自托管 rive WASM 库的说明。](/docs/runtimes/web/preloading-wasm)[## 低级 API 使用 (Low-level API Usage)
 
-Control the Rive render loop and layout, and draw multiple artboards to the same canvas.](/docs/runtimes/web/low-level-api-usage)
+控制 Rive 渲染循环和布局，并将多个画板绘制到同一个 canvas。](/docs/runtimes/web/low-level-api-usage)
 
-# [​](#examples) Examples
+# [​](#examples) 示例
 
-- [Basic gallery app](https://github.com/rive-app/rive-wasm/tree/master/js/examples/_frameworks/parcel_example_canvas)
-- [Tracking mouse cursor](https://codesandbox.io/p/sandbox/tracking-mouse-cursor-n38gdd?file=%2Fsrc%2Findex.ts)
-- [Connecting to page scroll](https://codesandbox.io/p/sandbox/rive-page-scroll-h4msqw?file=%2Fsrc%2Findex.ts%3A27%2C45)
-- [Playing state machine only when scrolled into the user’s viewport](https://codesandbox.io/p/sandbox/rive-wait-for-scroll-into-view-y9wg8d?file=%2Fsrc%2Findex.ts)
+-   [基础图库应用](https://github.com/rive-app/rive-wasm/tree/master/js/examples/_frameworks/parcel_example_canvas)
+-   [追踪鼠标光标](https://codesandbox.io/p/sandbox/tracking-mouse-cursor-n38gdd?file=%2Fsrc%2Findex.ts)
+-   [连接到页面滚动](https://codesandbox.io/p/sandbox/rive-page-scroll-h4msqw?file=%2Fsrc%2Findex.ts%3A27%2C45)
+-   [仅当滚动到用户视口时播放状态机](https://codesandbox.io/p/sandbox/rive-wait-for-scroll-into-view-y9wg8d?file=%2Fsrc%2Findex.ts)
 
-[Rive Events](/docs/runtimes/rive-events)[Rive Parameters](/docs/runtimes/web/rive-parameters)
+[Rive 事件](/docs/runtimes/rive-events)[Rive 参数](/docs/runtimes/web/rive-parameters)

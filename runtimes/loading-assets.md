@@ -1,107 +1,93 @@
 Runtime Fundamentals
 
-# Loading Assets
+# 加载资产 (Loading Assets)
 
-Loading and replacing assets dynamically at runtime
+在运行时动态加载和替换资产
 
-If you want to dynamically replace images, use [image data
-binding](/docs/runtimes/data-binding#images).
+如果你想动态替换图像，请使用 [图像数据绑定 (image data binding)](/docs/runtimes/data-binding#images)。
 
-Some Rive files may contain assets that can be embedded within the actual file binary, such as font, image, or audio files. The Rive runtimes may then load these assets when the Rive file is loaded. While this makes for easy usage of the Rive files/runtimes, there may be opportunities to load these assets in or even replace them at runtime instead of embedding them in the file binary.
-There are several benefits to this approach:
+一些 Rive 文件可能包含可以嵌入到实际文件二进制文件中的资产，例如字体、图像或音频文件。Rive 运行时可以在加载 Rive 文件时加载这些资产。虽然这使得 Rive 文件/运行时的使用变得容易，但也可能有机会在运行时加载甚至替换这些资产，而不是将它们嵌入到文件二进制文件中。
+这种方法有几个好处：
 
-- Keep the `.riv` files tiny without potential bloat of larger assets
-- Dynamically load an asset for any reason, such as loading an image with a smaller resolution if the `.riv` is running on a mobile device vs. an image of a larger resolution for desktop devices
-- Preload assets to have available immediately when displaying your `.riv`
-- Use assets already bundled with your application, such as font files
-- Sharing the same asset between multiple `.riv`s
+-   保持 `.riv` 文件微小，没有大资产的潜在膨胀
+-   出于任何原因动态加载资产，例如如果 `.riv` 在移动设备上运行，则加载较小分辨率的图像，而在桌面设备上加载较大分辨率的图像
+-   预加载资产以便在显示 `.riv` 时立即可用
+-   使用已经与你的应用程序捆绑在一起的资产，例如字体文件
+-   在多个 `.riv` 之间共享同一资产
 
-## [​](#methods-for-loading-assets) Methods for Loading Assets
+## [​](#methods-for-loading-assets) 加载资产的方法
 
-There are currently three different ways to load assets for your Rive files.
-In the Rive editor select the desired asset from the **Assets** tab, and in the inspector choose the desired export option:
+目前有三种不同的方法为你的 Rive 文件加载资产。
+在 Rive 编辑器中，从 **Assets** 选项卡中选择所需的资产，并在检查器中选择所需的导出选项：
 ![Image](images/df455228-a712-4cff-a24d-0771b8575e9d.webp)
-See the **Export Options** section in the editor docs for more details.
+有关更多详细信息，请参阅编辑器文档中的 **Export Options** 部分。
 
-### [​](#embedded-assets) Embedded Assets
+### [​](#embedded-assets) 嵌入式资产 (Embedded Assets)
 
-In the Rive editor, static assets can be included in the `.riv` file, by choosing the *“Embedded”* export type. As stated in the beginning of this page, when the Rive file gets loaded, the runtime will implicitly attempt to load in the assets embedded in the `.riv` as well, and you don’t need to concern yourself with loading any assets manually.
-**Caveat:** Embedded assets may bulk up the file size, especially when it comes to fonts when using Rive Text ([Text Overview](/docs/editor/text/text-overview)).
+在 Rive 编辑器中，可以通过选择 *“Embedded”* 导出类型将静态资产包含在 `.riv` 文件中。如本页开头所述，当加载 Rive 文件时，运行时也将隐式尝试加载嵌入在 `.riv` 中的资产，你无需担心手动加载任何资产。
+**警告：** 嵌入式资产可能会增加文件大小，尤其是在使用 Rive 文本 ([文本概览](/docs/editor/text/text-overview)) 时的字体。
 
-**Embedded is the default option.**
+**Embedded 是默认选项。**
 
-### [​](#loading-via-rive’s-cdn) Loading via Rive’s CDN
+### [​](#loading-via-rive’s-cdn) 通过 Rive 的 CDN 加载
 
-In the Rive editor, you can mark an imported asset as a *“Hosted”* export type, which means that when you export the `.riv` file, the asset will not be embedded in the file binary, but will be hosted on Rive’s CDN. This means that at runtime when loading in the file, the runtime will see the asset is marked as “Hosted” and load the asset in from the Rive CDN, so that you don’t need need to concern yourself with loading anything yourself, and the file can still remain tiny.
-**Caveat:** The app will make an extra call to a Rive CDN to retrieve your asset
+在 Rive 编辑器中，你可以将导入的资产标记为 *“Hosted”* 导出类型，这意味着当你导出 `.riv` 文件时，资产将不会嵌入到文件二进制文件中，而是托管在 Rive 的 CDN 上。这意味着在运行时加载文件时，运行时将看到资产被标记为“Hosted”并从 Rive CDN 加载资产，因此你无需担心自己加载任何内容，并且文件仍然可以保持微小。
+**警告：** 应用程序将对 Rive CDN 进行额外调用以检索你的资产。
 
-Hosted assets are available on Voyager and Enterprise plans. [Learn more about
-our plans and pricing](https://rive.app/pricing).
+Hosted 资产在 Voyager 和 Enterprise 计划中可用。[了解更多关于我们的计划和定价](https://rive.app/pricing)。
 
-### [​](#image-cdns) Image CDNs
+### [​](#image-cdns) 图像 CDN
 
-Some image CDNs allow for on-the-fly image transformations, including resizing, cropping, and automatic format conversion based on the browser’s and device’s capabilities. These CDNs can host your Rive image assets. Note that for these CDNs, you may need to specify the accepted formats, for example, as part of the HTTP header request:
+一些图像 CDN 允许进行动态图像转换，包括调整大小、裁剪和基于浏览器和设备功能的自动格式转换。这些 CDN 可以托管你的 Rive 图像资产。请注意，对于这些 CDN，你可能需要指定接受的格式，例如，作为 HTTP 标头请求的一部分：
 
-Copy
-
-Ask AI
-
-```
+```javascript
 ... headers: { Accept: 'image/png,image/webp,image/jpeg,*/*', } ...
 ```
 
-Please see your CDN provider’s documentation for additional information.
+请参阅你的 CDN 提供商的文档以获取更多信息。
 
-Rive support the following image formats: **jpeg**, **png**, and **webp**
+Rive 支持以下图像格式：**jpeg**、**png** 和 **webp**。
 
-### [​](#referenced-assets) Referenced Assets
+### [​](#referenced-assets) 引用资产 (Referenced Assets)
 
-In the Rive editor, you can mark an imported asset as a *“Referenced”* export type, which means that when you export the `.riv` file, the asset will not be embedded in the file binary, and the responsibility of loading the asset will be handled by your application at runtime. This option enables you to dynamically load in assets via a handler API when the runtime begins loading in the `.riv` file. This option is preferable if you have a need to dynamically load in a specific asset based on any kind of app/game logic, and especially if you want to keep file size small.
-All referenced assets, including the `.riv`, will be bundled as a zip file when you export your animation.
-**Caveat:** You will need to provide an asset handler API when loading in Rive which should do the work of loading in an asset yourself. See Handling Assets below.
+在 Rive 编辑器中，你可以将导入的资产标记为 *“Referenced”* 导出类型，这意味着当你导出 `.riv` 文件时，资产将不会嵌入到文件二进制文件中，加载资产的责任将由你的应用程序在运行时处理。此选项使你能够在运行时开始加载 `.riv` 文件时通过处理程序 API 动态加载资产。如果你需要根据任何类型的应用/游戏逻辑动态加载特定资产，特别是如果你想保持文件大小较小，此选项是首选。
+所有引用的资产（包括 `.riv`）在导出动画时将被捆绑为一个 zip 文件。
+**警告：** 你需要在加载 Rive 时提供一个资产处理程序 API，该 API 应执行你自己加载资产的工作。请参阅下面的“处理资产”。
 
-## [​](#handling-assets) Handling Assets
+## [​](#handling-assets) 处理资产
 
-See below for documentation on how to handle loading in assets at runtime for your Rive file with various runtimes.
+请参阅下文，了解如何使用各种运行时在运行时为你的 Rive 文件加载资产。
 
-- Web (JS)
-- React
-- Flutter
-- Apple
-- Android
-- React Native
+-   Web (JS)
+-   React
+-   Flutter
+-   Apple
+-   Android
+-   React Native
 
-### [​](#examples) Examples
+### [​](#examples) 示例 (Web/JS)
 
-- [Specify a font asset to load](https://codesandbox.io/p/devbox/rive-out-of-band-fonts-js-forked-kml2wd?file=%2Fsrc%2Findex.ts)
-- [Specify an image asset to load](https://codesandbox.io/p/sandbox/rive-out-of-band-images-js-forked-23jx8m?file=%2Fsrc%2Findex.ts)
-- [Out of band assets (fonts) - webgl2 advanced](https://codesandbox.io/p/sandbox/rive-canvas-advanced-out-of-band-assets-fonts-3q4zzy?file=%2Fsrc%2Findex.ts)
+-   [指定要加载的字体资产](https://codesandbox.io/p/devbox/rive-out-of-band-fonts-js-forked-kml2wd?file=%2Fsrc%2Findex.ts)
+-   [指定要加载的图像资产](https://codesandbox.io/p/sandbox/rive-out-of-band-images-js-forked-23jx8m?file=%2Fsrc%2Findex.ts)
+-   [带外资产 (字体) - webgl2 高级](https://codesandbox.io/p/sandbox/rive-canvas-advanced-out-of-band-assets-fonts-3q4zzy?file=%2Fsrc%2Findex.ts)
 
-### [​](#using-the-asset-handler-api) Using the Asset Handler API
+### [​](#using-the-asset-handler-api) 使用资产处理程序 API (Web/JS)
 
-When instantiating a new Rive instance, add an `assetLoader` callback property to the list of parameters. This callback will be called for every asset the runtime detects from the `.riv` file on load, and will be responsible for either handling the load of an asset at runtime or passing on the responsibility and giving the runtime a chance to load it otherwise.An instance where you may want to handle loading an asset is if an asset in the file is marked as **Referenced**, and you need to provide an actual asset to render for the graphic, as Rive does not embed it in the `.riv` and thus cannot load it.An instance where you may want to give the runtime a chance to load the asset is if the asset in the file is marked as **Hosted**, and want to pass the responsibility of loading it to the runtime (which will call into a Rive CDN to do so).
+当实例化一个新的 Rive 实例时，将 `assetLoader` 回调属性添加到参数列表中。此回调将针对运行时在加载时从 `.riv` 文件中检测到的每个资产进行调用，并负责在运行时处理资产的加载，或者将责任传递给运行时并让其尝试加载。你可能想要处理加载资产的一个实例是，如果文件中的资产标记为 **Referenced**，并且你需要提供实际资产来渲染图形，因为 Rive 不会将其嵌入 `.riv` 中，因此无法加载它。你可能想要给运行时一个机会加载资产的另一个实例是，如果文件中的资产标记为 **Hosted**，并希望将加载它的责任传递给运行时（运行时将调用 Rive CDN 来执行此操作）。
 
-Copy
-
-Ask AI
-
-```
+```javascript
 assetLoader: (asset: rc.FileAsset, bytes: Uint8Array) => boolean;
 ```
 
-Your provided callback will be passed an `asset` and `bytes`.
+你提供的回调将被传递一个 `asset` 和 `bytes`。
 
-- `asset` - Reference to a `FileAsset` object from WASM. You can grab a number of properties from this object, such as the name, asset type, and more. You’ll also use this to set a new Rive-specific asset for the dynamically loaded in asset you want to set (i.e. `RenderImage` for an image, `Font` for a font, or `Audio` for audio).
-- `bytes` - Array of bytes for the asset (if possible, such as if it’s an embedded asset)
+-   `asset` - 来自 WASM 的 `FileAsset` 对象的引用。你可以从该对象获取许多属性，例如名称、资产类型等。你还将使用它来为你想要设置的动态加载资产设置新的 Rive 特定资产（即图像的 `RenderImage`，字体的 `Font`，或音频的 `Audio`）。
+-   `bytes` - 资产的字节数组（如果可能，例如它是嵌入式资产）
 
-**Important**: Note that the return value is a `boolean`, which is where you need to return `true` if you intend on handling and loading in an asset yourself, or `false` if you do not want to handle asset loading for that given asset yourself, and attempt to have the runtime try to load the asset.When decoding an asset be sure to call `unref` once it is no longer needed - to avoid memory leaks. This allows the engine to clean it up when it is not used by any more animations.  
-Example Usage
+**重要**：请注意，返回值是一个 `boolean`，如果你打算处理并自己加载资产，则需要返回 `true`；如果你不想自己处理给定资产的加载，并尝试让运行时尝试加载该资产，则返回 `false`。解码资产时，确保在不再需要时调用 `unref` - 以避免内存泄漏。这允许引擎在没有任何动画使用它时清理它。
+示例用法
 
-Copy
-
-Ask AI
-
-```
+```javascript
 import {
 Rive,
 Fit,
@@ -129,11 +115,13 @@ fetch(urls[randomIndex]).then(
     async (res) => {
     // decodeFont creates a Rive-specific Font object that `setFont()` takes
     // on the asset from assetLoader
+    // decodeFont 创建一个 Rive 特定的 Font 对象，供 assetLoader 中的 asset 上的 `setFont()` 使用
     const font = await decodeFont(new Uint8Array(await res.arrayBuffer()));
     asset.setFont(font);
 
     // Be sure to call unref on the font once it is no longer needed. This
     // allows the engine to clean it up when it is not used by any more animations.
+    // 确保在不再需要字体时对其调用 unref。这允许引擎在没有任何动画使用它时清理它。
     font.unref();
     }
 );
@@ -150,6 +138,7 @@ layout: new Layout({
 autoplay: true,
 // Callback handler to pass in that dictates what to do with an asset found in
 // the Rive file that's being loaded in
+// 传入的回调处理程序，指示如何处理正在加载的 Rive 文件中找到的资产
 assetLoader: (asset, bytes) => {
     console.log("Asset properties to query", {
     name: asset.name,
@@ -164,6 +153,8 @@ assetLoader: (asset, bytes) => {
     // If the asset has a `cdnUuid`, return false to let the runtime handle
     // loading it in from a CDN. Or if there are bytes found for the asset
     // (aka, it was embedded), return false as there's no work needed here
+    // 如果资产有 `cdnUuid`，返回 false 让运行时处理从 CDN 加载它。
+    // 或者如果找到了资产的字节（即它是嵌入的），返回 false，因为这里不需要工作
     if (asset.cdnUuid.length > 0 || bytes.length > 0) {
     return false;
     }
@@ -171,6 +162,8 @@ assetLoader: (asset, bytes) => {
     // Here, we load a font asset with a random font on load of the Rive file
     // and return true, because this callback handler is responsible for loading
     // the asset, as opposed to the runtime
+    // 在这里，我们在加载 Rive 文件时加载一个随机字体的字体资产并返回 true，
+    // 因为此回调处理程序负责加载资产，而不是运行时
     if (asset.isFont) {
         randomFontAsset(asset);
         return true;
@@ -178,49 +171,42 @@ assetLoader: (asset, bytes) => {
 },
 onLoad: () => {
     // Prevent a blurry canvas by using the device pixel ratio
+    // 使用设备像素比防止画布模糊
     riveInstance.resizeDrawingSurfaceToCanvas();
 }
 });
 ```
 
-### [​](#examples-2) Examples
+### [​](#examples-2) 示例 (React)
 
-- [Specify a font asset to load](https://codesandbox.io/p/sandbox/peaceful-water-2chg77?file=%2Fsrc%2FApp.tsx%3A20%2C38)
-- [Localization - Swap a font based on language (TypeScript & i18n)](https://codesandbox.io/p/sandbox/rive-react-i18n-localization-and-font-swapping-kfsqsl?file=%2Fsrc%2FRiveDemo.tsx)
-- [Specify an image asset to load](https://codesandbox.io/p/sandbox/rive-out-of-band-images-react-forked-gstq2w?file=%2Fsrc%2FApp.tsx%3A14%2C30)
+-   [指定要加载的字体资产](https://codesandbox.io/p/sandbox/peaceful-water-2chg77?file=%2Fsrc%2FApp.tsx%3A20%2C38)
+-   [本地化 - 根据语言交换字体 (TypeScript & i18n)](https://codesandbox.io/p/sandbox/rive-react-i18n-localization-and-font-swapping-kfsqsl?file=%2Fsrc%2FRiveDemo.tsx)
+-   [指定要加载的图像资产](https://codesandbox.io/p/sandbox/rive-out-of-band-images-react-forked-gstq2w?file=%2Fsrc%2FApp.tsx%3A14%2C30)
 
-### [​](#using-the-asset-handler-api-2) Using the Asset Handler API
+### [​](#using-the-asset-handler-api-2) 使用资产处理程序 API (React)
 
-When instantiating a new Rive instance with the `useRive` hook, add an `assetLoader` callback property to the list of parameters. This callback will be called for every asset the runtime detects from the `.riv` file on load, and will be responsible for either handling the load of an asset at runtime or passing on the responsibility and giving the runtime a chance to load it otherwise.
+当使用 `useRive` hook 实例化一个新的 Rive 实例时，将 `assetLoader` 回调属性添加到参数列表中。此回调将针对运行时在加载时从 `.riv` 文件中检测到的每个资产进行调用，并负责在运行时处理资产的加载，或者将责任传递给运行时并让其尝试加载。
 
-Note that you can only use the `assetLoader` callback with the `useRive` hook, and not the default-exported `<Rive />` component from the React runtime
+请注意，你只能将 `assetLoader` 回调与 `useRive` hook 一起使用，而不能与 React 运行时默认导出的 `<Rive />` 组件一起使用。
 
-Copy
-
-Ask AI
-
-```
+```javascript
 assetLoader: (asset: rc.FileAsset, bytes: Uint8Array) => boolean;
 ```
 
-See the Web (JS) tab in this table for more API details.
+有关更多 API 详细信息，请参阅此表中的 Web (JS) 选项卡。
 
-### [​](#examples-3) Examples
+### [​](#examples-3) 示例 (Flutter)
 
-- [Swap out fonts dynamically](https://zapp.run/edit/rive-out-of-band-assets-fonts-zva0062lva10)
-- [Swap out images dynamically](https://zapp.run/edit/rive-out-of-band-assets-image-z09q06hl09r0?entry=lib/main.dart&file=pubspec.yaml:2865-2888)
+-   [动态交换字体](https://zapp.run/edit/rive-out-of-band-assets-fonts-zva0062lva10)
+-   [动态交换图像](https://zapp.run/edit/rive-out-of-band-assets-image-z09q06hl09r0?entry=lib/main.dart&file=pubspec.yaml:2865-2888)
 
-### [​](#using-the-asset-handler-api-3) Using the Asset Handler API
+### [​](#using-the-asset-handler-api-3) 使用资产处理程序 API (Flutter)
 
-When instantiating a `File`, add an `assetLoader` callback to the list of parameters. This callback will be called for every asset the runtime detects from the `.riv` file on load, and will be responsible for either handling the load of an asset at runtime or passing on the responsibility and giving the runtime a chance to load it otherwise.
+当实例化 `File` 时，将 `assetLoader` 回调添加到参数列表中。此回调将针对运行时在加载时从 `.riv` 文件中检测到的每个资产进行调用，并负责在运行时处理资产的加载，或者将责任传递给运行时并让其尝试加载。
 
-Font Asset Example
+字体资产示例
 
-Copy
-
-Ask AI
-
-```
+```dart
 final fontFile = await File.asset(
     'assets/acqua_text_out_of_band.riv',
     riveFactory: Factory.rive,
@@ -256,36 +242,32 @@ final fontFile = await File.asset(
 );
 ```
 
-Your provided callback will be passed an `asset` and `bytes`.
+你提供的回调将被传递一个 `asset` 和 `bytes`。
 
-- `asset` - Reference to a `FileAsset` object. You can grab a number of properties from this object, such as the name, asset type, and more. You’ll also use this to set a new Rive specific asset for dynamically loaded content. Types: `FontAsset`, `ImageAsset`, and `AudioAsset`.
-- `bytes` - Array of bytes for the asset (if it’s available as an embedded asset)
+-   `asset` - `FileAsset` 对象的引用。你可以从该对象获取许多属性，例如名称、资产类型等。你还将使用它来为动态加载的内容设置新的 Rive 特定资产。类型：`FontAsset`、`ImageAsset` 和 `AudioAsset`。
+-   `bytes` - 资产的字节数组（如果它作为嵌入式资产可用）
 
-**Example Usage**
+**示例用法**
 
-- See the Rive Flutter example app that shows how to pre-cache fonts and images, and dynamically swap them out at runtime.
+-   请参阅 Rive Flutter 示例应用程序，该应用程序展示了如何预先缓存字体和图像，并在运行时动态交换它们。
 
-**Important**: Note that the return value is a `boolean`, which is where you need to return:
+**重要**：请注意，返回值是一个 `boolean`，你需要返回：
 
-- `true` if you intend on handling and loading in an asset yourself
-- or `false` if you do not want to handle asset loading for that given asset yourself, and attempt to have the runtime try to load the asset
+-   `true` 如果你打算自己处理和加载资产
+-   或 `false` 如果你不想自己处理该特定资产的加载，并尝试让运行时尝试加载该资产
 
-Once the `File` is disposed, the `FileAsset` will no longer be valid and would be dangerous to use.
+一旦 `File` 被释放，`FileAsset` 将不再有效，使用它将是危险的。
 
-### [​](#examples-4) Examples
+### [​](#examples-4) 示例 (Apple)
 
-- [(SwiftUI) Swap out images and fonts](https://github.com/rive-app/rive-ios/blob/main/Example-iOS/Source/Examples/SwiftUI/SwiftSimpleAssets.swift)
-- [(UIKit) Swap and cache images and fonts](https://github.com/rive-app/rive-ios/blob/main/Example-iOS/Source/Examples/Storyboard/CachedAssets.swift)
+-   [(SwiftUI) 交换图像和字体](https://github.com/rive-app/rive-ios/blob/main/Example-iOS/Source/Examples/SwiftUI/SwiftSimpleAssets.swift)
+-   [(UIKit) 交换和缓存图像和字体](https://github.com/rive-app/rive-ios/blob/main/Example-iOS/Source/Examples/Storyboard/CachedAssets.swift)
 
-### [​](#using-the-asset-handler-api-4) Using the Asset Handler API
+### [​](#using-the-asset-handler-api-4) 使用资产处理程序 API (Apple)
 
-When instantiating a `RiveViewModel` (or `RiveFile` directly), add a `customLoader` callback property to the list of parameters. This callback will be called for every asset the runtime detects from the `.riv` file on load, and the callback will be responsible for either handling the load of an asset at runtime or passing on the responsibility and giving the runtime a chance to load it otherwise.An instance where you may want to handle loading an asset is if an asset in the file is marked as **Referenced**, and you need to provide an actual asset to render for the graphic, as Rive does not embed it in the `.riv` and thus cannot load it.An instance where you may want to give the runtime a chance to load the asset is if the asset in the file is marked as **Hosted**, and want to pass the responsibility of loading it to the runtime (which will call into a Rive CDN to do so).
+当实例化 `RiveViewModel`（或直接实例化 `RiveFile`）时，将 `customLoader` 回调属性添加到参数列表中。此回调将针对运行时在加载时从 `.riv` 文件中检测到的每个资产进行调用，回调将负责在运行时处理资产的加载，或者将责任传递给运行时并让其尝试加载。你可能想要处理加载资产的一个实例是，如果文件中的资产标记为 **Referenced**，并且你需要提供实际资产来渲染图形，因为 Rive 不会将其嵌入 `.riv` 中，因此无法加载它。你可能想要给运行时一个机会加载资产的另一个实例是，如果文件中的资产标记为 **Hosted**，并希望将加载它的责任传递给运行时（运行时将调用 Rive CDN 来执行此操作）。
 
-Copy
-
-Ask AI
-
-```
+```swift
 RiveViewModel(fileName: "simple_assets", loadCdn: false, customLoader: { (asset: RiveFileAsset, data: Data, factory: RiveFactory) -> Bool in
     // A simple check for a Rive file with one asset
     if (asset is RiveImageAsset){
@@ -306,29 +288,25 @@ RiveViewModel(fileName: "simple_assets", loadCdn: false, customLoader: { (asset:
 }).view()
 ```
 
-Your provided callback will be passed an `asset`, `data`, and a `factory`.
+你提供的回调将被传递一个 `asset`、`data` 和一个 `factory`。
 
-- `asset` - Reference to a `RiveFileAsset` object. You’ll use this reference to set a new Rive-specific asset for dynamically loaded content. If you wish to dynamically swap a given image/font over the lifetime of your view, you may want to cache this object. You can grab a number of properties from this object, such as:
-- `name()` - Name of the asset without the unique file identifier appended, (i.e. `picture.webp` instead of `picture-47982.webp`)
-- `uniqueFilename()` - Name of the asset with the unique file identifier, (i.e. `picture-47982.webp` instead of `picture.webp`)
-- `fileExtension()` - Name of the file extension (i.e. `"png"`)
-- `cdnBaseUrl()` - Name of the base URL for the CDN
-- `cdnUuid()` - Identifier for the resource in the Rive CDN. Useful to see if this has length so you can see if the asset is marked for grabbing from a Rive CDN (in which case, you can let the Rive runtime retrieve the asset, rather than your app logic)
-- `data` - Array of bytes for the asset. This is useful to determine if the asset is already embedded in the Rive file (aka, not marked as “referenced” in the editor)
-- `factory` - Utility with methods to transform an asset’s bytes into a `RiveRenderImage` ,`RiveFont`, or `RiveAudio` which the `asset` object uses to render via `.renderImage(your-rive-render-image)` , `.font(your-rive-font)` , or `.audio(your-rive-audio)` . These assets are created by calling `factory.decodeImage(data)`, `factory.decodeFont(data)`, or `factory.decodeAudio(data)`
+-   `asset` - `RiveFileAsset` 对象的引用。你将使用此引用为动态加载的内容设置新的 Rive 特定资产。如果你希望在视图的生命周期内动态交换给定的图像/字体，你可能希望缓存此对象。你可以从该对象获取许多属性，例如：
+    -   `name()` - 不附加唯一文件标识符的资产名称（即 `picture.webp` 而不是 `picture-47982.webp`）
+    -   `uniqueFilename()` - 带有唯一文件标识符的资产名称（即 `picture-47982.webp` 而不是 `picture.webp`）
+    -   `fileExtension()` - 文件扩展名的名称（即 `"png"`）
+    -   `cdnBaseUrl()` - CDN 的基本 URL 名称
+    -   `cdnUuid()` - Rive CDN 中的资源标识符。用于查看其是否有长度，以便你可以查看资产是否标记为从 Rive CDN 获取（在这种情况下，你可以让 Rive 运行时检索资产，而不是你的应用逻辑）
+-   `data` - 资产的字节数组。这对于确定资产是否已嵌入在 Rive 文件中（即，未在编辑器中标记为“referenced”）很有用。
+-   `factory` - 包含将资产字节转换为 `RiveRenderImage`、`RiveFont` 或 `RiveAudio` 的方法的实用程序，`asset` 对象使用这些方法通过 `.renderImage(your-rive-render-image)`、`.font(your-rive-font)` 或 `.audio(your-rive-audio)` 进行渲染。这些资产是通过调用 `factory.decodeImage(data)`、`factory.decodeFont(data)` 或 `factory.decodeAudio(data)` 创建的。
 
-**Important**: Note that the return value of the callback is a `boolean`, which is where you need to return:
+**重要**：请注意，回调的返回值是一个 `boolean`，你需要返回：
 
-- `true` if you intend on handling and loading in an asset yourself, or
-- `false` if you do not want to handle asset loading for that given asset yourself, and attempt to have the runtime try to load the asset.
+-   `true` 如果你打算自己处理和加载资产
+-   `false` 如果你不想自己处理该特定资产的加载，并尝试让运行时尝试加载该资产。
 
-**Example Usage**
+**示例用法**
 
-Copy
-
-Ask AI
-
-```
+```swift
 import SwiftUI
 import RiveRuntime
 
@@ -366,16 +344,12 @@ struct SimpleAssetReplacement: View {
 }
 ```
 
-### [​](#fonts) Fonts
+### [​](#fonts) 字体 (Fonts)
 
-When using a custom loader, referenced fonts can be loaded one of two ways: with raw data (from a file, as seen above), or with a `UIFont` / `NSFont`.  
-When using `UIFont` / `NSFont`, size, weight, and width of the supplied font is ignored. The font will be used as defined in the text run, rather than being overridden by the supplied font’s styling.
+当使用自定义加载器时，可以通过两种方式之一加载引用的字体：使用原始数据（来自文件，如上所示），或使用 `UIFont` / `NSFont`。
+当使用 `UIFont` / `NSFont` 时，提供的字体的大小、粗细和宽度将被忽略。字体将按照文本运行中的定义使用，而不是被提供的字体的样式覆盖。
 
-Copy
-
-Ask AI
-
-```
+```swift
 import SwiftUI
 import RiveRuntime
 
@@ -396,15 +370,11 @@ struct SimpleFontReplacement: View {
 }
 ```
 
-### [​](#images) Images
+### [​](#images) 图像 (Images)
 
-When loading assets for referenced images, you may need to scale local assets to the size of an image asset as defined in your Rive file. When using a custom loader, you can access the size of the referenced image via the `size` property of a `RiveImageAsset`.
+当为引用图像加载资产时，你可能需要将本地资产缩放到 Rive 文件中定义的图像资产的大小。当使用自定义加载器时，你可以通过 `RiveImageAsset` 的 `size` 属性访问引用图像的大小。
 
-Copy
-
-Ask AI
-
-```
+```swift
 import SwiftUI
 import RiveRuntime
 
@@ -428,19 +398,16 @@ struct SimpleImageSizeReplacement: View {
     }
 ```
 
-### [​](#examples-5) Examples
+### [​](#examples-5) 示例 (Android)
 
-- <https://github.com/rive-app/rive-android/blob/master/app/src/main/java/app/rive/runtime/example/AssetLoaderFragment.kt>
+-   <https://github.com/rive-app/rive-android/blob/master/app/src/main/java/app/rive/runtime/example/AssetLoaderFragment.kt>
 
-### [​](#using-the-asset-handler-api-5) Using the Asset Handler API
+### [​](#using-the-asset-handler-api-5) 使用资产处理程序 API (Android)
 
-When instantiating a new `RiveAnimationView`, set a new attribute called `riveAssetLoaderClass` whose value is a string name of the full path to a class that will be responsible for either handling the load of an asset at runtime or passing on the responsibility and giving the runtime a chance to load it otherwise.**via XML**
+当实例化一个新的 `RiveAnimationView` 时，设置一个名为 `riveAssetLoaderClass` 的新属性，其值是负责在运行时处理资产加载或将责任传递给运行时的类的完整路径字符串。
+**通过 XML**
 
-Copy
-
-Ask AI
-
-```
+```xml
 <app.rive.runtime.kotlin.RiveAnimationView
     android:id="@+id/rive_font_load_simple"
     android:layout_width="match_parent"
@@ -450,26 +417,21 @@ Ask AI
     app:riveResource="@raw/acqua_text" />
 ```
 
-In your accompanying activity, create a new class with the name provided to `riveAssetLoaderClass`, who should implement the `ContextAssetLoader` abstract class from the Rive runtime. Here, you can override a `loadContents` function, which will do the work of determining what assets (if any) to load:
+在你的 accompanying activity 中，创建一个具有提供给 `riveAssetLoaderClass` 名称的新类，该类应实现 Rive 运行时的 `ContextAssetLoader` 抽象类。在这里，你可以覆盖 `loadContents` 函数，该函数将执行确定要加载什么资产（如果有）的工作：
 
-- `asset` - Reference to a `FileAsset` object. You can grab a number of properties from this object, such as the name, asset type, and more. You’ll also use this to set a new Rive-specific asset for the dynamically loaded in asset you want to set
-- `bytes` - Array of bytes for the asset (if possible, such as if it’s an embedded asset)
+-   `asset` - `FileAsset` 对象的引用。你可以从该对象获取许多属性，例如名称、资产类型等。你还将使用它来为你想要设置的动态加载资产设置新的 Rive 特定资产
+-   `bytes` - 资产的字节数组（如果可能，例如它是嵌入式资产）
 
-Copy
-
-Ask AI
-
-```
+```kotlin
 override fun loadContents(asset: FileAsset, inBandBytes: ByteArray): Boolean
 ```
 
-**Important**: Note that the return value is a `boolean`, which is where you need to return `true` if you intend on handling and loading in an asset yourself, or `false` if you do not want to handle asset loading for that given asset yourself, and attempt to have the runtime try to load the asset.**Example Usage**To accompany the XML snippet above, here’s an example of what the accompanying activity may look like:
+**重要**：请注意，返回值是一个 `boolean`，如果你打算处理并自己加载资产，则需要返回 `true`；如果你不想自己处理给定资产的加载，并尝试让运行时尝试加载该资产，则返回 `false`。
 
-Copy
+**示例用法**
+为了配合上面的 XML 片段，以下是 accompanying activity 的示例：
 
-Ask AI
-
-```
+```kotlin
 package app.rive.runtime.example
 
 import android.content.Context
@@ -508,18 +470,15 @@ open class HandleSimpleRiveAsset(context: Context) : ContextAssetLoader(context)
 }
 ```
 
-- New Runtime (Recommended)
-- Legacy Runtime
+-   New Runtime (推荐)
+-   Legacy Runtime
 
-### [​](#using-the-asset-handler-api-6) Using the Asset Handler API
+### [​](#using-the-asset-handler-api-6) 使用资产处理程序 API (React Native)
 
-To load out-of-band assets, provide a key-value object that maps expected assets to their sources when loading the Rive file.The **key** is the name + unique identifier combination, as exported from the Rive editor.
+要加载带外资产，请在加载 Rive 文件时提供一个键值对象，该对象将预期资产映射到其源。
+**键 (key)** 是从 Rive 编辑器导出的名称 + 唯一标识符组合。
 
-Copy
-
-Ask AI
-
-```
+```javascript
 const { riveFile, isLoading, error } = useRiveFile(
     require('path/to/file.riv'),
     {
@@ -538,29 +497,21 @@ const { riveFile, isLoading, error } = useRiveFile(
 );
 ```
 
-You can optionally exclude the unique identifier. For example, instead of `Inter-594377`, you can use `Inter`. However, it is recommended to use the full identifier to avoid potential conflicts. Using just the asset name allows you to avoid knowing the unique identifier and gives you more control over naming.
+你可以选择排除唯一标识符。例如，你可以使用 `Inter` 代替 `Inter-594377`。但是，建议使用完整标识符以避免潜在冲突。仅使用资产名称允许你无需知道唯一标识符，并为你提供更多命名控制权。
 
-### [​](#using-suspense) Using Suspense
+### [​](#using-suspense) 使用 Suspense
 
-You can manage the asset decoding yourself, and share this resource across multiple Rive views.
+你可以自己管理资产解码，并在多个 Rive 视图之间共享此资源。
 
-We currently only support images, but work is underway for the other asset types.
+我们目前只支持图像，但其他资产类型的工作正在进行中。
 
-Copy
-
-Ask AI
-
-```
+```javascript
 function getImagePromise(url: string): Promise<RiveImage> {
     return RiveImages.loadFromURLAsync(url);
 }
 ```
 
-Copy
-
-Ask AI
-
-```
+```javascript
 <ErrorBoundary key={errorBoundaryKey} fallback={renderErrorFallback}>
     <React.Suspense
         fallback={
@@ -575,11 +526,7 @@ Ask AI
 </ErrorBoundary>
 ```
 
-Copy
-
-Ask AI
-
-```
+```javascript
 function RiveContent({ imageUrl }: { imageUrl: string }) {
     const imagePromise = React.useMemo(
         () => getImagePromise(imageUrl),
@@ -624,31 +571,27 @@ function RiveContent({ imageUrl }: { imageUrl: string }) {
 }
 ```
 
-See [this example](https://github.com/rive-app/rive-nitro-react-native/blob/main/example/src/pages/OutOfBandAssetsWithSuspense.tsx) for more information.
+请参阅 [此示例](https://github.com/rive-app/rive-nitro-react-native/blob/main/example/src/pages/OutOfBandAssetsWithSuspense.tsx) 以获取更多信息。
 
-### [​](#examples-6) Examples
+### [​](#examples-6) 示例 (React Native)
 
-- [Out of bands example](https://github.com/rive-app/rive-react-native/blob/main/example/app/(examples)/OutOfBandAssets.tsx)
+-   [带外资产示例](https://github.com/rive-app/rive-react-native/blob/main/example/app/(examples)/OutOfBandAssets.tsx)
 
-### [​](#using-the-referenced-assets-api) Using the Referenced Assets API
+### [​](#using-the-referenced-assets-api) 使用引用资产 API (Referenced Assets API - Legacy)
 
-React Native has a different API for handling out-of-band assets compared to our other runtimes.
+与我们的其他运行时相比，React Native 有一个不同的 API 来处理带外资产。
 
-The `referencedAssets` prop accepts a key-value object. The `key` is the unique identifier of the asset (as exported in the Editor), which combines the asset name and its unique identifier. The `value` specifies how to load the asset:
+`referencedAssets` 属性接受一个键值对象。`key` 是资产的唯一标识符（在编辑器中导出），结合了资产名称及其唯一标识符。`value` 指定如何加载资产：
 
-- A source loaded directly from JavaScript.
-- A URI pointing to an asset downloaded from the web.
-- A bundled asset on the native platform (iOS and Android), included through Xcode and Android Studio, respectively.
+-   直接从 JavaScript 加载的源。
+-   指向从 Web 下载的资产的 URI。
+-   本机平台（iOS 和 Android）上的捆绑资产，分别通过 Xcode 和 Android Studio 包含。
 
-You can optionally exclude the unique identifier. For example, instead of `Inter-594377`, you can use `Inter`. However, it is recommended to use the full identifier to avoid potential conflicts. Using just the asset name allows you to avoid knowing the unique identifier and gives you more control over naming.
+你可以选择排除唯一标识符。例如，你可以使用 `Inter` 代替 `Inter-594377`。但是，建议使用完整标识符以避免潜在冲突。仅使用资产名称允许你无需知道唯一标识符，并为你提供更多命名控制权。
 
-The following code sample illustrates the three different ways an asset can be loaded:
+以下代码示例说明了加载资产的三种不同方式：
 
-Copy
-
-Ask AI
-
-```
+```javascript
 <Rive
     autoplay={true}
     stateMachineName="State Machine 1"
@@ -676,6 +619,6 @@ Ask AI
 />
 ```
 
-## [​](#additional-resources) Additional Resources
+## [​](#additional-resources) 其他资源
 
-[Data Binding](/docs/runtimes/data-binding)[Fonts](/docs/runtimes/fonts)
+[数据绑定 (Data Binding)](/docs/runtimes/data-binding)[字体 (Fonts)](/docs/runtimes/fonts)

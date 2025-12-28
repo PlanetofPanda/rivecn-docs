@@ -1,86 +1,80 @@
-Scripting API
+脚本 API
 
 # Mat2D
 
-Represents a 2D transformation matrix with components for scaling,
-rotation, shear, and translation.
+表示一个 2D 变换矩阵，包含缩放、旋转、剪切和平移分量。
 
-## [​](#fields) Fields
+## [​](#fields) 字段 (Fields)
 
 ### [​](#xx) `xx`
 
-Represents a 2D transformation matrix with components for scaling,
-rotation, shear, and translation.
-The xx component of the matrix.
+矩阵的 xx 分量。
 
 ### [​](#xy) `xy`
 
-The xy component of the matrix.
+矩阵的 xy 分量。
 
 ### [​](#yx) `yx`
 
-The yx component of the matrix.
+矩阵的 yx 分量。
 
 ### [​](#yy) `yy`
 
-The yy component of the matrix.
+矩阵的 yy 分量。
 
 ### [​](#tx) `tx`
 
-Translation along the x-axis.
+沿 x 轴的平移。
 
 ### [​](#ty) `ty`
 
-Translation along the y-axis.
+沿 y 轴的平移。
 
 ### [​](#withtranslation) `withTranslation`
 
-Creates a translation matrix from the given x and y values or from a
-[Vector](/docs/scripting/api-reference/vector) position.
+从给定的 x 和 y 值或从 [向量 (Vector)](/docs/scripting/api-reference/vector) 位置创建一个平移矩阵。
 
 ### [​](#withscale) `withScale`
 
-Creates a scale matrix from the given x and y values or from a [Vector](/docs/scripting/api-reference/vector).
+从给定的 x 和 y 值或从 [向量 (Vector)](/docs/scripting/api-reference/vector) 创建一个缩放矩阵。
 
 ### [​](#withscaleandtranslation) `withScaleAndTranslation`
 
-Creates a scale-and-translation matrix from numeric values or vectors.
+从数值或向量创建一个缩放和平移矩阵。
 
-## [​](#constructors) Constructors
+## [​](#constructors) 构造函数 (Constructors)
 
 ### [​](#values) `values`
 
-Creates a matrix using the specified components.
+使用指定的分量创建一个矩阵。
 
 ### [​](#identity) `identity`
 
-Returns the identity matrix.
+返回单位矩阵。
 
 ### [​](#withrotation) `withRotation`
 
-Creates a rotation matrix from the given angle in radians.
+从给定的弧度角创建一个旋转矩阵。
 
-## [​](#methods) Methods
+## [​](#methods) 方法 (Methods)
 
 ### [​](#invert) `invert`
 
-Provides indexed access to the matrix components.
-Returns the inverse of the matrix, or nil if the matrix is not invertible.
+提供对矩阵分量的索引访问。
+返回矩阵的逆矩阵，如果矩阵不可逆，则返回 nil。
 
 ### [​](#isidentity) `isIdentity`
 
-Returns true if the matrix is the identity transform.
+如果矩阵是单位变换，则返回 true。
 
 ### [​](#eq) `__eq`
 
-Returns true if all components of the two matrices are equal.
+如果两个矩阵的所有分量都相等，则返回 true。
 
 ### [​](#mul) `__mul`
 
-Transforms the given vector by the matrix and returns the result.
+通过矩阵变换给定的向量并返回结果。
 
 ### [​](#mul-2) `__mul`
 
-Returns the matrix product of this matrix and the given matrix
-
-[Listener](/docs/scripting/api-reference/listener)[Node](/docs/scripting/api-reference/node)
+返回此矩阵与给定矩阵的矩阵乘积。

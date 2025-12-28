@@ -2,118 +2,100 @@ React
 
 # React
 
-React runtime for Rive.
+Rive 的 React 运行时。
 
-Note that certain Rive features may not be supported yet for a particular runtime, or may require using the Rive Renderer.For more details, refer to the [feature support](/docs/feature-support) and [choosing a renderer](/docs/runtimes/choose-a-renderer) pages.
+请注意，某些 Rive 功能可能尚未在特定运行时中受支持，或者可能需要使用 Rive 渲染器。有关更多详细信息，请参阅 [功能支持](/docs/feature-support) 和 [选择渲染器](/docs/runtimes/choose-a-renderer) 页面。
 
-## [​](#overview) Overview
+## [​](#overview) 概览
 
-This guide documents how to get started using the React runtime library. Rive runtime libraries are open-source. The source is available in its [GitHub repository](https://github.com/rive-app/rive-react).
-This library contains a React component, as well as custom hooks to help integrate Rive into your web application (types included). Under the hood, this runtime is a React-friendly wrapper around the `@rive-app/canvas` runtime, exposing types, and Rive instance functionality.
+本指南记录了如何开始使用 React 运行时库。Rive 运行时库是开源的。源代码可在 [GitHub 仓库](https://github.com/rive-app/rive-react) 中找到。
+该库包含一个 React 组件，以及帮助将 Rive 集成到你的 Web 应用程序中的自定义 Hooks（包含类型）。在底层，此运行时是 `@rive-app/canvas` 运行时的 React 友好封装，暴露了类型和 Rive 实例功能。
 
-## [​](#getting-started) Getting Started
+## [​](#getting-started) 快速开始
 
-Follow the steps below for a quick start on integrating Rive into your React app.
+按照以下步骤快速在你的 React 应用中集成 Rive。
 
-1
+1.  **安装依赖**
 
-Install the dependency
+    Rive React 运行时主要提供了两个选项，具体取决于你需要的底层渲染器。
 
-The Rive React runtime allows for two main options based on which backing renderer you need.
+    -   **(推荐)** `@rive-app/react-canvas` - 封装了 `@rive-app/canvas` 依赖项。除非你特别需要 `WebGL` 底层渲染器，否则我们建议你在应用中使用此依赖项以通过 Rive 进行快速便捷的使用。
+    -   `@rive-app/react-canvas-lite` - 类似于 `@rive-app/react-canvas`，但 [更小](/docs/runtimes/web/canvas-vs-webgl)。如果 Rive 图形不使用 [Rive 文本](/docs/editor/text)，建议使用此选项。
+    -   `@rive-app/react-webgl` - 封装了 `@rive-app/webgl` 依赖项。未来，我们可能会有仅在使用 `WebGL` 时才支持的高级渲染功能。但在目前，由于依赖项的大小（带有 Skia），除非你有特定需求，否则我们不建议使用它。我们目前正在致力于通过 [Rive 渲染器](https://rive.app/renderer) 提高性能和减小体积。
+    -   `@rive-app/react-webgl2` - 封装了 `@rive-app/webgl2` 依赖项。它使用带有 WebGL2 上下文的 Rive 渲染器，构建体积比 `rive-app/react-webgl` 小得多。在未来的主要版本中，此包可能会被弃用，而 `@rive-app/react-webgl` 将完全使用 Rive 渲染器，而无需额外的 Skia 依赖。
 
-- **(Recommended)** `@rive-app/react-canvas` - Wraps the `@rive-app/canvas` dependency. Unless you specifically need a `WebGL` backing renderer, we recommend you use this dependency when using Rive in your apps for quick and fast usage.
-- `@rive-app/react-canvas-lite` - Similar to `@rive-app/react-canvas`, but [smaller](/docs/runtimes/web/canvas-vs-webgl). This is recommended if the Rive graphic does not use [Rive Text](/docs/editor/text)
-- `@rive-app/react-webgl` - Wraps the `@rive-app/webgl` dependency. In the future, we may have advanced rendering features that are only supported by using `WebGL`. At the moment, however, due to the size of the dependency (with Skia), we do not recommend it unless you have specific needs here. We are currently working on improving the performance and size with the [Rive Renderer](https://rive.app/renderer).
-- `@rive-app/react-webgl2` - Wraps the `@rive-app/webgl2` dependency. It uses the Rive Renderer with a WebGL2 context and has a much smaller build size than `rive-app/react-webgl`. In a future major release, this package may be deprecated, and `@rive-app/react-webgl` will make use of the Rive Renderer completely, without an added Skia dependency.
+    要尝试使用 `react-webgl2` 的 Rive 渲染器，你应该 [启用草案](https://www.wikihow.tech/Enable-WebGL-Draft-Extensions-in-Google-Chrome) `WEBGL_shader_pixel_local_storage` Chrome 扩展（通过添加 WebGL Draft Extensions），否则，Rive 将在不支持扩展的浏览器上回退到 MSAA 解决方案（同样使用 WebGL2）。目前正在与主要浏览器合作，以便在普通用户的浏览器中默认支持此扩展。
 
-To take advantage of trying out the Rive Renderer with react-webgl2 , you should [enable the draft](https://www.wikihow.tech/Enable-WebGL-Draft-Extensions-in-Google-Chrome) `WEBGL_shader_pixel_local_storage` Chrome Extension (by adding WebGL Draft Extensions), otherwise, Rive will fall back to an MSAA solution (also with WebGL2) on browsers without the extension support. Current work is underway with major browsers to support this extension by default in consumer’s browsers.
+    ```bash
+    npm i --save @rive-app/react-canvas
+    ```
 
-Copy
+2.  **渲染 Rive 组件**
 
-Ask AI
+    Rive React 作为一个默认导入，提供了一个基本组件，用于显示简单的动画，并你可以设置一些属性，如画板 (artboard) 和布局 (layout)。在你的 React 项目中包含以下代码以测试 Rive 动画示例。
 
-```
-npm i --save @rive-app/react-canvas
-```
+    ```javascript
+    import Rive from '@rive-app/react-canvas';
 
-2
+    export const Simple = () => (
+      <Rive
+        src="https://cdn.rive.app/animations/vehicles.riv"
+        stateMachines="bumpy"
+      />
+    );
+    ```
 
-Render the Rive component
+    有关 `<Rive />` 组件参数和返回值的更多信息，请参阅 [参数和返回值](/docs/runtimes/react/parameters-and-return-values)。
 
-Rive React provides a basic component as its default import for displaying simple animations with a few props you can set such as artboard and layout. Include the code below in your React project to test out an example Rive animation.
+3.  **使用 useRive Hook**
 
-Copy
+    在许多情况下，你可能不仅需要 React 组件来渲染动画，还需要控制它的 `rive` 对象实例。Rive 对象实例允许你接入 API 以实现：
 
-Ask AI
+    -   动态设置 Rive 文本值
+    -   使用你自己的回调订阅 Rive 事件
+    -   控制动画播放（例如暂停和播放）
+    -   ... 以及 [更多](https://github.com/rive-app/rive-wasm)
 
-```
-import Rive from '@rive-app/react-canvas';
+    `useRive` Hook 返回此 `rive` 实例，以及挂载 Rive 将绘制到的底层 `<canvas>` 元素的 React 组件。
 
-export const Simple = () => (
-  <Rive
-    src="https://cdn.rive.app/animations/vehicles.riv"
-    stateMachines="bumpy"
-  />
-);
-```
+    ```javascript
+    import { useRive } from '@rive-app/react-canvas';
 
-See [Parameters and Return Values](/docs/runtimes/react/parameters-and-return-values) for more on the parameters and return values of the `<Rive />` component.
+    export default function Simple() {
+      const { rive, RiveComponent } = useRive({
+        src: 'https://cdn.rive.app/animations/vehicles.riv',
+        stateMachines: "bumpy",
+        autoplay: false,
+      });
 
-3
+      return (
+        <RiveComponent
+          onMouseEnter={() => rive && rive.play()}
+          onMouseLeave={() => rive && rive.pause()}
+        />
+      );
+    }
+    ```
 
-Using the useRive hook
+    **注意：** Rive 只有在 `<RiveComponent />` 被渲染后才会实例化，因为底层的 `<canvas>` 元素需要存在于 DOM 中。
 
-In many cases, you may not only need the React component to render your animation but also the `rive` object instance that controls it as well. The Rive object instance allows you to tap into APIs for:
+    此外，请记住，canvas 的大小取决于它所在的容器。最初，它是 0x0。请向 `RiveComponent` 传递 `className` 或用适当大小的容器包裹 `RiveComponent`。有关 `useRive` 的参数和返回值的更多信息，请参阅 [此处](/docs/runtimes/react/parameters-and-return-values)。此外，浏览后续运行时页面以了解如何控制动画播放、状态机等。
 
-- Setting Rive Text values dynamically
-- Subscribing to Rive Events with your own callbacks
-- Controlling animation playback (i.e. pause and play)
-- … and [much more](https://github.com/rive-app/rive-wasm)
+## [​](#rendering-considerations-with-userive) 使用 useRive 的渲染注意事项
 
-The `useRive` hook returns both this `rive` instance, as well as the React component that mounts the underlying `<canvas>` element that Rive will draw onto.
+目前，如果你计划有条件地渲染从 `useRive` Hook 返回的 `<RiveComponent />`，我们强烈建议将 `useRive` 的使用隔离到它自己的封装组件中。这是因为 Rive 是在组件挂载时实例化的，并且渲染上下文与特定的底层 `<canvas>` 元素相关联。当 React 尝试卸载/重新渲染时，你可能会遇到动画重新开始或当新的 `<canvas>` 挂载时不显示的问题。
+通过将 `useRive` 隔离到其自己的封装组件中，Rive 将有机会正确清理，并使用新的 canvas 重新开始动画。在父组件中，你可以根据任何状态或基于 prop 的逻辑有条件地渲染封装组件。
+查看 [此 CodeSandbox 示例](https://codesandbox.io/p/sandbox/rive-react-swapping-skins-with-solos-ctcnlx?file=%2Fsrc%2FApp.tsx) 以了解此模式的使用。
 
-Copy
-
-Ask AI
-
-```
-import { useRive } from '@rive-app/react-canvas';
-
-export default function Simple() {
-  const { rive, RiveComponent } = useRive({
-    src: 'https://cdn.rive.app/animations/vehicles.riv',
-    stateMachines: "bumpy",
-    autoplay: false,
-  });
-
-  return (
-    <RiveComponent
-      onMouseEnter={() => rive && rive.play()}
-      onMouseLeave={() => rive && rive.pause()}
-    />
-  );
-}
-```
-
-**Note:** Rive will not instantiate until the `<RiveCopmonent />` is rendered out, as the underlying `<canvas>` element needs to be present in the DOM.
-
-Also, keep in mind that the canvas size depends on the container it’s placed within. Initially, this is 0x0. Either pass a `className` to `RiveComponent` or wrap `RiveComponent` with an appropriately sized container.See [here](/docs/runtimes/react/parameters-and-return-values) for more on the parameters and return values of `useRive`.Additionally, explore subsequent runtime pages to learn how to control animation playback, state machines, and more.
-
-## [​](#rendering-considerations-with-userive) Rendering Considerations with useRive
-
-At this time, we highly recommend isolating your usage of `useRive` to its own wrapper component if you plan on conditionally rendering the `<RiveComponent />` returned from the `useRive` hook. This is due to Rive being instanced when the component is mounted and the rendering context associated with a specific underlying `<canvas>` element. When React tries to unmount/re-render, you may end up with the animation restarting or not displaying when a new `<canvas>` is mounted.
-By isolating `useRive` to its own wrapper component, Rive will have a chance to properly clean up, and restart the animation with a new canvas. In a parent component, you can then conditionally render the wrapper component based on any state or prop-based logic.
-Check out [this example CodeSandbox](https://codesandbox.io/p/sandbox/rive-react-swapping-skins-with-solos-ctcnlx?file=%2Fsrc%2FApp.tsx) to see this pattern in use.
-
-## [​](#resources) Resources
+## [​](#resources) 资源
 
 **GitHub**: <https://github.com/rive-app/rive-react>
-**Types**: <https://github.com/rive-app/rive-react/blob/main/src/types.ts>
-**Examples**
+**类型**: <https://github.com/rive-app/rive-react/blob/main/src/types.ts>
+**示例**
 
-- Simple skinning example: [https://codesandbox.io/p/sandbox/rive-react-swapping-skins-with-solos-ctcnlx](https://codesandbox.io/p/sandbox/rive-react-swapping-skins-with-solos-ctcnlx?file=%2Fsrc%2FApp.tsx)
-- Storybook demo: <https://rive-app.github.io/rive-react/>
-- Animated Login Form:
-  - Demo: [https://rive-app.github.io/rive-use-cases/?path=/story/example-loginformcomponent—primary](https://rive-app.github.io/rive-use-cases/?path=/story/example-loginformcomponent--primary)
+-   简单换肤示例: [https://codesandbox.io/p/sandbox/rive-react-swapping-skins-with-solos-ctcnlx](https://codesandbox.io/p/sandbox/rive-react-swapping-skins-with-solos-ctcnlx?file=%2Fsrc%2FApp.tsx)
+-   Storybook 演示: <https://rive-app.github.io/rive-react/>
+-   动画登录表单:
+    -   演示: [https://rive-app.github.io/rive-use-cases/?path=/story/example-loginformcomponent—primary](https://rive-app.github.io/rive-use-cases/?path=/story/example-loginformcomponent--primary)
 
-[Migrating from v1 to v2](/docs/runtimes/web/migrating-from-v1-to-v2)[Parameters and Return Values](/docs/runtimes/react/parameters-and-return-values)
+[从 v1 迁移到 v2](/docs/runtimes/web/migrating-from-v1-to-v2)[参数和返回值](/docs/runtimes/react/parameters-and-return-values)

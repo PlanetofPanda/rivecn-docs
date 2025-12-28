@@ -1,71 +1,70 @@
-Layouts
+布局 (Layouts)
 
-# Overview
+# 概览 (Overview)
 
-Layouts allow you to build responsive UI components in Rive. Make your designs fit, fill, or reflow content based on the space available.
+布局允许你在 Rive 中构建响应式 UI 组件。让你的设计根据可用空间适应、填充或重新排列内容。
 
-Leverage Rive’s layout system to accommodate a variety of use cases:
+利用 Rive 的布局系统来满足各种用例：
 
-- Pin items to chosen edges of a parent artboard or container.
-- Create buttons and labels that adapt to the size of the text.
-- Build lists and grids of content that reflow, animate, and scroll.
-- Combine and nest layouts to develop entire interfaces
+- 将项目固定到父画板或容器的选定边缘。
+- 创建适应文本大小的按钮和标签。
+- 构建可以重排、动画化和滚动的内容列表和网格。
+- 组合和嵌套布局以开发整个界面。
 
-You can use these techniques to create all kinds of production-ready buttons, lists, and menus that can fluidly resize to fit any device size or orientation. Rive graphics aren’t mockups or prototypes, they’re functional graphics that can change state and be connected to real data — and because Rive runs anywhere, you can re-use the same responsive graphics on mobile apps, game engines, websites, custom devices, and more.
+你可以使用这些技术来创建各种可直接用于生产环境的按钮、列表和菜单，它们可以流畅地调整大小以适应任何设备尺寸或方向。Rive 图形不是模型或原型，它们是可以改变状态并连接到真实数据的功能性图形——因为 Rive 可以在任何地方运行，你可以在移动应用、游戏引擎、网站、定制设备等上面重复使用相同的响应式图形。
 
-Check out the [Layouts playlist](https://www.youtube.com/playlist?list=PLujDTZWVDSsGvor80PkjHaZ3hNNo6s_ef) on Rive’s YouTube channel for additional Layout related tutorials
-
----
-
-## [​](#introduction) Introduction
-
-Prior to the addition of Layouts in Rive, all objects on an Artboard were positioned in a freeform way, with few rules limiting this (one exception being [Constraints](/docs/editor/constraints/constraints-overview)). Layouts provide a rules based way to position and size your content using Rows and Columns.
-
-A Layout is a container whose position and size is bound by rules (relative to its parent Layout or children). When Rive objects (text, shapes, paths, groups, images, components, and even joysticks or bones) are placed in a Layout, they inherit the positioning rules of the Layout (**participate in the Layout**), but they can also act independently within the Layout container if desired. This allows for added freedom if you need to animate an object within a Layout.
-
-Layouts only affect the position of other Layouts. For example, if you want to have a Row Layout, you would have a parent Layout set to a direction of Row, and all of its Layout children will be laid out in a row (and have things like their parent’s padding, gap, alignment, etc. applied to their positions).
+在 Rive 的 YouTube 频道上查看 [Layouts 播放列表](https://www.youtube.com/playlist?list=PLujDTZWVDSsGvor80PkjHaZ3hNNo6s_ef) 以获取更多布局相关的教程。
 
 ---
 
-## [​](#layout-parents-and-children) Layout Parents and Children
+## [​](#introduction) 介绍
 
-In order to create more complex UI that responds to the screen or browser size, it is important to understand that Layouts can be placed inside other Layouts. We refer to the outer Layout as the parent and the inner Layout as the child. The Layout children are typically positioned relative to their Layout parent (similar to how [Groups](/docs/editor/fundamentals/groups) work). In addition, the parent can either be sized to the children ([Hug](editor/layouts/layout-parameters#scale-types)) or the children can size to their parent ([Fill](editor/layouts/layout-parameters#scale-types)). Here is an example to help visualize how these relationships work.
-In the image below we will focus on the regions contained by the dashed lines. The outer green dashed line is the outermost Layout, which is set to Layout it’s children in a single Column. In the second row of that Column, the red dashed line is a child Layout containing the Battery indicators for various devices. This Layout is defined as a Row. This Layout has 4 child Layouts (blue dashed) set to evenly Fill the width of their parent (so that when the parent resizes, the child Layouts also resize, each to Fill 25% of the available space). Each of those 4 Layouts are set to Column and have 2 child Layouts (pink dashed) containing a trim path with a visualization of battery remaining and percentage label. By creating these simple parent-child Layouts, we can create infinitely responsive content with Rive!
-![Image](images/layout-visualized.png)
+在 Rive 添加布局功能之前，画板上的所有对象都以通过自由形式定位，几乎没有规则限制（[约束](/docs/editor/constraints/constraints-overview) 是一个例外）。布局提供了一种基于规则的方式，使用行 (Rows) 和列 (Columns) 来定位和调整内容大小。
 
----
+布局是一个容器，其位置和大小受规则约束（相对于其父布局或子级）。当 Rive 对象（文本、形状、路径、分组、图像、组件，甚至摇杆或骨骼）被放置在布局中时，它们会继承布局的定位规则（**参与布局**），但如果需要，它们也可以在布局容器内独立行动。如果你需要在布局内制作对象动画，这提供了额外的自由度。
 
-## [​](#absolute-vs-relative-layouts) Absolute vs Relative Layouts
-
-Layouts can exist within Rive’s freeform transform space, which means that you can draw a Layout to the Artboard and position it as you would any other Rive object. This type of Layout is referred to as **Absolute** (positioned absolutely).
-On the other hand, when you want a Layout to participate in the flow of its parent layout, this is referred to as **Relative** (positioned relative to its parent). The position of Relative Layouts are determined by their parent via many parameters such as Row/Column, alignment, padding, gap, etc.
-Use the icon in the top right of the layout inspector to toggle between an absolute and relative layout.
-![Image](images/3412f52f-c283-4617-b6c5-f5af8ad1ddcc.webp)
+布局仅影响其他布局的位置。例如，如果你想拥有一个行布局，你需要将父布局的方向设置为行 (Row)，其所有布局子级将排列成一行（并将诸如父级的内边距 padding、间隙 gap、对齐 alignment 等应用到它们的位置上）。
 
 ---
 
-## [​](#layouts-and-other-rive-objects) Layouts and other Rive objects
+## [​](#layout-parents-and-children) 布局父级和子级 (Layout Parents and Children)
 
-A Layout container will affect its children in one of two ways:
+为了创建能够响应屏幕或浏览器大小的更复杂 UI，重要的是要理解布局可以放置在其他布局内部。我们将外部布局称为父级 (Parent)，内部布局称为子级 (Child)。布局子级通常相对于其布局父级定位（类似于 [分组](/docs/editor/fundamentals/groups) 的工作方式）。此外，父级可以根据子级调整大小（[包裹 Hug](editor/layouts/layout-parameters#scale-types)），或者子级可以根据父级调整大小（[填充 Fill](editor/layouts/layout-parameters#scale-types)）。下面是一个例子，帮助直观地理解这些关系是如何工作的。
 
-- Set the child’s position
-- Set both the child’s position and size
-
-This behaviour is determined by the object type of the child. Objects that have both their position and size defined by a Layout container include:
-
-- Text
-- Images
-- Parametric shapes (rectangles, ellipses, triangles, polygons, and stars)
-- Component instances (Leaf & Layout mode)
-- Other Layouts
-
-All other objects will only have their positioned set by the layout. The [N-Slicing](/docs/editor/layouts/n-slicing) feature provides more advanced options to control the layout/scale behaviour of more advanced shapes and groups.
-Unlike in some other tools, Rive will provide an additional hierarchy item to represent the Layout container of an object. This helps differentiate the freeform nature of Rive with the structured Layout system. For example, an object within a Layout container can still apply additional transforms such as position, scale, and rotation to allow it to break out of the Layout. This becomes particularly powerful when coupled with constraints. Furthermore, a Layout container can house multiple objects that can be placed in front of each other.
+在下图中，我们将关注虚线包含的区域。外部的绿色虚线是最外层的布局，设置为将其子级在单列 (Column) 中布局。在该列的第二行，红色虚线是一个子布局，包含各种设备的电池指示器。此布局定义为行 (Row)。此布局有 4 个子布局（蓝色虚线），设置为均匀填充 (Fill) 其父级的宽度（因此当父级调整大小时，子布局也会调整大小，每个填充可用空间的 25%）。这 4 个布局中的每一个都被设置为列 (Column)，并有 2 个子布局（粉色虚线），包含剩余电池的可视化修剪路径和百分比标签。通过创建这些简单的父子布局，我们可以使用 Rive 创建无限响应的内容！
+![布局可视化示例](images/layout-visualized.png)
 
 ---
 
-## [​](#a-simple-use-case:-building-a-responsive-button) A Simple use case: Building a Responsive Button
+## [​](#absolute-vs-relative-layouts) 绝对布局 vs 相对布局 (Absolute vs Relative Layouts)
 
-This tutorial shows how you can build a responsive button from scratch.
+布局可以存在于 Rive 的自由变换空间中，这意味着你可以向画板绘制一个布局，并没有像其他 Rive 对象一样对其进行定位。这种类型的布局被称为 **绝对 (Absolute)**（绝对定位）。
+另一方面，当你希望布局参与其父布局的流 (flow) 时，这被称为 **相对 (Relative)**（相对于其父级定位）。相对布局的位置由其父级通过许多参数（如行/列、对齐、内边距、间隙等）确定。
+使用布局检查器右上角的图标在绝对布局和相对布局之间切换。
+![切换绝对/相对布局](images/3412f52f-c283-4617-b6c5-f5af8ad1ddcc.webp)
 
-[Lists](/docs/editor/data-binding/lists)[Tools](/docs/editor/layouts/layout-tools)
+---
+
+## [​](#layouts-and-other-rive-objects) 布局和其他 Rive 对象
+
+布局容器将以以下两种方式之一影响其子级：
+
+- 仅设置子级的位置
+- 同时设置子级的位置和大小
+
+此行为由子级的对象类型决定。位置和大小都由布局容器定义的对象包括：
+
+- 文本 (Text)
+- 图像 (Images)
+- 参数化图形 (Parametric shapes)（矩形、椭圆、三角形、多边形和星形）
+- 组件实例 (Component instances)（叶节点和布局模式）
+- 其他布局 (Other Layouts)
+
+所有其他对象仅由布局设置其位置。[N-切片 (N-Slicing)](/docs/editor/layouts/n-slicing) 功能提供了更高级的选项来控制更高级形状和分组的布局/缩放行为。
+与其他一些工具不同，Rive 提供了一个额外的层级项来表示对象的布局容器。这有助于区分 Rive 的自由形式本质与结构化布局系统。例如，布局容器内的对象仍然可以应用额外的变换，如位置、缩放和旋转，以允许它脱离布局。当与约束结合使用时，这变得特别强大。此外，一个布局容器可以容纳多个可以相互重叠放置的对象。
+
+---
+
+## [​](#a-simple-use-case:-building-a-responsive-button) 简单用例：构建响应式按钮
+
+本教程展示了如何从头开始构建响应式按钮。

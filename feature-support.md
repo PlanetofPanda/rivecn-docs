@@ -1,18 +1,16 @@
-# Feature Support
+# 功能支持 (Feature Support)
 
-As our Rive editor adds features for making Rive assets, sometimes our runtimes need to be updated to support these improvements. This may mean new or changed APIs.
-Check below to see if a given feature used by your Rive asset is supported yet at runtime. We generally recommend that your project uses the latest version of the runtimes to take advantage of follow-on bug fixes and new features.
+随着我们的 Rive 编辑器增加用于制作 Rive 资产的功能，有时我们的运行时需要更新以支持这些改进。这可能意味着新的或更改的 API。
+请查看下面以了解你的 Rive 资产使用的给定功能是否已在运行时受支持。我们通常建议你的项目使用最新版本的运行时，以利用后续的错误修复和新功能。
 
-Certain features require the use of the Rive Renderer at runtime. See our
-documentation on [choosing a renderer](/docs/runtimes/choose-a-renderer).
-Currently, the only feature that requires the Rive Renderer is **[Vector
-Feathering](https://rive.app/blog/introducing-vector-feathering)**.
+某些功能需要在运行时使用 Rive 渲染器。请参阅我们关于 [选择渲染器](/docs/runtimes/choose-a-renderer) 的文档。
+目前，唯一需要 Rive 渲染器的功能是 **[矢量羽化 (Vector Feathering)](https://rive.app/blog/introducing-vector-feathering)**。
 
-We may include notes on migrating to newer versions if a new feature warrants recent API changes.
+如果新功能需要最近的 API 更改，我们可能会包含有关迁移到较新版本的说明。
 
-Data Binding - Lists, Images, and Artboards
+## 数据绑定 - 列表、图像和画板 (Data Binding - Lists, Images, and Artboards)
 
-Data binding lists, images, and artboards were added after initial data binding support.See [Data Binding Overview](/docs/editor/data-binding/overview) and [Data Binding for Runtimes](/docs/runtimes/data-binding).
+数据绑定列表、图像和画板是在初始数据绑定支持之后添加的。请参阅 [数据绑定概览](/docs/editor/data-binding/overview) 和 [运行时的数据绑定](/docs/runtimes/data-binding)。
 
 | **Runtime** | **Version** |
 | --- | --- |
@@ -27,7 +25,7 @@ Data binding lists, images, and artboards were added after initial data binding 
 | Unity | ✅ `v0.3.7-canary.142` |
 | Unreal | Not yet supported |
 
-Right to Left Layouts & Text
+## 从右到左布局和文本 (Right to Left Layouts & Text)
 
 | **Runtime** | **Version** |
 | --- | --- |
@@ -42,7 +40,7 @@ Right to Left Layouts & Text
 | Unity | ✅ `0.3.5+` |
 | Unreal | ✅ `0.3.0a-gh` |
 
-Text Follow Path
+## 文本沿路径跟随 (Text Follow Path)
 
 | **Runtime** | **Version** |
 | --- | --- |
@@ -57,9 +55,9 @@ Text Follow Path
 | Unity | ✅ `0.3.5+` |
 | Unreal | ✅ `0.3.0a-gh` |
 
-Data Binding
+## 数据绑定 (Data Binding)
 
-See [Data Binding Overview](/docs/editor/data-binding/overview) and [Data Binding for Runtimes](/docs/runtimes/data-binding).
+请参阅 [数据绑定概览](/docs/editor/data-binding/overview) 和 [运行时的数据绑定](/docs/runtimes/data-binding)。
 
 | **Runtime** | **Version** |
 | --- | --- |
@@ -74,9 +72,9 @@ See [Data Binding Overview](/docs/editor/data-binding/overview) and [Data Bindin
 | Unity | ✅ `0.3.6-canary.27` |
 | Unreal | ✅ `0.3.0a-gh` |
 
-Vector Feathering
+## 矢量羽化 (Vector Feathering)
 
-This feature is only supported with the Rive Renderer. See [Choose a Renderer](/docs/runtimes/choose-a-renderer).
+此功能仅在使用 Rive 渲染器时受支持。请参阅 [选择渲染器](/docs/runtimes/choose-a-renderer)。
 
 | **Runtime** | **Version** |
 | --- | --- |
@@ -93,9 +91,9 @@ This feature is only supported with the Rive Renderer. See [Choose a Renderer](/
 | Unity | ✅ `0.3.3-canary.72+` |
 | Unreal | ✅ `0.3.0a-gh` |
 
-N-Slicing
+## N-Slicing
 
-See [N-Slicing](/docs/editor/layouts/n-slicing).
+请参阅 [N-Slicing](/docs/editor/layouts/n-slicing)。
 
 | **Runtime** | **Version** |
 | --- | --- |
@@ -110,9 +108,9 @@ See [N-Slicing](/docs/editor/layouts/n-slicing).
 | Unity | ✅ `0.2.2-canary.22+` |
 | Unreal | ✅ `0.2.2+` |
 
-Layouts
+## 布局 (Layouts)
 
-Allows Rive to automatically update the artboard size as the underlying view/canvas/widget/texture size changes. See [Layouts](/docs/editor/layouts/layouts-overview).
+允许 Rive 随着底层视图/画布/组件/纹理大小的变化自动更新画板大小。请参阅 [布局](/docs/editor/layouts/layouts-overview)。
 
 | **Runtime** | **Version** |
 | --- | --- |
@@ -127,9 +125,9 @@ Allows Rive to automatically update the artboard size as the underlying view/can
 | Unity | ✅ `0.2.1+` |
 | Unreal | ✅ `0.2.1+` |
 
-Fallback Fonts
+## 回退字体 (Fallback Fonts)
 
-Allows Rive to use a fallback font if a glyph is not available. A default font is automatically chosen, or you can optionally configure the desired fallback font based on various options. See [Fallback Fonts](/docs/runtimes/text#fallback-fonts).
+允许 Rive 在字形不可用时使用回退字体。默认字体会自动选择，或者你可以根据各种选项选择配置所需的回退字体。请参阅 [回退字体](/docs/runtimes/text#fallback-fonts)。
 
 | **Runtime** | **Version** |
 | --- | --- |
@@ -144,9 +142,9 @@ Allows Rive to use a fallback font if a glyph is not available. A default font i
 | Unity | Not supported |
 | Unreal | Not Supported |
 
-Nested Text
+## 嵌套文本 (Nested Text)
 
-Enables setting text on component instances. See [Nested Text](/docs/runtimes/text#read-update-nested-text-runs-at-runtime).
+启用在组件实例上设置文本。请参阅 [嵌套文本](/docs/runtimes/text#read-update-nested-text-runs-at-runtime).
 
 | **Runtime** | **Version** |
 | --- | --- |
@@ -161,9 +159,9 @@ Enables setting text on component instances. See [Nested Text](/docs/runtimes/te
 | Unity | ✅ Supported |
 | Unreal | ✅ `0.1.14+` |
 
-Nested Inputs
+## 嵌套输入 (Nested Inputs)
 
-Enables setting inputs on component instances. See [Nested Inputs](/docs/runtimes/inputs#nested-inputs).
+启用在组件实例上设置输入。请参阅 [嵌套输入](/docs/runtimes/inputs#nested-inputs)。
 
 | **Runtime** | **Version** |
 | --- | --- |
@@ -178,26 +176,9 @@ Enables setting inputs on component instances. See [Nested Inputs](/docs/runtime
 | Unity | ✅ `0.1.174+` |
 | Unreal | ✅ Supported |
 
-Randomization
+## 随机化 (Randomization)
 
-Enables randomizing transitions between animations and customizing the probability.
-
-| **Runtime** | **Version** |
-| --- | --- |
-| Web (`@rive-app/canvas` and `@rive-app/webgl`) | ✅ `2.15.6+` |
-| React | ✅ `4.9.5+` |
-| React Native | ✅ `7.0.3+` |
-| Flutter | ✅ `0.13.4+` |
-| Flutter (rive\_native) | ✅ `>= 0.0.1-dev.6` |
-| Apple | ✅ `5.11.5+` |
-| Android | ✅ `9.3.5+` |
-| C++ | ✅ Supported |
-| Unity | ✅ Supported |
-| Unreal | ✅ Supported |
-
-Audio
-
-See [Rive Events](/docs/runtimes/rive-events) and [Audio Events](/docs/editor/events/audio-events).
+启用动画之间过渡的随机化并自定义概率。
 
 | **Runtime** | **Version** |
 | --- | --- |
@@ -212,9 +193,26 @@ See [Rive Events](/docs/runtimes/rive-events) and [Audio Events](/docs/editor/ev
 | Unity | ✅ Supported |
 | Unreal | ✅ Supported |
 
-Nested Inputs and Nested Events
+## 音频 (Audio)
 
-See [Components](/docs/editor/fundamentals/components).
+请参阅 [Rive 事件](/docs/runtimes/rive-events) 和 [音频事件](/docs/editor/events/audio-events)。
+
+| **Runtime** | **Version** |
+| --- | --- |
+| Web (`@rive-app/canvas` and `@rive-app/webgl`) | ✅ `2.15.6+` |
+| React | ✅ `4.9.5+` |
+| React Native | ✅ `7.0.3+` |
+| Flutter | ✅ `0.13.4+` |
+| Flutter (rive\_native) | ✅ `>= 0.0.1-dev.6` |
+| Apple | ✅ `5.11.5+` |
+| Android | ✅ `9.3.5+` |
+| C++ | ✅ Supported |
+| Unity | ✅ Supported |
+| Unreal | ✅ Supported |
+
+## 嵌套输入和嵌套事件 (Nested Inputs and Nested Events)
+
+请参阅 [组件](/docs/editor/fundamentals/components)。
 
 | **Runtime** | **Version** |
 | --- | --- |
@@ -228,9 +226,9 @@ See [Components](/docs/editor/fundamentals/components).
 | C++ | ✅ Supported |
 | Unity | ✅ Supported |
 
-Out-of-band Assets
+## 带外资产 (Out-of-band Assets)
 
-See [Loading Assets](/docs/runtimes/loading-assets).
+请参阅 [加载资产](/docs/runtimes/loading-assets)。
 
 | **Runtime** | **Version** |
 | --- | --- |
@@ -245,9 +243,9 @@ See [Loading Assets](/docs/runtimes/loading-assets).
 | Unity | ✅ Supported |
 | Unreal | ✅ `0.1.14+` |
 
-Events
+## 事件 (Events)
 
-See [Rive Events](/docs/runtimes/rive-events).
+请参阅 [Rive 事件](/docs/runtimes/rive-events)。
 
 | **Runtime** | **Version** |
 | --- | --- |
@@ -262,9 +260,9 @@ See [Rive Events](/docs/runtimes/rive-events).
 | Unity | ✅ Supported |
 | Unreal | ✅ Supported |
 
-Text
+## 文本 (Text)
 
-See [Text](/docs/runtimes/text).
+请参阅 [文本](/docs/runtimes/text)。
 
 | **Runtime** | **Version** |
 | --- | --- |
@@ -279,9 +277,9 @@ See [Text](/docs/runtimes/text).
 | Unity | ✅ Supported |
 | Unreal | ✅ Supported |
 
-Note that we will proactively update the above versions as additional APIs on runtimes expose ways to dynamically set text (high and low-level), among other related features.
+请注意，我们会主动更新上述版本，因为运行时上的其他 API 提供了动态设置文本（高级和低级）以及其他相关功能的方法。
 
-Follow Path
+## 跟随路径 (Follow Path)
 
 | **Runtime** | **Version** |
 | --- | --- |
@@ -296,7 +294,7 @@ Follow Path
 | Unity | ✅ Supported |
 | Unreal | ✅ Supported |
 
-Interpolation on States
+## 状态插值 (Interpolation on States)
 
 | **Runtime** | **Version** |
 | --- | --- |
@@ -311,7 +309,7 @@ Interpolation on States
 | Unity | ✅ Supported |
 | Unreal | ✅ Supported |
 
-Joysticks
+## 操纵杆 (Joysticks)
 
 | **Runtime** | **Version** |
 | --- | --- |
@@ -326,7 +324,7 @@ Joysticks
 | Unity | ✅ Supported |
 | Unreal | ✅ Supported |
 
-Solos
+## Solos
 
 | **Runtime** | **Version** |
 | --- | --- |
@@ -341,7 +339,7 @@ Solos
 | Unity | ✅ Supported |
 | Unreal | ✅ Supported |
 
-Speed on States
+## 状态速度 (Speed on States)
 
 | **Runtime** | **Version** |
 | --- | --- |
@@ -357,7 +355,7 @@ Speed on States
 | Unity | ✅ Supported |
 | Unreal | ✅ Supported |
 
-Graph Editor
+## 图形编辑器 (Graph Editor)
 
 | **Runtime** | **Version** |
 | --- | --- |
@@ -373,7 +371,7 @@ Graph Editor
 | Unity | ✅ Supported |
 | Unreal | ✅ Supported |
 
-Listeners
+## 监听器 (Listeners)
 
 | **Runtime** | **Version** |
 | --- | --- |
@@ -389,15 +387,15 @@ Listeners
 | Unity | ✅ Supported |
 | Unreal | ✅ Supported |
 
-No extra code is needed to support listeners, and you do not need to invoke listeners via event listener/detector code at runtime. If the Rive file has a listener as part of the state machine at design time, the runtime library has implicit event listener/detector code to trigger the listeners at the appropriate time.
+无需额外代码即可支持监听器，也无需在运行时通过事件监听器/检测器代码调用监听器。如果 Rive 文件在设计时将监听器作为状态机的一部分，则运行时库具有隐式事件监听器/检测器代码，可以在适当的时间触发监听器。
 
-## [​](#notes) Notes
+## 备注 (Notes)
 
-- `rive-react` - Starting in `v3.0.0` the React runtime has split into two different published packages; `@rive-app/react-canvas` and `@rive-app/react-webgl`, each wrapping the respective `@rive-app/canvas` and `@rive-app/webgl` web runtimes. We recommend using `@rive-app/react-canvas`
-- `@rive-app/webgl` - There is a new flag here, `useOffscreenRenderer` which is off by default. This flag will allow you to work around the various browser constraints on the number of WebGL contexts created. We **highly recommend** setting this option to `true` when instantiating Rive in the high-level API. See more here: [https://github.com/rive-app/rive-wasm#other-notes](#nested-inputs-and-nested-events).
-- `rive-react-native` - Starting in `v3.0.0`, it will have a minimum iOS `14.0` support
+-   `rive-react` - 从 `v3.0.0` 开始，React 运行时已拆分为两个不同的已发布包：`@rive-app/react-canvas` 和 `@rive-app/react-webgl`，分别包装各自的 `@rive-app/canvas` 和 `@rive-app/webgl` Web 运行时。我们建议使用 `@rive-app/react-canvas`。
+-   `@rive-app/webgl` - 这里有一个新标志 `useOffscreenRenderer`，默认情况下为关闭。此标志将允许你解决浏览器对创建的 WebGL 上下文数量的各种限制。在高级 API 中实例化 Rive 时，我们 **强烈建议** 将此选项设置为 `true`。在此处查看更多信息：[https://github.com/rive-app/rive-wasm#other-notes](#nested-inputs-and-nested-events)。
+-   `rive-react-native` - 从 `v3.0.0` 开始，它将最低支持 iOS `14.0`。
 
-Mesh Deformation
+## 网格变形 (Mesh Deformation)
 
 | **Runtime** | **Version** |
 | --- | --- |
@@ -413,16 +411,16 @@ Mesh Deformation
 | Unity | ✅ Supported |
 | Unreal | ✅ Supported |
 
-## [​](#notes-2) Notes
+## 备注 (Notes)
 
-- `rive-react` - Starting in `v3.0.0` the React runtime has split into two different published packages; `@rive-app/react-canvas` and `@rive-app/react-webgl`, each wrapping the respective `@rive-app/canvas` and `@rive-app/webgl` web runtimes. We recommend using `@rive-app/react-canvas`
-- `@rive-app/webgl` - There is a new flag here, `useOffscreenRenderer` which is off by default. This flag will allow you to work around the various browser constraints on the number of WebGL contexts created. We **highly recommend** setting this option to `true` when instantiating Rive in the high-level API. See more here: [https://github.com/rive-app/rive-wasm#other-notes](#nested-inputs-and-nested-events)
-- Regarding web-based runtimes and meshes:
-  - Keep in mind that as meshes grow across larger screen areas, they become more resource-heavy on some devices
-  - Avoid complex transforms repeatedly on the `<canvas>` elements that display Rive animations (or `<RiveComponent />` in the React runtimes)
-  - We recommend using `@rive-app/webgl` to display mesh on Firefox for best performance
+-   `rive-react` - 从 `v3.0.0` 开始，React 运行时已拆分为两个不同的已发布包：`@rive-app/react-canvas` and `@rive-app/react-webgl`，分别包装各自的 `@rive-app/canvas` 和 `@rive-app/webgl` Web 运行时。我们建议使用 `@rive-app/react-canvas`。
+-   `@rive-app/webgl` - 这里有一个新标志 `useOffscreenRenderer`，默认情况下为关闭。此标志将允许你解决浏览器对创建的 WebGL 上下文数量的各种限制。在高级 API 中实例化 Rive 时，我们 **强烈建议** 将此选项设置为 `true`。在此处查看更多信息：[https://github.com/rive-app/rive-wasm#other-notes](#nested-inputs-and-nested-events)。
+-   关于基于 Web 的运行时和网格：
+    -   请记住，随着网格在更大的屏幕区域中增长，它们在某些设备上会变得更加耗费资源。
+    -   避免在显示 Rive 动画的 `<canvas>` 元素（或 React 运行时中的 `<RiveComponent />`）上重复进行复杂的变换。
+    -   我们建议使用 `@rive-app/webgl` 在 Firefox 上显示网格以获得最佳性能。
 
-Caching a Rive File
+## 缓存 Rive 文件 (Caching a Rive File)
 
 | **Runtime** | **Version** |
 | --- | --- |
@@ -437,7 +435,7 @@ Caching a Rive File
 | Unity | ✅ Supported |
 | Unreal | Not yet supported |
 
-Raster Assets
+## 光栅资产 (Raster Assets)
 
 | **Runtime** | **Version** |
 | --- | --- |
@@ -452,10 +450,10 @@ Raster Assets
 | Unity | ✅ Supported |
 | Unreal | ✅ Supported |
 
-## [​](#notes-3) Notes
+## 备注 (Notes)
 
-- For the web runtimes, we have deprecated `rive-js` and moved to a multi-package setup for a JS runtime that runs against the `context2d` and `webgl` renderer:
-- Note that the new web runtime packages all support raster assets, and the high-level JS API did not change in this migration
-  - `@rive-app/canvas` - Renders Rive with a `CanvasRenderingContext2D` renderer
-  - `@rive-app/webgl` - Renders Rive with a `WebGLRenderingContext` renderer.
-  - We recommend using the `@rive-app/canvas` dependency, but [check here](https://github.com/rive-app/rive-wasm/blob/master/WEB_RUNTIMES.md) to see which might fit your needs better
+-   对于 Web 运行时，我们已弃用 `rive-js` 并转为多包设置，用于针对 `context2d` 和 `webgl` 渲染器运行的 JS 运行时：
+-   请注意，新的 Web 运行时包都支持光栅资产，并且高级 JS API 在此次迁移中没有更改。
+    -   `@rive-app/canvas` - 使用 `CanvasRenderingContext2D` 渲染器渲染 Rive
+    -   `@rive-app/webgl` - 使用 `WebGLRenderingContext` 渲染器渲染 Rive
+    -   我们建议使用 `@rive-app/canvas` 依赖项，但 [请查看此处](https://github.com/rive-app/rive-wasm/blob/master/WEB_RUNTIMES.md) 以了解哪种可能更适合你的需求。

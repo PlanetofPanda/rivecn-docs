@@ -1,80 +1,56 @@
-Layouts
+布局 (Layouts)
 
-# N-Slicing
+# N-切片 (N-Slicing)
 
-## [​](#what-is-n-slicing) What is N-Slicing?
+## [​](#what-is-n-slicing) 什么是 N-切片？
 
-Rive’s N-Slice feature is inspired by the 9-slicing technique commonly used in game design. A 9-slice is typically applied to an image to prevent the four corner segments from scaling when resized. Meanwhile, the remaining five inner segments stretch or tile to allow raster artwork to scale up and change ratio without distorting.
-N-Slicing takes things a step further; allowing you to create any number of segments, to both raster and vector artwork within Rive.
+Rive 的 N-Slice 功能灵感来源于游戏设计中常用的“九宫格切片 (9-slicing)”技术。九宫格切片通常应用于图像，以防止四个角的部分在调整大小时发生缩放。与此同时，其余五个内部部分会拉伸或平铺，从而允许位图在放大和改变比例时不失真。
+N-Slicing 更进一步；它允许你为 Rive 中的位图和矢量作品创建任意数量的切片部分。
 
-## [​](#creating-an-n-slice) Creating an N-Slice
+## [​](#creating-an-n-slice) 创建 N-Slice
 
-There are two types of N-Slice — those applied to images and those applied to vector objects in the form of a group. Whilst much of the functionality between them is shared, there are some subtle differences, starting with the way you apply them.
-**Image/Raster N-Slice**
+N-Slice 有两种类型 —— 应用于图像的和应用于矢量对象（以分组形式）的。虽然它们之间的大部分功能是共享的，但也有一些细微差别，首先就是应用它们的方式。
 
-1
+**图像/位图 N-Slice**
 
-Select the image you want to apply an N-Slice to.
+1.  选择你想要应用 N-Slice 的图像。
+2.  在检查器的“变形 (Deform)”部分选择添加动作，然后选择“N-Slice”选项。或者，在舞台或层级面板中右键单击图像，并在“变形”子菜单中导航到 N-Slice 选项。
+3.  创建后，N-Slice 将进入编辑模式。在这里，你可以设置定义图像缩放行为的轴线和平铺模式。首先根据需要定位和/或创建轴线。完成后，在检查器或舞台提示中选择“完成 (Done)”动作。在下方的“设置 N-Slice”部分了解更多关于如何最好地设置 N-Slice 的信息。
+4.  要返回编辑模式，请在检查器或右键菜单中选择“编辑 N-Slice (Edit N-Slice)”动作。
 
-2
+**分组/矢量 N-Slice**
 
-Select the add action within the Deform section of the inspector and choose the N-Slice option. Alternatively, right-click the image on the stage or in the hierarchy and navigate to the N-Slice option within the Deform submenu.”
+1.  如果你的选区已经包含在一个分组中，请在舞台或层级面板中选择该分组，并使用检查器中的“转换为 N-Slice (Convert to N-Slice)”动作。或者，选择你想要包裹在 N-Slice 分组中的舞台对象，并在检查器中选择“N-Slice 选区 (N-Slice selection)”动作。你也可以通过右键单击舞台或层级面板中的项目并在“包裹于 (Wrap in)”子菜单中找到此选项。
+2.  选中 N-Slice 分组后，使用检查器中的“编辑 N-Slice”选项（或按 `enter` 键）启用编辑模式。从这里，你可以设置你的轴线和平铺模式。完成后，在检查器或舞台提示中选择“完成”动作。在下方的“设置 N-Slice”部分了解更多关于如何最好地设置 N-Slice 的信息。
 
-3
+## [​](#setting-up-an-n-slice) 设置 N-Slice
 
-Upon creation, the N-Slice will enter edit mode. Here you can set up the axes and tile modes that define the scale behaviour of the image. Start by positioning and/or creating the axes as desired. Once completed, select the ‘Done’ action in the inspector or stage prompt. Learn more about how to best setup your N-Slice in the ‘Setting up an N-Slice’ section below.
+选中你的图像或 N-Slice 项目后，使用检查器动作、右键菜单或 `enter` 键进入编辑模式。编辑模式允许你更改轴线和平铺模式的配置，以定义你的图像或分组如何缩放。
 
-4
+我们建议在缩放图像或更改分组大小 *之前* 设置 N-Slice。虽然可以在已缩放的图像上调整轴线，但准确地定位新轴线可能会更困难。
 
-To return to the edit mode, select the ‘Edit N-Slice’ action in the inspector or right-click menu.
+N-Slice 内各部分的缩放行为交替进行，从固定部分开始。对于常规的九宫格切片 (9-slice)，这将产生一个固定部分，随后是一个缩放部分，并以另一个固定部分结束。此行为沿两个轴应用。你可以通过编辑模式下显示的实心蓝色边框来区分固定部分和缩放部分。同时，缩放部分可以通过虚线边框来识别。
 
-**Group/Vector N-Slice**
+**创建和定位轴线**
+默认情况下，新建的 N-Slice 有 4 条轴线 —— 2 条垂直和 2 条水平。它们共同将内容分为 9 个部分。点击并拖动现有轴线以重新定位它们，或在检查器中调整它们的值。值可以定义为点 (points) 或百分比。
+要创建新轴线，请从图像或分组的外部边界点击并拖动。你可以通过每个边缘上的白色手柄来识别边界。默认情况下，新轴线将与其镜像对应轴线一起创建。这有助于保持交替的固定/缩放行为。但是，如果你更喜欢创建单条轴线，请在拖动新轴线之前按住 `command` / `control` 键。
 
-1
+> 按住 `command` / `control` 键拖动新轴线，可防止同时创建镜像对应轴线。
 
-If your selection is already contained within a group, select the group on the stage or in the hierarchy and use the ‘Convert to N-Slice’ action in the inspector. Alternatively, select the stage objects you’d like to wrap in an N-Slice group and choose the ‘N-Slice selection’ action in the inspector. You can also reach this option by right-clicking on the items within the stage or the hierarchy and navigating to the ‘Wrap in’ submenu.
+**设置平铺模式**
 
-2
+平铺模式只能在基于图像/位图的 N-Slice 上更改。
 
-With the N-Slice group selected, use the ‘Edit N-Slice’ option in the inspector (or press `enter`) to enable the edit mode. From here, you can setup your axes and tile modes. Once completed, select the ‘Done’ action in the inspector or stage prompt. Learn more about how to best setup your N-Slice in the ‘Setting up an N-Slice’ section below.
+平铺模式决定了 **缩放部分** 的行为。有 3 种平铺模式可供选择：
 
-## [​](#setting-up-an-n-slice) Setting up an N-Slice
+- **拉伸 (Stretch):** 随着图像调整大小拉伸该部分。
+- **重复 (Repeat):** 随着图像调整大小重复平铺该部分。
+- **隐藏 (Hidden):** 隐藏该部分，根本不渲染它。
 
-With your image or N-Slice item selected, use the inspector action, right-click menu, or `enter` key to enter the edit mode. The edit mode allows you to change the configuration of your axes and tile modes to define how your image or group scales.
+除“隐藏”以外的平铺模式不会对固定部分产生任何影响。
 
-We recommend setting up your N-Slice *before* scaling the image or changing the size of the group. While it’s possible to adjust the axes on an already-scaled image, accurately positioning new ones can be more difficult.
+要更改部分的平铺模式：
 
-The scale behaviour of segments within an N-Slice alternate, starting with a fixed segment. With a regular 9-slice, this results in a fixed segment, followed by a scaling one, and ending with another fixed. This behaviour is applied along both axes. You can identify a fixed segment from a scaling one by the solid blue borders displayed in edit mode. Meanwhile, scaling segments are identifiable via dashed borders.
-**Creating and positioning axes**
-By default, a new N-Slice is created with 4 axes — 2 vertical and 2 horizontal. Together they divide the content into 9 segments. Click and drag the existing axes to reposition them, or adjust their values in the inspector. Values can be defined as points or percentages.
-To create new axes, click and drag from the outer bounds of the image or group. You can identify the bounds via the white handles positioned on each edge. By default, a new axis will be created with a mirrored counterpart. This helps maintain the alternating fixed/scale behaviour. However if you’d prefer to create a single axis, hold `command` / `control` before dragging the new axis.
-
-Hold `command` / `control` while dragging a new axis to prevent a mirrored counterpart being created at the same time.
-
-**Setting tile modes**
-
-Tile modes can only be changed on image/raster based n-slices.
-
-Tile modes determine the behaviour of a **scaling segment**. There’re 3 tile mode options to choose from:
-
-- **Stretch:** Stretches the segment as the image is resized.
-- **Repeat:** Tiles the segment repeatedly as the image is resized.
-- **Hidden:** Hides the segment, not rendering it at all.
-
-Tile modes other than ‘hidden’ won’t have any effect on a fixed segment.
-
-To change the tile mode of a segment:
-
-1
-
-With the image or it’s N-Slice selected, use the ‘Edit N-Slice’ option in the inspector (or press `enter`) to enable the edit mode.
-
-2
-
-Identify the segment you want to change by selecting it on the stage. The corresponding tile will be highlighted in the inspector.
-
-3
-
-Set the tile mode via the dropdown menu in the inspector.
-
-[Animation](/docs/editor/layouts/layout-animation)[Scrolling](/docs/editor/layouts/scrolling)
+1.  在选中图像或其 N-Slice 的情况下，使用检查器中的“编辑 N-Slice”选项（或按 `enter` 键）启用编辑模式。
+2.  在舞台上通过选择来识别你想要更改的部分。相应的平铺块将在检查器中高亮显示。
+3.  通过检查器中的下拉菜单设置平铺模式。

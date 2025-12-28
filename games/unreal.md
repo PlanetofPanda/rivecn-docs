@@ -2,33 +2,33 @@ Unreal
 
 # Unreal
 
-Unreal runtime for Rive.
+Rive 的 Unreal 运行时。
 
-We’re rewriting our Unreal Engine integration to deliver significantly better performance, and it’s already showing a 4x speed boost. To focus on this effort, we’re temporarily pausing support and no longer recommending the current version of the Rive Unreal plugin, which was released as an experimental preview. More details [here](https://community.rive.app/c/announcements/rive-x-unreal).  
-  
-This page is for those using the legacy version of the plugin.
+我们要重写我们的 Unreal Engine 集成以提供显着更好的性能，并且它已经显示出 4 倍的速度提升。为了专注于这项工作，我们暂时暂停支持，并且不再推荐当前版本的 Rive Unreal 插件（作为实验性预览版发布）。更多详细信息 [在此](https://community.rive.app/c/announcements/rive-x-unreal)。
 
-See ‘**Feature Support**’ below for an updated list of Rive features in Unreal.
+此页面适用于使用插件旧版本的用户。
 
-## [​](#rendering-support) Rendering Support
+请参阅下面的“**功能支持**”以获取 Unreal 中 Rive 功能的更新列表。
 
-The rive-unreal runtime uses the [Rive Renderer](https://rive.app/renderer) and supports the following:
+## [​](#rendering-support) 渲染支持
 
-- Metal on Mac
-- Metal on iOS
-- Vulkan, DirectX11, and DirectX12 on Windows
-- Android support is coming soon!
+rive-unreal 运行时使用 [Rive 渲染器](https://rive.app/renderer) 并支持以下内容：
 
-Planned support for:
+-   Metal on Mac
+-   Metal on iOS
+-   Windows 上的 Vulkan, DirectX11, 和 DirectX12
+-   Android 支持即将推出！
 
-- Vulkan on Linux and Android.
+计划支持：
 
-## [​](#bug-reports) Bug Reports
+-   Linux 和 Android 上的 Vulkan。
 
-If you encounter any errors or unexpected crashes while integrating the Rive Unreal runtime, we recommend logging a detailed issue directly to the [rive-unreal](https://github.com/rive-app/rive-unreal/issues) repository.
+## [​](#bug-reports) 错误报告
 
-## [​](#feature-support) Feature Support
+如果你在集成 Rive Unreal 运行时时遇到任何错误或意外崩溃，我们建议直接在 [rive-unreal](https://github.com/rive-app/rive-unreal/issues) 仓库中记录详细问题。
 
-The rive-unreal runtime uses the [Rive C++ runtime](https://github.com/rive-app/rive-cpp). For more details on runtime support, see the [Feature Support](/docs/feature-support) page.
+## [​](#feature-support) 功能支持
 
-[Getting Started](/docs/game-runtimes/unreal/getting-started)
+rive-unreal 运行时使用 [Rive C++ 运行时](https://github.com/rive-app/rive-cpp)。有关运行时支持的更多详细信息，请参阅 [功能支持](/docs/feature-support) 页面。
+
+[快速开始](/docs/game-runtimes/unreal/getting-started)

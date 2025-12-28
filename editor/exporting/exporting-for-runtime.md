@@ -1,35 +1,35 @@
-Exporting
+导出 (Exporting)
 
-# Exporting for Runtime
+# 导出运行时使用 (Exporting for Runtime)
 
-Exporting for runtime is available on paid plans. [Learn more about our plans and pricing](https://rive.app/pricing).
+导出运行时使用的功能适用于付费方案。[了解更多关于我们的方案和定价的信息](https://rive.app/pricing)。
 
-To export a file for runtime, select the blue export action on the right-hand side of the toolbar or navigate to `Export` > `For runtime` via the left-hand toolbar menu. You can load the exported `.riv` file into your app, game, or website via any of our [open source runtimes](/docs/runtimes).
-![Image](images/94fc0d7c-cc7e-4b17-a6f7-0a00c98db70e.webp)
+要导出运行时使用的文件，请选择工具栏右侧的蓝色导出动作，或通过左侧工具栏菜单导航至 `Export` > `For runtime`。你可以通过任何我们的 [开源运行时](/docs/runtimes) 将导出的 `.riv` 文件加载到你的应用、游戏或网站中。
+![导出运行时示例](images/94fc0d7c-cc7e-4b17-a6f7-0a00c98db70e.webp)
 
-## [​](#changes-to-exporting-object-names) Changes to exporting object names
+## [​](#changes-to-exporting-object-names) 导出对象名称的变更
 
-You may need to access certain objects at runtime, such as a text run to swap a string, or a component to access its inputs. In order to make these objects discoverable at runtime, you’ll need to explicitly set it’s name to be exported.
-Previously, names would be exported if renamed from their default value in the editor. The issue with this approach was it assumed any renamed object was being sought at runtime, when in many cases you may simply want to rename objects to better organise your file — you didn’t necessarily need them to be exported into your `.riv` export. Subsequently, we’ve changed this approach to provide more finite control over what object names get exported.
-To export a name, right-click on it in the hierarchy or on the stage and toggle the ‘Export name’ option.
+你可能需要在运行时访问某些对象，例如用于替换字符串的文本运行 (text run)，或用于访问其输入的组件。为了使这些对象在运行时可被发现，你需要显式设置导出其名称。
 
-Objects with names set to be exported can be identified by the brackets wrapping their name.
+以前，如果在编辑器中修改了对象的默认名称，名称就会被导出。这种方法的问题在于，它假设任何重命名的对象都是需要在运行时查找的，而在许多情况下，你可能只是为了更好地组织文件而重命名对象 —— 并不一定需要将它们导出到你的 `.riv` 文件中。因此，我们更改了此方法，以便更精细地控制哪些对象名称被导出。
 
-![Image](images/8a147f5b-4e93-4d45-8984-64746ae1417d.webp)
+要导出名称，请在层级面板或舞台上右键单击对象，并勾选“导出名称 (Export name)”选项。
 
-Animations, State Machines, Events, and Input names do not require manual export.
+设置了导出名称的对象可以通过包裹其名称的括号来识别。
 
-### [​](#benefits-of-optimizing-your-names) Benefits of optimizing your names
+![导出名称括号标识示例](images/8a147f5b-4e93-4d45-8984-64746ae1417d.webp)
 
-Exporting an object’s name into your `.riv` adds a small amount of data. For large, complex files, the name data can start to add up. For that reason, it’s desirable to only export the names you need to reference at runtime.
+动画、状态机、事件和输入名称不需要手动导出。
 
-### [​](#files-created-before-the-introduction-of-explicit-export) Files created before the introduction of explicit export
+### [​](#benefits-of-optimizing-your-names) 优化名称的好处
 
-For files created before this toggle was implemented, we assume any renamed object needs to be discoverable at runtime. That means you may notice a lot of items in your hierarchy being displayed inside brackets when opening an existing file. If, however, you’d prefer to not export the names and make your export size smaller, you can take these steps:
+将对象名称导出到 `.riv` 中会增加少量数据。对于大型、复杂的文件，名称数据可能会累积。因此，最好只导出你在运行时需要引用的名称。
 
-1. From the toolbar menu, select `Export options` > `Remove name exports`.
-2. Individually re-enable name exports for objects you need to access at runtime by right-clicking them in the hierarchy or on the stage and selecting `Export name`.
+### [​](#files-created-before-the-introduction-of-explicit-export) 在引入显式导出之前创建的文件
 
-![Image](images/33b3efc7-3a2d-4c19-9ebd-c2dd1a0636c1.webp)
+对于在此开关实施之前创建的文件，我们假设任何重命名的对象都需要在运行时可被发现。这意味着打开现有文件时，你可能会注意到层级面板中的许多项目都显示在括号内。如果你希望不导出名称并减小导出文件的大小，可以采取以下步骤：
 
-[Keyboard Shortcuts](/docs/editor/keyboard-shortcuts)[Exporting for Video or Static Design](/docs/editor/exporting/exporting-for-video-and-static-design)
+1.  从工具栏菜单中，选择 `Export options` > `Remove name exports`。
+2.  通过在层级面板或舞台上右键单击并选择 `Export name`，为你需要在运行时访问的对象单独重新启用名称导出。
+
+![移除名称导出选项示例](images/33b3efc7-3a2d-4c19-9ebd-c2dd1a0636c1.webp)

@@ -2,158 +2,124 @@ Apple
 
 # Apple
 
-Apple runtime for Rive.
+Rive 的 Apple 运行时。
 
-Note that certain Rive features may not be supported yet for a particular runtime, or may require using the Rive Renderer.For more details, refer to the [feature support](/docs/feature-support) and [choosing a renderer](/docs/runtimes/choose-a-renderer) pages.
+请注意，某些 Rive 功能可能尚未在特定运行时中受支持，或者可能需要使用 Rive 渲染器。有关更多详细信息，请参阅 [功能支持](/docs/feature-support) 和 [选择渲染器](/docs/runtimes/choose-a-renderer) 页面。
 
-## [​](#overview) Overview
+## [​](#overview) 概览
 
-This guide documents how to get started using the Apple runtime library. Rive runtime libraries are open-source. The source is available in its [GitHub repository](https://github.com/rive-app/rive-ios).
-This library contains an API for Apple apps to easily integrate their Rive assets for both UIKit/AppKit and SwiftUI. The runtime can also be installed via Cocoapods or Swift Package Manager.
-The minimum iOS target is **14.0,** and the target for macOS is `13.1`
+本指南记录了如何开始使用 Apple 运行时库。Rive 运行时库是开源的。源代码可在其 [GitHub 仓库](https://github.com/rive-app/rive-ios) 中找到。
+该库包含一个 API，供 Apple 应用程序轻松地将 Rive 资产集成到 UIKit/AppKit 和 SwiftUI 中。该运行时也可以通过 Cocoapods 或 Swift Package Manager 安装。
+最低 iOS 目标为 **14.0**，macOS 目标为 `13.1`。
 
-**Note:** macOS runtime support is included in `v4.0.1+`
+**注意：** macOS 运行时支持包含在 `v4.0.1+` 中。
 
-You can run our Apple example app from the Rive GitHub repository.
+你可以从 Rive GitHub 仓库运行我们的 Apple 示例应用程序。
 
-Copy
-
-Ask AI
-
-```
+```bash
 git clone https://github.com/rive-app/rive-ios
 ```
 
-Open the `Example-iOS` app in XCode and be sure to select the `Preview (iOS)` or `Preview (macOS)` [scheme](https://developer.apple.com/documentation/xcode/customizing-the-build-schemes-for-a-project). The other schemes are for development purposes and require additional configuration, see[CONTRIBUTING.MD](https://github.com/rive-app/rive-ios/blob/main/CONTRIBUTING.md).
+在 XCode 中打开 `Example-iOS` 应用程序，并务必选择 `Preview (iOS)` 或 `Preview (macOS)` [scheme](https://developer.apple.com/documentation/xcode/customizing-the-build-schemes-for-a-project)。其他 scheme 用于开发目的，需要额外的配置，请参阅 [CONTRIBUTING.MD](https://github.com/rive-app/rive-ios/blob/main/CONTRIBUTING.md)。
 ![Image](images/f4e4f632-f24d-47ed-b19c-0c961da458e8.webp)
 
-## [​](#getting-started) Getting Started
+## [​](#getting-started) 快速开始
 
-Follow the steps below for a quick start on integrating Rive into your Apple app.
+按照以下步骤快速在你的 Apple 应用中集成 Rive。
 
-1
+1.  **安装依赖**
 
-Install the dependency
+    #### [​](#via-cocoapods) 通过 Cocoapods
 
-#### [​](#via-cocoapods) Via Cocoapods
+    将以下内容添加到你的 Podspec 文件中：
 
-Add the following to your Podspec file:
+    ```ruby
+    pod 'RiveRuntime'
+    ```
 
-Copy
+    #### [​](#via-swift-package-manager) 通过 Swift Package Manager
 
-Ask AI
+    要通过 Swift Package Manager 安装，请在 Xcode 的包查找器中搜索 `rive-ios` 或完整的 Github 路径：`https://github.com/rive-app/rive-ios`
 
-```
-pod 'RiveRuntime'
-```
+2.  **导入 Rive**
 
-#### [​](#via-swift-package-manager) Via Swift Package Manager
+    在你使用 Rive 运行时的文件顶部添加以下内容：
 
-To install via Swift Package Manager, in the package finder in Xcode, search for `rive-ios` or the full Github path: `https://github.com/rive-app/rive-ios`
+    ```swift
+    import RiveRuntime
+    ```
 
-2
+3.  **v2 运行时使用**
 
-Importing Rive
+    在版本 2.x.x 或更高版本的 Rive Apple 运行时中，你将使用的主要对象是 `RiveViewModel`。它负责创建和与 Rive 资产交互。
 
-Add the following to the top of your file where you utilize the Rive runtime:
+    #### [​](#swiftui) SwiftUI
 
-Copy
+    **设置 RiveViewModel 与 View**
 
-Ask AI
-
-```
-import RiveRuntime
-```
-
-3
-
-v2 Runtime Usage
-
-In Rive Apple runtimes of versions 2.x.x or later, the primary object you’ll use is a `RiveViewModel`. It is responsible for creating and interacting with Rive assets.
-
-#### [​](#swiftui) SwiftUI
-
-**Set up RiveViewModel w/ View**
-
-Copy
-
-Ask AI
-
-```
-struct AnimationView: View {
-    var body: some View {
-        RiveViewModel(fileName: "cool_rive_animation").view()
+    ```swift
+    struct AnimationView: View {
+        var body: some View {
+            RiveViewModel(fileName: "cool_rive_animation").view()
+        }
     }
-}
-```
+    ```
 
-In the above example, you reference the name of a `.riv` asset bundled into your application, but you can also load in a `.riv` file hosted on a remote URL like so:
+    在上面的示例中，你引用了绑定到应用程序中的 `.riv` 资产的名称，但你也可以加载托管在远程 URL 上的 `.riv` 文件，如下所示：
 
-Copy
-
-Ask AI
-
-```
-struct AnimationView: View {
-    var body: some View {
-        RiveViewModel(
-            webURL: "https://cdn.rive.app/animations/off_road_car_v7.riv"
-        ).view()
+    ```swift
+    struct AnimationView: View {
+        var body: some View {
+            RiveViewModel(
+                webURL: "https://cdn.rive.app/animations/off_road_car_v7.riv"
+            ).view()
+        }
     }
-}
-```
+    ```
 
-#### [​](#uikit-storyboard) UIKit - Storyboard
+    #### [​](#uikit-storyboard) UIKit - Storyboard
 
-#### [​](#set-up-riveviewmodel-w/-controller-formatted-on-a-storyboard) Set up RiveViewModel w/ Controller formatted on a Storyboard
+    #### [​](#set-up-riveviewmodel-w/-controller-formatted-on-a-storyboard) 使用 Storyboard 格式化的控制器设置 RiveViewModel
 
-The simplest way of adding Rive to a controller using Storyboards is to make a `RiveViewModel`, and set its view to be the `RiveView` you made in the Storyboard.
+    使用 Storyboard 将 Rive 添加到控制器的最简单方法是创建一个 `RiveViewModel`，并将其视图设置为你在 Storyboard 中创建的 `RiveView`。
 
-Copy
+    ```swift
+    class AnimationViewController: UIViewController {
+        @IBOutlet weak var riveView: RiveView!
+        var simpleVM = RiveViewModel(fileName: "cool_rive_animation")
 
-Ask AI
-
-```
-class AnimationViewController: UIViewController {
-    @IBOutlet weak var riveView: RiveView!
-    var simpleVM = RiveViewModel(fileName: "cool_rive_animation")
-
-    override public func viewDidLoad() {
-        simpleVM.setView(riveView)
+        override public func viewDidLoad() {
+            simpleVM.setView(riveView)
+        }
     }
-}
-```
+    ```
 
-#### [​](#uikit-programmatic) UIKit - Programmatic
+    #### [​](#uikit-programmatic) UIKit - 编程方式 (Programmatic)
 
-#### [​](#set-up-riveviewmodel-w/-controller-from-scratch-in-code) Set up RiveViewModel w/ Controller from scratch in code
+    #### [​](#set-up-riveviewmodel-w/-controller-from-scratch-in-code) 在代码中从头开始使用控制器设置 RiveViewModel
 
-You can also add Rive to a controller purely with code by making the `RiveViewModel`, telling it to create a fresh `RiveView` and then adding it to the view hierarchy.
+    你也可以完全通过代码将 Rive 添加到控制器，方法是创建 `RiveViewModel`，告诉它创建一个新的 `RiveView`，然后将其添加到视图层次结构中。
 
-Copy
+    ```swift
+    class AnimationViewController: UIViewController {
+        var simpleVM = RiveViewModel(fileName: "cool_rive_animation")
 
-Ask AI
-
-```
-class AnimationViewController: UIViewController {
-    var simpleVM = RiveViewModel(fileName: "cool_rive_animation")
-
-    override func viewWillAppear(_ animated: Bool) {
-        let riveView = simpleVM.createRiveView()
-        view.addSubview(riveView)
-        riveView.frame = view.bounds
+        override func viewWillAppear(_ animated: Bool) {
+            let riveView = simpleVM.createRiveView()
+            view.addSubview(riveView)
+            riveView.frame = view.bounds
+        }
     }
-}
-```
+    ```
 
-See subsequent runtime pages to learn how to control animation playback, state machines, and more.
+    查看后续运行时页面以了解如何控制动画播放、状态机等。
 
-## [​](#resources) Resources
+## [​](#resources) 资源
 
-Github: <https://github.com/rive-app/rive-ios> Examples:
+Github: <https://github.com/rive-app/rive-ios> 示例:
 
-- <https://github.com/rive-app/rive-ios/tree/main/Example-iOS>
-- <https://github.com/rive-app/rive-ios/tree/main/Demo-App>
-- Free course from Meng To: <https://designcode.io/swiftui-rive>
+-   <https://github.com/rive-app/rive-ios/tree/main/Example-iOS>
+-   <https://github.com/rive-app/rive-ios/tree/main/Demo-App>
+-   Meng To 的免费课程: <https://designcode.io/swiftui-rive>
 
-[Migration Guide](/docs/runtimes/flutter/migration-guide)[Migrating from 1.x.x to 2.x.x](/docs/runtimes/apple/migrating-from-1.x.x-to-2.x.x)
+[迁移指南](/docs/runtimes/flutter/migration-guide)[从 1.x.x 迁移到 2.x.x](/docs/runtimes/apple/migrating-from-1.x.x-to-2.x.x)

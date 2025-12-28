@@ -2,355 +2,303 @@ React Native
 
 # React Native
 
-React Native runtime for Rive.
+Rive 的 React Native 运行时。
 
-Note that certain Rive features may not be supported yet for a particular runtime, or may require using the Rive Renderer.For more details, refer to the [feature support](/docs/feature-support) and [choosing a renderer](/docs/runtimes/choose-a-renderer) pages.
+请注意，某些 Rive 功能可能尚未在特定运行时中受支持，或者可能需要使用 Rive 渲染器。有关更多详细信息，请参阅 [功能支持](/docs/feature-support) 和 [选择渲染器](/docs/runtimes/choose-a-renderer) 页面。
 
-🚀 **The new Rive React Native runtime is now available!** Built with Nitro for improved performance and better React Native integration.**Get started:**
+🚀 **新的 Rive React Native 运行时现已推出！** 基于 Nitro 构建，性能更佳，React Native 集成更好。**现在开始：**
 
-- [GitHub](https://github.com/rive-app/rive-nitro-react-native)
-- [NPM](https://www.npmjs.com/package/@rive-app/react-native)
+-   [GitHub](https://github.com/rive-app/rive-nitro-react-native)
+-   [NPM](https://www.npmjs.com/package/@rive-app/react-native)
 
-**Migration Timeline:**
+**迁移时间表：**
 
-- **Short term:** Complete the new runtime, see [Feature Support](https://github.com/rive-app/rive-nitro-react-native?tab=readme-ov-file#feature-support) and [Roadmap](https://github.com/rive-app/rive-nitro-react-native?tab=readme-ov-file#roadmap)
-- **Medium term:** Address major concerns in the legacy package while supporting migration
-- **Long term:** Full migration to the new package
+-   **短期：** 完成新运行时，请参阅 [功能支持](https://github.com/rive-app/rive-nitro-react-native?tab=readme-ov-file#feature-support) 和 [路线图](https://github.com/rive-app/rive-nitro-react-native?tab=readme-ov-file#roadmap)
+-   **中期：** 解决现有旧包中的主要问题，同时支持迁移
+-   **长期：** 完全迁移到新包
 
-We’re actively gathering feedback to improve the new runtime. Please share your thoughts and report any issues you encounter.
+我们正在积极收集反馈以改进新运行时。请分享你的想法并报告你遇到的任何问题。
 
-## [​](#overview) Overview
+## [​](#overview) 概览
 
-This guide documents how to get started using the Rive React Native runtime. The source for the new runtime is available in its [GitHub repository](https://github.com/rive-app/rive-nitro-react-native).
+本指南记录了如何开始使用 Rive React Native 运行时。新运行时的源代码可在其 [GitHub 仓库](https://github.com/rive-app/rive-nitro-react-native) 中找到。
 
-- New Runtime (Recommended)
-- Legacy Runtime
+-   新运行时（推荐）
+-   旧版运行时
 
-## [​](#requirements) Requirements
+## [​](#requirements) 要求
 
-- **React Native**: 0.78 or later (0.79+ recommended for improved Android error messages)
-- **Expo SDK**: 53 or later (for Expo users)
-- **iOS**: 15.1 or later
-- **Android**: SDK 24 (Android 7.0) or later
-- **Xcode**: 16.4 or later
-- **JDK**: 17 or later
-- **Nitro Modules**: 0.25.2 or later
+-   **React Native**: 0.78 或更高版本（推荐 0.79+ 以改善 Android 错误消息）
+-   **Expo SDK**: 53 或更高版本（适用于 Expo 用户）
+-   **iOS**: 15.1 或更高版本
+-   **Android**: SDK 24 (Android 7.0) 或更高版本
+-   **Xcode**: 16.4 或更高版本
+-   **JDK**: 17 或更高版本
+-   **Nitro Modules**: 0.25.2 或更高版本
 
-## [​](#quick-start) Quick Start
+## [​](#quick-start) 快速开始
 
-Follow these quick start steps to get familiar with the Rive React Native runtime.
+按照这些快速入门步骤熟悉 Rive React Native 运行时。
 
-[## Rive File
+[## Rive 文件
 
-Remix/download the Rive file used in this quick start guide](https://rive.app/marketplace/24637-46037-health-bar-data-binding-quick-start/)[## Complete example
+改编/下载本快速入门指南中使用的 Rive 文件](https://rive.app/marketplace/24637-46037-health-bar-data-binding-quick-start/)[## 完整示例
 
-View the complete quick start example](https://github.com/rive-app/rive-nitro-react-native/blob/main/example/src/pages/QuickStart.tsx)
+查看完整的快速入门示例](https://github.com/rive-app/rive-nitro-react-native/blob/main/example/src/pages/QuickStart.tsx)
 
-1
+1.  **安装依赖**
 
-Install the dependency
+    ```bash
+    npm install @rive-app/react-native react-native-nitro-modules
+    # or for Yarn
+    yarn add @rive-app/react-native react-native-nitro-modules
+    ```
 
-Copy
+    `react-native-nitro-modules` 是必需的，因为此库依赖于 [Nitro Modules](https://nitro.margelo.com/)。
 
-Ask AI
+2.  **设置**
 
-```
-npm install @rive-app/react-native react-native-nitro-modules
-# or for Yarn
-yarn add @rive-app/react-native react-native-nitro-modules
-```
+    导入必要的组件并为后续步骤定义样式。
 
-`react-native-nitro-modules` is required as this library relies on [Nitro Modules](https://nitro.margelo.com/).
+    **导入**
 
-2
+    ```javascript
+    import {
+      RiveView,
+      useRive,
+      useRiveFile,
+      useRiveNumber,
+      useRiveTrigger,
+      useViewModelInstance,
+      Fit,
+    } from '@rive-app/react-native';
+    ```
 
-Setup
+    **样式**
 
-Import the necessary components and define styles for the following steps.
+    ```javascript
+    const styles = StyleSheet.create({
+      container: {
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+      },
+      rive: {
+        width: '100%',
+        height: 400,
+      },
+    });
+    ```
 
-Imports
+3.  **Rive 文件和组件**
 
-Copy
+    `RiveView` 组件显示 Rive 图形。它需要一个 prop：`file`，即一个 `RiveFile` 对象。使用 `useRiveFile` Hook 加载 **riv** 文件并创建 `RiveFile` 对象。此对象可以被缓存并在多个组件中复用。
 
-Ask AI
+    **加载文件**
 
-```
-import {
-  RiveView,
-  useRive,
-  useRiveFile,
-  useRiveNumber,
-  useRiveTrigger,
-  useViewModelInstance,
-  Fit,
-} from '@rive-app/react-native';
-```
+    ```javascript
+    export default function QuickStart() {
+      const { riveFile } = useRiveFile(
+        require('path/to/quick_start.riv')
+      );
 
-Styles
+      return (
+        <View style={styles.container}>
+          {riveFile && <RiveView file={riveFile} style={styles.rive} />}
+        </View>
+      );
+    }
+    ```
 
-Copy
+    延伸阅读：
 
-Ask AI
+    [## Props
 
-```
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  rive: {
-    width: '100%',
-    height: 400,
-  },
-});
-```
+    `RiveView` 可用的 view props](/docs/runtimes/react-native/props)[## 加载 Rive 文件
 
-3
+    如何在你的应用中加载 Rive 文件](/docs/runtimes/react-native/loading-rive-files)[## 缓存 Rive 文件
 
-Rive File and Component
-
-The `RiveView` component displays Rive graphics. It requires a single prop: `file`, a `RiveFile` object.Use the `useRiveFile` hook to load a **riv** file and create a `RiveFile` object. This object can be cached and reused across multiple components.
-
-Loading a file
-
-Copy
-
-Ask AI
-
-```
-export default function QuickStart() {
-  const { riveFile } = useRiveFile(
-    require('path/to/quick_start.riv')
-  );
-
-  return (
-    <View style={styles.container}>
-      {riveFile && <RiveView file={riveFile} style={styles.rive} />}
-    </View>
-  );
-}
-```
-
-Further reading:
-
-[## Props
-
-Available view props for `RiveView`](/docs/runtimes/react-native/props)[## Loading Rive Files
-
-How to load Rive files in your app](/docs/runtimes/react-native/loading-rive-files)[## Caching Rive Files
-
-Cache Rive files for better performance](/docs/runtimes/caching-a-rive-file)
-
-4
-
-Layout
-
-Configure how the graphic fits within its container.For this example, we’ll set `fit` to `Layout`, which automatically resizes the artboard to match the view size. This is ideal for responsive Rive graphics built with [Layouts](/docs/editor/layouts/layouts-overview).
-
-Layout
-
-Copy
-
-Ask AI
-
-```
-<RiveView
-  file={riveFile}
-  style={styles.rive}
-  fit={Fit.Layout}
-/>
-```
-
-Further reading:
-
-[## Runtime layout
-
-Control how Rive graphics fit and align within their containers](/docs/runtimes/layout)
-
-5
-
-View Reference
-
-Use the `useRive()` hook to access the Rive view reference for programmatic control.
-
-useRive hook
-
-Copy
-
-Ask AI
-
-```
-export default function QuickStart() {
-  const { riveFile } = useRiveFile(
-    require('path/to/quick_start.riv')
-  );
-  const { riveViewRef, setHybridRef } = useRive();
-
-  return (
-    <View style={styles.container}>
-      {riveFile && (
-        <RiveView
-          hybridRef={setHybridRef}
-          file={riveFile}
-          fit={Fit.Layout}
-          style={styles.rive}
-        />
-      )}
-    </View>
-  );
-}
-```
-
-Further reading:
-
-[## View methods
-
-See all the available view reference methods.](/docs/runtimes/react-native/rive-ref-methods)[## Hybrid Views
-
-Read more on Nitro Hybrid Views.](https://nitro.margelo.com/docs/hybrid-views)
-
-6
-
-Data binding
-
-Create the view model instance manually using the `useViewModelInstance` hook and pass it to the view.This approach lets you set initial property values in the `onInit` callback before the view loads and decouples the `ViewModelInstance` from the `RiveView`.
-
-Manually create view model instance
-
-Copy
-
-Ask AI
-
-```
-export default function QuickStart() {
-  const { riveFile } = useRiveFile(
-    require('path/to/quick_start.riv')
-  );
-  const { riveViewRef, setHybridRef } = useRive();
-  const viewModelInstance = useViewModelInstance(riveFile, {
-    onInit: (vmi) => (vmi.numberProperty('health')!.value = 20),
-  });
-
-  return (
-    <View style={styles.container}>
-      {riveFile && viewModelInstance && (
-        <RiveView
-          hybridRef={setHybridRef}
-          file={riveFile}
-          fit={Fit.Layout}
-          style={styles.rive}
-          dataBind={viewModelInstance}
-        />
-      )}
-    </View>
-  );
-}
-```
-
-Use the view model property hooks to update and listen to property changes.
-
-Property hooks
-
-Copy
-
-Ask AI
-
-```
-export default function QuickStart() {
-  const { riveFile } = useRiveFile(
-    require('path/to/quick_start.riv')
-  );
-  const { riveViewRef, setHybridRef } = useRive();
-  const viewModelInstance = useViewModelInstance(riveFile, {
-    onInit: (vmi) => (vmi.numberProperty('health')!.value = 20),
-  });
-
-  const { value: health, setValue: setHealth } = useRiveNumber(
-    'health',
-    viewModelInstance
-  );
-
-  console.log('health', health);
-
-  const { trigger: gameOverTrigger } = useRiveTrigger(
-    'gameOver',
-    viewModelInstance,
-    { onTrigger: () => console.log('Game Over Triggered') }
-  );
-
-  const handleTakeDamage = () => {
-    setHealth((h) => (h ?? 0) - 7);
-    riveViewRef!.playIfNeeded();
-  };
-
-  const handleMaxHealth = () => {
-    setHealth(100);
-    riveViewRef!.playIfNeeded();
-  };
-
-  const handleGameOver = () => {
-    setHealth(0);
-    gameOverTrigger();
-    riveViewRef!.playIfNeeded();
-  };
-
-  return (
-    <View style={styles.container}>
-      {riveFile && viewModelInstance && (
-        <RiveView
-          hybridRef={setHybridRef}
-          file={riveFile}
-          fit={Fit.Layout}
-          style={styles.rive}
-          dataBind={viewModelInstance}
-        />
-      )}
-      <Button onPress={handleTakeDamage} title="Take Damage" />
-      <Button onPress={handleMaxHealth} title="Max Health" />
-      <Button onPress={handleGameOver} title="Game Over" />
-    </View>
-  );
-}
-```
-
-We call `playIfNeeded` to force the state machine to play. Under some circumstances, the state machine might be settled if there is no active timeline in the graphic.This is a temporary workaround. In the future, this will happen automatically.
-
-Further reading:
-
-[## Data binding
-
-See the runtime data binding documentation for more information.](/docs/runtimes/data-binding)
-
-See our [example app](https://github.com/rive-app/rive-nitro-react-native/tree/main/example) for more usage examples.
-
-## [​](#key-components) Key Components
+    缓存 Rive 文件以获得更好的性能](/docs/runtimes/caching-a-rive-file)
+
+4.  **布局**
+
+    配置图形如何适应其容器。对于此示例，我们将 `fit` 设置为 `Layout`，这会自动调整画板大小以匹配视图大小。这对于使用 [布局 (Layouts)](/docs/editor/layouts/layouts-overview) 构建的响应式 Rive 图形非常理想。
+
+    **布局**
+
+    ```javascript
+    <RiveView
+      file={riveFile}
+      style={styles.rive}
+      fit={Fit.Layout}
+    />
+    ```
+
+    延伸阅读：
+
+    [## 运行时布局
+
+    控制 Rive 图形在其容器内的适应和对齐方式](/docs/runtimes/layout)
+
+5.  **视图引用 (View Reference)**
+
+    使用 `useRive()` Hook 访问 Rive 视图引用以进行编程控制。
+
+    **useRive Hook**
+
+    ```javascript
+    export default function QuickStart() {
+      const { riveFile } = useRiveFile(
+        require('path/to/quick_start.riv')
+      );
+      const { riveViewRef, setHybridRef } = useRive();
+
+      return (
+        <View style={styles.container}>
+          {riveFile && (
+            <RiveView
+              hybridRef={setHybridRef}
+              file={riveFile}
+              fit={Fit.Layout}
+              style={styles.rive}
+            />
+          )}
+        </View>
+      );
+    }
+    ```
+
+    延伸阅读：
+
+    [## 视图方法
+
+    查看所有可用的视图引用方法。](/docs/runtimes/react-native/rive-ref-methods)[## Hybrid Views
+
+    阅读更多关于 Nitro Hybrid Views 的信息。](https://nitro.margelo.com/docs/hybrid-views)
+
+6.  **数据绑定**
+
+    使用 `useViewModelInstance` Hook 手动创建视图模型实例并将其传递给视图。这种方法允许你在视图加载之前的 `onInit` 回调中设置初始属性值，并解耦 `ViewModelInstance` 与 `RiveView`。
+
+    **手动创建视图模型实例**
+
+    ```javascript
+    export default function QuickStart() {
+      const { riveFile } = useRiveFile(
+        require('path/to/quick_start.riv')
+      );
+      const { riveViewRef, setHybridRef } = useRive();
+      const viewModelInstance = useViewModelInstance(riveFile, {
+        onInit: (vmi) => (vmi.numberProperty('health')!.value = 20),
+      });
+
+      return (
+        <View style={styles.container}>
+          {riveFile && viewModelInstance && (
+            <RiveView
+              hybridRef={setHybridRef}
+              file={riveFile}
+              fit={Fit.Layout}
+              style={styles.rive}
+              dataBind={viewModelInstance}
+            />
+          )}
+        </View>
+      );
+    }
+    ```
+
+    使用视图模型属性 Hooks 更新和监听属性更改。
+
+    **属性 Hooks**
+
+    ```javascript
+    export default function QuickStart() {
+      const { riveFile } = useRiveFile(
+        require('path/to/quick_start.riv')
+      );
+      const { riveViewRef, setHybridRef } = useRive();
+      const viewModelInstance = useViewModelInstance(riveFile, {
+        onInit: (vmi) => (vmi.numberProperty('health')!.value = 20),
+      });
+
+      const { value: health, setValue: setHealth } = useRiveNumber(
+        'health',
+        viewModelInstance
+      );
+
+      console.log('health', health);
+
+      const { trigger: gameOverTrigger } = useRiveTrigger(
+        'gameOver',
+        viewModelInstance,
+        { onTrigger: () => console.log('Game Over Triggered') }
+      );
+
+      const handleTakeDamage = () => {
+        setHealth((h) => (h ?? 0) - 7);
+        riveViewRef!.playIfNeeded();
+      };
+
+      const handleMaxHealth = () => {
+        setHealth(100);
+        riveViewRef!.playIfNeeded();
+      };
+
+      const handleGameOver = () => {
+        setHealth(0);
+        gameOverTrigger();
+        riveViewRef!.playIfNeeded();
+      };
+
+      return (
+        <View style={styles.container}>
+          {riveFile && viewModelInstance && (
+            <RiveView
+              hybridRef={setHybridRef}
+              file={riveFile}
+              fit={Fit.Layout}
+              style={styles.rive}
+              dataBind={viewModelInstance}
+            />
+          )}
+          <Button onPress={handleTakeDamage} title="Take Damage" />
+          <Button onPress={handleMaxHealth} title="Max Health" />
+          <Button onPress={handleGameOver} title="Game Over" />
+        </View>
+      );
+    }
+    ```
+
+    我们调用 `playIfNeeded` 强制状态机播放。在某些情况下，如果图形中没有活动的时间轴，状态机可能会停止。这是一个临时的解决方法。将来，这将自动发生。
+
+    延伸阅读：
+
+    [## 数据绑定
+
+    查看运行时数据绑定文档以获取更多信息。](/docs/runtimes/data-binding)
+
+    查看我们的 [示例应用](https://github.com/rive-app/rive-nitro-react-native/tree/main/example) 获取更多使用示例。
+
+## [​](#key-components) 关键组件 (Key Components)
 
 ### [​](#riveview) `RiveView`
 
-The component to render Rive content:
+用于渲染 Rive 内容的组件：
 
-Copy
-
-Ask AI
-
-```
+```javascript
 <RiveView
   file={riveFile}
 />
 ```
 
-See the available [props](/docs/runtimes/react-native/props) and [methods](/docs/runtimes/react-native/rive-ref-methods).
+查看可用的 [props](/docs/runtimes/react-native/props) 和 [methods](/docs/runtimes/react-native/rive-ref-methods)。
 
 ### [​](#userivefile) `useRiveFile`
 
-Hook for loading Rive files from a URL or local source:
+用于从 URL 或本地源加载 Rive 文件的 Hook：
 
-Copy
-
-Ask AI
-
-```
+```javascript
 const { riveFile } = useRiveFile({
   url: 'https://cdn.rive.app/animations/vehicles.riv',
   // or
@@ -358,17 +306,13 @@ const { riveFile } = useRiveFile({
 });
 ```
 
-See [loading Rive files](/docs/runtimes/react-native/loading-rive-files) and [caching Rive files](/docs/runtimes/caching-a-rive-file) for more information.
+查看 [加载 Rive 文件](/docs/runtimes/react-native/loading-rive-files) 和 [缓存 Rive 文件](/docs/runtimes/caching-a-rive-file) 获取更多信息。
 
 ### [​](#userive) `useRive`
 
-Hook to access the Rive view reference for programmatic control:
+用于访问 Rive 视图引用以进行编程控制的 Hook：
 
-Copy
-
-Ask AI
-
-```
+```javascript
 const { riveViewRef, setHybridRef } = useRive();
 
 <RiveView
@@ -377,34 +321,35 @@ const { riveViewRef, setHybridRef } = useRive();
 />
 ```
 
-This is a [Nitro Hybrid View](https://nitro.margelo.com/docs/hybrid-views). See the avaiable [view reference methods](/docs/runtimes/react-native/rive-ref-methods).
+这是一个 [Nitro Hybrid View](https://nitro.margelo.com/docs/hybrid-views)。查看可用的 [视图引用方法](/docs/runtimes/react-native/rive-ref-methods)。
 
 ### [​](#useviewmodelinstance) `useViewModelInstance`
 
-Hook to create a view model instance from a `RiveFile`, `ViewModel`, or `RiveViewRef`:
+用于从 `RiveFile`、`ViewModel` 或 `RiveViewRef` 创建视图模型实例的 Hook：
 
-Copy
-
-Ask AI
-
-```
+```javascript
 // Get default instance from RiveFile (recommended)
+// 从 RiveFile 获取默认实例（推荐）
 const instance = useViewModelInstance(riveFile);
 
 // or
 // Get named instance from a ViewModel
+// 从 ViewModel 获取命名实例
 const namedInstance = useViewModelInstance(viewModel, { name: 'My Instance' });
 
 // or
 // Create a new blank instance from a ViewModel
+// 从 ViewModel 创建新的空白实例
 const newInstance = useViewModelInstance(viewModel, { useNew: true });
 
 // or
 // With required: true (throws if null, use with Error Boundary)
+// 使用 required: true（如果为 null 则抛出错误，与错误边界一起使用）
 const instance = useViewModelInstance(riveFile, { required: true });
 
 // or
 // With onInit to set initial values synchronously
+// 使用 onInit 同步设置初始值
 const instance = useViewModelInstance(riveFile, {
   onInit: (vmi) => {
     vmi.numberProperty('count')?.set(10);
@@ -413,13 +358,9 @@ const instance = useViewModelInstance(riveFile, {
 });
 ```
 
-Pass the `dataBind` prop in `RiveView`.
+在 `RiveView` 中传递 `dataBind` prop。
 
-Copy
-
-Ask AI
-
-```
+```javascript
 return (
   <RiveView
     file={riveFile}
@@ -428,98 +369,73 @@ return (
 );
 ```
 
-You can also get the auto-bound instance from a `RiveViewRef`:
+你也可以从 `RiveViewRef` 获取自动绑定的实例：
 
-Copy
-
-Ask AI
-
-```
+```javascript
 import { useRive, useViewModelInstance } from '@rive-app/react-native';
 
 const { riveViewRef, setHybridRef } = useRive();
 const instance = useViewModelInstance(riveViewRef);
 ```
 
-See the [runtime data binding documentation](/docs/runtimes/data-binding) for more information.
+查看 [运行时数据绑定文档](/docs/runtimes/data-binding) 获取更多信息。
 
-## [​](#resources) Resources
+## [​](#resources) 资源
 
-[## GitHub](https://github.com/rive-app/rive-nitro-react-native)[## NPM](https://www.npmjs.com/package/@rive-app/react-native)[## Example App](https://github.com/rive-app/rive-nitro-react-native/tree/main/example)
+[## GitHub](https://github.com/rive-app/rive-nitro-react-native)[## NPM](https://www.npmjs.com/package/@rive-app/react-native)[## 示例应用](https://github.com/rive-app/rive-nitro-react-native/tree/main/example)
 
-The legacy runtime is still supported, but we recommend migrating to the new runtime for better performance and features.
+旧版运行时仍然受支持，但我们建议迁移到新运行时以获得更好的性能和功能。
 
-This guide documents how to get started using the legacy React Native runtime library. The source is available in its [GitHub repository](https://github.com/rive-app/rive-react-native). This library contains an API for React Native apps to easily integrate Rive assets.The minimum iOS target is **14.0**
+本指南记录了如何开始使用旧版 React Native 运行时库。源代码可在其 [GitHub 仓库](https://github.com/rive-app/rive-react-native) 中找到。此库包含一个 API，供 React Native 应用轻松集成 Rive 资产。最低 iOS 目标版本为 **14.0**。
 
-See [our documentation](/docs/runtimes/react-native/adding-rive-to-expo) to add
-Rive to an Expo app.
+请参阅 [我们的文档](/docs/runtimes/react-native/adding-rive-to-expo) 以将 Rive 添加到 Expo 应用中。
 
-## [​](#getting-started) Getting Started
+## [​](#getting-started) 快速开始 (旧版)
 
-Follow the steps below for a quick start on integrating Rive into your React Native app.
+按照以下步骤快速在你的 React Native 应用中集成 Rive。
 
-1
+1.  **安装依赖**
 
-Install the dependency
+    ```bash
+    npm install rive-react-native
+    # or for Yarn
+    yarn add rive-react-native
+    ```
 
-Copy
+2.  **iOS - Pod Install**
 
-Ask AI
+    `cd` 进入 `ios` 文件夹并运行 `pod install`（如果部署到 iOS）。
 
-```
-npm install rive-react-native
-# or for Yarn
-yarn add rive-react-native
-```
+    如果你在这里遇到问题，你可能需要将 `ios` 部署版本目标至少，提高到 `14.0`。你可以在 `ios/` 文件夹的 `Podfile` 中找到此版本。
 
-2
+3.  **Android - 设置 Kotlin 依赖解析**
 
-iOS - Pod Install
+    此步骤可能是可选的 - 但是，如果 React Native 项目中的 Android 设置没有设置 Kotlin `v1.8.0+`，你在构建项目时可能会遇到重复类问题。为了缓解这些问题，正如 [Kotlin 文档](https://kotlinlang.org/docs/gradle-configure-project.html#versions-alignment-of-transitive-dependencies) 所建议的那样，将以下内容添加到应用程序 `build.gradle` 文件的 `dependencies` 中以处理版本对齐：
 
-`cd` inside the `ios` folder and run `pod install` (if deploying to iOS)
+    ```gradle
+    dependencies {
+        implementation platform('org.jetbrains.kotlin:kotlin-bom:1.8.0')
+        ...
+    }
+    ```
 
-If you run into issues here, you may need to bump the `ios` deployment version target to at least `14.0`. You can find this version in the `Podfile` of the `ios/` folder.
+4.  **添加 Rive 组件**
 
-3
+    ```javascript
+    import Rive from 'rive-react-native';
 
-Android - Set Kotlin Dependency Resolution
+    function App() {
+      return <Rive
+          url="https://public.rive.app/community/runtime-files/2195-4346-avatar-pack-use-case.riv"
+          artboardName="Avatar 1"
+          stateMachineName="avatar"
+          style={{width: 400, height: 400}}
+      />;
+    }
+    ```
 
-This step may be optional - however, if your Android setup in the React Native project does not have Kotlin `v1.8.0+` set up, you may run into duplicate class issues when building the project. To mitigate these issues, as suggested by [Kotlin docs](https://kotlinlang.org/docs/gradle-configure-project.html#versions-alignment-of-transitive-dependencies), add the following to your dependencies in your application’s `build.gradle` file to deal with version alignment:
+## [​](#resources-2) 资源 (旧版)
 
-Copy
+[## GitHub](https://github.com/rive-app/rive-react-native)[## 示例应用](https://github.com/rive-app/rive-react-native/tree/main/example)
 
-Ask AI
-
-```
-dependencies {
-    implementation platform('org.jetbrains.kotlin:kotlin-bom:1.8.0')
-    ...
-}
-```
-
-4
-
-Add the Rive component
-
-Copy
-
-Ask AI
-
-```
-import Rive from 'rive-react-native';
-
-function App() {
-  return <Rive
-      url="https://public.rive.app/community/runtime-files/2195-4346-avatar-pack-use-case.riv"
-      artboardName="Avatar 1"
-      stateMachineName="avatar"
-      style={{width: 400, height: 400}}
-  />;
-}
-```
-
-## [​](#resources-2) Resources
-
-[## GitHub](https://github.com/rive-app/rive-react-native)[## Example App](https://github.com/rive-app/rive-react-native/tree/main/example)
-
-[Migrating from v3 to v4](/docs/runtimes/react/migrating-from-v3-to-v4)[Runtime Concepts](/docs/runtimes/react-native/runtime-concepts)
+[从 v3 迁移到 v4](/docs/runtimes/react/migrating-from-v3-to-v4)[运行时概念](/docs/runtimes/react-native/runtime-concepts)

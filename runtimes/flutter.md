@@ -2,406 +2,347 @@ Flutter
 
 # Flutter
 
-Flutter runtime for Rive.
+Rive 的 Flutter 运行时。
 
-Note that certain Rive features may not be supported yet for a particular runtime, or may require using the Rive Renderer.For more details, refer to the [feature support](/docs/feature-support) and [choosing a renderer](/docs/runtimes/choose-a-renderer) pages.
+请注意，某些 Rive 功能可能尚未在特定运行时中受支持，或者可能需要使用 Rive 渲染器。有关更多详细信息，请参阅 [功能支持](/docs/feature-support) 和 [选择渲染器](/docs/runtimes/choose-a-renderer) 页面。
 
-## [​](#overview) Overview
+## [​](#overview) 概览
 
-This guide documents how to use the Rive Flutter runtime to easily integrate Rive graphics in your Flutter apps.
+本指南记录了如何使用 Rive Flutter 运行时在你的 Flutter 应用中轻松集成 Rive 图形。
 
-The latest version of Rive Flutter is currently published as a dev release `0.14.0-dev.x`. This means that while the package is stable and ready for production use, we are still actively developing new features and improvements. We recommend using the latest dev version to take advantage of the newest features and fixes.
+Rive Flutter 的最新版本目前作为开发版本 `0.14.0-dev.x` 发布。这意味着虽然该包是稳定的并可用于生产，但我们仍在积极开发新功能和改进。我们建议使用最新的开发版本以利用最新的功能和修复。
 
-Already using Rive Flutter? See our [Migration
-Guide](/docs/runtimes/flutter/migration-guide) for information on adopting the latest `0.14.x` version.
+已经在用 Rive Flutter 了？请参阅我们的 [迁移指南](/docs/runtimes/flutter/migration-guide) 以获取有关采用最新 `0.14.x` 版本的信息。
 
-## [​](#quick-start) Quick start
+## [​](#quick-start) 快速开始
 
-See our [example app](https://github.com/rive-app/rive-flutter/tree/master/example).
+查看我们的 [示例应用](https://github.com/rive-app/rive-flutter/tree/master/example)。
 
-## [​](#getting-started) Getting started
+## [​](#getting-started) 快速开始
 
-Follow the steps below to integrate Rive into your Flutter apps.
+按照以下步骤将 Rive 集成到你的 Flutter 应用中。
 
-1
+1.  **添加 Rive 包依赖**
 
-Add the Rive package dependency
+    查看 Rive 的 [pub.dev](https://pub.dev/packages/rive) 页面以获取最新版本。
 
-Check out Rive’s [pub.dev](https://pub.dev/packages/rive) page to get the latest version.
+    ```yaml
+    # pubspec.yaml
+    dependencies:
+      rive: ^0.14.0-dev.6 # or latest dev version
+    ```
 
-Copy
+2.  **导入 Rive 包**
 
-Ask AI
+    在你想要集成 Rive 动画的文件中导入 Rive 运行时库。
 
-```
-# pubspec.yaml
-dependencies:
-  rive: ^0.14.0-dev.6 # or latest dev version
-```
+    ```dart
+    import 'package:rive/rive.dart';
+    ```
 
-2
+    考虑使用命名导入以避免与其他库冲突：
 
-Import the Rive package
+    ```dart
+    import 'package:rive/rive.dart' as rive;
+    ```
 
-Import the Rive runtime library in the file you’re looking to integrate Rive animations into.
+3.  **初始化 Rive**
 
-Copy
+    鼓励你在应用启动时或使用 Rive 之前调用 `await RiveNative.init()`。例如，在 `main.dart` 中。当你第一次加载 Rive 文件时，这会自动调用，但如果你想确保在显示第一个图形之前加载 Rive，请手动调用它。
 
-Ask AI
+    ```dart
+    import 'package:rive/rive.dart';
 
-```
-import 'package:rive/rive.dart';
-```
-
-Consider doing a named import to avoid conflicts with other libraries:
-
-Copy
-
-Ask AI
-
-```
-import 'package:rive/rive.dart' as rive;
-```
-
-3
-
-Initialize Rive
-
-You’re encouraged to call `await RiveNative.init()` at the start of your app, or before you use Rive. For example, in `main.dart`. This will automatically be called the first time you load a Rive file, but if you want to ensure Rive is loaded before showing your first graphic, call it manually.
-
-Copy
-
-Ask AI
-
-```
-import 'package:rive/rive.dart';
-
-Future<void> main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  // Call init before using Rive.
-  await RiveNative.init();
-  runApp(const MyApp());
-}
-```
-
-4
-
-Add a Rive widget
-
-There are several ways to render Rive graphics in Flutter. We recommend using the `RiveWidget`, and optionally the `RiveWidgetBuilder`, or `RivePanel`.
-
-- `RiveWidget` is responsible for rendering the graphic and exposing common view configuration.
-- `RiveWidgetBuilder` handles file loading, error states, and resource management automatically.
-- `RivePanel` is a higher-level inherited widget that creates a shared texture to paint multiple `RiveWidget`s to. Only usable when using the Rive Renderer (`Factory.rive`). This can drastically improve performance when showing many Rive graphics at once by reducing the number of textures and avoiding WebGL context limitations on the web.
-
-- Using RiveWidgetBuilder
-- Using RiveWidget directly
-- Using RivePanel
-
-Copy
-
-Ask AI
-
-```
-class ExampleRiveBuilder extends StatefulWidget {
-  const ExampleRiveBuilder({super.key});
-
-  @override
-  State<ExampleRiveBuilder> createState() => _ExampleRiveBuilderState();
-}
-
-class _ExampleRiveBuilderState extends State<ExampleRiveBuilder> {
-  late final fileLoader = FileLoader.fromAsset("assets/vehicles.riv", riveFactory: Factory.rive);
-
-  @override
-  void dispose() {
-    fileLoader.dispose();
-    super.dispose();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return RiveWidgetBuilder(
-      fileLoader: fileLoader,
-      builder: (context, state) => switch (state) {
-        RiveLoading() => const Center(child: CircularProgressIndicator()),
-        RiveFailed() => ErrorWidget.withDetails(
-            message: state.error.toString(),
-            error: FlutterError(state.error.toString()),
-          ),
-        RiveLoaded() => RiveWidget(
-            controller: state.controller,
-            fit: Fit.cover,
-          )
-      },
-    );
-  }
-}
-```
-
-Copy
-
-Ask AI
-
-```
-class ExampleBasic extends StatefulWidget {
-  const ExampleBasic({super.key});
-
-  @override
-  State<ExampleBasic> createState() => _ExampleBasicState();
-}
-
-class _ExampleBasicState extends State<ExampleBasic> {
-  late File file;
-  late RiveWidgetController controller;
-  bool isInitialized = false;
-
-  @override
-  void initState() {
-    super.initState();
-    initRive();
-  }
-
-  void initRive() async {
-    file = (await File.asset("assets/vehicles.riv", riveFactory: Factory.rive))!;
-    controller = RiveWidgetController(file);
-    setState(() => isInitialized = true);
-  }
-
-  @override
-  void dispose() {
-    file.dispose();
-    controller.dispose();
-    super.dispose();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    if (!isInitialized) {
-      return const Center(child: CircularProgressIndicator());
+    Future<void> main() async {
+      WidgetsFlutterBinding.ensureInitialized();
+      // Call init before using Rive.
+      await RiveNative.init();
+      runApp(const MyApp());
     }
-    return RiveWidget(
-      controller: controller,
-      fit: Fit.cover,
-    );
-  }
-}
-```
+    ```
 
-Steps:
+4.  **添加 Rive Widget**
 
-1. Wrap the `RiveWidget`s that should draw to the same texture with a single inherited `RivePanel`.
-2. Set `useSharedTexture: true` in each `RiveWidget` that should draw to the shared texture.
-3. (Optional) Set `drawOrder` in each `RiveWidget` to control the order they are drawn in. Lower numbers are drawn first.
+    在 Flutter 中有几种渲染 Rive 图形的方法。我们建议使用 `RiveWidget`，并可选择使用 `RiveWidgetBuilder` 或 `RivePanel`。
 
-Copy
+    -   `RiveWidget` 负责渲染图形并暴露常用的视图配置。
+    -   `RiveWidgetBuilder` 自动处理文件加载、错误状态和资源管理。
+    -   `RivePanel` 是一个更高级别的 Inherited Widget，它创建一个共享纹理供多个 `RiveWidget` 绘制。仅在使用 Rive 渲染器 (`Factory.rive`) 时可用。当通过减少纹理数量并避免 Web 上的 WebGL 上下文限制来一次显示许多 Rive 图形时，这可以大大提高性能。
 
-Ask AI
+    -   **使用 RiveWidgetBuilder**
+    -   **直接使用 RiveWidget**
+    -   **使用 RivePanel**
 
-```
- class ExampleRivePanel extends StatelessWidget {
-   const ExampleRivePanel({super.key});
+    ```dart
+    class ExampleRiveBuilder extends StatefulWidget {
+      const ExampleRiveBuilder({super.key});
 
-   @override
-   Widget build(BuildContext context) {
-     return const RivePanel(
-       backgroundColor: Colors.red,
-       child: ListViewExample(),
-     );
-   }
-}
-class ListViewExample extends StatefulWidget {
-  const ListViewExample({super.key});
+      @override
+      State<ExampleRiveBuilder> createState() => _ExampleRiveBuilderState();
+    }
 
-  @override
-  State<ListViewExample> createState() => _ListViewExampleState();
-}
+    class _ExampleRiveBuilderState extends State<ExampleRiveBuilder> {
+      late final fileLoader = FileLoader.fromAsset("assets/vehicles.riv", riveFactory: Factory.rive);
 
-class _ListViewExampleState extends State<ListViewExample> {
-  late final fileLoader = FileLoader.fromAsset(
-    'assets/rating.riv',
-    riveFactory: Factory.rive,
-  );
+      @override
+      void dispose() {
+        fileLoader.dispose();
+        super.dispose();
+      }
 
-  @override
-  void dispose() {
-    fileLoader.dispose();
-    super.dispose();
-  }
+      @override
+      Widget build(BuildContext context) {
+        return RiveWidgetBuilder(
+          fileLoader: fileLoader,
+          builder: (context, state) => switch (state) {
+            RiveLoading() => const Center(child: CircularProgressIndicator()),
+            RiveFailed() => ErrorWidget.withDetails(
+                message: state.error.toString(),
+                error: FlutterError(state.error.toString()),
+              ),
+            RiveLoaded() => RiveWidget(
+                controller: state.controller,
+                fit: Fit.cover,
+              )
+          },
+        );
+      }
+    }
+    ```
 
-  @override
-  Widget build(BuildContext context) {
-    return ListView.builder(
-      itemCount: 10,
-      itemBuilder: (context, index) {
-        return MyRiveWidget(fileLoader: fileLoader);
-      },
-    );
-  }
-}
-class MyRiveWidget extends StatelessWidget {
-  const MyRiveWidget({super.key, required this.fileLoader});
-  final FileLoader fileLoader;
+    ```dart
+    class ExampleBasic extends StatefulWidget {
+      const ExampleBasic({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return RiveWidgetBuilder(
-      fileLoader: fileLoader,
-      builder: (context, state) => switch (state) {
-        RiveLoading() => const Center(
-            child: Center(child: CircularProgressIndicator()),
-          ),
-        RiveFailed() => ErrorWidget.withDetails(
-            message: state.error.toString(),
-            error: FlutterError(state.error.toString()),
-          ),
-        RiveLoaded() => RiveWidget(
-            controller: state.controller,
-            fit: Fit.contain,
-            // Set this to true to draw to the nearest RivePanel
-            useSharedTexture: true,
-          )
-      },
-    );
-  }
-}
-```
+      @override
+      State<ExampleBasic> createState() => _ExampleBasicState();
+    }
 
-5
+    class _ExampleBasicState extends State<ExampleBasic> {
+      late File file;
+      late RiveWidgetController controller;
+      bool isInitialized = false;
 
-Loading from different sources
+      @override
+      void initState() {
+        super.initState();
+        initRive();
+      }
 
-**From Asset Bundle:**Make sure you add the Rive files to your asset bundle and reference them in `pubspec.yaml`:
+      void initRive() async {
+        file = (await File.asset("assets/vehicles.riv", riveFactory: Factory.rive))!;
+        controller = RiveWidgetController(file);
+        setState(() => isInitialized = true);
+      }
 
-Copy
+      @override
+      void dispose() {
+        file.dispose();
+        controller.dispose();
+        super.dispose();
+      }
 
-Ask AI
+      @override
+      Widget build(BuildContext context) {
+        if (!isInitialized) {
+          return const Center(child: CircularProgressIndicator());
+        }
+        return RiveWidget(
+          controller: controller,
+          fit: Fit.cover,
+        );
+      }
+    }
+    ```
 
-```
-# pubspec.yaml
-assets:
-    - assets/vehicles.riv
-```
+    **步骤：**
 
-Copy
+    1.  用单个继承的 `RivePanel` 包裹应该绘制到同一纹理的 `RiveWidget`。
+    2.  在每个应该绘制到共享纹理的 `RiveWidget` 中设置 `useSharedTexture: true`。
+    3.  (可选) 在每个 `RiveWidget` 中设置 `drawOrder` 以控制它们的绘制顺序。较小的数字先绘制。
 
-Ask AI
+    ```dart
+     class ExampleRivePanel extends StatelessWidget {
+       const ExampleRivePanel({super.key});
 
-```
-// Using FileLoader (with RiveWidgetBuilder)
-final fileLoader = FileLoader.fromAsset("assets/vehicles.riv", riveFactory: Factory.rive);
+       @override
+       Widget build(BuildContext context) {
+         return const RivePanel(
+           backgroundColor: Colors.red,
+           child: ListViewExample(),
+         );
+       }
+    }
+    class ListViewExample extends StatefulWidget {
+      const ListViewExample({super.key});
 
-// Using File directly
-final file = await File.asset("assets/vehicles.riv", riveFactory: Factory.rive);
-```
+      @override
+      State<ListViewExample> createState() => _ListViewExampleState();
+    }
 
-**From URL:**
+    class _ListViewExampleState extends State<ListViewExample> {
+      late final fileLoader = FileLoader.fromAsset(
+        'assets/rating.riv',
+        riveFactory: Factory.rive,
+      );
 
-Copy
+      @override
+      void dispose() {
+        fileLoader.dispose();
+        super.dispose();
+      }
 
-Ask AI
+      @override
+      Widget build(BuildContext context) {
+        return ListView.builder(
+          itemCount: 10,
+          itemBuilder: (context, index) {
+            return MyRiveWidget(fileLoader: fileLoader);
+          },
+        );
+      }
+    }
+    class MyRiveWidget extends StatelessWidget {
+      const MyRiveWidget({super.key, required this.fileLoader});
+      final FileLoader fileLoader;
 
-```
-// Using FileLoader (with RiveWidgetBuilder)
-final fileLoader = FileLoader.fromUrl("https://cdn.rive.app/animations/vehicles.riv", riveFactory: Factory.rive);
+      @override
+      Widget build(BuildContext context) {
+        return RiveWidgetBuilder(
+          fileLoader: fileLoader,
+          builder: (context, state) => switch (state) {
+            RiveLoading() => const Center(
+                child: Center(child: CircularProgressIndicator()),
+              ),
+            RiveFailed() => ErrorWidget.withDetails(
+                message: state.error.toString(),
+                error: FlutterError(state.error.toString()),
+              ),
+            RiveLoaded() => RiveWidget(
+                controller: state.controller,
+                fit: Fit.contain,
+                // Set this to true to draw to the nearest RivePanel
+                // 将此设置为 true 以绘制到最近的 RivePanel
+                useSharedTexture: true,
+              )
+          },
+        );
+      }
+    }
+    ```
 
-// Using File directly
-final file = await File.url("https://cdn.rive.app/animations/vehicles.riv", riveFactory: Factory.rive);
-```
+5.  **从不同来源加载**
 
-**From Rive File:**
+    **从 Asset Bundle:**
+    确保将 Rive 文件添加到你的 asset bundle 并在 `pubspec.yaml` 中引用它们：
 
-Copy
+    ```yaml
+    # pubspec.yaml
+    assets:
+        - assets/vehicles.riv
+    ```
 
-Ask AI
+    ```dart
+    // Using FileLoader (with RiveWidgetBuilder)
+    final fileLoader = FileLoader.fromAsset("assets/vehicles.riv", riveFactory: Factory.rive);
 
-```
-// Using FileLoader (with RiveWidgetBuilder)
-final fileLoader = FileLoader.fromFile(existingFile, riveFactory: Factory.rive);
-```
+    // Using File directly
+    final file = await File.asset("assets/vehicles.riv", riveFactory: Factory.rive);
+    ```
 
-## [​](#key-components) Key components
+    **从 URL:**
+
+    ```dart
+    // Using FileLoader (with RiveWidgetBuilder)
+    final fileLoader = FileLoader.fromUrl("https://cdn.rive.app/animations/vehicles.riv", riveFactory: Factory.rive);
+
+    // Using File directly
+    final file = await File.url("https://cdn.rive.app/animations/vehicles.riv", riveFactory: Factory.rive);
+    ```
+
+    **从 Rive 文件:**
+
+    ```dart
+    // Using FileLoader (with RiveWidgetBuilder)
+    final fileLoader = FileLoader.fromFile(existingFile, riveFactory: Factory.rive);
+    ```
+
+## [​](#key-components) 关键组件
 
 ### [​](#rivewidget) `RiveWidget`
 
-`RiveWidget` is responsible for displaying Rive graphics.
-**Properties:**
+`RiveWidget` 负责显示 Rive 图形。
+**属性:**
 
-- `controller` [**required**]: The `RiveWidgetController` that manages the Rive graphic
-- `fit`: How the artboard should fit within the widget (default: `contain`)
-- `alignment`: How the artboard should be aligned within the widget (default: `center`)
-- `hitTestBehavior`: How pointer events should be handled (default: `opaque`)
-- `cursor`: The cursor to display when hovering over the widget (default: `defer`)
-- `layoutScaleFactor`: Scale factor when using `Fit.layout` (default: `1.0`)
-- `useSharedTexture`: Whether to use a shared texture ([RivePanel](#rivepanel)) to draw the artboard to. Defaults to false. When set to true, it draws to nearest inherited widget of type [RivePanel](#rivepanel).
-- `drawOrder`: The draw order of the artboard. This is only used when `useSharedTexture` is true when drawing to a [RivePanel](#rivepanel), and using `Factory.rive`. Defaults to 1.
+-   `controller` [**必需**]: 管理 Rive 图形的 `RiveWidgetController`
+-   `fit`: 画板应如何适应组件（默认：`contain`）
+-   `alignment`: 画板应如何在组件内对齐（默认：`center`）
+-   `hitTestBehavior`: 指针事件应如何处理（默认：`opaque`）
+-   `cursor`: 悬停在组件上时显示的光标（默认：`defer`）
+-   `layoutScaleFactor`: 使用 `Fit.layout` 时的缩放因子（默认：`1.0`）
+-   `useSharedTexture`: 是否使用共享纹理 ([RivePanel](#rivepanel)) 来绘制画板。默认为 false。当设置为 true 时，它将绘制到 [RivePanel](#rivepanel) 类型的最近继承组件。
+-   `drawOrder`: 画板的绘制顺序。仅当 `useSharedTexture` 为 true 且绘制到 [RivePanel](#rivepanel) 并使用 `Factory.rive` 时使用。默认为 1。
 
 ### [​](#rivewidgetbuilder) `RiveWidgetBuilder`
 
-`RiveWidgetBuilder` is a higher-level widget that handles file loading, error states, and resource management automatically.
-**Properties:**
+`RiveWidgetBuilder` 是一个更高级别的组件，它自动处理文件加载、错误状态和资源管理。
+**属性:**
 
-- `fileLoader` [**required**]: The `FileLoader` for loading the Rive file
-- `builder` [**required**]: Function that builds the widget based on state
-- `artboardSelector`: Which artboard to use (default: `ArtboardDefault()`)
-- `stateMachineSelector`: Which state machine to use (default: `StateMachineDefault()`)
-- `dataBind`: How to bind view model data (optional)
-- `controller`: Optional custom controller builder
-- `onLoaded`: Callback when Rive state is loaded
-- `onFailed`: Callback when Rive state fails to load
+-   `fileLoader` [**必需**]: 用于加载 Rive 文件的 `FileLoader`
+-   `builder` [**必需**]: 根据状态构建组件的函数
+-   `artboardSelector`: 使用哪个画板（默认：`ArtboardDefault()`）
+-   `stateMachineSelector`: 使用哪个状态机（默认：`StateMachineDefault()`）
+-   `dataBind`: 如何绑定视图模型数据（可选）
+-   `controller`: 可选的自定义控制器构建器
+-   `onLoaded`: Rive 状态加载时的回调
+-   `onFailed`: Rive 状态加载失败时的回调
 
 ### [​](#rivepanel) `RivePanel`
 
-`RivePanel` is a widget that creates a shared texture to paint multiple `RiveWidget` s to. This is useful when using `Factory.rive` and can significantly improve performance under certain conditions.
-**When to use RivePanel:**
+`RivePanel` 是一个用于创建共享纹理以供多个 `RiveWidget` 绘制的组件。这在使用 `Factory.rive` 时非常有用，并且可以在某些条件下显著提高性能。
+**何时使用 RivePanel:**
 
-- When displaying multiple `RiveWidget`s in your app and they can be drawn to the same texture
-- When you want to programatically composit a scene that includes multiple Rive graphics (from multiple Rive files/artboards)
-- When using `Factory.rive` (will report errors with `Factory.flutter`) and want to improve performance
-- When you want to reduce the number of textures being drawn to
-- When targeting web platforms to avoid WebGL context limitations through `Factory.rive`
+-   当在你的应用中显示多个 `RiveWidget` 并且它们可以绘制到同一纹理时
+-   当你想要通过编程方式合成一个包含多个 Rive 图形（来自多个 Rive 文件/画板）的场景时
+-   当使用 `Factory.rive`（使用 `Factory.flutter` 时会报错）并希望提高性能时
+-   当你想要减少正在绘制的纹理数量时
+-   当目标是 Web 平台以通过 `Factory.rive` 避免 WebGL 上下文限制时
 
-**Performance considerations:**
+**性能注意事项:**
 
-- **Benefits**: Drawing multiple `RiveWidget`s to the same texture can drastically improve performance by reducing texture allocation overhead
-- **Memory cost**: There is a memory cost in allocating a larger texture, though this may be offset by the reduced number of individual textures
-- **Rendering limitations**: Drawing to the same surface means you cannot interleave Rive drawing commands with Flutter’s drawing commands
-- **Benchmarking recommended**: Performance characteristics vary by use case - what works for one scenario may not work for another
+-   **优点**: 将多个 `RiveWidget` 绘制到同一纹理可以通过减少纹理分配开销来显着提高性能
+-   **内存成本**: 分配更大的纹理会产生内存成本，但这可能会被减少的单个纹理数量所抵消
+-   **渲染限制**: 绘制到同一表面意味着你不能将 Rive 绘制命令与 Flutter 的绘制命令交错
+-   **建议进行基准测试**: 性能特征因用例而异 - 适用于一种场景的方法可能不适用于另一种场景
 
-**Usage:**
+**用法:**
 
-Copy
-
-Ask AI
-
-```
+```dart
 RivePanel(
   backgroundColor: Colors.red, // Optional background color
   child: YourWidgetWithMultipleRiveWidgets(),
 )
 ```
 
-**Important notes:**
+**重要说明:**
 
-- Only works with `Factory.rive` - has no effect with `Factory.flutter`
-- Set `useSharedTexture: true` in your `RiveWidget`s to enable shared texture rendering
-- If you need to interleave Rive content with Flutter content, consider using separate `RivePanel`s or `Factory.flutter`
-- For complex scenarios, benchmark both approaches to determine the best performance strategy
+-   仅适用于 `Factory.rive` - 对 `Factory.flutter` 无效
+-   在你的 `RiveWidget` 中设置 `useSharedTexture: true` 以启用共享纹理渲染
+-   如果你需要将 Rive 内容与 Flutter 内容交错，请考虑使用单独的 `RivePanel` 或 `Factory.flutter`
+-   对于复杂场景，请对两种方法进行基准测试以确定最佳性能策略
 
 ### [​](#rivewidgetcontroller) `RiveWidgetController`
 
-`RiveWidgetController` manages the graphic.
-**Creating a Controller:**
+`RiveWidgetController` 管理图形。
+**创建控制器:**
 
-Copy
-
-Ask AI
-
-```
+```dart
 // Using default artboard and state machine
+// 使用默认画板和状态机
 final controller = RiveWidgetController(file);
 
 // Specifying artboard and state machine
+// 指定画板和状态机
 final controller = RiveWidgetController(
   file,
   artboardSelector: ArtboardSelector.byName("MyArtboard"),
@@ -409,72 +350,55 @@ final controller = RiveWidgetController(
 );
 ```
 
-**Data Binding:**
+**数据绑定:**
 
-Copy
-
-Ask AI
-
-```
+```dart
 // Auto-bind with default view model instance
+// 使用默认视图模型实例自动绑定
 final viewModelInstance = controller.dataBind(DataBind.auto());
 
 // Bind by specific instance
+// 按特定实例绑定
 final viewModelInstance = controller.dataBind(DataBind.byInstance(myInstance));
 
 // Bind by name
+// 按名称绑定
 final viewModelInstance = controller.dataBind(DataBind.byName("MyViewModel"));
 ```
 
-### [​](#file-loading) File loading
+### [​](#file-loading) 文件加载
 
-The `FileLoader` class provides a unified way to load Rive files from different sources.
-**Loading from Assets:**
+`FileLoader` 类提供了一种统一的方式从不同来源加载 Rive 文件。
+**从 Assets 加载:**
 
-Copy
-
-Ask AI
-
-```
+```dart
 final fileLoader = FileLoader.fromAsset(
   "assets/vehicles.riv",
   riveFactory: Factory.rive,
 );
 ```
 
-**Loading from URL:**
+**从 URL 加载:**
 
-Copy
-
-Ask AI
-
-```
+```dart
 final fileLoader = FileLoader.fromUrl(
   "https://example.com/animation.riv",
   riveFactory: Factory.rive,
 );
 ```
 
-**Loading from Existing File:**
+**从现有文件加载:**
 
-Copy
-
-Ask AI
-
-```
+```dart
 final fileLoader = FileLoader.fromFile(
   existingFile,
   riveFactory: Factory.rive,
 );
 ```
 
-Or you can load files directly using the `File` class:
+或者你可以直接使用 `File` 类加载文件：
 
-Copy
-
-Ask AI
-
-```
+```dart
 // Load from asset
 final file = await File.asset("assets/vehicles.riv", riveFactory: Factory.rive);
 // Load from URL
@@ -486,29 +410,26 @@ final file = await File.path("/path/to/animation.riv", riveFactory: Factory.rive
 final file = await File.decode(bytes, riveFactory: Factory.rive);
 ```
 
-## [​](#error-handling) Error handling
+## [​](#error-handling) 错误处理
 
-The Rive Flutter package provides specific exception types for different error scenarios:
+Rive Flutter 包针对不同的错误场景提供了特定的异常类型：
 
-- `RiveFileLoaderException`: Thrown when file loading fails
-- `RiveArtboardException`: Thrown when artboard selection fails
-- `RiveStateMachineException`: Thrown when state machine selection fails
-- `RiveDataBindException`: Thrown when data binding fails
+-   `RiveFileLoaderException`: 文件加载失败时抛出
+-   `RiveArtboardException`: 画板选择失败时抛出
+-   `RiveStateMachineException`: 状态机选择失败时抛出
+-   `RiveDataBindException`: 数据绑定失败时抛出
 
-## [​](#resource-management) Resource management
+## [​](#resource-management) 资源管理
 
-### [​](#manual-resource-management-rivewidget) Manual resource management (`RiveWidget`)
+### [​](#manual-resource-management-rivewidget) 手动资源管理 (`RiveWidget`)
 
-When using `RiveWidget` directly, you are responsible for managing all resources:
+当直接使用 `RiveWidget` 时，你需要负责管理所有资源：
 
-Copy
-
-Ask AI
-
-```
+```dart
 @override
 void dispose() {
   // Dispose resources in reverse order of creation
+  // 按创建的相反顺序释放资源
   viewModelInstance.dispose();
   controller.dispose();
   file.dispose();
@@ -516,15 +437,11 @@ void dispose() {
 }
 ```
 
-### [​](#automatic-resource-management-rivewidgetbuilder) Automatic resource management (`RiveWidgetBuilder`)
+### [​](#automatic-resource-management-rivewidgetbuilder) 自动资源管理 (`RiveWidgetBuilder`)
 
-When using `RiveWidgetBuilder`, the widget automatically manages most resources. You only need to dispose the file loader:
+当使用 `RiveWidgetBuilder` 时，组件会自动管理大多数资源。你只需要释放文件加载器：
 
-Copy
-
-Ask AI
-
-```
+```dart
 @override
 void dispose() {
   fileLoader.dispose();
@@ -532,99 +449,91 @@ void dispose() {
 }
 ```
 
-Because the resources are managed by the `RiveWidgetBuilder`, you will not be able to access the `RiveWidgetController` (and other state) after the widget is disposed. If you need to access the controller after the widget is disposed, consider creating the file and controller yourself.The exception to this is the `FileLoader`, which you control. This loader can be reused across multiple `RiveWidgetBuilder` instances. The underlying `File` will only be loaded once. The `File` will be disposed when the `FileLoader` is disposed.
+因为资源由 `RiveWidgetBuilder` 管理，所以在组件被释放后，你将无法访问 `RiveWidgetController`（和其他状态）。如果你需要在组件释放后访问控制器，请考虑自己创建文件和控制器。`FileLoader` 是个例外，你可以控制它。此加载器可以在多个 `RiveWidgetBuilder` 实例之间复用。底层的 `File` 只会被加载一次。`File` 将在 `FileLoader` 被释放时释放。
 
-## [​](#specifying-a-renderer) Specifying a renderer
+## [​](#specifying-a-renderer) 指定渲染器
 
-When creating a Rive `File` or `FileLoader`, you need to specify a factory to use:
+当创建 Rive `File` 或 `FileLoader` 时，你需要指定要使用的工厂：
 
-- `Factory.rive` for the Rive renderer
-- `Factory.flutter` for the Flutter renderer (Skia or Impeller)
+-   `Factory.rive` 用于 Rive 渲染器
+-   `Factory.flutter` 用于 Flutter 渲染器 (Skia 或 Impeller)
 
-You can use different renderers for different graphics in your app.
-Some considerations when choosing a renderer:
+你可以在应用中为不同的图形使用不同的渲染器。
+选择渲染器时的一些注意事项：
 
-- If you plan on showing many Rive graphics that are all drawing to different Rive widgets consider using a [RivePanel](#rivepanel) with `Factory.rive` to draw multiple graphics to the same texture to reduce the overhead of allocating native render targets and textures. Or make use of `Factory.flutter`.
-- If you are showing a complex graphic, consider using `Factory.rive` to take advantage of the Rive renderer’s optimizations.
-- Vector Feathering is only available with `Factory.rive`, so if you need that feature, use the Rive renderer.
+-   如果你计划显示许多都绘制到不同 Rive 组件的 Rive 图形，请考虑使用带有 `Factory.rive` 的 [RivePanel](#rivepanel)，将多个图形绘制到同一纹理，以减少分配本机渲染目标和纹理的开销。或者使用 `Factory.flutter`。
+-   如果你要显示复杂的图形，请考虑使用 `Factory.rive` 以利用 Rive 渲染器的优化。
+-   矢量羽化 (Vector Feathering) 仅在 `Factory.rive` 中可用，因此如果你需要该功能，请使用 Rive 渲染器。
 
-For more information see [Choosing a Renderer](/docs/runtimes/choose-a-renderer).
+有关更多信息，请参阅 [选择渲染器](/docs/runtimes/choose-a-renderer)。
 
-The Rive Renderer is not yet supported on Linux through Flutter. On Linux, it automatically falls back to `Factory.flutter`.
+Rive 渲染器目前尚未通过 Flutter 在 Linux 上受支持。在 Linux 上，它会自动回退到 `Factory.flutter`。
 
-### [​](#note-on-flutter-rendering) Note on Flutter Rendering
+### [​](#note-on-flutter-rendering) 关于 Flutter 渲染的说明
 
-[Impeller](https://docs.flutter.dev/perf/impeller) is replacing [Skia](https://skia.org/) to become the default renderer for all platforms. As such, there is a possibility of rendering and [performance](https://github.com/flutter/flutter/issues/134432) discrepancies when using the Rive Flutter runtime with platforms that use the Impeller renderer that may not have surfaced before. If you encounter any visual or performance errors at runtime compared to expected behavior in the Rive editor, we recommend trying the following steps to triage:
+[Impeller](https://docs.flutter.dev/perf/impeller) 正在取代 [Skia](https://skia.org/) 成为所有平台的默认渲染器。因此，当在通过 Impeller 渲染器使用 Rive Flutter 运行时，可能会出现以前未出现的渲染和 [性能](https://github.com/flutter/flutter/issues/134432) 差异。如果你在运行时遇到与 Rive 编辑器中的预期行为相比的任何视觉或性能错误，我们建议尝试以下步骤进行分类：
 
-1. Try running the Flutter app with the `--no-enable-impeller` flag to use the Skia renderer. If the visual discrepancy does not show when using Skia, it may be a rendering bug on Impeller. However, before raising a bug with the Flutter team, try the second point below👇
+1.  尝试使用 `--no-enable-impeller` 标志运行 Flutter 应用以使用 Skia 渲染器。如果使用 Skia 时未出现视觉差异，则可能是 Impeller 上的渲染错误。但是，在向 Flutter 团队提交错误之前，请尝试下面的第二点👇
 
-Copy
+    ```bash
+    flutter run --no-enable-impeller
+    ```
 
-Ask AI
+2.  尝试在最新的 `master` 通道上运行 Flutter 应用。视觉错误可能已在最新的 Flutter 提交中解决，但尚未发布到 `beta` 或 `stable` 通道。
+3.  如果你在最新的 master 分支上仅使用 Impeller 渲染器时仍然看到视觉差异，我们建议向 [Flutter](https://github.com/flutter/flutter) Github 仓库提交详细的问题，并提供可重现的示例和其他相关详细信息，以帮助团队调试可能存在的任何问题。
 
-```
-flutter run --no-enable-impeller
-```
+## [​](#troubleshooting) 故障排除
 
-2. Try running the Flutter app on the latest `master` channel. It is possible that visual bugs may be resolved on the latest Flutter commits, but not yet released in the `beta` or `stable` channel.
-3. If you are still seeing visual discrepancies with just the Impeller renderer on the latest master branch, we recommend raising a detailed issue to the [Flutter](https://github.com/flutter/flutter) Github repo with a reproducible example, and other relevant details that can help the team debug any possible issues that may be present.
+如果你在 Flutter 中使用 Rive 时遇到问题，请考虑以下事项：
 
-## [​](#troubleshooting) Troubleshooting
+-   确保在使用任何 Rive 功能之前调用了 `await RiveNative.init()`。
+-   检查控制台是否有任何与 Rive 相关的错误消息。
+-   确保你的 Rive 文件在 `pubspec.yaml` 中被正确引用并且存在于指定路径中。
+-   如果使用 `RiveWidgetBuilder`，请确保在构建器函数中处理所有可能的状态（加载中、已加载、失败）。
 
-If you encounter issues with Rive in Flutter, consider the following:
+### [​](#build-errors) 构建错误
 
-- Ensure you have called `await RiveNative.init()` before using any Rive features.
-- Check the console for any error messages related to Rive.
-- Make sure your Rive files are correctly referenced in `pubspec.yaml` and exist in the specified paths.
-- If using `RiveWidgetBuilder`, ensure you handle all possible states (loading, loaded, failed) in the builder function.
+如果你遇到与 Rive 相关的构建错误，请确保：
 
-### [​](#build-errors) Build errors
+-   你的 `pubspec.yaml` 中有正确版本的 Rive 包。
+-   你已经运行 `flutter pub get` 来获取最新的依赖项。
 
-If you encounter build errors related to Rive, ensure that:
+如果你仍然遇到问题，请参阅 Rive Native 文档中的 [故障排除部分](/docs/runtimes/flutter/rive-native#troubleshooting)。
 
-- You have the correct version of the Rive package in your `pubspec.yaml`.
-- You have run `flutter pub get` to fetch the latest dependencies.
+## [​](#manually-building-rive-native-libraries) 手动构建 Rive 原生库
 
-If you’re still having issues, please see the [Troubleshooting section](/docs/runtimes/flutter/rive-native#troubleshooting) in the Rive Native documentation.
+Rive 会自动为你下载原生库作为 `rive_native` 插件的一部分。
+但是，如果你需要手动构建原生库，请参阅 Rive Native 文档中的 [构建部分](/docs/runtimes/flutter/rive-native#building-rive-native)。
 
-## [​](#manually-building-rive-native-libraries) Manually building Rive native libraries
+## [​](#next-steps) 下一步
 
-Rive automatically downloads the native libraries for you as part of the `rive_native` plugin.
-However, if you need to manually build the native libraries, see the [build section](/docs/runtimes/flutter/rive-native#building-rive-native) in the Rive Native documentation.
+既然你已经将 Rive 集成到你的 Flutter 应用中，你可以探索更高级的功能，例如：
 
-## [​](#next-steps) Next steps
+[## 画板 (Artboards)
 
-Now that you have Rive integrated into your Flutter app, you can explore more advanced features like:
+在运行时控制显示哪个画板。](/docs/runtimes/artboards)[## 布局 (Layout)
 
-[## Artboards
+在运行时控制画板的布局（适应和对齐）。](/docs/runtimes/layout)[## 状态机播放 (State Machine Playback)
 
-Control which artboard is displayed at runtime.](/docs/runtimes/artboards)[## Layout
+在运行时控制状态机播放并与状态机输入交互。](/docs/runtimes/state-machines)[## 数据绑定 (Data Binding)
 
-Control the artboard’s layout (fit and alignment) at runtime.](/docs/runtimes/layout)[## State Machine Playback
+在运行时使用双向数据绑定动态更新文本、颜色、图像、列表等内容。](/docs/runtimes/data-binding)[## 加载资产 (Loading Assets)
 
-Control state machine playback at runtime and interact with state machine
-inputs.](/docs/runtimes/state-machines)[## Data Binding
+在运行时加载引用的资产（图像、字体、音频）。也称为带外资产 (out-of-band assets)。](/docs/runtimes/loading-assets)[## 缓存 Rive 文件 (Caching a Rive File)
 
-Dynamically update content at runtime using two-way data binding for text,
-colors, images, lists, and more.](/docs/runtimes/data-binding)[## Loading Assets
+在多个 Rive 实例之间缓存并复用 Rive 文件对象以提高性能。](/docs/runtimes/caching-a-rive-file)
 
-Load referenced assets (images, fonts, audio) at runtime. Also known as
-out-of-band assets.](/docs/runtimes/loading-assets)[## Caching a Rive File
-
-Cache and reuse a Rive file object across multiple Rive instances to improve
-performance.](/docs/runtimes/caching-a-rive-file)
-
-## [​](#resources) Resources
+## [​](#resources) 资源
 
 Rive Flutter:
 
-- [GitHub](https://github.com/rive-app/rive-flutter)
-- [pub.dev](https://pub.dev/packages/rive)
-- [Example app](https://github.com/rive-app/rive-flutter/tree/master/example/)
+-   [GitHub](https://github.com/rive-app/rive-flutter)
+-   [pub.dev](https://pub.dev/packages/rive)
+-   [示例应用](https://github.com/rive-app/rive-flutter/tree/master/example/)
 
 Rive Native:
 
-- [Rive Native overview](/docs/runtimes/flutter/rive-native)
-- [pub.dev](https://pub.dev/packages/rive_native)
+-   [Rive Native 概览](/docs/runtimes/flutter/rive-native)
+-   [pub.dev](https://pub.dev/packages/rive_native)
 
-[Migration Guide](/docs/runtimes/react-native/migration-guide)[Rive Native for Flutter](/docs/runtimes/flutter/rive-native)
+[迁移指南](/docs/runtimes/react-native/migration-guide)[Rive Native for Flutter](/docs/runtimes/flutter/rive-native)
