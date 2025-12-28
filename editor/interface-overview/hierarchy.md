@@ -39,7 +39,7 @@
 
 ## [​](#right-click-menu) **右键菜单 (Right Click Menu)**
 
-在层级面板中右键点击任何对象都会弹出一个针对不同对象的选项菜单。在菜单中，你可以找到复制/粘贴对象和样式、删除对象、将对象包裹在 [布局 (Layouts)](/editor/layouts/overview.md) 和 [Solo (Solos)](/editor/manipulating-shapes/solos.md) 中、显示依赖图、添加 [标签 (Tags)](/editor/tagging)、翻转绘制顺序以及 [导出名称](/editor/exporting/exporting-for-runtime.md) 的功能。
+在层级面板中右键点击任何对象都会弹出一个针对不同对象的选项菜单。在菜单中，你可以找到复制/粘贴对象和样式、删除对象、将对象包裹在 [布局 (Layouts)](/editor/layouts/overview.md) 和 [Solo (Solos)](/editor/manipulating-shapes/solos.md) 中、显示依赖图、添加 [标签 (Tags)](/editor/tagging.md)、翻转绘制顺序以及 [导出名称](/editor/exporting/exporting-for-runtime.md) 的功能。
 ![右键菜单 Pn](images/right_click.png)
 其中许多选项都有快捷键，可以在选项旁边找到，也可以在快捷键菜单中查看。
 
@@ -52,7 +52,7 @@
 
 # [​](#data-panel) 数据面板 (Data Panel)
 
-数据面板是创建、组织和查看文件所有视图模型 (View Models)、枚举 (Enums) 和转换器 (Converters) 的地方。该面板分为三个独立空间：视图模型、枚举和转换器。在此处了解更多关于数据绑定 (Data Binding) 的信息：[此处](/editor/data-binding/overview)。
+数据面板是创建、组织和查看文件所有视图模型 (View Models)、枚举 (Enums) 和转换器 (Converters) 的地方。该面板分为三个独立空间：视图模型、枚举和转换器。在此处了解更多关于数据绑定 (Data Binding) 的信息：[此处](/editor/data-binding/overview.md)。
 ![数据面板 Pn](images/Data.png)
 每个部分右侧的加号按钮允许你添加新的视图模型、枚举或转换器。
 如果任何部分有相关的元素，可以使用左侧的箭头图标展开或折叠列表。

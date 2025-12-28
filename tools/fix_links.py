@@ -51,7 +51,7 @@ def fix_content(content, file_path, url_map):
         # 1. Clean up link prefix
         # Remove https://rive.app/docs/ or /docs/
         link_clean = re.sub(r'https?://(help\.)?rive\.app/docs/', '', link)
-        link_clean = re.sub(r'^/docs/', '', link_clean)
+        link_clean = re.sub(r'^(/?docs/)+', '', link_clean)
         link_clean = link_clean.lstrip('/') # Remove leading slash for matching
 
         # Extract anchor if present
@@ -94,8 +94,9 @@ def fix_content(content, file_path, url_map):
         
         # If we modified the link (e.g. removed http or /docs/), return the cleaner version at least
         # But prefer keeping relative if we didn't map it? No, standardizing to absolute / is easier for docsify
-        if link != original_link:
-             # Just return the cleaned version if we couldn't resolve it better
+        # If we modified the link (e.g. removed http or /docs/), return the cleaner version
+        # This ensures even broken links point to the local structure
+        if link != original_link or link_clean != link.strip('/'):
              final_link = '/' + link_clean + anchor
              return f"[{text}]({final_link})"
 

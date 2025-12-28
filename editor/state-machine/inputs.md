@@ -22,12 +22,12 @@
 - Events
 - Data Binding
 - Layouts
-- [Libraries](/editor/libraries)
-- [Keyboard Shortcuts](/editor/keyboard-shortcuts)
+- [Libraries](/editor/libraries.md)
+- [Keyboard Shortcuts](/editor/keyboard-shortcuts.md)
 - Exporting
 - Share Links
 - MCP
-- [Tagging](/editor/tagging)
+- [Tagging](/editor/tagging.md)
 
 On this page
 
@@ -44,7 +44,7 @@ State Machines
 ⚠️ DEPRECATED: Use Data Binding instead of Inputs for controlling Rive graphics
 
 **DEPRECATION NOTICE:** This entire page documents the legacy Inputs system.
-**For new projects:** Use [Data Binding](/editor/data-binding) instead. **For
+**For new projects:** Use [Data Binding](/editor/data-binding/overview.md) instead. **For
 existing projects:** Plan to migrate from Inputs to Data Binding as soon as
 possible. **This content is provided for legacy support only.**
 

@@ -13,7 +13,7 @@ Rive 的 React Native 运行时。
 
 **迁移时间表：**
 
--   **短期：** 完成新运行时，请参阅 [功能支持](https://github.com/rive-app/rive-nitro-react-native?tab=readme-ov-file#feature-support) 和 [路线图](https://github.com/rive-app/rive-nitro-react-native?tab=readme-ov-file#roadmap)
+-   **短期：** 完成新运行时，请参阅 [功能支持](/https://github.com/rive-app/rive-nitro-react-native?tab=readme-ov-file#feature-support) 和 [路线图](/https://github.com/rive-app/rive-nitro-react-native?tab=readme-ov-file#roadmap)
 -   **中期：** 解决现有旧包中的主要问题，同时支持迁移
 -   **长期：** 完全迁移到新包
 
@@ -42,7 +42,7 @@ Rive 的 React Native 运行时。
 
 [## Rive 文件
 
-改编/下载本快速入门指南中使用的 Rive 文件](https://rive.app/marketplace/24637-46037-health-bar-data-binding-quick-start/)[## 完整示例
+[改编/下载本快速入门指南中使用的 Rive 文件](/https://rive.app/marketplace/24637-46037-health-bar-data-binding-quick-start/)[## 完整示例
 
 查看完整的快速入门示例](https://github.com/rive-app/rive-nitro-react-native/blob/main/example/src/pages/QuickStart.tsx)
 
@@ -54,7 +54,7 @@ Rive 的 React Native 运行时。
     yarn add @rive-app/react-native react-native-nitro-modules
     ```
 
-    `react-native-nitro-modules` 是必需的，因为此库依赖于 [Nitro Modules](https://nitro.margelo.com/)。
+    `react-native-nitro-modules` 是必需的，因为此库依赖于 [Nitro Modules](/https://nitro.margelo.com/)。
 
 2.  **设置**
 
@@ -114,11 +114,11 @@ Rive 的 React Native 运行时。
 
     [## Props
 
-    `RiveView` 可用的 view props](/runtimes/react-native/props)[## 加载 Rive 文件
+[    `RiveView` 可用的 view props](/runtimes/react-native/props)[## 加载 Rive 文件
 
-    如何在你的应用中加载 Rive 文件](/runtimes/react-native/loading-rive-files)[## 缓存 Rive 文件
+[    如何在你的应用中加载 Rive 文件](/runtimes/react-native/loading-rive-files)[## 缓存 Rive 文件
 
-    缓存 Rive 文件以获得更好的性能](/runtimes/caching-a-rive-file)
+[    缓存 Rive 文件以获得更好的性能](/runtimes/caching-a-rive-file)
 
 4.  **布局**
 
@@ -138,7 +138,7 @@ Rive 的 React Native 运行时。
 
     [## 运行时布局
 
-    控制 Rive 图形在其容器内的适应和对齐方式](/runtimes/layout)
+[    控制 Rive 图形在其容器内的适应和对齐方式](/runtimes/layout)
 
 5.  **视图引用 (View Reference)**
 
@@ -172,7 +172,7 @@ Rive 的 React Native 运行时。
 
     [## 视图方法
 
-    查看所有可用的视图引用方法。](/runtimes/react-native/rive-ref-methods)[## Hybrid Views
+[    查看所有可用的视图引用方法。](/runtimes/react-native/rive-ref-methods)[## Hybrid Views
 
     阅读更多关于 Nitro Hybrid Views 的信息。](https://nitro.margelo.com/docs/hybrid-views)
 
@@ -276,7 +276,7 @@ Rive 的 React Native 运行时。
 
     [## 数据绑定
 
-    查看运行时数据绑定文档以获取更多信息。](/runtimes/data-binding)
+[    查看运行时数据绑定文档以获取更多信息。](/runtimes/data-binding)
 
     查看我们的 [示例应用](https://github.com/rive-app/rive-nitro-react-native/tree/main/example) 获取更多使用示例。
 
@@ -410,7 +410,7 @@ const instance = useViewModelInstance(riveViewRef);
 
 3.  **Android - 设置 Kotlin 依赖解析**
 
-    此步骤可能是可选的 - 但是，如果 React Native 项目中的 Android 设置没有设置 Kotlin `v1.8.0+`，你在构建项目时可能会遇到重复类问题。为了缓解这些问题，正如 [Kotlin 文档](https://kotlinlang.org/docs/gradle-configure-project.html#versions-alignment-of-transitive-dependencies) 所建议的那样，将以下内容添加到应用程序 `build.gradle` 文件的 `dependencies` 中以处理版本对齐：
+    此步骤可能是可选的 - 但是，如果 React Native 项目中的 Android 设置没有设置 Kotlin `v1.8.0+`，你在构建项目时可能会遇到重复类问题。为了缓解这些问题，正如 [Kotlin 文档](/https://kotlinlang.org/docs/gradle-configure-project.html#versions-alignment-of-transitive-dependencies) 所建议的那样，将以下内容添加到应用程序 `build.gradle` 文件的 `dependencies` 中以处理版本对齐：
 
     ```gradle
     dependencies {

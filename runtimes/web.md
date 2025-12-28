@@ -201,17 +201,17 @@ riveInstance.cleanup();
 
 [## 画板 (Artboards)
 
-在运行时控制显示哪个画板。](/runtimes/artboards)[## 布局 (Layout)
+[在运行时控制显示哪个画板。](/runtimes/artboards)[## 布局 (Layout)
 
-在运行时控制画板的布局（适应和对齐）。](/runtimes/layout)[## 状态机播放 (State Machine Playback)
+[在运行时控制画板的布局（适应和对齐）。](/runtimes/layout)[## 状态机播放 (State Machine Playback)
 
-在运行时控制状态机播放并与状态机输入交互。](/runtimes/state-machines.md)[## 数据绑定 (Data Binding)
+[在运行时控制状态机播放并与状态机输入交互。](/runtimes/state-machines.md)[## 数据绑定 (Data Binding)
 
-在运行时使用双向数据绑定动态更新文本、颜色、图像、列表等内容。](/runtimes/data-binding)[## 加载资产 (Loading Assets)
+[在运行时使用双向数据绑定动态更新文本、颜色、图像、列表等内容。](/runtimes/data-binding)[## 加载资产 (Loading Assets)
 
-在运行时加载引用的资产（图像、字体、音频）。也称为带外资产 (out-of-band assets)。](/runtimes/loading-assets.md)[## 缓存 Rive 文件 (Caching a Rive File)
+[在运行时加载引用的资产（图像、字体、音频）。也称为带外资产 (out-of-band assets)。](/runtimes/loading-assets.md)[## 缓存 Rive 文件 (Caching a Rive File)
 
-在多个 Rive 实例之间缓存并复用 Rive 文件对象以提高性能。](/runtimes/caching-a-rive-file)
+[在多个 Rive 实例之间缓存并复用 Rive 文件对象以提高性能。](/runtimes/caching-a-rive-file)
 
 # [​](#additional-rive-web-resources) 其他 Rive Web 资源
 
@@ -219,15 +219,15 @@ riveInstance.cleanup();
 
 [## Rive 参数 (Rive Parameters)
 
-Rive 实例的 API 文档。](/runtimes/web/rive-parameters)[## Canvas vs WebGL
+[Rive 实例的 API 文档。](/runtimes/web/rive-parameters)[## Canvas vs WebGL
 
-Rive Web 包及其不同版本的指南](/runtimes/web/canvas-vs-webgl)[## 常见问题 (FAQ)
+[Rive Web 包及其不同版本的指南](/runtimes/web/canvas-vs-webgl)[## 常见问题 (FAQ)
 
-常见问题](/runtimes/web/faq)[## 预加载 WASM (Preloading WASM)
+[常见问题](/runtimes/web/faq)[## 预加载 WASM (Preloading WASM)
 
-关于如何预加载和自托管 rive WASM 库的说明。](/runtimes/web/preloading-wasm)[## 低级 API 使用 (Low-level API Usage)
+[关于如何预加载和自托管 rive WASM 库的说明。](/runtimes/web/preloading-wasm)[## 低级 API 使用 (Low-level API Usage)
 
-控制 Rive 渲染循环和布局，并将多个画板绘制到同一个 canvas。](/runtimes/web/low-level-api-usage)
+[控制 Rive 渲染循环和布局，并将多个画板绘制到同一个 canvas。](/runtimes/web/low-level-api-usage)
 
 # [​](#examples) 示例
 

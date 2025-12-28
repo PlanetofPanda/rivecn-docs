@@ -6,14 +6,14 @@ Rive 编辑器有两种不同的模式：设计 (Design) 和动画 (Animate)。�
 
 ## [​](#design-mode) 设计模式 (Design Mode)
 
-使用设计模式为动画准备图形。在这里，你可以使用 Rive 的 [工具](../interface-overview/toolbar.md) 设计自己的图形、[从其他软件导入图形](./importing-assets.md)，或者使用 [骨骼 (Bones)](../manipulating-shapes/bones.md)、[变换空间 (Transform Spaces)](./transform-spaces)、[布局 (Layouts)](/editor/layouts/overview.md)、[摇杆 (Joysticks)](/editor/manipulating-shapes/joysticks.md) 和 [约束 (Constraints)](../constraints/) 来绑定 (Rig) 你的图形。
+使用设计模式为动画准备图形。在这里，你可以使用 Rive 的 [工具](../interface-overview/toolbar.md) 设计自己的图形、[从其他软件导入图形](./importing-assets.md)，或者使用 [骨骼 (Bones)](../manipulating-shapes/bones.md)、[变换空间 (Transform Spaces)](./transform-spaces)、[布局 (Layouts)](/editor/layouts/overview.md)、[摇杆 (Joysticks)](/editor/manipulating-shapes/joysticks.md) 和 [约束 (Constraints)](/../constraints/) 来绑定 (Rig) 你的图形。
 ![设计模式示例](images/Design_Mode.png)
 设计模式是任何尚未创建动画的文件的默认模式。该模式存在的原因是 Rive 允许你为一个画板附加多个动画，因此你需要一个地方来设置和创建这些图形。
 
 ## [​](#animate-mode) 动画模式 (Animate Mode)
 
-使用 [动画模式](../animate-mode/) 为你的画板创建所有的 [状态 (States)](/editor/state-machine/states.md) 和 [状态机 (State Machine)](../state-machine/)。
-当你切换到动画模式时，UI 会更新以显示与 [活动画板 (Active Artboard)](./artboards.md#active-artboard) 关联的时间轴 (Timelines) 和状态机列表。[检查器 (Inspector)](/editor/interface-overview/inspector.md) 也会更新，在任何可以制作动画的属性旁边显示关键帧按钮。
+使用 [动画模式](/../animate-mode/) 为你的画板创建所有的 [状态 (States)](/editor/state-machine/states.md) 和 [状态机 (State Machine)](/../state-machine/)。
+当你切换到动画模式时，UI 会更新以显示与 [活动画板 (Active Artboard)](/./artboards.md#active-artboard) 关联的时间轴 (Timelines) 和状态机列表。[检查器 (Inspector)](/editor/interface-overview/inspector.md) 也会更新，在任何可以制作动画的属性旁边显示关键帧按钮。
 ![动画模式 Pn](images/Animate_Mode.png)
 从动画列表中选择任何动画将调出时间轴视图，而选择状态机将用图表视图取代时间轴。
 ![状态机视图 Pn](images/State_Machine.png)

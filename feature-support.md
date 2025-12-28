@@ -10,7 +10,7 @@
 
 ## 数据绑定 - 列表、图像和画板 (Data Binding - Lists, Images, and Artboards)
 
-数据绑定列表、图像和画板是在初始数据绑定支持之后添加的。请参阅 [数据绑定概览](/editor/data-binding/overview) 和 [运行时的数据绑定](/runtimes/data-binding)。
+数据绑定列表、图像和画板是在初始数据绑定支持之后添加的。请参阅 [数据绑定概览](/editor/data-binding/overview.md) 和 [运行时的数据绑定](/runtimes/data-binding)。
 
 | **Runtime** | **Version** |
 | --- | --- |
@@ -57,7 +57,7 @@
 
 ## 数据绑定 (Data Binding)
 
-请参阅 [数据绑定概览](/editor/data-binding/overview) 和 [运行时的数据绑定](/runtimes/data-binding)。
+请参阅 [数据绑定概览](/editor/data-binding/overview.md) 和 [运行时的数据绑定](/runtimes/data-binding)。
 
 | **Runtime** | **Version** |
 | --- | --- |

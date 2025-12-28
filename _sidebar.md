@@ -39,15 +39,15 @@
     * [States (状态)](/editor/state-machine/states.md)
     * [Transitions (过渡)](/editor/state-machine/transitions.md)
     * [Inputs (输入)](/editor/state-machine/inputs.md)
-  * [Events (事件)](editor/events.md)
+  * [Events (事件)](/editor/events.md)
   * [Data Binding (数据绑定)](editor/data-binding.md)
   * [Layouts (布局)](editor/layouts.md)
-  * [Libraries (库)](editor/libraries.md)
-  * [Keyboard Shortcuts (快捷键)](editor/keyboard-shortcuts.md)
+  * [Libraries (库)](/editor/libraries.md)
+  * [Keyboard Shortcuts (快捷键)](/editor/keyboard-shortcuts.md)
   * [Exporting (导出)](editor/exporting.md)
   * [Share Links (分享链接)](editor/share-links.md)
   * [MCP](editor/mcp.md)
-  * [Tagging (标签)](editor/tagging.md)
+  * [Tagging (标签)](/editor/tagging.md)
 
 * **1. Home (入门 / 总览)**
   * **Getting Started (入门指南)**

@@ -87,7 +87,7 @@ end
 
 ### [​](#instantiating-components) 实例化组件 (Instantiating Components)
 
-为了能够在运行时实例化组件，你需要对 [数据绑定](/editor/data-binding/overview)、[组件](/editor/fundamentals/components.md) 和 [脚本输入](/scripting/script-inputs) 有基本的了解。
+为了能够在运行时实例化组件，你需要对 [数据绑定](/editor/data-binding/overview.md)、[组件](/editor/fundamentals/components.md) 和 [脚本输入](/scripting/script-inputs) 有基本的了解。
 请看下面的例子，展示了如何设置你的组件、视图模型和脚本：
 
 ```lua

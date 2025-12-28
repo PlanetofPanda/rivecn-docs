@@ -24,12 +24,12 @@
 - Events
 - Data Binding
 - Layouts
-- [Libraries](/editor/libraries)
-- [Keyboard Shortcuts](/editor/keyboard-shortcuts)
+- [Libraries](/editor/libraries.md)
+- [Keyboard Shortcuts](/editor/keyboard-shortcuts.md)
 - Exporting
 - Share Links
 - MCP
-- [Tagging](/editor/tagging)
+- [Tagging](/editor/tagging.md)
 
 On this page
 

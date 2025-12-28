@@ -1,0 +1,80 @@
+Events
+
+# Events Overview
+
+If you’re using [Data Binding](/editor/data-binding/overview.md), you can listen for triggers or value changes from your code without needing Events.
+
+Events are a way to send signals to your runtime code to execute a block of code at the right moment. They enhance the communication between designers and developers by passing along useful information. With them, we can do things like go to a URL, play a sound, have some HTML appear, or do anything else we may want to accomplish via code.
+Coordinating Rive events at design time and runtime will be important to ensure a successful integration in apps, games, and more.
+
+## [​](#creating-an-event) Creating an Event
+
+To create an Event, use the Events tool located in the Toolbar. Once the tool is active, click anywhere on the artboard to add a new event.
+![Adding a new event](images/image_0.png)
+You’ll notice that the Event is displayed on the artboard and in the Hierarchy.
+
+## [​](#configuring-an-event) Configuring an Event
+
+Once we’ve added an event, we need to configure the Event using the Inspector.
+![Inspector view for the Event](images/45fd9a33-3b9f-4e29-bc82-c0a8dca96abd.webp)
+
+### [​](#name) Name
+
+The Name field is where we can give our Event a specific name. It’s important to do this so that at runtime, we can hook up the correct bits of code to their corresponding events.
+![Renaming an Event](images/image_2.png)
+You can also rename the Event directly on the artboard.
+
+### [​](#type) Type
+
+The Type dropdown allows you to change the Event type between General and URL.
+![Image](images/image_3.png)
+
+### [​](#properties) Properties
+
+Properties allow us to define extra information being passed to the Runtimes. For example, you may want to pass in the name of an audio file to play when the event is reported at runtime, or perhaps some other metadata for data analytics purposes.
+To add a new property, hit the plus button next to the Properties.
+![Add New Property](images/image_4.png)
+First, we want to change the name of our property to something identifiable. Next, we need to select what type of value our property will track such as a Number, Boolean, or String.
+![Rename and select input](images/image_5.png)
+
+### [​](#url) URL
+
+When an `Open URL` Event is selected, we have additional configuration options.
+Properties for Open URL Event
+![Image](images/spaces%2F-M3EXlibk6bj2FzPQW-9%2Fuploads%2FrDR98sXAUkNZXqBbv0sy%2FCleanShot%202023-09-18%20at%2013.06.14%402x.png)
+In the text box, we will add the URL that we want our component to take us.
+
+Make sure to include the URL Protocol (i.e. “http://” or “https://”) if you want to link to a new domain.
+
+The Target tells the user’s browser where this URL should open. We have a few options: Blank, Parent, Self, and Top.
+
+- `Blank` - Usually opens the link in a new tab, but users can configure browsers to open a new window instead. **Note:** if the Event is not signaled from a Rive Listener, the browser may block and notify the user a popup was blocked
+- `Parent` - Opens in the parent browsing context of the current one. If no parent, behaves as `Self`.
+- Self - Opens in the current browsing context
+- Top - Opens in the topmost browsing context (the “highest” context that’s an ancestor of the current one). If no ancestors, behaves as `Self`.
+
+At this time, by default, Rive will not open URLs when this type of event is reported in share links or Marketplace posts due to security considerations. However, this may change in the future
+
+## [​](#signaling-an-event) Signaling an Event
+
+We can signal an event in three ways: via the timeline, on a state, or on a transition.
+
+### [​](#timeline) Timeline
+
+Signaling an event through the timeline allows us to control the precise moment a piece of code will fire, like a sound effect.
+First, select the timeline you want to add the event to. Next, use the Report Event button in the inspector. Note that this key will be placed at the location of the playhead.
+![Keying an Event on the timeline](images/image_7.png)
+Additionally, you can key a property to let the runtimes know that a particular boolean, number, or string property has a new value.
+
+### [​](#transition-&-state) Transition & State
+
+You can report an event on a Transition or a State. We typically do this to signal at runtime contextual information about what is happening in the State Machine. For example, if we want to have some element appear at the end of our Transition, we would want to use an event tied to a Transition to signal this.
+To report an event, select either the desired State or Transition and use the plus button next to the Events section in the Inspector.
+![Signaling an Event via State or Transition](images/image_8.png)
+The dropdown allows us to select any Event we’ve defined. Now that we’ve selected the Event, we can decide whether it is signaled at the start or end of the Transition or State.
+
+## [​](#events-at-runtime) Events at Runtime
+
+For more information on how to listen for Events at runtime, check out the [Rive Events](/runtimes/rive-events) section.
+
+[Layers](/editor/state-machine/layers)[Audio Events](/editor/events/audio-events)

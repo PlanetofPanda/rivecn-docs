@@ -17,16 +17,16 @@ Rive 新手？这里有一些入门建议：
 
 [## 界面概览 (Interface Overview)
 
-准备好开始在 Rive 中进行设计和制作动画了吗？编辑器是你创建、制作动画并利用强大的状态机 (State Machine) 构建逻辑（控制不同动画如何混合）的地方。从那里，你可以导出作品，并通过我们的运行时 (Runtimes) 之一将其放入你的应用或游戏中。](docs/editor/interface-overview/overview)[## 应用运行时 (App Runtimes)
+[准备好开始在 Rive 中进行设计和制作动画了吗？编辑器是你创建、制作动画并利用强大的状态机 (State Machine) 构建逻辑（控制不同动画如何混合）的地方。从那里，你可以导出作品，并通过我们的运行时 (Runtimes) 之一将其放入你的应用或游戏中。](/editor/interface-overview/overview.md)[## 应用运行时 (App Runtimes)
 
-应用运行时是开源库，能够在各种平台和框架（包括 Web、iOS、Android、Flutter、React Native 等）上实时渲染和更新你的 Rive 文件。](/runtimes/getting-started)[## 游戏运行时 (Game Runtimes)
+[应用运行时是开源库，能够在各种平台和框架（包括 Web、iOS、Android、Flutter、React Native 等）上实时渲染和更新你的 Rive 文件。](/runtimes/getting-started)[## 游戏运行时 (Game Runtimes)
 
-游戏运行时是开源库，允许在 Unity、Unreal 和 Defold 中实时渲染和更新你的 Rive 文件，并且易于集成到自定义引擎中。](/games/unreal.md)
+[游戏运行时是开源库，允许在 Unity、Unreal 和 Defold 中实时渲染和更新你的 Rive 文件，并且易于集成到自定义引擎中。](/games/unreal.md)
 
 [## 市场概览 (Marketplace Overview)
 
-在 Rive 市场分享和重新创作作品。](/community/marketplace-overview.md)[## 管理 (Admin)
+[在 Rive 市场分享和重新创作作品。](/community/marketplace-overview.md)[## 管理 (Admin)
 
-管理账号、团队和方案所需的所有信息。](/account-admin/account-overview/account-overview)[## 服务条款 (Terms of Service)
+[管理账号、团队和方案所需的所有信息。](/account-admin/account-overview/account-overview)[## 服务条款 (Terms of Service)
 
-我们所有的法律文件，如服务条款、可接受使用政策和隐私政策。](/legal/terms-of-service)
+[我们所有的法律文件，如服务条款、可接受使用政策和隐私政策。](/legal/terms-of-service)

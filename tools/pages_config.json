@@ -146,6 +146,48 @@
                 "target": "editor/exporting/exporting-for-runtime.md"
             }
         ],
+        "editor/events": [
+            {
+                "source": "editor/events",
+                "target": "editor/events.md"
+            }
+        ],
+        "editor/libraries": [
+            {
+                "source": "editor/libraries/libraries-overview",
+                "target": "editor/libraries.md"
+            }
+        ],
+        "editor/keyboard-shortcuts": [
+            {
+                "source": "editor/keyboard-shortcuts",
+                "target": "editor/keyboard-shortcuts.md"
+            }
+        ],
+        "editor/share-links": [
+            {
+                "source": "editor/share-links",
+                "target": "editor/share-links.md"
+            }
+        ],
+        "editor/mcp": [
+            {
+                "source": "editor/mcp",
+                "target": "editor/mcp.md"
+            }
+        ],
+        "editor/tagging": [
+            {
+                "source": "editor/tagging",
+                "target": "editor/tagging.md"
+            }
+        ],
+        "editor/data-binding": [
+            {
+                "source": "editor/data-binding/overview",
+                "target": "editor/data-binding/overview.md"
+            }
+        ],
         "editor/animate-mode": [
             {
                 "source": "editor/animate-mode/timeline/timeline",

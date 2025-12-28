@@ -4,7 +4,7 @@ Unity
 
 Rive 的 Unity 运行时。
 
-Rive Unity 运行时目前处于 Unity 的 Mac 和 Windows 安装的 **技术预览 (Technical Preview)** 阶段。随着我们扩展平台支持，我们希望收集有关 API 和功能集的反馈。请通过我们的 [社区](https://community.rive.app/c/support/) 或 [支持渠道](https://rive.atlassian.net/servicedesk/customer/portals) 联系我们。
+Rive Unity 运行时目前处于 Unity 的 Mac 和 Windows 安装的 **技术预览 (Technical Preview)** 阶段。随着我们扩展平台支持，我们希望收集有关 API 和功能集的反馈。请通过我们的 [社区](/https://community.rive.app/c/support/) 或 [支持渠道](https://rive.atlassian.net/servicedesk/customer/portals) 联系我们。
 
 有关 Unity 中 Rive 功能的更新列表，请参阅下面的 [功能支持](#feature-support)。
 

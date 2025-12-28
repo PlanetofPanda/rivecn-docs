@@ -26,7 +26,7 @@
 ![创建过渡](images/image_2.png)
 
 **弃用通知：** 本节关于旧版输入系统。
-**对于新项目：** 请改用 [数据绑定 (Data Binding)](/editor/data-binding)。
+**对于新项目：** 请改用 [数据绑定 (Data Binding)](/editor/data-binding/overview.md)。
 **对于现有项目：** 计划尽快从 Inputs 迁移到 Data Binding。
 **此内容仅用于支持遗留项目。**
 

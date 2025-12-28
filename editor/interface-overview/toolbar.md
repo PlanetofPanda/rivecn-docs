@@ -87,7 +87,7 @@ Gizmo 允许你操纵所选内容的平移、旋转和缩放属性。
 
 使用分组来组织你的图形或添加额外的变换空间。](../fundamentals/groups.md)[## 布局 (Layouts)
 
-布局让你能够创建响应式设计。](/editor/layouts/overview.md)
+[布局让你能够创建响应式设计。](/editor/layouts/overview.md)
 
 ## [​](#vector-tools-menu) 矢量工具菜单 (Vector Tools menu)
 
@@ -106,9 +106,9 @@ Gizmo 允许你操纵所选内容的平移、旋转和缩放属性。
 
 [## 事件 (Events)
 
-事件允许你向运行时和编辑器提供额外信息。](/editor/events/overview)[## 摇杆 (Joysticks)
+[事件允许你向运行时和编辑器提供额外信息。](/editor/events/overview)[## 摇杆 (Joysticks)
 
-摇杆是一个绑定工具，它能提供舞台控制项，让你能够平滑地切换已连接的时间轴。](/editor/manipulating-shapes/joysticks.md)
+[摇杆是一个绑定工具，它能提供舞台控制项，让你能够平滑地切换已连接的时间轴。](/editor/manipulating-shapes/joysticks.md)
 
 ## [​](#view-options-menu) 视图选项菜单 (View Options menu)
 
@@ -161,7 +161,7 @@ Gizmo 是屏幕上的视觉对象，可以让我们更改对象的位置、缩�
 
 ## [​](#export-button) 导出按钮 (Export Button)
 
-导出按钮允许你创建 [分享链接 (Share Links)](/editor/share-links/overview)、[发布文件到市场 (Marketplace)](/community/marketplace-overview.md#marketplace-overview)、[下载 `.riv` 文件](/editor/exporting/exporting-for-runtime.md) 以及 [发布库 (Library)](/editor/libraries)。
+导出按钮允许你创建 [分享链接 (Share Links)](/editor/share-links/overview)、[发布文件到市场 (Marketplace)](/community/marketplace-overview.md#marketplace-overview)、[下载 `.riv` 文件](/editor/exporting/exporting-for-runtime.md) 以及 [发布库 (Library)](/editor/libraries.md)。
 ![导出按钮 Pn](images/export.png)
 
 ## [​](#mode-toggle) 模式切换 (Mode toggle)

@@ -471,7 +471,7 @@ Rive 渲染器目前尚未通过 Flutter 在 Linux 上受支持。在 Linux 上�
 
 ### [​](#note-on-flutter-rendering) 关于 Flutter 渲染的说明
 
-[Impeller](https://docs.flutter.dev/perf/impeller) 正在取代 [Skia](https://skia.org/) 成为所有平台的默认渲染器。因此，当在通过 Impeller 渲染器使用 Rive Flutter 运行时，可能会出现以前未出现的渲染和 [性能](https://github.com/flutter/flutter/issues/134432) 差异。如果你在运行时遇到与 Rive 编辑器中的预期行为相比的任何视觉或性能错误，我们建议尝试以下步骤进行分类：
+[Impeller](https://docs.flutter.dev/perf/impeller) 正在取代 [Skia](/https://skia.org/) 成为所有平台的默认渲染器。因此，当在通过 Impeller 渲染器使用 Rive Flutter 运行时，可能会出现以前未出现的渲染和 [性能](https://github.com/flutter/flutter/issues/134432) 差异。如果你在运行时遇到与 Rive 编辑器中的预期行为相比的任何视觉或性能错误，我们建议尝试以下步骤进行分类：
 
 1.  尝试使用 `--no-enable-impeller` 标志运行 Flutter 应用以使用 Skia 渲染器。如果使用 Skia 时未出现视觉差异，则可能是 Impeller 上的渲染错误。但是，在向 Flutter 团队提交错误之前，请尝试下面的第二点👇
 
@@ -511,17 +511,17 @@ Rive 会自动为你下载原生库作为 `rive_native` 插件的一部分。
 
 [## 画板 (Artboards)
 
-在运行时控制显示哪个画板。](/runtimes/artboards)[## 布局 (Layout)
+[在运行时控制显示哪个画板。](/runtimes/artboards)[## 布局 (Layout)
 
-在运行时控制画板的布局（适应和对齐）。](/runtimes/layout)[## 状态机播放 (State Machine Playback)
+[在运行时控制画板的布局（适应和对齐）。](/runtimes/layout)[## 状态机播放 (State Machine Playback)
 
-在运行时控制状态机播放并与状态机输入交互。](/runtimes/state-machines.md)[## 数据绑定 (Data Binding)
+[在运行时控制状态机播放并与状态机输入交互。](/runtimes/state-machines.md)[## 数据绑定 (Data Binding)
 
-在运行时使用双向数据绑定动态更新文本、颜色、图像、列表等内容。](/runtimes/data-binding)[## 加载资产 (Loading Assets)
+[在运行时使用双向数据绑定动态更新文本、颜色、图像、列表等内容。](/runtimes/data-binding)[## 加载资产 (Loading Assets)
 
-在运行时加载引用的资产（图像、字体、音频）。也称为带外资产 (out-of-band assets)。](/runtimes/loading-assets.md)[## 缓存 Rive 文件 (Caching a Rive File)
+[在运行时加载引用的资产（图像、字体、音频）。也称为带外资产 (out-of-band assets)。](/runtimes/loading-assets.md)[## 缓存 Rive 文件 (Caching a Rive File)
 
-在多个 Rive 实例之间缓存并复用 Rive 文件对象以提高性能。](/runtimes/caching-a-rive-file)
+[在多个 Rive 实例之间缓存并复用 Rive 文件对象以提高性能。](/runtimes/caching-a-rive-file)
 
 ## [​](#resources) 资源
 
@@ -529,7 +529,7 @@ Rive Flutter:
 
 -   [GitHub](https://github.com/rive-app/rive-flutter)
 -   [pub.dev](https://pub.dev/packages/rive)
--   [示例应用](https://github.com/rive-app/rive-flutter/tree/master/example/)
+-   [示例应用](/https://github.com/rive-app/rive-flutter/tree/master/example/)
 
 Rive Native:
 
