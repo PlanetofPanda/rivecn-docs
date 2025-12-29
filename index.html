@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
   <meta charset="UTF-8">
   <title>Rive 中文文档</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css">
+  <link rel="stylesheet" href="https://registry.npmmirror.com/docsify/4.13.1/files/lib/themes/vue.css">
 </head>
+
 <body>
   <div id="app">加载中...</div>
   <script>
@@ -17,11 +19,10 @@
       loadSidebar: true,    // 开启侧边栏
       auto2top: true,       // 切换页面后自动回到顶部
       subMaxLevel: 3,       // 目录层级
-      sidebarDisplayLevel: 1, 
-      // 路由别名配置：让子目录使用各自的侧边栏
+      sidebarDisplayLevel: 1,
+      // 路由别名配置：所有子目录统一使用根目录的侧边栏
       alias: {
-        '/editor/.*/_sidebar.md': '/editor/_sidebar.md',
-        '/runtime/.*/_sidebar.md': '/runtime/_sidebar.md',
+        '/.*/_sidebar.md': '/_sidebar.md',
       },
       sidebarCollapse: {
         accordion: true,
@@ -34,8 +35,10 @@
       }
     }
   </script>
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
-  <script src="//unpkg.com/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
+  <script src="https://registry.npmmirror.com/docsify/4.13.1/files/lib/docsify.min.js"></script>
+  <script src="https://registry.npmmirror.com/docsify/4.13.1/files/lib/plugins/search.min.js"></script>
+  <script
+    src="https://registry.npmmirror.com/docsify-sidebar-collapse/2.0.3/files/dist/docsify-sidebar-collapse.min.js"></script>
 </body>
+
 </html>

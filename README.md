@@ -54,7 +54,7 @@ Rive 不仅仅是一个动画工具，它是一个**实时的交互设计运行�
 <div style="border: 1px solid #e0e0e0; border-radius: 8px; padding: 20px; background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); color: white; transition: transform 0.3s;">
   <h4 style="margin-top: 0; color: white;">💻 Scripting - 脚本</h4>
   <p style="font-size: 0.95em; line-height: 1.6;">在一个协作编辑器中迭代代码、设计和动画（目前处于早期访问阶段）。</p>
-  <a href="https://rive.app/docs/scripting/getting-started" target="_blank" style="color: white; text-decoration: underline;">访问官网 →</a>
+  <a href="#/scripting/getting-started" target="_blank" style="color: white; text-decoration: underline;">访问官网 →</a>
 </div>
 
 <!-- App Runtimes 卡片 -->
@@ -68,7 +68,7 @@ Rive 不仅仅是一个动画工具，它是一个**实时的交互设计运行�
 <div style="border: 1px solid #e0e0e0; border-radius: 8px; padding: 20px; background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); color: white; transition: transform 0.3s;">
   <h4 style="margin-top: 0; color: white;">🎮 Game Runtimes - 游戏运行时</h4>
   <p style="font-size: 0.95em; line-height: 1.6;">开源库，支持在 Unity、Unreal、Defold 和自定义游戏引擎中集成 Rive。</p>
-  <a href="https://rive.app/docs/game-runtimes/unreal/unreal" target="_blank" style="color: white; text-decoration: underline;">访问官网 →</a>
+  <a href="#/game-runtimes/unreal/unreal" target="_blank" style="color: white; text-decoration: underline;">访问官网 →</a>
 </div>
 
 <!-- Feature Support 卡片 -->
