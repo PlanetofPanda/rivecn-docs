@@ -25,6 +25,7 @@ Rive 不仅仅是一个动画工具，它是一个**实时的交互设计运行�
     frameborder="no" 
     framespacing="0" 
     allowfullscreen="true" 
+    referrerpolicy="no-referrer"
     style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
   </iframe>
 </div>

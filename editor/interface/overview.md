@@ -16,6 +16,7 @@ Rive 编辑器是所有创作发生的地方。它分为两大主要模式：**�
     frameborder="no" 
     framespacing="0" 
     allowfullscreen="true" 
+    referrerpolicy="no-referrer"
     style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
   </iframe>
 </div>
