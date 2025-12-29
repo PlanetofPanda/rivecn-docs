@@ -1,23 +1,16 @@
-操纵形状
+操控形状
 
 # 网格 (Meshes)
 
-网格是为位图图形添加自然且有机变形的绝佳方式。让皮肤活动、织物起伏、头发飘动等等。
+网格允许你将点阵图像（如 PNG, JPG）或复杂的矢量形状转换为可变形的网格结构，从而实现自然且有机的动画效果。
 
-## [​](#add-mesh) 添加网格 (Add Mesh)
+## [​](#creating-a-mesh) 创建网格
 
-在创建任何变形之前，你需要先添加一个网格。
-选中图像后，按 Enter 键或导航到检查器的“变形 (Deform)”部分，点击加号按钮，然后选择“网格 (Mesh)”。你会注意到系统会自动为你生成一个简单的网格。
-![新建网格演示 Gi](images/NewMesh.gif)
-使用检查器中的“新建轮廓 (New Contour)”按钮开始为对象创建自定义网格。使用钢笔工具放置网格的顶点。在钢笔工具激活的情况下持续点击以创建强制边（由连接两个顶点的蓝线表示），或者在点击之间按下 Esc 键以取消顶点之间的连接。
-![新建轮廓演示 Gi](images/NewContour.gif)
+你可以通过在图像或形状的检查器中点击“编辑网格 (Edit Mesh)”按钮来进入网格编辑模式。
+![编辑网格 Pn](images/edit-mesh.gif)
 
-## [​](#edit-mesh) 编辑网格 (Edit Mesh)
+## [​](#vertex-weighting) 顶点权重
 
-你可以随时使用检查器中的“编辑网格 (Edit Mesh)”按钮，或在选中资产的情况下按 Enter 键来编辑网格。使用钢笔工具添加、删除或移动顶点。
-![编辑网格演示 Gi](images/EditMesh.gif)
+在网格中，每个顶点都可以被赋予不同的权重，以决定它受骨骼影响的程度。这对于实现类似肌肉、布料或流体的平滑运动至关重要。
 
-## [​](#mesh-deform) 网格变形 (Mesh Deform)
-
-在设计 (Design) 和编辑 (Edit) 模式下，你都可以通过进入编辑网格模式并使用选择工具移动顶点来让网格变形。为了获得更自然的体验，请考虑使用 [骨骼 (Bones)](/editor/manipulating-shapes/bones.md)。
-![网格变形演示 Gi](images/MeshDeform.gif)
+[骨骼 (Bones)](/editor/manipulating-shapes/bones.md)[裁剪 (Clipping)](/editor/manipulating-shapes/clipping.md)

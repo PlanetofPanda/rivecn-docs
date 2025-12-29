@@ -1,69 +1,34 @@
-- [Case Studies](https://rive.app/blog/case-studies)
-- [Community](https://community.rive.app)
-- [Blog](https://rive.app/blog)
-- [Early Access](https://rive.app/blog/early-access-to-unreleased-features)
+操控形状 (Manipulating Shapes)
 
-##### Editor
+# 骨骼技巧 (Bone Tips)
 
-- Interface Overview
-- Fundamentals
-- Manipulating Shapes
+如何进行骨骼绑定 (Rigging) 非常重要。一个聪明的绑定方案可以让你用更少的关键帧创建动画，使你的工作流更加高效，并保持时间轴的整洁。
 
-  - [Overview](/editor/manipulating-shapes/manipulating-shapes)
-  - [Bones](/editor/manipulating-shapes/bones.md)
-  - [Bone Tips](/editor/manipulating-shapes/bone-tips.md)
-  - [Meshes](/editor/manipulating-shapes/meshes.md)
-  - [Clipping](/editor/manipulating-shapes/clipping.md)
-  - [Solos](/editor/manipulating-shapes/solos.md)
-  - [Trim Path](/editor/manipulating-shapes/trim-path.md)
-  - [Joysticks](/editor/manipulating-shapes/joysticks.md)
-- Text
-- Constraints
-- Animate Mode
-- State Machines
-- Events
-- Data Binding
-- Layouts
-- [Libraries](/editor/libraries.md)
-- [Keyboard Shortcuts](/editor/keyboard-shortcuts.md)
-- Exporting
-- Share Links
-- MCP
-- [Tagging](/editor/tagging.md)
+## [​](#use-bones-for-multiple-vertices) 使用骨骼控制多个顶点
 
-On this page
+骨骼最强大的功能之一是能够同时驱动多个顶点的变换。如果你发现自己在为大量独立的顶点逐个设置关键帧，这通常意味着你可以通过更优的骨骼设置来简化流程。
 
-- [Use bones to animate multiple vertices together](#use-bones-to-animate-multiple-vertices-together)
-- [The way you weight vertices or handles is important](#the-way-you-weight-vertices-or-handles-is-important)
+一个好的绑定方案应该能：
+- 用**一根骨骼的变换替代多个顶点的手动关键帧**。
+- 在骨骼之间建立清晰的层级关系，使得父级移动时，所有子级自然跟随。
 
-Manipulating Shapes
+## [​](#importance-of-weighting) 权重的重要性
 
-# Bone Tips
+当你使用网格 (Mesh) 和骨骼时，**权重 (Weighting)** 决定了每根骨骼对特定顶点的影响程度。
 
-How you rig your design is important. A smart rig allows you to create fewer keys, making your animation easy to work with and keeping your timeline tidy.
+- **权重值为 1**：顶点完全跟随该骨骼移动。
+- **权重值为 0**：顶点不受该骨骼影响。
+- **介于 0 和 1 之间**：顶点受该骨骼的部分影响（多根骨骼可以同时影响同一个顶点，产生平滑的混合效果）。
 
-## [​](#use-bones-to-animate-multiple-vertices-together) Use bones to animate multiple vertices together
+花时间精细调整权重可以避免变形时出现不自然的"捏合"或"拉伸"。
 
-With Rive you can bind vertices and bezier handles to bones. You can connect different bones to different vertices to control parts of a shape.
-![Image](images/23a2b758-3cf9-4da3-8bed-07f9a00fedac.webp)
-In this page-turn example, we’ve connected the bezier handles at the top and bottom of the page to a single bone.
-![Image](images/image_1.png)
-This allows you to easily deform the page with just a few bones acting as controls.
+## [​](#planning-your-rig) 规划你的绑定
 
-## [​](#the-way-you-weight-vertices-or-handles-is-important) The way you weight vertices or handles is important
+在开始绑定之前，先思考：
+1. **变形点在哪里？** 例如肘部、膝盖、旗杆的节点。
+2. **哪些部件需要独立运动？** 例如手指的每个关节。
+3. **是否需要 IK（反向动力学）？** 例如需要让脚固定在地面上。
 
-Weighting a vertex and its handles differently allows you to create interesting deformations.
-![Image](images/image_2.png)
-In this example, the top and bottom bezier handles (on the back shape of the orange) are weighted differently from their vertices. This causes the bezier handles to move at a different speed as the connected bone is scaled, creating a 3D effect.
-![Image](images/image_3.png)
-Notice how the vertices and handles on the back shape of the orange move as the bone’s scale changes.
+通过提前规划，你可以避免在项目后期推翻重来。
 
-Was this page helpful?
-
-YesNo
-
-[Suggest edits](https://github.com/rive-app/rive-docs/edit/main/editor/manipulating-shapes/bone-tips.mdx)[Raise issue](https://github.com/rive-app/rive-docs/issues/new?title=Issue on docs&body=Path: /editor/manipulating-shapes/bone-tips)
-
-[Bones](/editor/manipulating-shapes/bones.md)[Meshes](/editor/manipulating-shapes/meshes.md)
-
-⌘I
+[骨骼 (Bones)](/editor/manipulating-shapes/bones.md)[网格 (Meshes)](/editor/manipulating-shapes/meshes.md)

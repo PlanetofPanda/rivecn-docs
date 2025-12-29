@@ -99,7 +99,7 @@ type Enemy = {
 export type MyGame = {
   -- This is the component that we will dynamically add to our scene
   -- 这是我们将动态添加到场景中的组件
-  -- See: https://rive.app/docs/scripting/script-inputs
+  -- See: http://rive.org.cn/docs/#/scripting/script-inputs
   enemy: Input<Artboard<Data.Enemy>>,
   enemies: { Enemy },
 }

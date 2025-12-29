@@ -1,54 +1,51 @@
-Editor
+编辑器 (Editor)
 
-# Tagging
+# 标签系统 (Tagging)
 
-Tagging is a way to organize your hierarchy further. Create tags, then apply them to objects in the Hierarchy like Bones or Groups, then filter the view to see exactly what you need, when you need it.
+标签是一种进一步组织层级面板的方法。通过创建标签并将其应用到 [层级面板 (Hierarchy)](/editor/interface-overview/hierarchy.md) 中的对象（如骨骼或分组），你可以根据需要在特定时刻过滤视图，聚焦于关键内容。
 
-## [​](#creating-tags) Creating Tags
+## [​](#creating-tags) 创建标签 (Creating Tags)
 
-There are two ways to create a Tag: either through the Hierarchy or by using the Inspector. Remember that any Tag created can be used on any artboard in the file.
+有两种创建标签的方式：通过层级面板或使用检查器。请记住，创建的任何标签都可以在该文件的任何画板中使用。
 
-### [​](#in-the-inspector) In the Inspector
+### [​](#in-the-inspector) 在检查器中
 
-To create a new tag, ensure that you have nothing selected on the artboard, then use the plus button next to the Tags option.
-![Create Tag through Inspector](images/image_0.png)
-Once the Tag has been added, you can change the name and color to your liking.
+确保舞台上未选中任何内容，然后在检查器中找到 **Tags** 选项并点击旁边的加号。
+![通过检查器创建标签](images/image_0.png)
+标签添加后，你可以根据喜好修改名称和颜色。
 
-### [​](#in-the-hierarchy) In the Hierarchy
+### [​](#in-the-hierarchy) 在层级面板中
 
-There are two ways to create tags through the Hierarchy. The first is by using the tag menu at the top of the Hierarchy. From here you can create new Tags, edit Tags, collapse Tags, filter, lock, or select assigned Tags.
-![Create Tag through Tag menu](images/image_1.png)
-The second way is to select one or more objects to create a tag directly in the hierarchy, then right-click and use the add tag option. From there, you can either create a new tag or assign a tag that you’ve already created.
-![Create Tag on object](images/image_2.png)
-To edit the Tag’s properties, use the steps above.
+- **方式一**：使用层级面板顶部的标签菜单。在这里你可以新建标签、编辑现有标签、折叠标签视图、过滤、锁定或选择指定的标签。
+![通过标签菜单创建标签](images/image_1.png)
+- **方式二**：选中一个或多个对象，鼠标右键点击并选择“Add Tag”选项。你可以创建新标签或分配已存在的标签。
+![在对象上直接创建标签](images/image_2.png)
 
-## [​](#the-tags-menu) The Tags Menu
+## [​](#the-tags-menu) 标签菜单 (The Tags Menu)
 
-The Tags Menu is where you will find most of the Tag Options. Some of these options are self-explanatory, such as creating or editing a tag. Let’s explore some of the other available options.
-![Tag menu](images/b4ba7047-3927-467f-9528-32c9b066f0d2.webp)
+标签菜单是大多数标签选项所在地。
+![标签菜单概览](images/b4ba7047-3927-467f-9528-32c9b066f0d2.webp)
 
-### [​](#collapse-tag) Collapse Tag
+### [​](#collapse-tag) 折叠标签 (Collapse Tag)
 
-When you add a tag to an object, you’ll notice that the Tag’s name and the color pip are displayed to the right.
-![Image](images/image_4.png)
-We can use the Collapse Tag option to hide the name. Conversely, we can use the Reveal Tag option to display the names again.
+当你为对象添加标签时，标签名称和颜色图标通常显示在右侧。
+![标签显示效果](images/image_4.png)
+你可以使用 **Collapse Tag** 选项隐藏名称（仅保留颜色点），或使用 Reveal Tag 重新显示。
 
-### [​](#filter-tags) Filter Tags
+### [​](#filter-tags) 过滤标签 (Filter Tags)
 
-When you mouse over a tag in the menu, you’re given the option to Filter. This option will filter your Hierarchy and only show you the objects with the filtered tag. The current filtered tabs are shown next to the Tag Menu.
-![Image](images/image_5.png)
-Note that you can add as many tags to the filter as you want. This is a great way to show only the controls you need to create an animation.
+当鼠标悬停在菜单中的某个标签上时，会出现 **Filter (过滤)** 选项。这会过滤你的层级树，仅显示拥有该标签的对象。当前激活的过滤器会显示在菜单旁。
+![过滤标签示例](images/image_5.png)
+你可以将多个标签添加到过滤器中，这在制作动画时仅显示所需的交互控制项非常有用。
 
-### [​](#locked) Locked
+### [​](#locked) 锁定 (Locked)
 
-The Locked option will allow you to lock the objects with the selected Tag. When locked, you can no longer select that object on the stage.
-![Image](images/image_6.png)
-This is a great tool to use when you want to hand off a file to another animator so that they don’t inadvertently use a control that shouldn’t be.
-This option is also available via the Inspector via the lock icon.
+**Locked** 选项允许你锁定带有所选标签的对象。锁定后，你无法在舞台上直接选中该对象。
+![锁定标签示例](images/image_6.png)
+当你想把文件交付给另一名动画师，且不想让他们误操作某些关键控制器时，这是一个极好的工具。该选项也可在检查器的锁定图标处找到。
 
-### [​](#select) Select
+### [​](#select) 选择 (Select)
 
-The Select option will select every object with the assigned tag.
-Note that this option is also available in the Inspector via the target icon.
+**Select** 选项会一键选中所有带有该标签的对象。该选项也可在检查器的目标图标处找到。
 
-[MCP Integration](/editor/mcp/integration)
+[MCP 集成 (MCP Integration)](/editor/mcp/integration)

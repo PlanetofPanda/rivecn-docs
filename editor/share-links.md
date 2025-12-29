@@ -1,75 +1,58 @@
-Share Links
+编辑器 (Editor)
 
-# Share Links Overview
+# 分享链接概览 (Share Links Overview)
 
-Share Links are a fast no-code way to get your Rive files running on a website or to present your graphics to a client.
+分享链接是一种快速、无需代码的方法，可以让你的 Rive 文件在网站上运行，或向客户展示你的图形作品。
 
-Generating share links is available on Voyager and Enterprise plans. [Learn more about our plans and pricing](https://rive.app/pricing).
+生成分享链接功能适用于 Voyager 和 Enterprise 方案。[了解更多关于我们的方案和定价的信息](https://rive.app/pricing)。
 
-Share the current version of the file you’re working with share links. Note that this is not the same as giving someone access to the live file with all its revision history. This link will be a frozen version of the file in its current state. If you make changes to the file, you’ll need to generate a new share link.
+通过分享链接分享你当前处理的文件版本。请注意，这并不等同于让某人访问包含所有版本历史记录的实时文件。分享链接是文件当前状态的“冻结”版本。如果你对文件进行了更改，则需要生成一个新的分享链接。
 
-Certain features, such as [Vector Feathering](https://rive.app/blog/introducing-vector-feathering), are only supported through the Rive Renderer. See our [Feature Support](/docs/feature-support) page for more information.
+某些功能（如 [矢量羽化](https://rive.app/blog/introducing-vector-feathering)）仅通过 Rive 渲染器 (Rive Renderer) 支持。更多信息请参阅我们的 [功能支持](/feature-support.md) 页面。
 
-## [​](#creating-a-share-link) Creating a share link
+## [​](#creating-a-share-link) 创建分享链接 (Creating a share link)
 
-Generate a share link from the Export menu. This link can be shared with anyone, not just your team members.
-![Image](images/spaces%2F-M3EXlibk6bj2FzPQW-9%2Fuploads%2FpdTtfPZWSbUO2F68xJAi%2FCleanShot%202022-08-01%20at%2015.25.06%402x.png)
-Choose which artboard, animation, or state machine you want to share in the Share Link modal.
-![Image](images/spaces%2F-M3EXlibk6bj2FzPQW-9%2Fuploads%2FHboa00GCgDOCjmOMJQwu%2FScreen%20Shot%202022-05-19%20at%204.02.59%20PM.png)
+你可以从“导出 (Export)”菜单生成分享链接。该链接可以分享给任何人，而不仅仅是你的团队成员。
+![创建分享链接示例](images/spaces%2F-M3EXlibk6bj2FzPQW-9%2Fuploads%2FpdTtfPZWSbUO2F68xJAi%2FCleanShot%202022-08-01%20at%2015.25.06%402x.png)
+在分享链接弹窗中，选择你想要分享的画板、动画或状态机。
+![分享链接选项选择](images/spaces%2F-M3EXlibk6bj2FzPQW-9%2Fuploads%2FHboa00GCgDOCjmOMJQwu%2FScreen%20Shot%202022-05-19%20at%204.02.59%20PM.png)
 
-### [​](#share-link-options) Share link options
+### [​](#share-link-options) 分享链接选项 (Share link options)
 
-Once you click on the “Generate link” button, several share link types appear:
+点击“Generate link”按钮后，会出现几种分享链接类型：
 
-- **Share link** - Displayed within a border frame on the Rive site at a unique URL. Use this for quickly showing off your Rive creation to clients without having to stage it within the context of a web application yourself
-- **Embed link** - Standalone display of your Rive creation without the context of the border frame. Use this link when you want to embed your Rive creation into other 3rd party platforms that support unfurling and displaying your Rive creation still as a preview (i.e Notion, Tome, Telegram)
-- **Embed code** - A code snippet that allows you to embed your Rive creation’s embed link in an iframe. This is useful for where you need to drop Rive into a platform where you can edit HTML (i.e Webflow, WordPress, etc.) and you don’t want to deal with setting up the creation with a web runtime
-- **Framer code (Deprecated)** - See the new official [Rive Framer Plugin](https://www.framer.com/marketplace/plugins/rive/).
+- **Share link (分享链接)**：在 Rive 网站的一个唯一 URL 上展示，带有边框。适用于快速向客户展示 Rive 作品。
+- **Embed link (嵌入链接)**：独立显示你的 Rive 作品，不带边框。适用于将作品嵌入 Notion、Tome、Telegram 等支持“预览展开 (unfurling)”的第三方平台。
+- **Embed code (嵌入代码)**：一段 iframe 代码片段。适用于 Webflow、WordPress 等可以编辑 HTML 的平台，无需配置 Web 运行时即可快速部署。
+- **Framer code (已弃用)**：请参阅新的官方 [Rive Framer 插件](https://www.framer.com/marketplace/plugins/rive/)。
 
-Other options include:
+其他选项包括：
+- **Enable (启用)**：关闭开关可防止他人查看该链接。
+- **Rive Renderer**：在使用 Rive 渲染器（推荐）和 Canvas 渲染器之间切换。
 
-- **Enable**: Disable the link to prevent others from viewing it.
-- **Rive Renderer**: Toggle between using the Rive Renderer (recommended) and the Canvas renderer.
+## [​](#integrations) 平台集成 (Integrations)
 
-Certain features, such as [Vector Feathering](https://rive.app/blog/introducing-vector-feathering), are only available using the Rive Renderer. See our [Feature Support](/docs/feature-support) page for more information.
-
-## [​](#integrations) Integrations
-
-Use share links to embed your Rive files with other well-known tools and platforms! This is not a full list. Most tools will support Rive share links using the methods described here.
+使用分享链接将你的 Rive 文件嵌入到其他知名工具和平台中。
 
 ### [​](#notion) Notion
-
-1. Copy the *share* or *embed link*
-2. Paste the link in Notion.
-3. Select the Embed option that appears in the context menu.
-
-Embed share link in Notion
-![Image](images/spaces%2F-M3EXlibk6bj2FzPQW-9%2Fuploads%2F1QHWSbe4L4gdwkaTLV4x%2FCleanShot%202022-08-01%20at%2015.32.03%402x.png)
+1. 复制 **Share link** 或 **Embed link**。
+2. 在 Notion 中粘贴链接。
+3. 在菜单中选择 **Embed** 选项。
+![Notion 嵌入示例](images/spaces%2F-M3EXlibk6bj2FzPQW-9%2Fuploads%2F1QHWSbe4L4gdwkaTLV4x%2FCleanShot%202022-08-01%20at%2015.32.03%402x.png)
 
 ### [​](#webflow) Webflow
-
-1. Copy the *embed code* with the iframe HTML block
-2. In Webflow, click the + sign to add a component and add an Embed to access the HTML Embed Code Editor
-3. Paste the embed code you copied from the Rive editor
-
-![Embed code in Webflow](images/spaces%2F-M3EXlibk6bj2FzPQW-9%2Fuploads%2FJUt6rSYoE1TJYJHHUHvW%2FScreen%20Shot%202022-05-19%20at%207.30.30%20PM.png)
+1. 复制带有 iframe 的 **Embed code**。
+2. 在 Webflow 中添加一个 **Embed** 组件以访问 HTML 编辑器。
+3. 粘贴从 Rive 编辑器复制的代码。
+![Webflow 嵌入示例](images/spaces%2F-M3EXlibk6bj2FzPQW-9%2Fuploads%2FJUt6rSYoE1TJYJHHUHvW%2FScreen%20Shot%202022-05-19%20at%207.30.30%20PM.png)
 
 ### [​](#tome) Tome
+1. 复制 **Embed link**。
+2. 在 Tome 幻灯片上添加一个 **Weblink**。
+3. 粘贴链接。
 
-1. Copy the *embed link*
-2. In Tome on a slide of your choosing, add a weblink
-3. Paste the embed link you copied from the Rive editor
+## [​](#managing-share-links) 管理分享链接 (Managing share links)
 
-![Embed share link in Tome](images/spaces%2F-M3EXlibk6bj2FzPQW-9%2Fuploads%2FRQDfIWCWxjJ9XBGC3wBG%2FScreen%20Shot%202022-05-19%20at%207.32.34%20PM.png)
+访问设置中的 [Share Links](https://rive.app/profile/?section=share%20links) 部分来管理你生成的链接。你可以通过关闭 **Active** 开关来禁用链接。
 
-### [​](#social-media) Social Media
-
-1. Copy the *share link*
-2. Paste it into your favorite platform
-3. See your Rive creation unfurl when you post
-
-## [​](#managing-share-links) Managing share links
-
-Visit the [Share Links](https://rive.app/profile/?section=share%20links) section of your settings to manage the links you’ve generated. You can disable a share link by setting its Active toggle to off.
-
-[Exporting for Backup](/docs/editor/exporting/exporting-for-backup)[Framer And Rive](/docs/editor/share-links/framer-and-rive)
+[导出为备份](/editor/exporting/exporting-for-backup)[Framer 与 Rive](/editor/share-links/framer-and-rive)

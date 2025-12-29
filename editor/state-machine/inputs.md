@@ -1,86 +1,35 @@
-- [Case Studies](https://rive.app/blog/case-studies)
-- [Community](https://community.rive.app)
-- [Blog](https://rive.app/blog)
-- [Early Access](https://rive.app/blog/early-access-to-unreleased-features)
+状态机 (State Machines)
 
-##### Editor
+# 输入 (Inputs)
 
-- Interface Overview
-- Fundamentals
-- Manipulating Shapes
-- Text
-- Constraints
-- Animate Mode
-- State Machines
+> [!WARNING]
+> **⚠️ 已弃用：请使用数据绑定 (Data Binding) 控制 Rive 图形**
+>
+> **弃用提示：** 本页介绍的是旧版 Inputs 系统。
+> - **新项目**：请使用 [数据绑定 (Data Binding)](/editor/data-binding/overview.md) 替代。
+> - **现有项目**：请尽早规划迁移。
+> - **本内容仅为向后兼容提供。**
 
-  - [Overview](/editor/state-machine/overview.md)
-  - [States](/editor/state-machine/states.md)
-  - [Inputs](/editor/state-machine/inputs.md)
-  - [Transitions](/editor/state-machine/transitions.md)
-  - [Listeners](/editor/state-machine/listeners.md)
-  - [Layers](/editor/state-machine/layers)
-- Events
-- Data Binding
-- Layouts
-- [Libraries](/editor/libraries.md)
-- [Keyboard Shortcuts](/editor/keyboard-shortcuts.md)
-- Exporting
-- Share Links
-- MCP
-- [Tagging](/editor/tagging.md)
+输入是控制状态机过渡的旧式工具。虽然仍可使用，但数据绑定是最佳实践，因为视图模型 (View Models) 更强大且在运行时更易控制。
+输入最适合用于快速原型交互，不打算迁移到运行时的场景。
 
-On this page
+### [​](#creating-a-new-input) 创建新输入
 
-- [Creating a new Input](#creating-a-new-input)
-- [Input Types](#input-types)
-- [Boolean](#boolean)
-- [Trigger](#trigger)
-- [Number](#number)
+在输入面板中点击加号按钮，选择输入类型。有三种类型：布尔值、触发器和数字。
+![创建输入](images/image_0.png)
 
-State Machines
+## [​](#input-types) 输入类型
 
-# Inputs
+### [​](#boolean) 布尔值 (Boolean)
+布尔值只有两种状态：true 或 false。
+![开关的布尔输入](images/image_1.png)
 
-⚠️ DEPRECATED: Use Data Binding instead of Inputs for controlling Rive graphics
+### [​](#trigger) 触发器 (Trigger)
+触发器类似布尔值，但只能短暂变为 true（一次性脉冲）。
+![攻击动画的触发器](images/image_2.png)
 
-**DEPRECATION NOTICE:** This entire page documents the legacy Inputs system.
-**For new projects:** Use [Data Binding](/editor/data-binding/overview.md) instead. **For
-existing projects:** Plan to migrate from Inputs to Data Binding as soon as
-possible. **This content is provided for legacy support only.**
+### [​](#number) 数字 (Number)
+数字输入提供一个可以是任意整数的数值框。
+![评分动画的数字输入](images/image_3.png)
 
-Inputs are a legacy tool to control transitions in our state machine. While Inputs can still be used to control transitions, Data Binding is considered best practice since View Models are both more powerful and easier to control at runtime.
-The best use for Inputs is quick, prototype interactions that you don’t plan to migrate to runtime.
-
-### [​](#creating-a-new-input) Creating a new Input
-
-To create a new Input, use the plus button in the input panel. After hitting the plus button, you’ll be prompted to select the type of input you want to create. There are three types of inputs; booleans, triggers, and numbers.
-![Image](images/image_0.png)
-
-## [​](#input-types) Input Types
-
-We can use three types of inputs depending on the situation and type of interactive content: booleans, triggers, and numbers. We’ll discuss each of these inputs below.
-
-### [​](#boolean) Boolean
-
-A boolean can hold either a true or false value.
-![Boolean for a switch](images/image_1.png)
-
-### [​](#trigger) Trigger
-
-Triggers are similar to booleans, but can only become true for a short time.
-![Trigger for attack animation](images/image_2.png)
-
-### [​](#number) Number
-
-A number input give you a number box that can be any integer.
-![Number input for rating animation](images/image_3.png)
-
-Was this page helpful?
-
-YesNo
-
-[Suggest edits](https://github.com/rive-app/rive-docs/edit/main/editor/state-machine/inputs.mdx)[Raise issue](https://github.com/rive-app/rive-docs/issues/new?title=Issue on docs&body=Path: /editor/state-machine/inputs)
-
-[States](/editor/state-machine/states.md)[Transitions](/editor/state-machine/transitions.md)
-
-⌘I
+[状态 (States)](/editor/state-machine/states.md)[过渡 (Transitions)](/editor/state-machine/transitions.md)

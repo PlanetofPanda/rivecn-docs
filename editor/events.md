@@ -1,80 +1,71 @@
-Events
+事件 (Events)
 
-# Events Overview
+# 事件概览 (Events Overview)
 
-If you’re using [Data Binding](/editor/data-binding/overview.md), you can listen for triggers or value changes from your code without needing Events.
+如果你正在使用 [数据绑定 (Data Binding)](/editor/data-binding/overview.md)，你可以直接从代码中监听触发器或值变化，而无需额外使用“事件”。
 
-Events are a way to send signals to your runtime code to execute a block of code at the right moment. They enhance the communication between designers and developers by passing along useful information. With them, we can do things like go to a URL, play a sound, have some HTML appear, or do anything else we may want to accomplish via code.
-Coordinating Rive events at design time and runtime will be important to ensure a successful integration in apps, games, and more.
+**事件**是一种在精确时刻向运行时代码发送信号的方法。它们通过传递有用信息来增强设计师与开发者之间的沟通。利用事件，我们可以触发诸如：打开网页（URL）、播放音效、显示特定的 HTML 元素，或者任何可以通过代码实现的逻辑。
 
-## [​](#creating-an-event) Creating an Event
+在设计阶段和运行时协调好 Rive 事件，对于在应用、游戏等场景下的成功集成至关重要。
 
-To create an Event, use the Events tool located in the Toolbar. Once the tool is active, click anywhere on the artboard to add a new event.
-![Adding a new event](images/image_0.png)
-You’ll notice that the Event is displayed on the artboard and in the Hierarchy.
+## [​](#creating-an-event) 创建事件 (Creating an Event)
 
-## [​](#configuring-an-event) Configuring an Event
+要创建事件，请使用位于工具栏中的 **事件工具 (Events tool)**。激活工具后，点击画板上的任意位置即可添加一个新事件。
+![添加新事件示例](images/image_0.png)
+你会发现事件会同时显示在舞台画板上和层级面板 (Hierarchy) 中。
 
-Once we’ve added an event, we need to configure the Event using the Inspector.
-![Inspector view for the Event](images/45fd9a33-3b9f-4e29-bc82-c0a8dca96abd.webp)
+## [​](#configuring-an-event) 配置事件 (Configuring an Event)
 
-### [​](#name) Name
+添加事件后，我们需要在检查器 (Inspector) 中进行配置。
+![检查器中的事件配置](images/45fd9a33-3b9f-4e29-bc82-c0a8dca96abd.webp)
 
-The Name field is where we can give our Event a specific name. It’s important to do this so that at runtime, we can hook up the correct bits of code to their corresponding events.
-![Renaming an Event](images/image_2.png)
-You can also rename the Event directly on the artboard.
+### [​](#name) 名称 (Name)
 
-### [​](#type) Type
+名称字段用于给事件指定唯一标识。这非常重要，因为在运行时，开发者需要根据这个名称来挂载代码逻辑。
+![重命名事件](images/image_2.png)
+你也可以直接在画板上点击名称进行修改。
 
-The Type dropdown allows you to change the Event type between General and URL.
-![Image](images/image_3.png)
+### [​](#type) 类型 (Type)
 
-### [​](#properties) Properties
+类型下拉菜单允许你在这两种事件类型间切换：**General (通用)** 和 **URL**。
 
-Properties allow us to define extra information being passed to the Runtimes. For example, you may want to pass in the name of an audio file to play when the event is reported at runtime, or perhaps some other metadata for data analytics purposes.
-To add a new property, hit the plus button next to the Properties.
-![Add New Property](images/image_4.png)
-First, we want to change the name of our property to something identifiable. Next, we need to select what type of value our property will track such as a Number, Boolean, or String.
-![Rename and select input](images/image_5.png)
+### [​](#properties) 属性 (Properties)
+
+属性允许你向运行时传递额外的信息。例如，你可能想传递一个音频文件的名称，以便在事件上报时播放对应的声音，或者传递一些用于数据分析的元数据。
+点击属性旁边的“加号”按钮即可添加新属性。
+![添加新属性](images/image_4.png)
+你需要为属性重命名，并选择其跟踪的值类型（数字、布尔值或字符串）。
 
 ### [​](#url) URL
 
-When an `Open URL` Event is selected, we have additional configuration options.
-Properties for Open URL Event
-![Image](images/spaces%2F-M3EXlibk6bj2FzPQW-9%2Fuploads%2FrDR98sXAUkNZXqBbv0sy%2FCleanShot%202023-09-18%20at%2013.06.14%402x.png)
-In the text box, we will add the URL that we want our component to take us.
+当选择 `Open URL` 事件时，会出现额外的配置：
+![URL 配置示例](images/spaces%2F-M3EXlibk6bj2FzPQW-9%2Fuploads%2FrDR98sXAUkNZXqBbv0sy%2FCleanShot%202023-09-18%20at%2013.06.14%402x.png)
+- **URL**：在文本框中输入目标网址（确保包含 `http://` 或 `https://`）。
+- **Target (目标)**：告诉浏览器在哪里打开 URL。
+  - `Blank`：通常在**新页签**打开。
+  - `Parent`：在父浏览上下文中打开。
+  - `Self`：在当前页面打开。
+  - `Top`：在顶层浏览上下文中打开。
 
-Make sure to include the URL Protocol (i.e. “http://” or “https://”) if you want to link to a new domain.
+## [​](#signaling-an-event) 发射信号 (Signaling an Event)
 
-The Target tells the user’s browser where this URL should open. We have a few options: Blank, Parent, Self, and Top.
+我们可以通过三种方式触发（发射）事件：通过时间轴、在状态上、或在过渡上。
 
-- `Blank` - Usually opens the link in a new tab, but users can configure browsers to open a new window instead. **Note:** if the Event is not signaled from a Rive Listener, the browser may block and notify the user a popup was blocked
-- `Parent` - Opens in the parent browsing context of the current one. If no parent, behaves as `Self`.
-- Self - Opens in the current browsing context
-- Top - Opens in the topmost browsing context (the “highest” context that’s an ancestor of the current one). If no ancestors, behaves as `Self`.
+### [​](#timeline) 时间轴 (Timeline)
 
-At this time, by default, Rive will not open URLs when this type of event is reported in share links or Marketplace posts due to security considerations. However, this may change in the future
+在时间轴上触发事件允许你控制代码执行的精确时间点（例如配合音效）。
+选中目标时间轴，将播放头移至特定时间，点击检查器中的 **“Report Event”** 按钮。
+![在时间轴关键帧上报告事件](images/image_7.png)
 
-## [​](#signaling-an-event) Signaling an Event
+### [​](#transition-&-state) 过渡与状态 (Transition & State)
 
-We can signal an event in three ways: via the timeline, on a state, or on a transition.
+你可以在**过渡 (Transition)** 或 **状态 (State)** 上报告事件。这通常用于向运行时提供关于状态机所处位置的状态上下文信息。
+选中目标状态或过渡，点击检查器中 Events 区域的加号。
+![在状态或过渡中报告事件](images/image_8.png)
+下拉菜单允许你选择之前定义的任何事件。你可以决定是在状态/过渡的**开始 (Start)** 还是**结束 (End)** 时发出信号。
 
-### [​](#timeline) Timeline
+## [​](#events-at-runtime) 运行时中的事件
 
-Signaling an event through the timeline allows us to control the precise moment a piece of code will fire, like a sound effect.
-First, select the timeline you want to add the event to. Next, use the Report Event button in the inspector. Note that this key will be placed at the location of the playhead.
-![Keying an Event on the timeline](images/image_7.png)
-Additionally, you can key a property to let the runtimes know that a particular boolean, number, or string property has a new value.
+有关如何在运行时监听事件的更多信息，请查阅 [Rive 事件 (Runtimes)](/runtimes/rive-events) 章节。
 
-### [​](#transition-&-state) Transition & State
-
-You can report an event on a Transition or a State. We typically do this to signal at runtime contextual information about what is happening in the State Machine. For example, if we want to have some element appear at the end of our Transition, we would want to use an event tied to a Transition to signal this.
-To report an event, select either the desired State or Transition and use the plus button next to the Events section in the Inspector.
-![Signaling an Event via State or Transition](images/image_8.png)
-The dropdown allows us to select any Event we’ve defined. Now that we’ve selected the Event, we can decide whether it is signaled at the start or end of the Transition or State.
-
-## [​](#events-at-runtime) Events at Runtime
-
-For more information on how to listen for Events at runtime, check out the [Rive Events](/runtimes/rive-events) section.
-
-[Layers](/editor/state-machine/layers)[Audio Events](/editor/events/audio-events)
+[图层 (Layers)](/editor/state-machine/layers.md)[音频事件](/editor/events/audio-events)

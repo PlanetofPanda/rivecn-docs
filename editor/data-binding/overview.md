@@ -1,141 +1,67 @@
-Data Binding
+数据绑定 (Data Binding)
 
-# Data Binding Overview
+# 数据绑定概览 (Data Binding Overview)
 
-Connect editor elements to data and code using View Models
+通过视图模型 (View Models) 将编辑器元素连接到数据和代码。
 
-# [​](#what-is-data-binding) What is Data Binding?
+# [​](#what-is-data-binding) 什么是数据绑定？
 
-Data binding is a powerful way to create reactive connections between editor elements, data, and code. For instance, you might:
+数据绑定是一种在编辑器元素、数据和代码之间建立“响应式连接”的强大方式。例如，你可以：
+- 将图标的颜色绑定到一个“颜色数据属性”，以便开发者在运行时进行调整。
+- 绑定动画对象的 X 轴位置，以便另一个对象能以一定的偏移量跟随它。
+- 监听两个按钮的点击事件，从而增加或减少一个计数器。
 
-- Bind the color of an icon to a color data property that can be adjusted by a developer at runtime
-- Bind the X-position of an animated object so that it can be followed with an offset by another object
-- Listen for a click event on two buttons to increment and decrement a counter
+# [​](#why-use-data-binding) 为什么要使用数据绑定？
 
-# [​](#why-use-data-binding) Why Use Data Binding?
+数据绑定通过引入“中间数据（即契约）”来解耦设计和代码。一旦这个“契约”建立，设计师和开发者就可以独立迭代，从而加快交付速度。
+在编辑器内部，数据绑定能让你的设计具备极强的“反应能力”。你可以建立对象间的关联，并确保无论画板处于何种状态，特定的对应关系始终成立。数据绑定系统将确保这些关系在动画或代码调用改变值时始终保持最新。
+此外，它还允许你将更多的逻辑从代码转移到 Rive 文件中。虽然你需要决定某段逻辑是留在代码中还是放在数据绑定里，但一个核心优势是：**数据绑定逻辑在所有运行时中都是通用的**，不需要针对不同平台（如 iOS 和 Web）重复实现。
 
-Data binding decouples design and code by introducing intermediate data that both sides can bind to. This forms the “contract” between designers and developers. Once this contract is in place, both sides can iterate independently, speeding your ability to deliver new features and experiment with what’s possible.
-Within the editor, data binding allows for more reactivity in your designs. You can establish relationships between objects and ensure that certain invariants hold true, no matter the state of the artboard. The data binding system will ensure that these relationships are always up to date as animations and calls from code change the values.
-It also offers the opportunity to shift more logic into the Rive file and out of code. You will need to decide whether a piece of logic lives in code or data binding for your given use case, but one consideration is that any data binding logic will be universal across runtimes, rather than needing separate re-implementations.
+# [​](#glossary) 术语表 (Glossary)
 
-# [​](#intro-videos) Intro Videos
+数据绑定引入了几个你需要熟悉的术语。这些名称借鉴了软件开发中的 **MVVM (Model, View, Viewmodel)** 模式。
 
-The following video series introduces data binding through a guided walkthrough of the editor, which will help solidify the concepts below.
+### [​](#editor-element) 编辑器元素 (Editor Element)
+指编辑器中任何可编辑的 UI 元素，其属性值可以挂载绑定。
 
-### [​](#introduction) Introduction
+### [​](#view-model) 视图模型 (View Model)
+视图模型是数据的蓝图。开发者可以将其理解为面向对象编程中的“类 (Class)”。视图模型通常描述了特定用例（通常是每个画板一个）的所有关联数据。视图模型本身不含具体数值，包含具体数值的是 [实例 (Instance)](#view-model-instance)。
 
-### [​](#view-models) View Models
+### [​](#view-model-property) 视图模型属性 (View Model Property)
+视图模型中的单个数据项，类似于类中的“字段 (Field)”。属性在创建时会选择数据类型，并赋予一个可在代码中引用的名称。
 
-### [​](#number-properties) Number Properties
+### [​](#view-model-instance) 视图模型实例 (View Model Instance)
+视图模型的“活”样本，带有实际数值。一个视图模型可以创建无数个实例。例如，如果你有一个包含三个按钮的菜单：🏠 首页、👤 个人资料、❓ 关于，你可以只有一个画板（菜单项模板），但创建三个对应不同图标和文字的“视图模型实例”。
 
-### [​](#string-properties) String Properties
+### [​](#binding) 绑定 (Binding)
+属性与编辑器元素之间的关联。
+- **默认绑定 (Source to Target)**：属性值的变化驱动元素更新（如：XPos 属性更新位置）。
+- **反向绑定 (Target to Source)**：元素值的变化驱动属性更新。
+- **双向绑定 (Bidirectional)**：双向同步，任何一方改变都会更新另一方。
 
-### [​](#color-properties) Color Properties
+### [​](#converter) 转换器 (Converter)
+转换器用于在应用绑定时对值进行转换。例如，使用“转换为字符串”转换码，将数字位置信息转换为文本显示在文本框中。
 
-### [​](#binding-state-machine-conditions) Binding State Machine Conditions
+# [​](#comparing-to-existing-features) 与现有功能对比
 
-# [​](#glossary) Glossary
+数据绑定是输入 (Inputs) 和事件 (Events) 的更强大替代方案。我们建议在未来的大多数用例中采用它。
 
-Data binding introduces a number of concepts that you will need to familiarize yourself with. The names of these concepts are loosely derived from the Model, View, Viewmodel (MVVM) pattern in software development.
+| 特性支持 | 输入 (Inputs) | 事件 (Events) | 视图模型属性 |
+| --- | :---: | :---: | :---: |
+| 浮点数/布尔值 | ✅ | ✅ | ✅ |
+| 触发器 (Triggers) | ✅ | ❌ | ✅ |
+| 字符串 (Strings) | ❌ | ✅ | ✅ |
+| 枚举 (Enums)/颜色 | ❌ | ❌ | ✅ |
+| 嵌套/列表/图像 | ❌ | ❌ | ✅ |
 
-### [​](#editor-element) Editor Element
+### [​](#state-machine-inputs) 状态机输入
+在数据绑定之前，输入是主要的交互方式。但输入只能驱动状态机过渡，而数据绑定可以驱动 Rive 中的**绝大多数编辑器元素**（如颜色、透明度、位置等）。
 
-For the purposes of data binding, an “editor element” simply refers to an editable UI element in the editor with a value that can have a binding attached to it.
+### [​](#events) 事件
+事件主要是为了让设计向代码发送“信号（输出）”。数据绑定提供了一个更丰富的通道。虽然事件依然支持播放音效（数据绑定暂不支持），但在大多数逻辑层面，视图模型属性更具优势。
 
-### [​](#view-model) View Model
+# [​](#runtime-apis) 运行时 API
 
-A view model is a blueprint for a collection of data. Developers might think of this as similar to a class in object-oriented programming. View models typically describe all of the associated data with a given use case - commonly one per artboard. View models themselves don’t have concrete values. For that, you must have [an instance](#view-model-instance).
+要了解如何在代码中与数据绑定交互，请参阅 [运行时概览](/runtimes/data-binding) 页面。
 
-### [​](#view-model-property) View Model Property
-
-A view model property is one piece of data within a view model. Developers might think of this as similar to a field in object-oriented programming. Properties have a data type which is selected when they are created and a name which can be referenced in code. Each property can be bound to different editor elements of the same type.
-
-### [​](#view-model-instance) View Model Instance
-
-A view model instance is the living version of a view model with actual values. Developers might think of this as similar to a class instance in object-oriented programming. Instances have the same properties as the view model they are derived from, except now each of these properties has a living value that can change over time.
-You may create as many instances as you’d like from a given view model. Each can be given a unique name associated with what those values represent. Each can have different initial values for its properties, representing a design-time configuration. For example, if you had a menu with three buttons with icons: 🏠 Home, 👤 Profile, and ❓ About, you might have a single artboard representing the menu item, but three view model instances, each with the menu item’s label and associated icon, that can be applied to that artboard to configure the buttons.
-Artboards are assigned an instance to populate the data bindings. Changing which instance is applied will change the initial state of the properties and all associated bound elements.
-In order for an instance to be visible to developers, it must be marked as Exported. Otherwise, it is considered internal to the file. One reason you may want to keep it internal is if you only use the instance to test your design when it is configured with a given set of values, including edge cases.
-These exported instances can then be assigned to an artboard at runtime by developers. Alternatively, developers can create empty instances which have default values, such as zero for numbers and empty strings. Once the instance is assigned, its values will begin updating according to the bindings.
-
-### [​](#binding) Binding
-
-A binding is an association between a property and an editor element. For instance, you might have a property named “Name” bound to a text run’s text value.
-Bindings can be source to target, target to source, or bidirectional. In this case, “source” means the property, and “target” means the editor element.
-The default binding is source to target. This means that changes to the property update the value of the element. For example, an XPos property updates the X position of an object.
-Target to source means that changes to the element’s value update the property. For example, the X position of an object updates the XPos property.
-Bidirectional means that changes are applied in both directions, meaning either the element or the property can update the other.
-Additionally, a binding may be marked as “Bind Once”. This means that the initial value will apply and thereafter the binding will not apply any updates.
-
-### [​](#view-model-nesting) View Model Nesting
-
-View models can have another view model as one of their properties. This is referred to as “nesting”. This is useful when a parent instance wants to associate with a particular child instance, similar to components.
-
-### [​](#enumeration-enum) Enumeration (Enum)
-
-An enum represents a fixed set of options, similar to a drop-down. Use this property type to constrain the available values to a known, unchanging set.
-Enum properties can be either a “system” enum, in which case they represent a fixed set of options in the editor, such as the “Horizontal Align” options, or a “user defined” enum, in which case they can represent any fixed set of options applicable to your use case.
-
-### [​](#converter) Converter
-
-A converter is a general purpose way of transforming a binding’s value when it is applied. These transformations might involve changing its type. For instance, the “Convert to String” converter can be used to convert a numerical binding to text, so that an object’s X position could be applied to a text run.
-To apply a converter on a value that already has a binding, right click on the bound property, click Update Bind, and select your converter from the Convert dropdown.
-
-# [​](#comparing-to-existing-features) Comparing to Existing Features
-
-Data binding fills some of the same roles as existing features in Rive. In general, it is considered a more powerful alternative to both inputs and events, and we recommend you adopt it for most use cases going forward. However, this does not mean that you need to retrofit existing files as they will continue to work as expected.
-
-### [​](#type-support) Type Support
-
-View model properties can represent more types of data compared to inputs and events. See below for a comparison.
-
-|  | Inputs | Events | View Model Properties |
-| --- | --- | --- | --- |
-| Floating point numbers | ✅ | ✅ | ✅ |
-| Booleans | ✅ | ✅ | ✅ |
-| Triggers | ✅ | ❌ | ✅ |
-| Strings | ❌ | ✅ | ✅ |
-| Enumerations (Enums) | ❌ | ❌ | ✅ |
-| Colors | ❌ | ❌ | ✅ |
-| View Model Nesting | ❌ | ❌ | ✅ |
-| Lists | ❌ | ❌ | ✅ |
-| Images | ❌ | ❌ | ✅ |
-| Artboards | ❌ | ❌ | ✅ |
-
-### [​](#state-machine-inputs) State Machine Inputs
-
-Before data binding, state machine inputs were the primary way for developers to affect designs. They formed the “input” side of the contract with design. View model properties are a more flexible system.
-Inputs can only be used to drive state machine transitions, whereas data binding can be used to drive most editor elements in Rive and state machine transitions.
-Inputs must be used as-is where data-bound properties can be converted, either before being used by developers or before being applied to editor elements.
-View model properties also support both polling and listening APIs for developers, whereas inputs only support polling. This means that developers can more naturally react to changes in data.
-View model properties can also be used in two features currently used by inputs, that being blended states (both Blend 1D and Blend Additive) as the mix parameter and as the receiver for listeners, e.g. setting a value on a mouse click or tap.
-
-### [​](#events) Events
-
-The counterpart to inputs, events were the primary way for developers to receive “outputs” from designs. Data binding is a much richer channel for developers to observe values from the Rive design. Additionally, events were used internally in Rive files to add reactivity using listeners. Both of these use cases are addressed by properties. For developers, the runtime APIs allow you to subscribe to changes to their values. For designers, you can bind reacting elements directly to the property.
-Events can only be triggered by timelines, state machine transitions, or listeners. By comparison, data bound properties can be changed from any number of sources.
-Events can have keyable properties with values that are passed when triggered. This is limited to being updated by animation keys and can be tricky to “bubble” when the animation exists on a component. By comparison, view model properties carry the most recent data each time they change, from any level of the hierarchy, triggering a developer’s listener with the new value.
-One use case which events offer functionality not yet supported by data binding is in their ability to play audio.
-
-### [​](#constraints) Constraints
-
-Constraints allow for a specific kind of binding between two objects, such as Translation for position. This constraint is optimized for that use case, with built in options for local/world space conversion, a strength parameter, minimum and maximum values, etc. For use cases where this is all you need, this is likely to be the more concise option. By comparison, for example, data binding the X and Y positions can be used for a broader range of output behavior, though it may require some setup with converters to achieve.
-
-### [​](#nesting) Nesting
-
-There are a few use cases related to nesting where you may want to consider updating to use data binding, as it offers a much more straightforward approach:
-
-- Setting nested inputs
-- Setting nested text runs
-- “Bubbling” nested events
-
-These three use cases are unified by view model instances, where components can pull from top-level viewmodels. This simplifies the developer interop, as the structure, naming, and nesting of the file’s artboards can change without breaking the code’s reference to the data.
-
-# [​](#runtime-apis) Runtime APIs
-
-To continue reading about how to interact with data binding in code, see the [Runtime Overview](/runtimes/data-binding) page.
-[## Data Binding Runtime Overview
-
-[A dive into using data binding at runtime.](/runtimes/data-binding)
-
-[Audio Events](/editor/events/audio-events)[Lists](/editor/data-binding/lists)
+[音频事件](/editor/events/audio-events)[列表](/editor/data-binding/lists)

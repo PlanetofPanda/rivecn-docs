@@ -1,72 +1,54 @@
-Editor
+编辑器 (Editor)
 
-# Keyboard Shortcuts
+# 键盘快捷键 (Keyboard Shortcuts)
 
-Navigate quickly with keyboard shortcuts
+使用键盘快捷键快速导航
 
-## [​](#tools) Tools
+## [​](#tools) 工具 (Tools)
 
-| Tools | Shortcut |
+| 工具 | 快捷键 |
 | --- | --- |
-| Select Tool | `V` |
-| Translate Tool | `Q` |
-| Rotate Tool | `W` |
-| Scale Tool | `E` |
-| Rectangle Tool | `R` |
-| Ellipse Tool | `O` |
-| [Pen Tool Overview](/editor/fundamentals/pen-tool-overview.md) | `P` |
-| [Artboards](/editor/fundamentals/artboards.md) | `A` |
-| [Bones](/editor/manipulating-shapes/bones.md) | `B` |
-| [Groups](/editor/fundamentals/groups.md) | `G` |
-| [Freeze and Origin](/editor/fundamentals/freeze-and-origin) | `Y` |
+| 选择工具 (Select) | `V` |
+| 移动工具 (Translate) | `Q` |
+| 旋转工具 (Rotate) | `W` |
+| 缩放工具 (Scale) | `E` |
+| 矩形工具 (Rectangle) | `R` |
+| 椭圆工具 (Ellipse) | `O` |
+| [钢笔工具 (Pen)](/editor/fundamentals/pen-tool-overview.md) | `P` |
+| [画板 (Artboards)](/editor/fundamentals/artboards.md) | `A` |
+| [骨骼 (Bones)](/editor/manipulating-shapes/bones.md) | `B` |
+| [组 (Groups)](/editor/fundamentals/groups.md) | `G` |
+| [原点与冻结 (Freeze and Origin)](/editor/fundamentals/origin-freeze.md) | `Y` |
 
-## [​](#editor) Editor
+## [​](#editor) 编辑器 (Editor)
 
-| Purpose | Shortcut |
+| 用途 | 快捷键 |
 | --- | --- |
-| Switch Mode | `Tab` |
-| Constrain Shape/Angle | `Shift` |
-| Deep Select | macOS: `⌘` + click Windows: `Ctrl` + click |
-| Select Behind | `Alt` |
-| Nudge Object | Arrow Keys |
-| Edit Vertices | `Enter` w/ path selected |
-| Group Selection | macOS: `⌘` + `G` Windows: `Ctrl` + `G` |
-| Ungroup Selection | macOS: `⌘` + `Shift` + `G` Windows: `Ctrl` + `Shift` + `G` |
-| Convert to Solo | macOS: `⌘` + `L` Windows: `Ctrl` + `L` |
-| Duplicate | macOS: `⌘` + `D` Windows: `Ctrl` + `D` |
-| Layer Forward | macOS: `⌘` + `]` Windows: `Ctrl` + `]` |
-| Layer Backward | macOS: `⌘` + `[` Windows: `Ctrl` + `[` |
-| Layer to Top | macOS: `⌘` + `Opt` + `]` Windows: `Ctrl` + `Alt` + `]` |
-| Layer to Bottom | macOS: `⌘` + `Opt` + `[` Windows: `Ctrl` + `Alt` + `[` |
-| Move Timeline Playhead | `,` or `.` Hold `Shift` to move 10 frames |
-| Move |  |
-| Move Selected Keys | `Alt` + `,` or `.` Hold `Shift` to move 10 frames |
-| Skip to Keys (Selected Row, Otherwise All) | macOS: `⌘` + `,` or `.` Windows: `Ctrl` + `,` or `.` |
-| Toggle Snapping | macOS: hold `⌘` Windows: hold `Ctrl` |
-| Color Picker | macOS: `Ctrl` + `C` or `I` Windows: `I` |
-| Search | macOS: `⌘` + `K` Windows: `Ctrl` + `K` |
-| Reveal Keys for Selection | `U` |
-| Play Default State Machine | `Shift` + `Space` |
+| 切换模式 (设计/动画) | `Tab` |
+| 约束形状/角度 | `Shift` |
+| 深度选择 (Deep Select) | macOS: `⌘` + 点击 Windows: `Ctrl` + 点击 |
+| 选择底层对象 | `Alt` |
+| 微调对象位置 | 方向键 |
+| 编辑顶点 | 选中路径后按 `Enter` |
+| 打组 (Group) | macOS: `⌘` + `G` Windows: `Ctrl` + `G` |
+| 解组 (Ungroup) | macOS: `⌘` + `Shift` + `G` Windows: `Ctrl` + `Shift` + `G` |
+| 复制 (Duplicate) | macOS: `⌘` + `D` Windows: `Ctrl` + `D` |
+| 层级向前 | macOS: `⌘` + `]` Windows: `Ctrl` + `]` |
+| 层级向后 | macOS: `⌘` + `[` Windows: `Ctrl` + `[` |
+| 移动时间轴播放头 | `,` 或 `.` (按住 `Shift` 移动 10 帧) |
+| 切换吸附 (Snapping) | macOS: 按住 `⌘` Windows: 按住 `Ctrl` |
+| 吸色器 (Color Picker) | macOS: `Ctrl` + `C` 或 `I` Windows: `I` |
+| 搜索 | macOS: `⌘` + `K` Windows: `Ctrl` + `K` |
+| 播放默认状态机 | `Shift` + `Space` |
 
-## [​](#view) View
+## [​](#view) 视图 (View)
 
-| Purpose | Shortcut |
+| 用途 | 快捷键 |
 | --- | --- |
-| Fit selection to screen | `F` |
-| Zoom (mouse) | macOS: `⌘` + Mouse Wheel Windows: `Ctrl` + Mouse Wheel |
-| Zoom (keyboard) | `+` and `-` |
-| Zoom (marquee) | `Z` (hold) |
-| Pan | `Right-click` + drag `Space` + drag |
+| 将选中项适配至屏幕 | `F` |
+| 缩放 (鼠标) | macOS: `⌘` + 滚轮 Windows: `Ctrl` + 滚轮 |
+| 缩放 (键盘) | `+` 和 `-` |
+| 缩放 (选区) | `Z` (按住) |
+| 平移 (Pan) | `右键` + 拖动 或 `空格` + 拖动 |
 
-## [​](#hierarchy) Hierarchy
-
-| Purpose | Shortcut |
-| --- | --- |
-| Select parent | `Esc` |
-| Select 1st child | `Enter` |
-| Rename | macOS: `⌘` + `R` Windows: `Ctrl` + `R` |
-| Expand/Collapse all children | macOS: `Opt` + click expand icon Windows: `Alt` + click expand icon |
-| Show/hide self only | macOS: `⌘` + click eye icon Windows: `Ctrl` + click eye icon |
-| Show/hide parents only | macOS: `Opt` + click eye icon Windows: `Alt` + click eye icon |
-
-[Libraries](/editor/libraries.md)[Exporting for Runtime](/editor/exporting/exporting-for-runtime.md)
+[库 (Libraries)](/editor/libraries.md)[导出为运行时文件](/editor/exporting/exporting-for-runtime.md)

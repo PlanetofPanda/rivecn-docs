@@ -74,18 +74,46 @@
                 "target": "editor/fundamentals/fill-and-stroke.md"
             },
             {
+                "source": "editor/fundamentals/origin-freeze",
+                "target": "editor/fundamentals/origin-freeze.md"
+            },
+            {
                 "source": "editor/fundamentals/importing-assets",
                 "target": "editor/fundamentals/importing-assets.md"
+            },
+            {
+                "source": "editor/fundamentals/pen-tool-overview",
+                "target": "editor/fundamentals/pen-tool-overview.md"
             }
         ],
         "editor/manipulating-shapes": [
+            {
+                "source": "editor/manipulating-shapes/manipulating-shapes",
+                "target": "editor/manipulating-shapes/overview.md"
+            },
             {
                 "source": "editor/manipulating-shapes/bones",
                 "target": "editor/manipulating-shapes/bones.md"
             },
             {
+                "source": "editor/manipulating-shapes/bone-tips",
+                "target": "editor/manipulating-shapes/bone-tips.md"
+            },
+            {
                 "source": "editor/manipulating-shapes/meshes",
                 "target": "editor/manipulating-shapes/meshes.md"
+            },
+            {
+                "source": "editor/manipulating-shapes/clipping",
+                "target": "editor/manipulating-shapes/clipping.md"
+            },
+            {
+                "source": "editor/manipulating-shapes/solos",
+                "target": "editor/manipulating-shapes/solos.md"
+            },
+            {
+                "source": "editor/manipulating-shapes/trim-path",
+                "target": "editor/manipulating-shapes/trim-path.md"
             },
             {
                 "source": "editor/manipulating-shapes/joysticks",
@@ -100,12 +128,48 @@
             {
                 "source": "editor/text/text-runs",
                 "target": "editor/text/text-runs.md"
+            },
+            {
+                "source": "editor/text/text-modifiers",
+                "target": "editor/text/text-modifiers.md"
+            },
+            {
+                "source": "editor/text/text-styles",
+                "target": "editor/text/text-styles.md"
+            },
+            {
+                "source": "editor/text/fonts",
+                "target": "editor/text/fonts.md"
             }
         ],
         "editor/constraints": [
             {
+                "source": "editor/constraints/constraints-overview",
+                "target": "editor/constraints/overview.md"
+            },
+            {
                 "source": "editor/constraints/ik-constraint",
                 "target": "editor/constraints/ik-constraint.md"
+            },
+            {
+                "source": "editor/constraints/distance-constraint",
+                "target": "editor/constraints/distance-constraint.md"
+            },
+            {
+                "source": "editor/constraints/transform-constraint",
+                "target": "editor/constraints/transform-constraint.md"
+            },
+            {
+                "source": "editor/constraints/translation-constraint",
+                "target": "editor/constraints/translation-constraint.md"
+            },
+            {
+                "source": "editor/constraints/rotation-constraint",
+                "target": "editor/constraints/rotation-constraint.md"
+            },
+            {
+                "source": "editor/constraints/scale-constraint",
+                "target": "editor/constraints/scale-constraint.md"
             },
             {
                 "source": "editor/constraints/follow-path-constraint",
@@ -114,6 +178,24 @@
             {
                 "source": "editor/constraints/scroll-constraint",
                 "target": "editor/constraints/scroll-constraint.md"
+            }
+        ],
+        "editor/animate-mode": [
+            {
+                "source": "editor/animate-mode/animate-mode-overview",
+                "target": "editor/animate-mode/overview.md"
+            },
+            {
+                "source": "editor/animate-mode/timeline",
+                "target": "editor/animate-mode/timeline.md"
+            },
+            {
+                "source": "editor/animate-mode/keyframes",
+                "target": "editor/animate-mode/keyframes.md"
+            },
+            {
+                "source": "editor/animate-mode/settings",
+                "target": "editor/animate-mode/settings.md"
             }
         ],
         "editor/state-machine": [
@@ -126,8 +208,20 @@
                 "target": "editor/state-machine/states.md"
             },
             {
+                "source": "editor/state-machine/transitions",
+                "target": "editor/state-machine/transitions.md"
+            },
+            {
+                "source": "editor/state-machine/inputs",
+                "target": "editor/state-machine/inputs.md"
+            },
+            {
                 "source": "editor/state-machine/listeners",
                 "target": "editor/state-machine/listeners.md"
+            },
+            {
+                "source": "editor/state-machine/layers",
+                "target": "editor/state-machine/layers.md"
             }
         ],
         "editor/layouts": [
@@ -138,6 +232,22 @@
             {
                 "source": "editor/layouts/n-slicing",
                 "target": "editor/layouts/n-slicing.md"
+            },
+            {
+                "source": "editor/layouts/layout-parameters",
+                "target": "editor/layouts/layout-parameters.md"
+            },
+            {
+                "source": "editor/layouts/layout-tools",
+                "target": "editor/layouts/layout-tools.md"
+            },
+            {
+                "source": "editor/layouts/layout-animation",
+                "target": "editor/layouts/layout-animation.md"
+            },
+            {
+                "source": "editor/layouts/scrolling",
+                "target": "editor/layouts/scrolling.md"
             }
         ],
         "editor/exporting": [
@@ -186,20 +296,6 @@
             {
                 "source": "editor/data-binding/overview",
                 "target": "editor/data-binding/overview.md"
-            }
-        ],
-        "editor/animate-mode": [
-            {
-                "source": "editor/animate-mode/timeline/timeline",
-                "target": "editor/animate-mode/timeline.md"
-            },
-            {
-                "source": "editor/animate-mode/keyframes/keyframes",
-                "target": "editor/animate-mode/keyframes.md"
-            },
-            {
-                "source": "editor/animate-mode/settings",
-                "target": "editor/animate-mode/settings.md"
             }
         ],
         "scripting": [

@@ -32,9 +32,10 @@ RETRY_COUNT = 3       # 失败重试次数
 class RiveDocTranslator:
     """Rive 文档翻译器"""
     
-    def __init__(self, config_path: str, output_base: str):
+    def __init__(self, config_path: str, output_base: str, api_key: str = None):
         self.config_path = Path(config_path)
         self.output_base = Path(output_base)
+        self.api_key = api_key
         self.session: aiohttp.ClientSession = None
         self.semaphore = asyncio.Semaphore(CONCURRENT_LIMIT)
         self.stats = {"success": 0, "failed": 0, "images": 0}
@@ -177,41 +178,86 @@ class RiveDocTranslator:
             result = result.replace(f']({url})', f'](images/{filename})')
         return result
     
+    async def translate_with_retry(self, model, prompt, retries=5):
+        """带重试逻辑的 Gemini 翻译"""
+        delay = 10
+        for attempt in range(retries):
+            try:
+                response = await model.generate_content_async(prompt)
+                return response.text.strip()
+            except Exception as e:
+                error_str = str(e)
+                if "429" in error_str or "Quota exceeded" in error_str:
+                    wait_time = 60
+                    match = re.search(r'retry in (\d+(\.\d+)?)s', error_str)
+                    if match:
+                        wait_time = float(match.group(1)) + 5
+                    
+                    print(f"\n    ⏳ 触发限速，等待 {wait_time:.1f}s (第 {attempt+1}/{retries} 次重试)...", end="", flush=True)
+                    await asyncio.sleep(wait_time)
+                    delay *= 2
+                else:
+                    print(f"  ❌ 翻译错误: {e}")
+                    return None
+        return None
+
     async def translate_to_chinese(self, text: str) -> str:
         """使用 Google Gemini API 翻译为中文"""
         try:
             import google.generativeai as genai
-            import os
             
-            # 尝试从环境变量获取API密钥
-            api_key = os.environ.get('GEMINI_API_KEY')
+            api_key = self.api_key
             if not api_key:
-                print("  ⚠️  未找到 GEMINI_API_KEY，跳过翻译")
                 return text
             
             genai.configure(api_key=api_key)
-            model = genai.GenerativeModel('gemini-2.0-flash-exp')
+            model = genai.GenerativeModel('gemini-1.5-flash-latest')
             
-            prompt = f"""将以下 Rive 文档内容翻译为中文。要求：
-1. 保持 Markdown 格式不变
-2. 保留所有链接、图片路径、代码块
-3. 专业术语翻译一致：State Machine → 状态机, Artboard → 画板, Timeline → 时间轴
-4. 翻译要流畅自然，符合中文表达习惯
-5. 保留原文中的专有名词（如 Rive, Lottie 等）
+            prompt = f"""task: Translate the following Rive documentation Markdown to Chinese.
 
-原文：
+Requirements:
+1. Keep Markdown format intact (headers, lists, links, images, HTML tags).
+2. Keep all image paths `images/xxx` as is.
+3. Keep all URLs as is.
+4. Terminology:
+   - State Machine -> 状态机 (State Machine)
+   - Artboard -> 画板 (Artboard)
+   - Timeline -> 时间轴 (Timeline)
+   - Hierarchy -> 层级面板 (Hierarchy)
+   - Inspector -> 检查器 (Inspector)
+   - Toolbar -> 工具栏 (Toolbar)
+   - Stage -> 舞台 (Stage)
+   - Rive -> Rive
+   - Run -> 运行
+   - Input -> 输入
+   - Listener -> 监听器
+   - Bone -> 骨骼
+   - Mesh -> 网格
+   - Constraints -> 约束
+5. Style: Professional technical documentation style. Simple and clear.
+6. REMOVE any navigation links (e.g. 'Overview', 'Next', 'Previous') at the very top or bottom if they are just lists of links. Keep the main content.
+
+Original Markdown:
 {text}
 
-翻译："""
+Translated Markdown:"""
             
-            response = model.generate_content(prompt)
-            return response.text.strip()
+            translated = await self.translate_with_retry(model, prompt)
+            if not translated:
+                return text
+                
+            # 清理代码块包装
+            if translated.startswith("```markdown"):
+                translated = translated[11:]
+            elif translated.startswith("```"):
+                translated = translated[3:]
+            if translated.endswith("```"):
+                translated = translated[:-3]
+                
+            return translated.strip()
             
-        except ImportError:
-            print("  ⚠️  google-generativeai 未安装，跳过翻译")
-            return text
         except Exception as e:
-            print(f"  ⚠️  翻译失败: {e}")
+            print(f"  ⚠️  翻译异常: {e}")
             return text
     
     async def process_page(self, source: str, target: str) -> bool:
@@ -231,9 +277,9 @@ class RiveDocTranslator:
         # 2. 转换为 Markdown
         markdown = self.html_to_markdown(html)
         
-        # 2.5 翻译为中文 (暂时跳过，先抓取英文)
-        # print(f"  🌐 正在翻译...")
-        # markdown = await self.translate_to_chinese(markdown)
+        # 2.5 翻译为中文
+        print(f"  🌐 正在翻译...")
+        markdown = await self.translate_to_chinese(markdown)
         
         # 3. 提取并下载图片
         images = self.extract_images(markdown, url)
@@ -255,6 +301,11 @@ class RiveDocTranslator:
         
         self.stats["success"] += 1
         print(f"  ✅ 保存: {target}")
+        
+        # 翻译冷却
+        if self.api_key:
+            await asyncio.sleep(2)
+            
         return True
     
     async def run(self, limit: int = None, section: str = None):
@@ -302,7 +353,10 @@ async def main():
         elif arg == "--section" and i < len(sys.argv) - 1:
             section = sys.argv[i + 1]
     
-    async with RiveDocTranslator(config_path, output_base) as translator:
+    # API Configuration
+    api_key = "AIzaSyCTXcejCoCmusoQIuuQdJSttlrs9Zt0SQo"
+    
+    async with RiveDocTranslator(config_path, output_base, api_key=api_key) as translator:
         await translator.run(limit=limit, section=section)
 
 

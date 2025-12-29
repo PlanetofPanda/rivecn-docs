@@ -1,74 +1,33 @@
-- [Case Studies](https://rive.app/blog/case-studies)
-- [Community](https://community.rive.app)
-- [Blog](https://rive.app/blog)
-- [Early Access](https://rive.app/blog/early-access-to-unreleased-features)
+约束 (Constraints)
 
-##### Editor
+# 约束概览 (Constraints Overview)
 
-- Interface Overview
-- Fundamentals
-- Manipulating Shapes
-- Text
-- Constraints
+学习如何在 Rive 中使用约束。
 
-  - [Overview](/editor/constraints/constraints-overview)
-  - [IK Constraint](/editor/constraints/ik-constraint.md)
-  - [Distance Constraint](/editor/constraints/distance-constraint)
-  - [Scale Constraint](/editor/constraints/scale-constraint)
-  - [Rotation Constraint](/editor/constraints/rotation-constraint)
-  - [Transform Constraint](/editor/constraints/transform-constraint)
-  - [Translation Constraint](/editor/constraints/translation-constraint)
-  - [Follow Path Constraint](/editor/constraints/follow-path-constraint.md)
-  - [Scroll Constraints](/editor/constraints/scroll-constraint.md)
-- Animate Mode
-- State Machines
-- Events
-- Data Binding
-- Layouts
-- [Libraries](/editor/libraries.md)
-- [Keyboard Shortcuts](/editor/keyboard-shortcuts.md)
-- Exporting
-- Share Links
-- MCP
-- [Tagging](/editor/tagging.md)
+约束 (Constraints) 是一种通过另一个"目标对象"来控制某个对象属性的方法。某些约束可以限制这些属性的取值范围（及其层级关系），而另一些则可以从一个对象复制属性到另一个对象。
 
-Constraints
+约束的常见应用场景：
 
-# Constraints Overview
+- 让角色的眼睛跟随一个目标点移动。
+![眼睛跟随示例](images/image_0.png)
 
-Learn how to use constraints in Rive.
+- 确保角色的脚站在地面上时，腿部自动在膝盖处弯曲（反向动力学）。
+![IK 示例](images/image_1.png)
 
-Constraints are a way to control the properties of an object through another target object. Some constraints can set limits on these properties (and their hierarchical relationships), while others can copy properties from one object to another.
-Examples of where to use constraints:
+- 让车辆的所有轮子同时旋转。
+- 让时钟的指针旋转。
+- 复制另一个对象的位移、旋转或缩放。
+- 当一个对象靠近时，推开另一个对象；或者确保一个对象始终靠近另一个对象。
 
-- Make a character’s eyes follow a target.
+Rive 中的约束类型：
 
-![Image](images/image_0.png)
+- [IK 约束 (IK Constraint)](/editor/constraints/ik-constraint.md)
+- [距离约束 (Distance Constraint)](/editor/constraints/distance-constraint.md)
+- [变换约束 (Transform Constraint)](/editor/constraints/transform-constraint.md)
+- [位移约束 (Translation Constraint)](/editor/constraints/translation-constraint.md)
+- [缩放约束 (Scale Constraint)](/editor/constraints/scale-constraint.md)
+- [旋转约束 (Rotation Constraint)](/editor/constraints/rotation-constraint.md)
+- [路径跟随约束 (Follow Path Constraint)](/editor/constraints/follow-path-constraint.md)
+- [滚动约束 (Scroll Constraint)](/editor/constraints/scroll-constraint.md)
 
-- Ensure a character’s feet stay planted on the floor while their legs automatically bend at the knees.
-
-![Image](images/image_1.png)
-
-- Make all the wheels on a vehicle rotate together.
-- Make the hands on a clock rotate.
-- Copy translation, rotation, or scale from another object.
-- Push an object away as one gets closer, or ensure an object always stays close to another one.
-
-Types of constraints in Rive:
-
-- [IK Constraint](/editor/constraints/ik-constraint.md)​
-- [Distance Constraint](/editor/constraints/distance-constraint)
-- [Transform Constraint](/editor/constraints/transform-constraint)​
-- [Translation Constraint](/editor/constraints/translation-constraint)
-- [Scale Constraint](/editor/constraints/scale-constraint)
-- [Rotation Constraint](/editor/constraints/rotation-constraint)
-
-Was this page helpful?
-
-YesNo
-
-[Suggest edits](https://github.com/rive-app/rive-docs/edit/main/editor/constraints/constraints-overview.mdx)[Raise issue](https://github.com/rive-app/rive-docs/issues/new?title=Issue on docs&body=Path: /editor/constraints/constraints-overview)
-
-[Fonts](/editor/text/fonts)[IK Constraint](/editor/constraints/ik-constraint.md)
-
-⌘I
+[字体 (Fonts)](/editor/text/fonts.md)[IK 约束 (IK Constraint)](/editor/constraints/ik-constraint.md)

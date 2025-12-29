@@ -2,14 +2,18 @@
 
 # 文本概览 (Text Overview)
 
-## [​](#text-guides) 文本指南 (Text Guides)
+## [​](#text-guides) 文本指南
 
-[## 文本运行 (Text Runs)
+### [​](#text-runs) 文本串 (Text Runs)
+[文本串允许你将文本拆分为多个部分——通常用于向单个文本块应用多种不同的样式。](/editor/text/text-runs.md)
 
-[“运行 (Runs)”允许你将文本分成不同的部分 —— 通常，它们被用于为单个文本文本块应用多种样式。](/editor/text/text-runs.md)[## 文本样式 (Text Styles)
+### [​](#text-styles) 文本样式 (Text Styles)
+[文本样式包含许多熟悉的选项，用于定义文本的外观，并可应用于一个或多个文本串。](/editor/text/text-styles.md)
 
-[文本样式包含许多熟悉的选项，用于定义你希望文本呈现的风格，并应用于一个或多个“运行”。](/editor/text/text-styles)[## 文本修改器 (Text Modifiers)
+### [​](#text-modifiers) 文本修饰符 (Text Modifiers)
+[修饰符提供了强大的方式来操作和动画化构成文本的字符。目前可用的修饰符属性包括位置、旋转、缩放等。](/editor/text/text-modifiers.md)
 
-[修改器提供了强大的方式来操纵和制作组成文本的字形动画。目前，可用的文本修改器属性包括：](/editor/text/text-modifiers)[## 字体 (Fonts)
+### [​](#fonts) 字体 (Fonts)
+[在检查器中选择字体作为文本样式的一部分。](/editor/text/fonts.md)
 
-[在检查器中选择字体作为文本样式的一部分。](/editor/text/fonts)
+[摇杆控制 (Joysticks)](/editor/manipulating-shapes/joysticks.md)[文本串 (Text Runs)](/editor/text/text-runs.md)

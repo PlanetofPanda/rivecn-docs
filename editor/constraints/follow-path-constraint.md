@@ -1,40 +1,37 @@
-约束
+约束 (Constraints)
 
 # 路径跟随约束 (Follow Path Constraint)
 
-路径跟随约束允许我们将一个对象约束到一条路径上，从而使复杂的运动变得更加容易创建。通过观看视频或阅读下文了解更多。
+路径跟随约束通过将对象约束到一条路径上，大大简化了复杂运动轨迹的创建。
 
 ## [​](#setting-up-a-follow-path-constraint) 设置路径跟随约束
 
-首先，我们需要一个要约束的对象和一条用于约束该对象的路径。
-接下来，添加一个新约束并选择“路径跟随约束 (Follow Path Constraint)”。
-![添加路径跟随约束示例](images/image_0.png)
-现在，点击目标 (Target) 按钮并选择你想要让对象跟随的路径。
+1. 首先，你需要一个要约束的对象和一条用作路径的曲线。
+2. 选中对象，添加新约束并选择 **Follow Path Constraint**。
+![添加路径跟随约束](images/image_0.png)
+3. 点击 Target 按钮，选择你希望对象跟随的路径。
 
-## [​](#follow-path-properties) 路径跟随属性 (Follow Path Properties)
+## [​](#follow-path-properties) 路径跟随属性
 
-与其他约束一样，路径跟随约束具有许多可以自定义的属性。
+与其他约束类似，路径跟随约束有多个可自定义的属性。
 
 #### [​](#strength) 强度 (Strength)
-
-强度属性决定了被约束对象追随目标属性的紧密程度。
+控制受约束对象对路径的遵循程度。
 
 #### [​](#target) 目标 (Target)
-
-目标属性告诉约束应该跟随哪条路径。
+指定要跟随的路径对象。
 
 #### [​](#distance) 距离 (Distance)
-
-距离属性使对象沿路径移动。随着百分比的增加，被约束对象会沿着路径前进。请注意，此属性可以超过 100%。
-![距离属性示例](images/image_1.png)
+该属性控制对象沿路径移动的位置。百分比增加时，对象沿路径前进。*注意：该值可以超过 100%。*
+![距离属性效果](images/image_1.png)
 
 #### [​](#orient) 朝向 (Orient)
-
-朝向开关控制被约束对象的旋转。
-当朝向开关开启时，对象将根据路径调整其旋转角度。请注意，在这种状态下你无法手动更改对象的旋转。
-![朝向开启示例](images/image_2.png)
-当朝向开关关闭时，被约束对象的旋转不会改变。这意味着你可以根据需要手动调整对象的旋转。
+控制受约束对象的旋转方式。
+- **开启**：对象的旋转会自动跟随路径的切线方向。此时无法手动调整对象旋转。
+![朝向开启效果](images/image_2.png)
+- **关闭**：对象旋转不受路径影响，你可以手动设置任意旋转角度。
 
 #### [​](#offset) 偏移 (Offset)
+允许对象沿路径移动，但保持其当前位置作为偏移起点。
 
-偏移开关允许被约束对象基于其当前的偏移位置沿路径移动。
+[位移约束 (Translation Constraint)](/editor/constraints/translation-constraint.md)[滚动约束 (Scroll Constraints)](/editor/constraints/scroll-constraint.md)

@@ -1,126 +1,51 @@
-- [Case Studies](https://rive.app/blog/case-studies)
-- [Community](https://community.rive.app)
-- [Blog](https://rive.app/blog)
-- [Early Access](https://rive.app/blog/early-access-to-unreleased-features)
+状态机 (State Machines)
 
-##### Editor
+# 过渡 (Transitions)
 
-- Interface Overview
-- Fundamentals
-- Manipulating Shapes
-- Text
-- Constraints
-- Animate Mode
-- State Machines
+过渡为状态机提供逻辑路线图。本节将介绍过渡的配置属性和注意事项。
 
-  - [Overview](/editor/state-machine/overview.md)
-  - [States](/editor/state-machine/states.md)
-  - [Inputs](/editor/state-machine/inputs.md)
-  - [Transitions](/editor/state-machine/transitions.md)
-  - [Listeners](/editor/state-machine/listeners.md)
-  - [Layers](/editor/state-machine/layers)
-- Events
-- Data Binding
-- Layouts
-- [Libraries](/editor/libraries.md)
-- [Keyboard Shortcuts](/editor/keyboard-shortcuts.md)
-- Exporting
-- Share Links
-- MCP
-- [Tagging](/editor/tagging.md)
+## [​](#creating-a-new-transition) 创建过渡
 
-On this page
+将鼠标移到某个状态附近，当出现椭圆图标时，点击并拖动到目标状态即可创建过渡。连接完成后会显示一个带箭头的椭圆，指示过渡方向。
+![创建过渡](images/image_0.png)
+你可以在两个状态之间创建多条过渡，每条设置不同的条件，实现"或 (OR)"逻辑。
+![创建"或"过渡](images/image_1.png)
 
-- [Creating a new Transition](#creating-a-new-transition)
-- [Configuring a Transition](#configuring-a-transition)
-- [Transition properties](#transition-properties)
-- [Duration](#duration)
-- [Exit Time](#exit-time)
-- [Pause when exiting](#pause-when-exiting)
-- [Conditions](#conditions)
-- [Adding a new condition](#adding-a-new-condition)
-- [Interpolation](#interpolation)
+## [​](#configuring-a-transition) 配置过渡
 
-State Machines
+选中过渡的方向指示器后，可以配置三个部分：过渡属性、条件和插值。
 
-# Transitions
+### [​](#transition-properties) 过渡属性
+![过渡属性面板](images/9b35e6bf-8e06-4df9-b211-10d3e1150435.webp)
 
-Transitions supply the logical map for the state machine to follow. There are a number of considerations and configurable properties for transitions that we will cover below. Note that we’ll briefly discuss Inputs as well, so be sure to read more about those as well here.
+### [​](#duration) 持续时间 (Duration)
+描述过渡完成所需的时间。默认为 0（立即切换），增加该值会让过渡更平滑。
+![持续时间效果对比](images/image_3.png)
+过渡本质上是一种动画：起始属性来自离开的状态，结束属性来自进入的状态，Duration 就是两者之间的插值时间。
 
-## [​](#creating-a-new-transition) Creating a new Transition
+### [​](#exit-time) 退出时间 (Exit Time)
+指定在过渡之前，当前状态必须播放多长时间或多少百分比。
+![退出时间设置](images/image_6.png)
+例如：希望动画播放完整再过渡，可设置为 100%。
 
-To create a transition, place your mouse near the state you want to leave until you notice the ellipse appear. Click and drag the ellipse to the state you want to transition to. Once you’ve connected two states, you’ll notice an ellipse with an arrow icon indicating the transition’s direction.
-![Creating a transition](images/image_0.png)
-Note that you can create multiple transitions from one state to another. Each of these transitions can require a different condition to be met, which will fire the transition, thus giving you the ability to make “or” conditions.
-![Creating an "or" transition](images/image_1.png)
+### [​](#pause-when-exiting) 退出时暂停 (Pause when exiting)
+过渡发生时，离开的状态是否暂停播放。
+![暂停效果](images/image_7.png)
 
-## [​](#configuring-a-transition) Configuring a Transition
+### [​](#conditions) 条件 (Conditions)
+条件是触发过渡的规则。没有条件，过渡会持续触发导致混乱。条件需要定义输入 (Inputs)。
+![条件面板](images/a5336985-e1d4-4892-a04a-deee93e6a8b1.webp)
 
-Once you’ve added a transition, selecting the direction indicator will allow you to configure the transition. There are three different sections to the transition panel, the transition properties, conditions, and interpolation.
+#### 添加条件
+点击 Conditions 旁的加号，选择输入类型（布尔值、数字或触发器）。
+- **布尔值 (Boolean)**：设置 true 或 false 时触发。
+- **数字 (Number)**：等于、大于或小于某值时触发。
+- **触发器 (Trigger)**：触发时执行过渡。
 
-### [​](#transition-properties) Transition properties
+多个条件构成"与 (AND)"逻辑。
 
-The transition properties allow you to customize how a transition occurs.
-![Transition properties](images/9b35e6bf-8e06-4df9-b211-10d3e1150435.webp)
+### [​](#interpolation) 插值 (Interpolation)
+可在过渡面板底部设置插值曲线（线性、三次方或定格）。持续时间越长，插值效果越明显。
+了解更多：[插值与缓动](/editor/animate-mode/interpolation-easing)。
 
-### [​](#duration) Duration
-
-The duration property describes how long it takes for a transition to occur.
-The duration is set to zero by default, meaning the transition happens immediately. So, when we transition between these two animations, it appears as though the object snaps from one side of the artboard to the other.
-![Duration of 0ms](images/image_3.png)
-If we increase the duration, you’ll notice that the higher the number, the longer the transition takes.
-![Duration of 500ms](images/image_4.png)
-In a way, transitions act as their own animation. The starting properties (coming from the state your state machine is leaving from) will be interpolated to the ending properties (the starting properties of the state your state machine is going to). If the starting properties are the first key on a timeline, and the ending properties are the second key, the duration is the timing between those two keys. Transitions are much more complex than this, but thinking about transitions this way will help you diagnose issues with your state machine.
-![Interpolation on a Transition](images/image_5.png)
-Much like keys on our timeline, we can change the interpolation, which we’ll discuss more below.
-
-### [​](#exit-time) Exit Time
-
-Exit Time tells the state machine how much of the state must play before transitioning.
-By default, Exit Time is unchecked. If you want to enable the Exit Time, use the check box. Once the setting is enabled, you can use either a time value or percent.
-![Using Exit Time](images/image_6.png)
-For example, if you want the state machine to play the entire animation before transitioning, you can either enter the duration of the animation, or use 100%.
-
-### [​](#pause-when-exiting) Pause when exiting
-
-The Pause When Exiting option pauses the animation you are leaving from during the transition.
-![Pause when exiting](images/image_7.png)
-As we discussed in the duration section, when a transition happens, properties from the first state are mixed with the first key of the next state. In reality, the animation your state machine leaves from continues to play as the transition happens.
-
-### [​](#conditions) Conditions
-
-Conditions are the rules for our transitions. Without conditions, our transitions would continuously fire and our state machine would likely look either glitchy, or only play a single animation. Conditions require us to define some inputs, which you can read more about [here](/editor/state-machine/inputs.md).
-![Conditions](images/a5336985-e1d4-4892-a04a-deee93e6a8b1.webp)
-
-#### [​](#adding-a-new-condition) Adding a new condition
-
-To add a new condition to a transition, hit the plus button next to the Conditions section.
-![Image](images/image_9.png)
-Adding a new Condition
-Each new condition provides a dropdown showing all of the inputs you’ve added to the State Machine. The configuration options will be different depending on the input type you select.
-Note that you can add multiple conditions to a single transition to create an “and” transition.
-**Configuring a Boolean**
-When you configure a boolean, you can decide if the transition happens when said boolean is either true or false.
-![Configure a boolean](images/image_10.png)
-**Configuring a Number**
-When you configure a number input, you can tell the transition to happen when a numerical condition happens such as equalling a specific number, being greater than or less than a specific number.
-![Configure number input](images/image_11.png)
-**Configuring a Trigger**
-When you add a trigger input to a transition, you are telling the transition to fire when that trigger occurs.
-![Configuring triggers](images/image_12.png)
-
-### [​](#interpolation) Interpolation
-
-You can add interpolation to your transition at the bottom of the Transitions Panel. By default, the interpolation is set to linear, but you can use the cubic and hold interpolations.
-Note that the interpolation between states is most effective when your transition duration is longer.
-If you are unfamiliar with the basics of Interpolation, read more [Interpolation (Easing)](/editor/animate-mode/interpolation-easing).
-
-Was this page helpful?
-
-YesNo
-
-[Suggest edits](https://github.com/rive-app/rive-docs/edit/main/editor/state-machine/transitions.mdx)[Raise issue](https://github.com/rive-app/rive-docs/issues/new?title=Issue on docs&body=Path: /editor/state-machine/transitions)
-
-[Inputs](/editor/state-machine/inputs.md)[Listeners](/editor/state-machine/listeners.md)
-
-⌘I
+[输入 (Inputs)](/editor/state-machine/inputs.md)[监听器 (Listeners)](/editor/state-machine/listeners.md)

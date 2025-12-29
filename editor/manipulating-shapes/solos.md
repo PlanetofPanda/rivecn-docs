@@ -1,83 +1,17 @@
-- [Case Studies](https://rive.app/blog/case-studies)
-- [Community](https://community.rive.app)
-- [Blog](https://rive.app/blog)
-- [Early Access](https://rive.app/blog/early-access-to-unreleased-features)
+操控形状
 
-##### Editor
+# 单独显示 (Solos)
 
-- Interface Overview
-- Fundamentals
-- Manipulating Shapes
+单独显示 (Solos) 类似于组（Group），但它增加了一个特殊功能：能够切换其内部嵌套对象的渲染状态，每次仅显示一个子对象。
 
-  - [Overview](/editor/manipulating-shapes/manipulating-shapes)
-  - [Bones](/editor/manipulating-shapes/bones.md)
-  - [Bone Tips](/editor/manipulating-shapes/bone-tips.md)
-  - [Meshes](/editor/manipulating-shapes/meshes.md)
-  - [Clipping](/editor/manipulating-shapes/clipping.md)
-  - [Solos](/editor/manipulating-shapes/solos.md)
-  - [Trim Path](/editor/manipulating-shapes/trim-path.md)
-  - [Joysticks](/editor/manipulating-shapes/joysticks.md)
-- Text
-- Constraints
-- Animate Mode
-- State Machines
-- Events
-- Data Binding
-- Layouts
-- [Libraries](/editor/libraries.md)
-- [Keyboard Shortcuts](/editor/keyboard-shortcuts.md)
-- Exporting
-- Share Links
-- MCP
-- [Tagging](/editor/tagging.md)
+## [​](#what-is-a-solo) 什么是 Solo
 
-On this page
+Solo 非常适合用于处理具有多种状态或视角的对象。例如，一个角色的不同手势、不同朝向的脸部，或是一个开关的不同视觉状态。
 
-- [Creating a Solo](#creating-a-solo)
-- [Animating Solos](#animating-solos)
-- [Creating New Skins](#creating-new-skins)
-- [Change the underlying rig](#change-the-underlying-rig)
-- [Frame-by-frame animation](#frame-by-frame-animation)
+![Solo 示例 Pn](images/solos-example.gif)
 
-Manipulating Shapes
+## [​](#how-to-use) 如何使用
 
-# Solos
+将多个对象放入 Solo 后，你可以在检查器中看到一个列表。点击列表中的项即可切换当前显示的对象。在动画模式下，这个切换过程可以被设为关键帧。
 
-A Solo is similar to a group, but only one of the elements inside the solo is rendered at a time. This is much faster than having to animate the opacity of each object individually.
-
-## [​](#creating-a-solo) Creating a Solo
-
-There are two ways to create a solo. The first is to select multiple items on your artboard, right click them in the Hierarchy, and click “Wrap in Solo”.
-![Wrap in Solo](images/28ce305c-d84f-45ca-b70f-f0aa925ec21e.webp)
-The second option is to select the **Solo** tool from the **Hierarchy Tools** dropdown (or click **S** on your keyboard) and click anywhere on your artboard. Now that you have a Solo in your Hierarchy, you can drag elements into it.
-![Solo Tool](images/0bacaffd-b25c-445f-9677-a4f31c4c2043.webp)
-
-## [​](#animating-solos) Animating Solos
-
-You can animate solos by opening a timeline and clicking the solo’s radio buttons in the Hierarchy.
-![Image](images/8be34515-c2e9-46f9-9dc3-7347e2528dd9.webp)
-
-## [​](#creating-new-skins) Creating New Skins
-
-One of the most common use cases for Solos is creating new skins for a character.
-![Image](images/image_3.png)
-
-## [​](#change-the-underlying-rig) Change the underlying rig
-
-Sometimes when we animate an object or character, we need to create animations at different angles. Solos allow us to create multiple rigs and switch between them during our animation.
-![Image](images/image_4.png)
-
-## [​](#frame-by-frame-animation) Frame-by-frame animation
-
-The ability to toggle between many images gives you a quick way to create frame by frame effects.
-![Image](images/image_5.png)
-
-Was this page helpful?
-
-YesNo
-
-[Suggest edits](https://github.com/rive-app/rive-docs/edit/main/editor/manipulating-shapes/solos.mdx)[Raise issue](https://github.com/rive-app/rive-docs/issues/new?title=Issue on docs&body=Path: /editor/manipulating-shapes/solos)
-
-[Clipping](/editor/manipulating-shapes/clipping.md)[Trim Path](/editor/manipulating-shapes/trim-path.md)
-
-⌘I
+[裁剪 (Clipping)](/editor/manipulating-shapes/clipping.md)[路径裁剪 (Trim Path)](/editor/manipulating-shapes/trim-path.md)

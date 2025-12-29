@@ -20,7 +20,7 @@ Rive 旨在应用和游戏中高效地播放编辑器内创建的交互式图形
 
 #### [​](#fonts) 字体 (Fonts)
 
-字体文件通常包含数千个你可能不需要的字形，如希腊字母、数学运算符和图标。为了减小导出的字体或 .riv 文件的大小，可以 [选择包含哪些字形](/editor/text/fonts#glyph-%2F-script-selection)。
+字体文件通常包含数千个你可能不需要的字形，如希腊字母、数学运算符和图标。为了减小导出的字体或 .riv 文件的大小，可以 [选择包含哪些字形](/editor/text/fonts.md#glyph-%2F-script-selection)。
 
 #### [​](#raster-image-sizes-&-dimensions) 位图大小与尺寸 (Raster Image Sizes & Dimensions)
 

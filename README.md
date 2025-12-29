@@ -56,7 +56,7 @@ Rive 不仅仅是一个动画工具，它是一个**实时的交互设计运行�
 <div style="border: 1px solid #e0e0e0; border-radius: 8px; padding: 20px; background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); color: white; transition: transform 0.3s;">
   <h4 style="margin-top: 0; color: white;">📱 App Runtimes - 应用运行时</h4>
   <p style="font-size: 0.95em; line-height: 1.6;">开源库，支持在 Web、iOS、Android、Flutter、React Native 等平台实时渲染。</p>
-  <a href="https://rive.app/docs/runtimes/getting-started" target="_blank" style="color: white; text-decoration: underline;">访问官网 →</a>
+  <a href="http://rive.org.cn/docs/#/runtimes/getting-started" target="_blank" style="color: white; text-decoration: underline;">访问官网 →</a>
 </div>
 
 <!-- Game Runtimes 卡片 -->
@@ -70,14 +70,14 @@ Rive 不仅仅是一个动画工具，它是一个**实时的交互设计运行�
 <div style="border: 1px solid #e0e0e0; border-radius: 8px; padding: 20px; background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); color: #333; transition: transform 0.3s;">
   <h4 style="margin-top: 0; color: #333;">✅ Feature Support - 功能支持</h4>
   <p style="font-size: 0.95em; line-height: 1.6;">跟踪 Rive 编辑器功能在各个运行时和版本中的支持情况。</p>
-  <a href="https://rive.app/docs/feature-support" target="_blank" style="color: #333; text-decoration: underline;">访问官网 →</a>
+  <a href="http://rive.org.cn/docs/#/feature-support" target="_blank" style="color: #333; text-decoration: underline;">访问官网 →</a>
 </div>
 
 <!-- Tutorials 卡片 -->
 <div style="border: 1px solid #e0e0e0; border-radius: 8px; padding: 20px; background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%); color: #333; transition: transform 0.3s;">
   <h4 style="margin-top: 0; color: #333;">📚 Tutorials - 教程</h4>
   <p style="font-size: 0.95em; line-height: 1.6;">学习资源，包括"Rive 绝对入门"、"Rive 101"和社区贡献的教程。</p>
-  <a href="https://rive.app/docs/tutorials/learn-rive" target="_blank" style="color: #333; text-decoration: underline;">访问官网 →</a>
+  <a href="http://rive.org.cn/docs/#/tutorials/learn-rive" target="_blank" style="color: #333; text-decoration: underline;">访问官网 →</a>
 </div>
 
 </div>
