@@ -56,15 +56,15 @@ export default defineConfig({
                               text: "快速入门",
                               items: [
                                     {
-                                          text: "Introduction",
+                                          text: "简介",
                                           link: "/getting-started/introduction.md"
                                     },
                                     {
-                                          text: "Best Practices",
+                                          text: "最佳实践",
                                           link: "/getting-started/best-practices.md"
                                     },
                                     {
-                                          text: "Quick Links",
+                                          text: "快速链接",
                                           link: "/getting-started/quick-links.md"
                                     }
                               ],
@@ -74,15 +74,15 @@ export default defineConfig({
                               text: "社区",
                               items: [
                                     {
-                                          text: "Community Overview",
+                                          text: "社区概览",
                                           link: "/community/community-overview.md"
                                     },
                                     {
-                                          text: "Marketplace Overview",
+                                          text: "市场概览",
                                           link: "/community/marketplace-overview.md"
                                     },
                                     {
-                                          text: "Rive Experts",
+                                          text: "Rive 专家",
                                           link: "/community/rive-experts.md"
                                     }
                               ],
@@ -92,79 +92,79 @@ export default defineConfig({
                               text: "账户管理",
                               items: [
                                     {
-                                          text: "Account Overview",
+                                          text: "账户概览",
                                           items: [
                                                 {
-                                                      text: "Account Overview",
+                                                      text: "账户概览",
                                                       link: "/account-admin/account-overview/account-overview.md"
                                                 },
                                                 {
-                                                      text: "Creating An Account",
+                                                      text: "创建账户",
                                                       link: "/account-admin/account-overview/creating-an-account.md"
                                                 },
                                                 {
-                                                      text: "Account Management",
+                                                      text: "账户管理",
                                                       link: "/account-admin/account-overview/account-management.md"
                                                 },
                                                 {
-                                                      text: "Cancel My Account",
+                                                      text: "取消账户",
                                                       link: "/account-admin/account-overview/cancel-my-account.md"
                                                 },
                                                 {
-                                                      text: "Delete My Account",
+                                                      text: "删除账户",
                                                       link: "/account-admin/account-overview/delete-my-account.md"
                                                 },
                                                 {
-                                                      text: "Trouble Logging In",
+                                                      text: "登录故障排除",
                                                       link: "/account-admin/account-overview/trouble-logging-in.md"
                                                 },
                                                 {
-                                                      text: "Billing Changes",
+                                                      text: "账单变更",
                                                       link: "/account-admin/account-overview/billing-changes.md"
                                                 },
                                                 {
-                                                      text: "Downloading My Receipt Or Invoice",
+                                                      text: "下载收据或发票",
                                                       link: "/account-admin/account-overview/downloading-my-receipt-or-invoice.md"
                                                 }
                                           ],
                                           collapsed: false
                                     },
                                     {
-                                          text: "Workspaces",
+                                          text: "工作空间",
                                           items: [
                                                 {
-                                                      text: "Workspaces Overview",
+                                                      text: "工作空间概览",
                                                       link: "/account-admin/workspaces/workspaces-overview.md"
                                                 },
                                                 {
-                                                      text: "Creating A Workspace",
+                                                      text: "创建工作空间",
                                                       link: "/account-admin/workspaces/creating-a-workspace.md"
                                                 },
                                                 {
-                                                      text: "Inviting Workspace Members",
+                                                      text: "邀请工作空间成员",
                                                       link: "/account-admin/workspaces/inviting-workspace-members.md"
                                                 },
                                                 {
-                                                      text: "Removing Workspace Members",
+                                                      text: "移除工作空间成员",
                                                       link: "/account-admin/workspaces/removing-workspace-members.md"
                                                 },
                                                 {
-                                                      text: "Reactivating A Canceled Workspace",
+                                                      text: "重新激活已取消的工作空间",
                                                       link: "/account-admin/workspaces/reactivating-a-canceled-workspace.md"
                                                 },
                                                 {
-                                                      text: "Workspace Faqs",
+                                                      text: "工作空间常见问题",
                                                       link: "/account-admin/workspaces/workspace-faqs.md"
                                                 }
                                           ],
                                           collapsed: false
                                     },
                                     {
-                                          text: "Pricing",
+                                          text: "价格",
                                           link: "/account-admin/pricing.md"
                                     },
                                     {
-                                          text: "Bring Your Own Bucket",
+                                          text: "使用自有存储桶",
                                           link: "/account-admin/bring-your-own-bucket.md"
                                     }
                               ],
@@ -174,15 +174,15 @@ export default defineConfig({
                               text: "法律信息",
                               items: [
                                     {
-                                          text: "Terms Of Service",
+                                          text: "服务条款",
                                           link: "/legal/terms-of-service.md"
                                     },
                                     {
-                                          text: "Acceptable Use Policy",
+                                          text: "可接受使用政策",
                                           link: "/legal/acceptable-use-policy.md"
                                     },
                                     {
-                                          text: "Privacy Policy",
+                                          text: "隐私政策",
                                           link: "/legal/privacy-policy.md"
                                     }
                               ],
@@ -194,26 +194,26 @@ export default defineConfig({
                               text: "编辑器",
                               items: [
                                     {
-                                          text: "Interface Overview",
+                                          text: "界面概览",
                                           items: [
                                                 {
-                                                      text: "Overview",
+                                                      text: "概览",
                                                       link: "/editor/interface-overview/overview.md"
                                                 },
                                                 {
-                                                      text: "Toolbar",
+                                                      text: "工具栏",
                                                       link: "/editor/interface-overview/toolbar.md"
                                                 },
                                                 {
-                                                      text: "Hierarchy",
+                                                      text: "层级",
                                                       link: "/editor/interface-overview/hierarchy.md"
                                                 },
                                                 {
-                                                      text: "Inspector",
+                                                      text: "检查器",
                                                       link: "/editor/interface-overview/inspector.md"
                                                 },
                                                 {
-                                                      text: "Stage",
+                                                      text: "舞台",
                                                       link: "/editor/interface-overview/stage.md"
                                                 }
                                           ],
@@ -223,71 +223,71 @@ export default defineConfig({
                                           text: "基础知识",
                                           items: [
                                                 {
-                                                      text: "Overview",
+                                                      text: "概览",
                                                       link: "/editor/fundamentals/overview.md"
                                                 },
                                                 {
-                                                      text: "Design Vs Animate Mode",
+                                                      text: "设计 与 动画 模式",
                                                       link: "/editor/fundamentals/design-vs-animate-mode.md"
                                                 },
                                                 {
-                                                      text: "Artboards",
+                                                      text: "画板",
                                                       link: "/editor/fundamentals/artboards.md"
                                                 },
                                                 {
-                                                      text: "Components",
+                                                      text: "组件",
                                                       link: "/editor/fundamentals/components.md"
                                                 },
                                                 {
-                                                      text: "Pen Tool Overview",
+                                                      text: "钢笔工具概览",
                                                       link: "/editor/fundamentals/pen-tool-overview.md"
                                                 },
                                                 {
-                                                      text: "Shapes And Paths Overview",
+                                                      text: "形状与路径概览",
                                                       link: "/editor/fundamentals/shapes-and-paths-overview.md"
                                                 },
                                                 {
-                                                      text: "Procedural Shapes",
+                                                      text: "程序化形状",
                                                       link: "/editor/fundamentals/procedural-shapes.md"
                                                 },
                                                 {
-                                                      text: "Groups",
+                                                      text: "组",
                                                       link: "/editor/fundamentals/groups.md"
                                                 },
                                                 {
-                                                      text: "Selecting And Navigating Groups",
+                                                      text: "选择与导航组",
                                                       link: "/editor/fundamentals/selecting-and-navigating-groups.md"
                                                 },
                                                 {
-                                                      text: "Transform Spaces",
+                                                      text: "变换空间",
                                                       link: "/editor/fundamentals/transform-spaces.md"
                                                 },
                                                 {
-                                                      text: "Group Tips",
+                                                      text: "组技巧",
                                                       link: "/editor/fundamentals/group-tips.md"
                                                 },
                                                 {
-                                                      text: "Fill And Stroke",
+                                                      text: "填充与描边",
                                                       link: "/editor/fundamentals/fill-and-stroke.md"
                                                 },
                                                 {
-                                                      text: "Edit Vertices",
+                                                      text: "编辑顶点",
                                                       link: "/editor/fundamentals/edit-vertices.md"
                                                 },
                                                 {
-                                                      text: "Edit Vertices Tips",
+                                                      text: "编辑顶点技巧",
                                                       link: "/editor/fundamentals/edit-vertices-tips.md"
                                                 },
                                                 {
-                                                      text: "Freeze And Origin",
+                                                      text: "冻结与原点",
                                                       link: "/editor/fundamentals/freeze-and-origin.md"
                                                 },
                                                 {
-                                                      text: "Importing Assets",
+                                                      text: "导入资源",
                                                       link: "/editor/fundamentals/importing-assets.md"
                                                 },
                                                 {
-                                                      text: "Revision History",
+                                                      text: "修订历史",
                                                       link: "/editor/fundamentals/revision-history.md"
                                                 }
                                           ],
@@ -297,61 +297,61 @@ export default defineConfig({
                                           text: "操纵形状",
                                           items: [
                                                 {
-                                                      text: "Manipulating Shapes",
+                                                      text: "操纵形状",
                                                       link: "/editor/manipulating-shapes/manipulating-shapes.md"
                                                 },
                                                 {
-                                                      text: "Bones",
+                                                      text: "骨骼",
                                                       link: "/editor/manipulating-shapes/bones.md"
                                                 },
                                                 {
-                                                      text: "Bone Tips",
+                                                      text: "骨骼技巧",
                                                       link: "/editor/manipulating-shapes/bone-tips.md"
                                                 },
                                                 {
-                                                      text: "Meshes",
+                                                      text: "网格",
                                                       link: "/editor/manipulating-shapes/meshes.md"
                                                 },
                                                 {
-                                                      text: "Clipping",
+                                                      text: "裁剪",
                                                       link: "/editor/manipulating-shapes/clipping.md"
                                                 },
                                                 {
-                                                      text: "Solos",
+                                                      text: "独奏 (Solos)",
                                                       link: "/editor/manipulating-shapes/solos.md"
                                                 },
                                                 {
-                                                      text: "Trim Path",
+                                                      text: "修剪路径",
                                                       link: "/editor/manipulating-shapes/trim-path.md"
                                                 },
                                                 {
-                                                      text: "Joysticks",
+                                                      text: "操纵杆 (Joysticks)",
                                                       link: "/editor/manipulating-shapes/joysticks.md"
                                                 }
                                           ],
                                           collapsed: false
                                     },
                                     {
-                                          text: "Text",
+                                          text: "文本",
                                           items: [
                                                 {
-                                                      text: "Text Overview",
+                                                      text: "文本概览",
                                                       link: "/editor/text/text-overview.md"
                                                 },
                                                 {
-                                                      text: "Text Runs",
+                                                      text: "文本段 (Text Runs)",
                                                       link: "/editor/text/text-runs.md"
                                                 },
                                                 {
-                                                      text: "Text Styles",
+                                                      text: "文本样式",
                                                       link: "/editor/text/text-styles.md"
                                                 },
                                                 {
-                                                      text: "Text Modifiers",
+                                                      text: "文本修改器",
                                                       link: "/editor/text/text-modifiers.md"
                                                 },
                                                 {
-                                                      text: "Fonts",
+                                                      text: "字体",
                                                       link: "/editor/text/fonts.md"
                                                 }
                                           ],
@@ -361,39 +361,39 @@ export default defineConfig({
                                           text: "约束",
                                           items: [
                                                 {
-                                                      text: "Constraints Overview",
+                                                      text: "约束概览",
                                                       link: "/editor/constraints/constraints-overview.md"
                                                 },
                                                 {
-                                                      text: "Ik Constraint",
+                                                      text: "IK 约束",
                                                       link: "/editor/constraints/ik-constraint.md"
                                                 },
                                                 {
-                                                      text: "Distance Constraint",
+                                                      text: "距离约束",
                                                       link: "/editor/constraints/distance-constraint.md"
                                                 },
                                                 {
-                                                      text: "Scale Constraint",
+                                                      text: "缩放约束",
                                                       link: "/editor/constraints/scale-constraint.md"
                                                 },
                                                 {
-                                                      text: "Rotation Constraint",
+                                                      text: "旋转约束",
                                                       link: "/editor/constraints/rotation-constraint.md"
                                                 },
                                                 {
-                                                      text: "Transform Constraint",
+                                                      text: "变换约束",
                                                       link: "/editor/constraints/transform-constraint.md"
                                                 },
                                                 {
-                                                      text: "Translation Constraint",
+                                                      text: "位移约束",
                                                       link: "/editor/constraints/translation-constraint.md"
                                                 },
                                                 {
-                                                      text: "Follow Path Constraint",
+                                                      text: "跟随路径约束",
                                                       link: "/editor/constraints/follow-path-constraint.md"
                                                 },
                                                 {
-                                                      text: "Scroll Constraint",
+                                                      text: "滚动约束",
                                                       link: "/editor/constraints/scroll-constraint.md"
                                                 }
                                           ],
@@ -403,27 +403,27 @@ export default defineConfig({
                                           text: "动画模式",
                                           items: [
                                                 {
-                                                      text: "Animate Mode Overview",
+                                                      text: "动画模式概览",
                                                       link: "/editor/animate-mode/animate-mode-overview.md"
                                                 },
                                                 {
-                                                      text: "Timeline",
+                                                      text: "时间轴",
                                                       link: "/editor/animate-mode/timeline.md"
                                                 },
                                                 {
-                                                      text: "Keys",
+                                                      text: "关键帧",
                                                       link: "/editor/animate-mode/keys.md"
                                                 },
                                                 {
-                                                      text: "Animation Mixing",
+                                                      text: "动画混合",
                                                       link: "/editor/animate-mode/animation-mixing.md"
                                                 },
                                                 {
-                                                      text: "Interpolation Easing",
+                                                      text: "插值与缓动",
                                                       link: "/editor/animate-mode/interpolation-easing.md"
                                                 },
                                                 {
-                                                      text: "Animating Draw Order",
+                                                      text: "动画绘制顺序",
                                                       link: "/editor/animate-mode/animating-draw-order.md"
                                                 }
                                           ],
@@ -433,27 +433,27 @@ export default defineConfig({
                                           text: "状态机",
                                           items: [
                                                 {
-                                                      text: "State Machine",
+                                                      text: "状态机",
                                                       link: "/editor/state-machine/state-machine.md"
                                                 },
                                                 {
-                                                      text: "States",
+                                                      text: "状态",
                                                       link: "/editor/state-machine/states.md"
                                                 },
                                                 {
-                                                      text: "Inputs",
+                                                      text: "输入",
                                                       link: "/editor/state-machine/inputs.md"
                                                 },
                                                 {
-                                                      text: "Transitions",
+                                                      text: "过渡",
                                                       link: "/editor/state-machine/transitions.md"
                                                 },
                                                 {
-                                                      text: "Listeners",
+                                                      text: "监听器",
                                                       link: "/editor/state-machine/listeners.md"
                                                 },
                                                 {
-                                                      text: "Layers",
+                                                      text: "图层",
                                                       link: "/editor/state-machine/layers.md"
                                                 }
                                           ],
@@ -463,11 +463,11 @@ export default defineConfig({
                                           text: "事件",
                                           items: [
                                                 {
-                                                      text: "Overview",
+                                                      text: "概览",
                                                       link: "/editor/events/overview.md"
                                                 },
                                                 {
-                                                      text: "Audio Events",
+                                                      text: "音频事件",
                                                       link: "/editor/events/audio-events.md"
                                                 }
                                           ],
@@ -477,11 +477,11 @@ export default defineConfig({
                                           text: "数据绑定",
                                           items: [
                                                 {
-                                                      text: "Overview",
+                                                      text: "概览",
                                                       link: "/editor/data-binding/overview.md"
                                                 },
                                                 {
-                                                      text: "Lists",
+                                                      text: "列表",
                                                       link: "/editor/data-binding/lists.md"
                                                 }
                                           ],
@@ -491,57 +491,57 @@ export default defineConfig({
                                           text: "布局",
                                           items: [
                                                 {
-                                                      text: "Layouts Overview",
+                                                      text: "布局概览",
                                                       link: "/editor/layouts/layouts-overview.md"
                                                 },
                                                 {
-                                                      text: "Layout Tools",
+                                                      text: "布局工具",
                                                       link: "/editor/layouts/layout-tools.md"
                                                 },
                                                 {
-                                                      text: "Layout Parameters",
+                                                      text: "布局参数",
                                                       link: "/editor/layouts/layout-parameters.md"
                                                 },
                                                 {
-                                                      text: "Layout Styles",
+                                                      text: "布局样式",
                                                       link: "/editor/layouts/layout-styles.md"
                                                 },
                                                 {
-                                                      text: "Layout Animation",
+                                                      text: "布局动画",
                                                       link: "/editor/layouts/layout-animation.md"
                                                 },
                                                 {
-                                                      text: "N Slicing",
+                                                      text: "N-Slicing",
                                                       link: "/editor/layouts/n-slicing.md"
                                                 },
                                                 {
-                                                      text: "Scrolling",
+                                                      text: "滚动",
                                                       link: "/editor/layouts/scrolling.md"
                                                 }
                                           ],
                                           collapsed: false
                                     },
                                     {
-                                          text: "Libraries",
+                                          text: "库",
                                           link: "/editor/libraries.md"
                                     },
                                     {
-                                          text: "Keyboard Shortcuts",
+                                          text: "键盘快捷键",
                                           link: "/editor/keyboard-shortcuts.md"
                                     },
                                     {
                                           text: "导出",
                                           items: [
                                                 {
-                                                      text: "Exporting For Runtime",
+                                                      text: "导出为运行时",
                                                       link: "/editor/exporting/exporting-for-runtime.md"
                                                 },
                                                 {
-                                                      text: "Exporting For Video And Static Design",
+                                                      text: "导出为视频与静态设计",
                                                       link: "/editor/exporting/exporting-for-video-and-static-design.md"
                                                 },
                                                 {
-                                                      text: "Exporting For Backup",
+                                                      text: "导出为备份",
                                                       link: "/editor/exporting/exporting-for-backup.md"
                                                 }
                                           ],
@@ -551,11 +551,11 @@ export default defineConfig({
                                           text: "共享链接",
                                           items: [
                                                 {
-                                                      text: "Overview",
+                                                      text: "概览",
                                                       link: "/editor/share-links/overview.md"
                                                 },
                                                 {
-                                                      text: "Framer And Rive",
+                                                      text: "Framer 与 Rive",
                                                       link: "/editor/share-links/framer-and-rive.md"
                                                 }
                                           ],
@@ -565,14 +565,14 @@ export default defineConfig({
                                           text: "MCP",
                                           items: [
                                                 {
-                                                      text: "Integration",
+                                                      text: "集成",
                                                       link: "/editor/mcp/integration.md"
                                                 }
                                           ],
                                           collapsed: false
                                     },
                                     {
-                                          text: "Tagging",
+                                          text: "标记 (Tagging)",
                                           link: "/editor/tagging.md"
                                     }
                               ],
@@ -584,68 +584,68 @@ export default defineConfig({
                               text: "脚本",
                               items: [
                                     {
-                                          text: "Getting Started",
+                                          text: "入门指南",
                                           link: "/scripting/getting-started.md"
                                     },
                                     {
-                                          text: "Demos",
+                                          text: "演示",
                                           link: "/scripting/demos.md"
                                     },
                                     {
-                                          text: "Creating Scripts",
+                                          text: "创建脚本",
                                           link: "/scripting/creating-scripts.md"
                                     },
                                     {
                                           text: "协议",
                                           items: [
                                                 {
-                                                      text: "Overview",
+                                                      text: "概览",
                                                       link: "/scripting/protocols/overview.md"
                                                 },
                                                 {
-                                                      text: "Node Scripts",
+                                                      text: "节点脚本",
                                                       link: "/scripting/protocols/node-scripts.md"
                                                 },
                                                 {
-                                                      text: "Layout Scripts",
+                                                      text: "布局脚本",
                                                       link: "/scripting/protocols/layout-scripts.md"
                                                 },
                                                 {
-                                                      text: "Converter Scripts",
+                                                      text: "转换器脚本",
                                                       link: "/scripting/protocols/converter-scripts.md"
                                                 },
                                                 {
-                                                      text: "Path Effect Scripts",
+                                                      text: "路径效果脚本",
                                                       link: "/scripting/protocols/path-effect-scripts.md"
                                                 },
                                                 {
-                                                      text: "Util Scripts",
+                                                      text: "工具脚本",
                                                       link: "/scripting/protocols/util-scripts.md"
                                                 },
                                                 {
-                                                      text: "Test Scripts",
+                                                      text: "测试脚本",
                                                       link: "/scripting/protocols/test-scripts.md"
                                                 }
                                           ],
                                           collapsed: false
                                     },
                                     {
-                                          text: "Script Inputs",
+                                          text: "脚本输入",
                                           link: "/scripting/script-inputs.md"
                                     },
                                     {
-                                          text: "Pointer Events",
+                                          text: "指针事件",
                                           link: "/scripting/pointer-events.md"
                                     },
                                     {
                                           text: "调试",
                                           items: [
                                                 {
-                                                      text: "Debug Panel",
+                                                      text: "调试面板",
                                                       link: "/scripting/debugging/debug-panel.md"
                                                 },
                                                 {
-                                                      text: "Unit Testing",
+                                                      text: "单元测试",
                                                       link: "/scripting/debugging/unit-testing.md"
                                                 }
                                           ],
@@ -656,94 +656,94 @@ export default defineConfig({
                                           link: "/scripting/ai-agent.md"
                                     },
                                     {
-                                          text: "Keyboard Shortcuts",
+                                          text: "键盘快捷键",
                                           link: "/scripting/keyboard-shortcuts.md"
                                     },
                                     {
                                           text: "脚本 API",
                                           items: [
                                                 {
-                                                      text: "Artboard",
+                                                      text: "画板 (Artboard)",
                                                       link: "/scripting/api-reference/artboard.md"
                                                 },
                                                 {
-                                                      text: "Blend Mode",
+                                                      text: "混合模式 (Blend Mode)",
                                                       link: "/scripting/api-reference/blend-mode.md"
                                                 },
                                                 {
-                                                      text: "Color",
+                                                      text: "颜色 (Color)",
                                                       link: "/scripting/api-reference/color.md"
                                                 },
                                                 {
-                                                      text: "Command Type",
+                                                      text: "命令类型 (Command Type)",
                                                       link: "/scripting/api-reference/command-type.md"
                                                 },
                                                 {
-                                                      text: "Context",
+                                                      text: "上下文 (Context)",
                                                       link: "/scripting/api-reference/context.md"
                                                 },
                                                 {
-                                                      text: "Contour Measure",
+                                                      text: "轮廓测量 (Contour Measure)",
                                                       link: "/scripting/api-reference/contour-measure.md"
                                                 },
                                                 {
-                                                      text: "Converter",
+                                                      text: "转换器 (Converter)",
                                                       link: "/scripting/api-reference/converter.md"
                                                 },
                                                 {
-                                                      text: "Data Value",
+                                                      text: "数据值 (Data Value)",
                                                       link: "/scripting/api-reference/data-value.md"
                                                 },
                                                 {
-                                                      text: "Data Value Boolean",
+                                                      text: "布尔数据值 (Data Value Boolean)",
                                                       link: "/scripting/api-reference/data-value-boolean.md"
                                                 },
                                                 {
-                                                      text: "Data Value Color",
+                                                      text: "颜色数据值 (Data Value Color)",
                                                       link: "/scripting/api-reference/data-value-color.md"
                                                 },
                                                 {
-                                                      text: "Data Value Number",
+                                                      text: "数字数据值 (Data Value Number)",
                                                       link: "/scripting/api-reference/data-value-number.md"
                                                 },
                                                 {
-                                                      text: "Data Value String",
+                                                      text: "字符串数据值 (Data Value String)",
                                                       link: "/scripting/api-reference/data-value-string.md"
                                                 },
                                                 {
-                                                      text: "Gradient",
+                                                      text: "渐变 (Gradient)",
                                                       link: "/scripting/api-reference/gradient.md"
                                                 },
                                                 {
-                                                      text: "Gradient Stop",
+                                                      text: "渐变停止点 (Gradient Stop)",
                                                       link: "/scripting/api-reference/gradient-stop.md"
                                                 },
                                                 {
-                                                      text: "Image",
+                                                      text: "图像 (Image)",
                                                       link: "/scripting/api-reference/image.md"
                                                 },
                                                 {
-                                                      text: "Image Filter",
+                                                      text: "图像滤镜 (Image Filter)",
                                                       link: "/scripting/api-reference/image-filter.md"
                                                 },
                                                 {
-                                                      text: "Image Sampler",
+                                                      text: "图像采样器 (Image Sampler)",
                                                       link: "/scripting/api-reference/image-sampler.md"
                                                 },
                                                 {
-                                                      text: "Image Wrap",
+                                                      text: "图像包裹 (Image Wrap)",
                                                       link: "/scripting/api-reference/image-wrap.md"
                                                 },
                                                 {
-                                                      text: "Input",
+                                                      text: "输入 (Input)",
                                                       link: "/scripting/api-reference/input.md"
                                                 },
                                                 {
-                                                      text: "Layout",
+                                                      text: "布局 (Layout)",
                                                       link: "/scripting/api-reference/layout.md"
                                                 },
                                                 {
-                                                      text: "Listener",
+                                                      text: "监听器 (Listener)",
                                                       link: "/scripting/api-reference/listener.md"
                                                 },
                                                 {
@@ -751,91 +751,91 @@ export default defineConfig({
                                                       link: "/scripting/api-reference/mat2d.md"
                                                 },
                                                 {
-                                                      text: "Node",
+                                                      text: "节点 (Node)",
                                                       link: "/scripting/api-reference/node.md"
                                                 },
                                                 {
-                                                      text: "Node Data",
+                                                      text: "节点数据 (Node Data)",
                                                       link: "/scripting/api-reference/node-data.md"
                                                 },
                                                 {
-                                                      text: "Output",
+                                                      text: "输出 (Output)",
                                                       link: "/scripting/api-reference/output.md"
                                                 },
                                                 {
-                                                      text: "Paint",
+                                                      text: "绘制 (Paint)",
                                                       link: "/scripting/api-reference/paint.md"
                                                 },
                                                 {
-                                                      text: "Paint Definition",
+                                                      text: "绘制定义 (Paint Definition)",
                                                       link: "/scripting/api-reference/paint-definition.md"
                                                 },
                                                 {
-                                                      text: "Paint Style",
+                                                      text: "绘制样式 (Paint Style)",
                                                       link: "/scripting/api-reference/paint-style.md"
                                                 },
                                                 {
-                                                      text: "Paint Type",
+                                                      text: "绘制类型 (Paint Type)",
                                                       link: "/scripting/api-reference/paint-type.md"
                                                 },
                                                 {
-                                                      text: "Path",
+                                                      text: "路径 (Path)",
                                                       link: "/scripting/api-reference/path.md"
                                                 },
                                                 {
-                                                      text: "Path Command",
+                                                      text: "路径命令 (Path Command)",
                                                       link: "/scripting/api-reference/path-command.md"
                                                 },
                                                 {
-                                                      text: "Path Data",
+                                                      text: "路径数据 (Path Data)",
                                                       link: "/scripting/api-reference/path-data.md"
                                                 },
                                                 {
-                                                      text: "Path Effect",
+                                                      text: "路径效果 (Path Effect)",
                                                       link: "/scripting/api-reference/path-effect.md"
                                                 },
                                                 {
-                                                      text: "Path Measure",
+                                                      text: "路径测量 (Path Measure)",
                                                       link: "/scripting/api-reference/path-measure.md"
                                                 },
                                                 {
-                                                      text: "Pointer Event",
+                                                      text: "指针事件 (Pointer Event)",
                                                       link: "/scripting/api-reference/pointer-event.md"
                                                 },
                                                 {
-                                                      text: "Property",
+                                                      text: "属性 (Property)",
                                                       link: "/scripting/api-reference/property.md"
                                                 },
                                                 {
-                                                      text: "Property List",
+                                                      text: "属性列表 (Property List)",
                                                       link: "/scripting/api-reference/property-list.md"
                                                 },
                                                 {
-                                                      text: "Property Trigger",
+                                                      text: "属性触发器 (Property Trigger)",
                                                       link: "/scripting/api-reference/property-trigger.md"
                                                 },
                                                 {
-                                                      text: "Renderer",
+                                                      text: "渲染器 (Renderer)",
                                                       link: "/scripting/api-reference/renderer.md"
                                                 },
                                                 {
-                                                      text: "Stroke Cap",
+                                                      text: "描边末端 (Stroke Cap)",
                                                       link: "/scripting/api-reference/stroke-cap.md"
                                                 },
                                                 {
-                                                      text: "Stroke Join",
+                                                      text: "描边连接 (Stroke Join)",
                                                       link: "/scripting/api-reference/stroke-join.md"
                                                 },
                                                 {
-                                                      text: "Trigger",
+                                                      text: "触发器 (Trigger)",
                                                       link: "/scripting/api-reference/trigger.md"
                                                 },
                                                 {
-                                                      text: "Vector",
+                                                      text: "向量 (Vector)",
                                                       link: "/scripting/api-reference/vector.md"
                                                 },
                                                 {
-                                                      text: "View Model",
+                                                      text: "视图模型 (View Model)",
                                                       link: "/scripting/api-reference/view-model.md"
                                                 }
                                           ],
@@ -850,62 +850,62 @@ export default defineConfig({
                               text: "运行时基础",
                               items: [
                                     {
-                                          text: "Getting Started",
+                                          text: "入门指南",
                                           link: "/runtimes/getting-started.md"
                                     },
                                     {
-                                          text: "Demos",
+                                          text: "演示",
                                           link: "/runtimes/demos.md"
                                     },
                                     {
-                                          text: "Runtime Sizes",
+                                          text: "运行时大小",
                                           link: "/runtimes/runtime-sizes.md"
                                     },
                                     {
-                                          text: "Artboards",
+                                          text: "画板",
                                           link: "/runtimes/artboards.md"
                                     },
                                     {
-                                          text: "Layout",
+                                          text: "布局",
                                           link: "/runtimes/layout.md"
                                     },
                                     {
-                                          text: "State Machines",
+                                          text: "状态机",
                                           link: "/runtimes/state-machines.md"
                                     },
                                     {
-                                          text: "Data Binding",
+                                          text: "数据绑定",
                                           link: "/runtimes/data-binding.md"
                                     },
                                     {
-                                          text: "Loading Assets",
+                                          text: "加载资源",
                                           link: "/runtimes/loading-assets.md"
                                     },
                                     {
-                                          text: "Fonts",
+                                          text: "字体",
                                           link: "/runtimes/fonts.md"
                                     },
                                     {
-                                          text: "Caching A Rive File",
+                                          text: "缓存 Rive 文件",
                                           link: "/runtimes/caching-a-rive-file.md"
                                     },
                                     {
-                                          text: "Playing Audio",
+                                          text: "播放音频",
                                           link: "/runtimes/playing-audio.md"
                                     },
                                     {
-                                          text: "Logging",
+                                          text: "日志",
                                           link: "/runtimes/logging.md"
                                     },
                                     {
-                                          text: "Choose a Renderer",
+                                          text: "选择渲染器",
                                           items: [
                                                 {
-                                                      text: "Overview",
+                                                      text: "概览",
                                                       link: "/runtimes/choose-a-renderer/overview.md"
                                                 },
                                                 {
-                                                      text: "Faq",
+                                                      text: "常见问题",
                                                       link: "/runtimes/choose-a-renderer/faq.md"
                                                 }
                                           ],
@@ -915,7 +915,7 @@ export default defineConfig({
                                           text: "高级主题",
                                           items: [
                                                 {
-                                                      text: "Format",
+                                                      text: "格式",
                                                       link: "/runtimes/advanced-topic/format.md"
                                                 }
                                           ],
@@ -925,19 +925,19 @@ export default defineConfig({
                                           text: "旧版功能",
                                           items: [
                                                 {
-                                                      text: "Animation Playback",
+                                                      text: "动画播放",
                                                       link: "/runtimes/animation-playback.md"
                                                 },
                                                 {
-                                                      text: "Inputs",
+                                                      text: "输入",
                                                       link: "/runtimes/inputs.md"
                                                 },
                                                 {
-                                                      text: "Text",
+                                                      text: "文本",
                                                       link: "/runtimes/text.md"
                                                 },
                                                 {
-                                                      text: "Rive Events",
+                                                      text: "Rive 事件",
                                                       link: "/runtimes/rive-events.md"
                                                 }
                                           ],
@@ -953,35 +953,35 @@ export default defineConfig({
                                           text: "Web (JS)",
                                           items: [
                                                 {
-                                                      text: "Web Js",
+                                                      text: "Web (JS)",
                                                       link: "/runtimes/web/web-js.md"
                                                 },
                                                 {
-                                                      text: "Rive Parameters",
+                                                      text: "Rive 参数",
                                                       link: "/runtimes/web/rive-parameters.md"
                                                 },
                                                 {
-                                                      text: "Canvas Vs Webgl",
+                                                      text: "Canvas 与 WebGL",
                                                       link: "/runtimes/web/canvas-vs-webgl.md"
                                                 },
                                                 {
-                                                      text: "Migrating From Rive Js",
+                                                      text: "从 Rive.js 迁移",
                                                       link: "/runtimes/web/migrating-from-rive-js.md"
                                                 },
                                                 {
-                                                      text: "Faq",
+                                                      text: "常见问题",
                                                       link: "/runtimes/web/faq.md"
                                                 },
                                                 {
-                                                      text: "Preloading Wasm",
+                                                      text: "预加载 WASM",
                                                       link: "/runtimes/web/preloading-wasm.md"
                                                 },
                                                 {
-                                                      text: "Low Level Api Usage",
+                                                      text: "低级 API 使用",
                                                       link: "/runtimes/web/low-level-api-usage.md"
                                                 },
                                                 {
-                                                      text: "Migrating From V1 To V2",
+                                                      text: "从 V1 迁移到 V2",
                                                       link: "/runtimes/web/migrating-from-v1-to-v2.md"
                                                 }
                                           ],
@@ -995,19 +995,19 @@ export default defineConfig({
                                                       link: "/runtimes/react/react.md"
                                                 },
                                                 {
-                                                      text: "Parameters And Return Values",
+                                                      text: "参数与返回值",
                                                       link: "/runtimes/react/parameters-and-return-values.md"
                                                 },
                                                 {
-                                                      text: "Migrating From V0 To V1",
+                                                      text: "从 V0 迁移到 V1",
                                                       link: "/runtimes/react/migrating-from-v0-to-v1.md"
                                                 },
                                                 {
-                                                      text: "Migrating From V1 To V3",
+                                                      text: "从 V1 迁移到 V3",
                                                       link: "/runtimes/react/migrating-from-v1-to-v3.md"
                                                 },
                                                 {
-                                                      text: "Migrating From V3 To V4",
+                                                      text: "从 V3 迁移到 V4",
                                                       link: "/runtimes/react/migrating-from-v3-to-v4.md"
                                                 }
                                           ],
@@ -1021,35 +1021,35 @@ export default defineConfig({
                                                       link: "/runtimes/react-native/react-native.md"
                                                 },
                                                 {
-                                                      text: "Runtime Concepts",
+                                                      text: "运行时概念",
                                                       link: "/runtimes/react-native/runtime-concepts.md"
                                                 },
                                                 {
-                                                      text: "Loading Rive Files",
+                                                      text: "加载 Rive 文件",
                                                       link: "/runtimes/react-native/loading-rive-files.md"
                                                 },
                                                 {
-                                                      text: "Props",
+                                                      text: "属性 (Props)",
                                                       link: "/runtimes/react-native/props.md"
                                                 },
                                                 {
-                                                      text: "Rive Ref Methods",
+                                                      text: "Rive Ref 方法",
                                                       link: "/runtimes/react-native/rive-ref-methods.md"
                                                 },
                                                 {
-                                                      text: "Error Handling",
+                                                      text: "错误处理",
                                                       link: "/runtimes/react-native/error-handling.md"
                                                 },
                                                 {
-                                                      text: "Adding Rive To Expo",
+                                                      text: "将 Rive 添加到 Expo",
                                                       link: "/runtimes/react-native/adding-rive-to-expo.md"
                                                 },
                                                 {
-                                                      text: "Native Version Customization",
+                                                      text: "原生版本自定义",
                                                       link: "/runtimes/react-native/native-version-customization.md"
                                                 },
                                                 {
-                                                      text: "Migration Guide",
+                                                      text: "迁移指南",
                                                       link: "/runtimes/react-native/migration-guide.md"
                                                 }
                                           ],
@@ -1063,11 +1063,11 @@ export default defineConfig({
                                                       link: "/runtimes/flutter/flutter.md"
                                                 },
                                                 {
-                                                      text: "Rive Native",
+                                                      text: "Rive 原生 (Native)",
                                                       link: "/runtimes/flutter/rive-native.md"
                                                 },
                                                 {
-                                                      text: "Migration Guide",
+                                                      text: "迁移指南",
                                                       link: "/runtimes/flutter/migration-guide.md"
                                                 }
                                           ],
@@ -1081,31 +1081,31 @@ export default defineConfig({
                                                       link: "/runtimes/apple/apple.md"
                                                 },
                                                 {
-                                                      text: "Migrating From 1.x.x To 2.x.x",
+                                                      text: "从 1.x.x 迁移到 2.x.x",
                                                       link: "/runtimes/apple/migrating-from-1.x.x-to-2.x.x.md"
                                                 },
                                                 {
-                                                      text: "Migrating From 2.x.x To 3.x.x",
+                                                      text: "从 2.x.x 迁移到 3.x.x",
                                                       link: "/runtimes/apple/migrating-from-2.x.x-to-3.x.x.md"
                                                 },
                                                 {
-                                                      text: "Migrating From 3.x.x To 4.x.x",
+                                                      text: "从 3.x.x 迁移到 4.x.x",
                                                       link: "/runtimes/apple/migrating-from-3.x.x-to-4.x.x.md"
                                                 },
                                                 {
-                                                      text: "Migrating From 4.x.x To 5.x.x",
+                                                      text: "从 4.x.x 迁移到 5.x.x",
                                                       link: "/runtimes/apple/migrating-from-4.x.x-to-5.x.x.md"
                                                 },
                                                 {
-                                                      text: "Migrating From 5.x.x To 6.x.x",
+                                                      text: "从 5.x.x 迁移到 6.x.x",
                                                       link: "/runtimes/apple/migrating-from-5.x.x-to-6.x.x.md"
                                                 },
                                                 {
-                                                      text: "Faq",
+                                                      text: "常见问题",
                                                       link: "/runtimes/apple/faq.md"
                                                 },
                                                 {
-                                                      text: "Resource Usage",
+                                                      text: "资源使用",
                                                       link: "/runtimes/apple/resource-usage.md"
                                                 }
                                           ],
@@ -1122,10 +1122,10 @@ export default defineConfig({
                                           collapsed: false
                                     },
                                     {
-                                          text: "Community Runtimes",
+                                          text: "社区运行时",
                                           items: [
                                                 {
-                                                      text: "C Sharp",
+                                                      text: "C# (C Sharp)",
                                                       link: "/runtimes/community-runtimes/c-sharp.md"
                                                 },
                                                 {
@@ -1144,54 +1144,54 @@ export default defineConfig({
                               text: "游戏运行时",
                               items: [
                                     {
-                                          text: "Unreal",
+                                          text: "Unreal (虚幻引擎)",
                                           items: [
                                                 {
-                                                      text: "Unreal",
+                                                      text: "Unreal 概览",
                                                       link: "/game-runtimes/unreal/unreal.md"
                                                 },
                                                 {
-                                                      text: "Getting Started",
+                                                      text: "入门指南",
                                                       link: "/game-runtimes/unreal/getting-started.md"
                                                 },
                                                 {
-                                                      text: "Fundamentals",
+                                                      text: "基础知识",
                                                       link: "/game-runtimes/unreal/fundamentals.md"
                                                 },
                                                 {
-                                                      text: "State Machines",
+                                                      text: "状态机",
                                                       link: "/game-runtimes/unreal/state-machines.md"
                                                 },
                                                 {
-                                                      text: "Rive Events",
+                                                      text: "Rive 事件",
                                                       link: "/game-runtimes/unreal/rive-events.md"
                                                 },
                                                 {
-                                                      text: "Data Binding Overview",
+                                                      text: "数据绑定概览",
                                                       link: "/game-runtimes/unreal/data-binding-overview.md"
                                                 },
                                                 {
-                                                      text: "Data Binding Usage",
+                                                      text: "数据绑定用法",
                                                       link: "/game-runtimes/unreal/data-binding-usage.md"
                                                 },
                                                 {
-                                                      text: "Text",
+                                                      text: "文本",
                                                       link: "/game-runtimes/unreal/text.md"
                                                 },
                                                 {
-                                                      text: "Audio",
+                                                      text: "音频",
                                                       link: "/game-runtimes/unreal/audio.md"
                                                 },
                                                 {
-                                                      text: "Loading Assets",
+                                                      text: "加载资源",
                                                       link: "/game-runtimes/unreal/loading-assets.md"
                                                 },
                                                 {
-                                                      text: "Runtime Asset Swapping",
+                                                      text: "运行时资源交换",
                                                       link: "/game-runtimes/unreal/runtime-asset-swapping.md"
                                                 },
                                                 {
-                                                      text: "Common Use Cases",
+                                                      text: "常用场景",
                                                       link: "/game-runtimes/unreal/common-use-cases.md"
                                                 }
                                           ],
@@ -1201,62 +1201,62 @@ export default defineConfig({
                                           text: "Unity",
                                           items: [
                                                 {
-                                                      text: "Unity",
+                                                      text: "Unity 概览",
                                                       link: "/game-runtimes/unity/unity.md"
                                                 },
                                                 {
-                                                      text: "Getting Started",
+                                                      text: "入门指南",
                                                       link: "/game-runtimes/unity/getting-started.md"
                                                 },
                                                 {
-                                                      text: "Fundamentals",
+                                                      text: "基础知识",
                                                       link: "/game-runtimes/unity/fundamentals.md"
                                                 },
                                                 {
-                                                      text: "Components",
+                                                      text: "组件",
                                                       link: "/game-runtimes/unity/components.md"
                                                 },
                                                 {
-                                                      text: "Layouts",
+                                                      text: "布局",
                                                       link: "/game-runtimes/unity/layouts.md"
                                                 },
                                                 {
-                                                      text: "Listeners",
+                                                      text: "监听器",
                                                       link: "/game-runtimes/unity/listeners.md"
                                                 },
                                                 {
-                                                      text: "State Machines",
+                                                      text: "状态机",
                                                       link: "/game-runtimes/unity/state-machines.md"
                                                 },
                                                 {
-                                                      text: "Data Binding",
+                                                      text: "数据绑定",
                                                       link: "/game-runtimes/unity/data-binding.md"
                                                 },
                                                 {
-                                                      text: "Loading Assets",
+                                                      text: "加载资源",
                                                       link: "/game-runtimes/unity/loading-assets.md"
                                                 },
                                                 {
-                                                      text: "Procedural Rendering",
+                                                      text: "程序化渲染",
                                                       link: "/game-runtimes/unity/procedural-rendering.md"
                                                 },
                                                 {
-                                                      text: "Runtime Asset Swapping",
+                                                      text: "运行时资源交换",
                                                       link: "/game-runtimes/unity/runtime-asset-swapping.md"
                                                 },
                                                 {
-                                                      text: "Legacy",
+                                                      text: "旧版",
                                                       items: [
                                                             {
-                                                                  text: "Inputs",
+                                                                  text: "输入",
                                                                   link: "/game-runtimes/unity/inputs.md"
                                                             },
                                                             {
-                                                                  text: "Text",
+                                                                  text: "文本",
                                                                   link: "/game-runtimes/unity/text.md"
                                                             },
                                                             {
-                                                                  text: "Rive Events",
+                                                                  text: "Rive 事件",
                                                                   link: "/game-runtimes/unity/rive-events.md"
                                                             }
                                                       ],
@@ -1278,11 +1278,11 @@ export default defineConfig({
                               text: "教程",
                               items: [
                                     {
-                                          text: "Learn Rive",
+                                          text: "学习 Rive",
                                           link: "/tutorials/learn-rive.md"
                                     },
                                     {
-                                          text: "Awesome Rive",
+                                          text: "精彩 Rive (Awesome Rive)",
                                           link: "/tutorials/awesome-rive.md"
                                     }
                               ],
@@ -1325,8 +1325,8 @@ export default defineConfig({
 
             // 页脚
             footer: {
-                  message: 'Released under the MIT License.',
-                  copyright: 'Copyright © 2024 Rive'
+                  message: '在 MIT 许可下发布',
+                  copyright: '版权所有 © 2024 Rive'
             },
 
             // 文档页脚

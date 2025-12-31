@@ -9,7 +9,7 @@ description: "Rive 脚本编辑器中的快捷键列表。"
 | :--- | :--- | :--- |
 | **搜索脚本** | <kbd>⌘</kbd> + <kbd>P</kbd> | <kbd>Ctrl</kbd> + <kbd>P</kbd> |
 | **查找下一个** | <kbd>⌘</kbd> + <kbd>G</kbd> | <kbd>Ctrl</kbd> + <kbd>G</kbd> |
-| **查找上一个** | <kbd<ctrl42>>⌘</kbd> + <kbd>⇧</kbd> + <kbd>G</kbd> | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>G</kbd> |
+| **查找上一个** | <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>G</kbd> | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>G</kbd> |
 | **按单词移动光标** | <kbd>⌥</kbd> + <kbd>←</kbd>/<kbd>→</kbd> | <kbd>Alt</kbd> + <kbd>←</kbd>/<kbd>→</kbd> |
 | **按子词移动光标** | <kbd>⌃</kbd> + <kbd>⌥</kbd> + <kbd>←</kbd>/<kbd>→</kbd> | — |
 | **移动光标至行首/行尾** | <kbd>⌘</kbd> + <kbd>←</kbd>/<kbd>→</kbd> | <kbd>Ctrl</kbd> + <kbd>←</kbd>/<kbd>→</kbd> |
@@ -18,7 +18,7 @@ description: "Rive 脚本编辑器中的快捷键列表。"
 | **选择下一个标签页** | <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>]</kbd> | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>]</kbd> |
 | **选择上一个标签页** | <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>[</kbd> | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>[</kbd> |
 | **显示下一个标签页调色板** | <kbd>⌃</kbd> + <kbd>Tab</kbd> | <kbd>Ctrl</kbd> + <kbd>Tab</kbd> |
-| **显示上一个标签页调色板** | <kbd>⌃</kbd> + <kbd>↑</kbd> + <kbd>Tab</kbd> | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Tab</kbd> |
+| **显示上一个标签页调色板** | <kbd>⌃</kbd> + <kbd>⇧</kbd> + <kbd>Tab</kbd> | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Tab</kbd> |
 
 ### 编辑 (Editing)
 
