@@ -1328,7 +1328,7 @@ export default defineConfig({
 
             // 页脚
             footer: {
-                  message: '在 MIT 许可下发布',
+                  message: '京ICP备2023007831号-7',
                   copyright: '版权所有 © 2024 Rive'
             },
 
