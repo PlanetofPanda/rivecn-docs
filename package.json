@@ -1,0 +1,24 @@
+{
+  "name": "rive-docs-cn",
+  "version": "1.0.0",
+  "description": "Rive 官方文档中文版",
+  "type": "module",
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs",
+    "convert": "node scripts/convert-to-vitepress.js"
+  },
+  "keywords": [
+    "rive",
+    "documentation",
+    "vitepress",
+    "animation"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "vitepress": "^1.0.0",
+    "vue": "^3.4.0"
+  }
+}

@@ -1,0 +1,14 @@
+---
+title: '登录故障排除'
+description: ''
+---
+
+如果您输入电子邮件地址和密码后看到"凭据无效"（Invalid credentials），可能是因为您输入了错误的登录信息，或者是您通过 Google 或 Facebook 的快捷登录方式创建了账户。
+
+如果您使用了快捷登录，我们的系统中没有存储您的密码——密码由 Google 或 Facebook 管理。您必须使用 Google 或 Facebook 登录选项，而不是电子邮件和密码。
+
+电子邮件和密码登录选项仅适用于使用电子邮件和密码创建的账户。如果您忘记了密码，可以点击登录按钮下方的"忘记密码？"（Forgot password?），系统将向您发送一封用于重置密码的电子邮件。
+
+如需进一步帮助，请发送电子邮件至 [support@rive.app](mailto:support@rive.app)。
+
+![Image](/images/account-admin/account-overview/34f3f638-826b-4779-be26-4e36482b5e47.webp)
