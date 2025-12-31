@@ -1328,7 +1328,7 @@ export default defineConfig({
 
             // 页脚
             footer: {
-                  message: '京ICP备2023007831号-7',
+                  message: '<a href="https://beian.miit.gov.cn/" target="_blank">京ICP备2023007831号-7</a>',
                   copyright: '版权所有 © 2024 Rive'
             },
 
