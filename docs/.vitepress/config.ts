@@ -4,8 +4,11 @@ export default defineConfig({
       title: 'Rive 中文文档',
       description: 'Rive 官方文档中文版',
 
-      // 基础路径，适配 GitHub Pages
-      base: '/rivecn-docs/',
+      // 基础路径，适配生产环境
+      base: '/docs/',
+
+      // 开启简洁 URL
+      cleanUrls: true,
 
       // 语言设置
       lang: 'zh-CN',
