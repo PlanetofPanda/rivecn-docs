@@ -1,51 +1,51 @@
 ---
-title: "Introduction"
-description: "Welcome to the Rive Docs. We've split this documentation into the sub-sections below. If you can't find the information you're looking for or have questions for us, join us on [Twitter](https://twitter.com/rive_app), [Discord](https://discord.com/invite/FGjmaTr), or contact us by filling out [this form](https://rive.app/contact)."
+title: "简介"
+description: "欢迎阅读 Rive 文档。我们将文档分为以下几个子章节。如果您找不到所需信息或有任何疑问，请加入我们的 [Twitter](https://twitter.com/rive_app)、[Discord](https://discord.com/invite/FGjmaTr)，或通过填写[此表格](https://rive.app/contact)联系我们。"
 ---
 
 <YouTube videoId="mMpik32gkt4" />
 
-## Getting Started
+## 入门指南
 
-New to Rive? Here are some tips to get started:
+刚开始接触 Rive？这里有一些入门技巧：
 
-* [Create an account](https://rive.app/login/?redirect=https%3A%2F%2Feditor.rive.app) today and try out the Rive Editor
+* 今天就开始[创建账户](https://rive.app/login/?redirect=https%3A%2F%2Feditor.rive.app)并试用 Rive 编辑器
 
-* Ready to design and animate? Peruse the Rive docs here, or watch our series of short tutorial videos in [Rive 101](https://youtube.com/playlist?list=PLujDTZWVDSsFGonP9kzAnvryowW098-p3)
+* 准备好进行设计和动画了吗？可以阅读此处的 Rive 文档，或者观看我们在 [Rive 101](https://youtube.com/playlist?list=PLujDTZWVDSsFGonP9kzAnvryowW098-p3) 中的系列简短教程视频
 
-* Want to jump straight into adding Rive into your apps and games? See the [app runtimes docs](/runtimes/getting-started) and [game runtime docs](/game-runtimes/unreal/unreal) for quickstart guides, examples, and code snippets
+* 想直接将 Rive 添加到您的应用和游戏中吗？请参阅[应用运行时文档](/runtimes/getting-started)和[游戏运行时文档](/game-runtimes/unreal/unreal)以获取快速入门指南、示例和代码片段
 
-* Curious about what use cases to consider when building with Rive? We've got examples, blogs, tutorials, and more on our [use cases page](https://rive.app/use-cases)
+* 对在使用 Rive 构建时要考虑哪些用例感到好奇吗？我们在我们的[用例页面](https://rive.app/use-cases)上有示例、博客、教程等
 
-## Explore Rive
+## 探索 Rive
 
-**[Interface Overview](/editor/interface-overview/overview)**
+**[界面概览](/editor/interface-overview/overview)**
 
-    Ready to start designing and animating in Rive? The editor is where you create and animate designs and utilize the powerful State Machine to build your logic of how different animations mix together. From there, you can export your work ready to drop into your app or game via one of our runtimes.
+    准备好在 Rive 中开始设计和制作动画了吗？编辑器是您创建和制作动画设计并利用强大的状态机来构建不同动画如何混合在一起的逻辑的地方。从那里，您可以导出您的作品，准备好通过我们的运行时之一将其放入您的应用或游戏。
   
 
-  **[App Runtimes](/runtimes/getting-started)**
+  **[应用运行时](/runtimes/getting-started)**
 
-    App runtimes are open-source libraries that enable real-time rendering and updating of your Rive files across various platforms and frameworks, including Web, iOS, Android, Flutter, React Native, and more.
+    应用运行时是开源库，可以跨越各种平台和框架（包括 Web、iOS、Android、Flutter、React Native 等）实现 Rive 文件的实时渲染和更新。
   
 
-  **[Game Runtimes](/game-runtimes/unreal/unreal)**
+  **[游戏运行时](/game-runtimes/unreal/unreal)**
 
-    Game runtimes are open-source libraries that allow real-time rendering and updating of your Rive files in Unity, Unreal, and Defold and is easy to integrate with custom engines.
+    游戏运行时是开源库，允许在 Unity、Unreal 和 Defold 中实时渲染和更新 Rive 文件，并且易于与自定义引擎集成。
   
 
-**[Marketplace Overview](/community/marketplace-overview)**
+**[市场概览](/community/marketplace-overview)**
 
-    Share and remix creations with the Rive Marketplace.
+    使用 Rive 市场分享和重新混合创作。
   
 
-  **[Admin](/account-admin/account-overview/account-overview)**
+  **[账户管理](/account-admin/account-overview/account-overview)**
 
-    All the information you need to manage accounts, teams, and plans.
+    管理账户、团队和计划所需的全部信息。
   
 
-  **[Terms of Service](/legal/terms-of-service)**
+  **[法律信息](/legal/terms-of-service)**
 
-    All our legal stuff, like our Terms of Service, Acceptable Use Policy, and Privacy Policy.
+    我们所有的法律材料，比如服务条款、可接受使用政策和隐私政策。
   
 
