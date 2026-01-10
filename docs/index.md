@@ -36,3 +36,5 @@ features:
     title: 丰富的文档
     details: 详细的文档、教程和示例，帮助你快速上手
 ---
+## 学习路线
+![Image](/images/rive.png)
