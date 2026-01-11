@@ -9,7 +9,9 @@ export default defineConfig({
 
       // 开启简洁 URL
       cleanUrls: true,
-
+      sitemap: {
+            hostname: 'https://rive.org.cn' // 开启后 build 就会自动生成 sitemap.xml
+      },
       // 语言设置
       lang: 'zh-CN',
 
