@@ -275,3 +275,32 @@ body {
   50% { transform: translateY(-15px); }
   100% { transform: translateY(0px); }
 }
+
+/* Roadmap Image Style */
+.roadmap-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 60px auto 20px auto;
+  padding: 0 24px;
+  max-width: 1000px;
+  width: 100%;
+}
+.roadmap-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 16px;
+  border: 1px solid var(--vp-c-divider);
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.4s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.4s ease;
+  object-fit: cover;
+  background: var(--vp-c-bg-soft);
+}
+.dark .roadmap-image {
+  box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.8), 0 0 30px rgba(100, 108, 255, 0.1);
+}
+.roadmap-image:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.3), 0 0 40px rgba(100, 108, 255, 0.2);
+  border-color: rgba(100, 108, 255, 0.5);
+}

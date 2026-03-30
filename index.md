@@ -74,4 +74,8 @@ Rive 不仅仅是一个常规的动画导出工具，它是一个**实时的交�
 - 👉 [Web 开发者如何把 Rive 塞进网页里？](/runtimes/web)
 - 👉 [下载属于自己的离线版 Rive](https://rive.app/downloads)
 
+<div class="roadmap-image-container">
+  <img src="/roadmap.png" alt="Rive 中文学习路线图" class="roadmap-image" />
+</div>
+
 <Roadmap />

@@ -167,7 +167,8 @@ export default defineConfig({
                         resetButtonTitle: '清除查询条件',
                         footer: {
                             selectText: '选择',
-                            navigateText: '切换'
+                            navigateText: '切换',
+                            closeText: '关闭'
                         }
                     }
                 }
@@ -181,10 +182,10 @@ export default defineConfig({
         },
 
         // 首页页脚（仅在使用默认 layout: home 时生效）
-        footer: {
-            message: 'PlanetofPanda & Rive Community',
-            copyright: '版权所有 © 2024-至今 | <a href="https://beian.miit.gov.cn/" target="_blank">备案号请在此修改 (如: 京ICP备XXXXXXXX号-1)</a>'
-        },
+            footer: {
+      message: '<a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener" style="color:var(--vp-c-text-2);text-decoration:hover:underline;">京ICP备2023007831号-7</a> <span style="margin: 0 8px;">|</span> <img src="https://beian.mps.gov.cn/web/assets/logo01.6189a29f.png" width="16" style="display:inline;vertical-align:middle;margin-top:-2px;"> <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11011502030362" target="_blank" rel="noopener" style="color:var(--vp-c-text-2);text-decoration:hover:underline;">京公网安备11011502030362号</a>',
+      copyright: '版权所有 © 2024 Rive'
+    },
 
         // 文档页脚
         docFooter: {
