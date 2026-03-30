@@ -1,44 +1,39 @@
 /**
- * RiveCN Docs - Clean Professional Aesthetic (Light & Dark)
- * Matching the official Rive documentation style
+ * RiveCN Docs - Clean Layout + Tech Glow Effects
  */
 
 :root {
   --vp-font-family-base: 'Inter', system-ui, -apple-system, 'PingFang SC', 'Noto Sans SC', sans-serif;
   --vp-font-family-mono: 'Fira Code', 'JetBrains Mono', monospace;
   
-  /* Color Palette */
+  /* Color Palette (Vibrant Tech Blue/Purple) */
   --vp-c-brand-1: #2563eb; 
-  --vp-c-brand-2: #3b82f6; 
-  --vp-c-brand-3: #60a5fa; 
+  --vp-c-brand-2: #8b5cf6; 
+  --vp-c-brand-3: #c084fc; 
   --vp-c-brand-soft: rgba(37, 99, 235, 0.08);
 
   /* Light Theme */
-  --vp-c-bg: #ffffff;            
-  --vp-c-bg-soft: #f8fafc; 
+  --vp-c-bg: #f8fafc;            
+  --vp-c-bg-soft: #ffffff; 
   --vp-c-bg-mute: #f1f5f9; 
-  --vp-c-text-1: #1a1a1a; 
-  --vp-c-text-2: #666666; 
+  --vp-c-text-1: #0f172a; 
+  --vp-c-text-2: #475569; 
 
-  /* Hero name color - solid blue */
-  --vp-home-hero-name-color: #2563eb;
-  --vp-home-hero-name-background: none;
+  --vp-home-hero-name-color: transparent !important;
+  --vp-home-hero-name-background: transparent !important;
 }
 
 .dark {
   --vp-c-brand-1: #60a5fa; 
-  --vp-c-brand-2: #93c5fd; 
-  --vp-c-brand-3: #bfdbfe;
+  --vp-c-brand-2: #a78bfa; 
+  --vp-c-brand-3: #e879f9;
   --vp-c-brand-soft: rgba(96, 165, 250, 0.15);
 
-  --vp-c-bg: #1a1a1a; 
-  --vp-c-bg-soft: #242424;
-  --vp-c-bg-mute: #2e2e2e; 
-  --vp-c-text-1: #ffffff;
-  --vp-c-text-2: #a0a0a0;
-
-  --vp-home-hero-name-color: #60a5fa;
-  --vp-home-hero-name-background: none;
+  --vp-c-bg: #030712; 
+  --vp-c-bg-soft: #0b0f19;
+  --vp-c-bg-mute: #1e293b; 
+  --vp-c-text-1: #f8fafc;
+  --vp-c-text-2: #94a3b8;
 }
 
 ::selection {
@@ -46,15 +41,96 @@
   color: white;
 }
 
+/* ================== BACKGROUNDS (Mesh Grid) ================== */
+body {
+  background-color: #f8fafc !important;
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(59, 130, 246, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(139, 92, 246, 0.08) 0%, transparent 40%),
+    linear-gradient(rgba(15, 23, 42, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 23, 42, 0.03) 1px, transparent 1px) !important;
+  background-size: 100% 100%, 100% 100%, 32px 32px, 32px 32px !important;
+  background-attachment: fixed !important;
+}
+
+.dark body {
+  background-color: #030712 !important;
+  background-image: 
+    radial-gradient(circle at top, rgba(99, 102, 241, 0.15) 0%, rgba(3, 7, 18, 1) 60%),
+    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px) !important;
+  background-size: 100% 100%, 32px 32px, 32px 32px !important;
+}
+
+/* ================== NAVBAR GLASSMORPHISM ================== */
+.VPNav, .VPNavBar {
+  backdrop-filter: blur(24px) saturate(200%) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(200%) !important;
+  background-color: rgba(255, 255, 255, 0.6) !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.04) !important;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.01);
+}
+.dark .VPNav, .dark .VPNavBar {
+  background-color: rgba(3, 7, 18, 0.5) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+
 /* ================== HERO SECTION ================== */
+#VPContent .VPHero {
+  position: relative !important;
+  padding-top: 4rem;
+}
+
+/* Central Glowing Orb */
+#VPContent .VPHero::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  height: 800px;
+  max-width: 80vw;
+  background: radial-gradient(circle, rgba(59,130,246,0.15) 0%, rgba(139,92,246,0.08) 50%, transparent 70%) !important;
+  filter: blur(50px);
+  z-index: -1;
+  pointer-events: none;
+  animation: pulse-glow 8s ease-in-out infinite alternate;
+}
+.dark #VPContent .VPHero::before {
+  background: radial-gradient(circle, rgba(59,130,246,0.25) 0%, rgba(139,92,246,0.15) 50%, transparent 70%) !important;
+  filter: blur(80px);
+}
+
+@keyframes pulse-glow {
+  0% { transform: translate(-50%, -50%) scale(0.9); opacity: 0.8; }
+  100% { transform: translate(-50%, -50%) scale(1.1); opacity: 1; }
+}
+
+/* Title Gradient & Animation */
 .VPHero .name {
   font-size: clamp(2.8rem, 6vw, 4.5rem) !important; 
   line-height: 1.15 !important;
-  font-weight: 800 !important;
-  letter-spacing: -0.02em !important; 
-  color: var(--vp-home-hero-name-color) !important;
-  -webkit-text-fill-color: var(--vp-home-hero-name-color) !important;
-  background: none !important;
+  font-weight: 900 !important;
+  letter-spacing: -0.03em !important; 
+  background: linear-gradient(110deg, #1e3a8a 0%, #3b82f6 40%, #8b5cf6 80%, #1e3a8a 100%) !important;
+  background-size: 200% auto !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  animation: shine 6s linear infinite;
+  filter: drop-shadow(0px 4px 12px rgba(37, 99, 235, 0.15));
+}
+
+.dark .VPHero .name {
+  background: linear-gradient(110deg, #f8fafc 0%, #93c5fd 40%, #c4b5fd 80%, #f8fafc 100%) !important;
+  background-size: 200% auto !important;
+  -webkit-background-clip: text !important;
+  filter: drop-shadow(0px 4px 24px rgba(139, 92, 246, 0.3));
+}
+
+@keyframes shine {
+  to { background-position: 200% center; }
 }
 
 .VPHero .text {
@@ -73,125 +149,126 @@
   line-height: 1.6;
 }
 
-/* ================== ACTION BUTTONS ================== */
+/* ================== ACTION BUTTONS (Pill 3D) ================== */
 .VPButton.brand {
-  border-radius: 8px !important; 
+  border-radius: 9999px !important; 
   font-weight: 600;
-  font-size: 14px;
-  padding: 0 20px;
-  height: 40px;
-  background: var(--vp-c-brand-1) !important;
-  border: 1px solid var(--vp-c-brand-1) !important;
+  padding: 0 36px;
+  background: linear-gradient(180deg, #3b82f6, #2563eb) !important;
+  border: 1px solid rgba(255,255,255,0.2) !important;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1), 0 8px 16px -4px rgba(37, 99, 235, 0.3) !important;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   color: white !important;
-  transition: all 0.2s ease;
+}
+.dark .VPButton.brand {
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.15), 0 8px 16px -4px rgba(59, 130, 246, 0.4) !important;
 }
 .VPButton.brand:hover {
-  opacity: 0.9;
-  transform: translateY(-1px);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 24px rgba(37, 99, 235, 0.4), 0 0 0 2px rgba(59, 130, 246, 0.5) !important;
+  filter: brightness(1.1);
 }
 
 .VPButton.alt {
-  border-radius: 8px !important; 
+  border-radius: 9999px !important; 
   font-weight: 500;
-  font-size: 14px;
-  padding: 0 20px;
-  height: 40px;
-  background: var(--vp-c-bg) !important;
-  border: 1px solid var(--vp-c-divider) !important;
-  color: var(--vp-c-text-1) !important;
-  transition: all 0.2s ease;
+  padding: 0 28px;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 .VPButton.alt:hover {
+  transform: translateY(-2px);
   border-color: var(--vp-c-brand-1) !important;
   color: var(--vp-c-brand-1) !important;
-  transform: translateY(-1px);
 }
 
-/* ================== FEATURE CARDS ================== */
+/* ================== FEATURE CARDS (Glassmorphism) ================== */
 .VPFeature {
-  background: var(--vp-c-bg-soft) !important;
-  border: 1px solid var(--vp-c-divider) !important;
-  border-radius: 12px !important;
-  transition: all 0.25s ease !important;
+  background: rgba(255, 255, 255, 0.6) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(15, 23, 42, 0.05) !important;
+  border-radius: 20px !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03) !important;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
+
+.dark .VPFeature {
+  background: rgba(17, 24, 39, 0.5) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.05), 0 4px 6px -1px rgba(0,0,0,0.2) !important;
+}
+
 .VPFeature:hover {
-  border-color: var(--vp-c-brand-soft) !important;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05) !important;
-  transform: translateY(-2px) !important;
+  transform: translateY(-8px) scale(1.02) !important;
+  border-color: rgba(37, 99, 235, 0.3) !important;
+  box-shadow: 0 25px 50px -12px rgba(37, 99, 235, 0.2) !important;
 }
 .dark .VPFeature:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important;
+  border-color: rgba(96, 165, 250, 0.4) !important;
+  background: rgba(17, 24, 39, 0.8) !important;
+  box-shadow: 0 25px 50px -12px rgba(59, 130, 246, 0.3), inset 0 1px 0 rgba(255,255,255,0.1) !important;
 }
 
 .VPFeature .title {
-  font-weight: 600 !important;
-  font-size: 15px !important;
-}
-.VPFeature .details {
-  font-size: 13px !important;
-  color: var(--vp-c-text-2) !important;
-  line-height: 1.5;
-}
-
-/* Feature icon container */
-.VPFeature .icon {
-  font-size: 28px;
-  width: 48px;
-  height: 48px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 10px;
-  background: var(--vp-c-bg-mute);
-}
-
-/* ================== NAVBAR ================== */
-.VPNav, .VPNavBar {
-  background-color: var(--vp-c-bg) !important;
-  border-bottom: 1px solid var(--vp-c-divider) !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.01em;
 }
 
 /* ================== CONTENT TYPOGRAPHY ================== */
 .VPDoc {
-  padding-bottom: 80px;
+  padding-bottom: 120px;
 }
 .VPDoc h1 {
-  font-weight: 700;
-  letter-spacing: -0.02em;
+  font-weight: 800;
+  letter-spacing: -0.03em;
   color: var(--vp-c-text-1);
 }
 .VPDoc h2 {
-  font-weight: 600;
-  letter-spacing: -0.01em;
+  font-weight: 700;
+  letter-spacing: -0.02em;
   color: var(--vp-c-text-1);
-  border-bottom: 1px solid var(--vp-c-divider);
+  border-bottom: 1px solid rgba(128,128,128,0.15);
   padding-bottom: 0.5rem;
-  margin-top: 3rem;
+  margin-top: 4rem;
 }
 
 .VPDoc a {
   color: var(--vp-c-brand-1);
   text-decoration: none;
   font-weight: 500;
-  transition: color 0.2s ease;
+  background: linear-gradient(to right, var(--vp-c-brand-1), var(--vp-c-brand-2));
+  background-size: 0% 2px;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  transition: background-size 0.3s ease;
 }
 .VPDoc a:hover {
-  color: var(--vp-c-brand-2);
-  text-decoration: underline;
+  background-size: 100% 2px;
 }
 
 /* ================== CUSTOM INFO BLOCKS ================== */
 .custom-block.tip {
-  background: var(--vp-c-brand-soft);
+  background: rgba(37, 99, 235, 0.05);
   border-color: var(--vp-c-brand-1);
-  border-radius: 8px;
-  padding: 1.25rem;
+  border-radius: 12px;
+  padding: 1.5rem;
+  font-weight: 500;
+}
+.dark .custom-block.tip {
+  background: rgba(59, 130, 246, 0.1);
 }
 
 /* Document Code blocks */
 [class*='language-'] {
-  border: 1px solid var(--vp-c-divider);
-  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.02);
+}
+.dark [class*='language-'] {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background-color: #060913; 
+  box-shadow: inset 0 2px 8px rgba(0,0,0,0.2);
 }
 
 /* ================== ROADMAP IMAGE ================== */
@@ -207,25 +284,26 @@
 .roadmap-image {
   max-width: 100%;
   height: auto;
-  border-radius: 12px;
+  border-radius: 16px;
   border: 1px solid var(--vp-c-divider);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.4s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.4s ease;
   background: #fff;
 }
 .dark .roadmap-image {
   background: #1e1e1e;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.8), 0 0 30px rgba(100, 108, 255, 0.1);
 }
 .roadmap-image:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.3), 0 0 40px rgba(100, 108, 255, 0.2);
+  border-color: rgba(100, 108, 255, 0.5);
 }
 .dark .roadmap-image:hover {
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.6), 0 0 50px rgba(100, 108, 255, 0.3);
 }
 
-/* ================== HOMEPAGE H2 (学习路线) ================== */
+/* ================== HOMEPAGE H2 ================== */
 .vp-doc h2 {
   font-size: 1.5rem;
   font-weight: 700;
