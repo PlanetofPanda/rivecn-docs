@@ -1,3 +1,12 @@
+---
+title: "滚动约束 (Scroll Constraints) - Rive 编辑器"
+description: "约束 (Constraints) 滚动约束是一种特殊类型的约束，专门用于布局 (Layout) 对象，允许其子元素进行滚动。它支持构建可滚动的内容区域以及滚动条。"
+head:
+  - - meta
+    - name: keywords
+      content: Rive, Rive 中文文档, Rive 编辑器, 约束, 滚动约束
+---
+
 约束 (Constraints)
 
 # 滚动约束 (Scroll Constraints)

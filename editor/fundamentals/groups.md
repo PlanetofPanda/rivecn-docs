@@ -1,3 +1,12 @@
+---
+title: "分组 (Groups) - Rive 编辑器"
+description: "基础概念 (Fundamentals) 使用分组来组织你的图形或增加额外的变换空间。"
+head:
+  - - meta
+    - name: keywords
+      content: Rive, Rive 中文文档, Rive 编辑器, 基础概念, 分组
+---
+
 基础概念 (Fundamentals)
 
 # 分组 (Groups)
@@ -14,16 +23,16 @@
 
 ### [​](#group) 分组 (Group)
 
-“分组”是默认行为，其运作方式参考[选择与导航分组 (Selecting and Navigating Groups)](/editor/fundamentals/selecting-and-navigating-groups)。
+“分组”是默认行为，其运作方式参考[选择与导航分组 (Selecting and Navigating Groups)](https://help.rive.app/editor/fundamentals/selecting-and-navigating-groups)。
 
 ### [​](#target) 目标 (Target)
 
-“目标”选项会在舞台上绘制一个始终可见的不同图标（通常分组只有在为空时才会显示图标）。当分组显示为“目标”时，它还会禁用[选择与导航分组](/editor/fundamentals/selecting-and-navigating-groups)章节中描述的功能。这意味着你可以直接点击选中该分组的任何子级对象（无需双击、按 Enter/Esc 或使用深层选择）。
-![分组切换为目标模式 GIF](images/groups-targets.gif)
+“目标”选项会在舞台上绘制一个始终可见的不同图标（通常分组只有在为空时才会显示图标）。当分组显示为“目标”时，它还会禁用[选择与导航分组](https://help.rive.app/editor/fundamentals/selecting-and-navigating-groups)章节中描述的功能。这意味着你可以直接点击选中该分组的任何子级对象（无需双击、按 Enter/Esc 或使用深层选择）。
+![分组切换为目标模式 GIF](https://help.rive.app/images/groups-targets.gif)
 “目标”选项在处理“约束 (Constraints)”时特别有用。
 
 ### [​](#constraints) 约束 (Constraints)
 
 [约束是一种通过另一个目标对象来控制目标对象属性的方法。有些约束可以限制这些属性（及其层级关系），而另一些则可以将属性从一个对象复制到另一个对象。](/editor/constraints/overview.md)
 
-[程序化形状 (Procedural Shapes)](/editor/fundamentals/procedural-shapes.md)[选择与导航分组 (Selecting and Navigating Groups)](/editor/fundamentals/selecting-and-navigating-groups)
+[程序化形状 (Procedural Shapes)](/editor/fundamentals/procedural-shapes.md)[选择与导航分组 (Selecting and Navigating Groups)](https://help.rive.app/editor/fundamentals/selecting-and-navigating-groups)

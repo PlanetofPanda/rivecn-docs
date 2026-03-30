@@ -1,3 +1,12 @@
+---
+title: "音频事件 (Audio Events) - Rive 编辑器"
+description: "编辑器 (Editor) 在动画中触发音频播放。"
+head:
+  - - meta
+    - name: keywords
+      content: Rive, Rive 中文文档, Rive 编辑器, 事件, 音频事件
+---
+
 编辑器 (Editor)
 
 # 音频事件 (Audio Events)

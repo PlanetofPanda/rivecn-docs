@@ -1,3 +1,12 @@
+---
+title: "创建脚本 (Creating Scripts) - Rive 脚本"
+description: "脚本 (Scripting) 学习如何在 Rive 中创建和使用脚本。"
+head:
+  - - meta
+    - name: keywords
+      content: Rive, Rive 中文文档, Rive 脚本, 创建脚本
+---
+
 脚本 (Scripting)
 
 # 创建脚本 (Creating Scripts)

@@ -1,3 +1,12 @@
+---
+title: "数据绑定 (Data Binding) - Rive 运行时"
+description: "运行时 (Runtimes) 使用视图模型 (View Models) 将代码连接到编辑器中绑定的元素。"
+head:
+  - - meta
+    - name: keywords
+      content: Rive, Rive 中文文档, Rive 运行时, 数据绑定
+---
+
 运行时 (Runtimes)
 
 # 数据绑定 (Data Binding)

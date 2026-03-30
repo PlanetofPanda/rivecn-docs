@@ -1,3 +1,12 @@
+---
+title: "布局参数 (Parameters) - Rive 编辑器"
+description: "布局 (Layouts) 布局参数大致可以分为两类：影响父布局的参数和影响子布局的参数。"
+head:
+  - - meta
+    - name: keywords
+      content: Rive, Rive 中文文档, Rive 编辑器, 布局, 布局参数
+---
+
 布局 (Layouts)
 
 # 布局参数 (Parameters)
@@ -11,7 +20,7 @@
 ## [​](#absolute-vs-relative) 绝对布局与相对布局
 
 要控制行 (Row) 或列 (Column) 中子布局的流向，需要子布局为**相对 (Relative)** 模式。你可以在检查器右上角切换。
-![模式切换 Pn](images/3412f52f-c283-4617-b6c5-f5af8ad1ddcc.webp)
+![模式切换 Pn](https://help.rive.app/images/3412f52f-c283-4617-b6c5-f5af8ad1ddcc.webp)
 
 - **绝对布局 (Absolute)**：在画板或父布局容器中定位自己。可以将 2 条或更多边缘固定 (Pinned) 到容器。
 - **相对布局 (Relative)**：位置由父级定义。更改父级的 flex 属性将决定子布局的行为。
@@ -26,7 +35,7 @@
 ## [​](#size-constraints) 尺寸约束
 
 由于可以设置最小 (Min) 和最大 (Max) 宽度/高度。
-![尺寸约束 Pn](images/d6898bfa-62bf-4d4c-9769-5c68d439e03a.webp)
+![尺寸约束 Pn](https://help.rive.app/images/d6898bfa-62bf-4d4c-9769-5c68d439e03a.webp)
 
 ## [​](#clip) 裁剪 (Clip)
 开启后会隐藏布局边界之外的所有子元素。
@@ -61,4 +70,4 @@
 ## [​](#gap) 间距 (Gap)
 可以设置水平和垂直方向的间距。
 
-[工具 (Tools)](/editor/layouts/layout-tools.md)[样式 (Styles)](/editor/layouts/layout-styles)
+[工具 (Tools)](/editor/layouts/layout-tools.md)[样式 (Styles)](https://help.rive.app/editor/layouts/layout-styles)

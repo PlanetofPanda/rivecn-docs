@@ -1,3 +1,12 @@
+---
+title: "Apple - Rive 运行时"
+description: "Rive 的 Apple 运行时。 请注意，某些 Rive 功能可能尚未在特定运行时中受支持，或者可能需要使用 Rive 渲染器。有关更多详细信息，请参阅 功能支持 和 选择渲染器 页面。"
+head:
+  - - meta
+    - name: keywords
+      content: Rive, Rive 中文文档, Rive 运行时, Apple
+---
+
 Apple
 
 # Apple
@@ -21,7 +30,7 @@ git clone https://github.com/rive-app/rive-ios
 ```
 
 在 XCode 中打开 `Example-iOS` 应用程序，并务必选择 `Preview (iOS)` 或 `Preview (macOS)` [scheme](https://developer.apple.com/documentation/xcode/customizing-the-build-schemes-for-a-project)。其他 scheme 用于开发目的，需要额外的配置，请参阅 [CONTRIBUTING.MD](https://github.com/rive-app/rive-ios/blob/main/CONTRIBUTING.md)。
-![Image](images/f4e4f632-f24d-47ed-b19c-0c961da458e8.webp)
+![Image](https://help.rive.app/images/f4e4f632-f24d-47ed-b19c-0c961da458e8.webp)
 
 ## [​](#getting-started) 快速开始
 
@@ -122,4 +131,4 @@ Github: <https://github.com/rive-app/rive-ios> 示例:
 -   <https://github.com/rive-app/rive-ios/tree/main/Demo-App>
 -   Meng To 的免费课程: <https://designcode.io/swiftui-rive>
 
-[迁移指南](/runtimes/flutter/migration-guide)[从 1.x.x 迁移到 2.x.x](/runtimes/apple/migrating-from-1.x.x-to-2.x.x)
+[迁移指南](https://help.rive.app/runtimes/flutter/migration-guide)[从 1.x.x 迁移到 2.x.x](https://help.rive.app/runtimes/apple/migrating-from-1.x.x-to-2.x.x)

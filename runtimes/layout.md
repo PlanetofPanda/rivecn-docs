@@ -1,3 +1,12 @@
+---
+title: "布局 (Layout) - Rive 运行时"
+description: "运行时 (Runtimes) 在运行时控制 Rive 画板的布局和适配。"
+head:
+  - - meta
+    - name: keywords
+      content: Rive, Rive 中文文档, Rive 运行时, 布局
+---
+
 运行时 (Runtimes)
 
 # 布局 (Layout)

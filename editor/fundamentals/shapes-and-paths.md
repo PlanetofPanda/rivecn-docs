@@ -1,3 +1,12 @@
+---
+title: "形状与路径概览 (Shapes and Paths Overview) - Rive 编辑器"
+description: "基础概念 (Fundamentals) Rive 允许你使用程序化形状 (Procedural Shapes) 或自定义形状来创建、编辑和制作矢量图形动画。这些图形结合了“形状层 (Shape layer)”和“路径层 (Path layer)”来定义，Rive 开放了这些层级，以便在设计和动..."
+head:
+  - - meta
+    - name: keywords
+      content: Rive, Rive 中文文档, Rive 编辑器, 基础概念, 形状与路径概览
+---
+
 基础概念 (Fundamentals)
 
 # 形状与路径概览 (Shapes and Paths Overview)
@@ -8,21 +17,21 @@ Rive 允许你使用程序化形状 (Procedural Shapes) 或自定义形状来创
 
 ## [​](#shape-layer) 形状层 (Shape layer)
 
-![形状层示例](images/shape-and-path-shapelayer.png)
+![形状层示例](https://help.rive.app/images/shape-and-path-shapelayer.png)
 Rive 中的矢量图形是在形状层上渲染的。形状层通过允许你自定义“填充 (Fill)”和“描边 (Stroke)”来定义形状的样式。
-![填充与描边](images/shape-and-path-fill.png)
+![填充与描边](https://help.rive.app/images/shape-and-path-fill.png)
 
 ## [​](#path-layer) 路径层 (Path layer)
 
-![路径层示例](images/shape-and-path-pathlayer.gif)
+![路径层示例](https://help.rive.app/images/shape-and-path-pathlayer.gif)
 矢量图形的实际轮廓是由一个或多个路径定义的。在 Rive 的层级面板中展开一个形状层，即可查看到它正在使用的路径。
-![移动路径](images/shape-and-path-move.gif)
+![移动路径](https://help.rive.app/images/shape-and-path-move.gif)
 你可以通过将现有路径拖放到目标形状层级中，来向任何形状添加新路径。
 
 ### [​](#path-layer-properties) 路径层属性 (Path layer properties)
 
 路径层会显示与该路径类型相关的属性。详细了解 [程序化形状 (Procedural Shapes)](/editor/fundamentals/procedural-shapes.md)。
-![路径层属性](images/shape-and-path-properties.png)
+![路径层属性](https://help.rive.app/images/shape-and-path-properties.png)
 
 ## [​](#enter-and-esc-shortcuts) Enter 和 Esc 快捷键
 

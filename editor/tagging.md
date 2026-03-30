@@ -1,3 +1,12 @@
+---
+title: "标签系统 (Tagging) - Rive 编辑器"
+description: "编辑器 (Editor) 标签是一种进一步组织层级面板的方法。通过创建标签并将其应用到 层级面板 (Hierarchy) 中的对象（如骨骼或分组），你可以根据需要在特定时刻过滤视图，聚焦于关键内容。"
+head:
+  - - meta
+    - name: keywords
+      content: Rive, Rive 中文文档, Rive 编辑器, 标签系统
+---
+
 编辑器 (Editor)
 
 # 标签系统 (Tagging)
@@ -11,41 +20,41 @@
 ### [​](#in-the-inspector) 在检查器中
 
 确保舞台上未选中任何内容，然后在检查器中找到 **Tags** 选项并点击旁边的加号。
-![通过检查器创建标签](images/image_0.png)
+![通过检查器创建标签](https://help.rive.app/images/image_0.png)
 标签添加后，你可以根据喜好修改名称和颜色。
 
 ### [​](#in-the-hierarchy) 在层级面板中
 
 - **方式一**：使用层级面板顶部的标签菜单。在这里你可以新建标签、编辑现有标签、折叠标签视图、过滤、锁定或选择指定的标签。
-![通过标签菜单创建标签](images/image_1.png)
+![通过标签菜单创建标签](https://help.rive.app/images/image_1.png)
 - **方式二**：选中一个或多个对象，鼠标右键点击并选择“Add Tag”选项。你可以创建新标签或分配已存在的标签。
-![在对象上直接创建标签](images/image_2.png)
+![在对象上直接创建标签](https://help.rive.app/images/image_2.png)
 
 ## [​](#the-tags-menu) 标签菜单 (The Tags Menu)
 
 标签菜单是大多数标签选项所在地。
-![标签菜单概览](images/b4ba7047-3927-467f-9528-32c9b066f0d2.webp)
+![标签菜单概览](https://help.rive.app/images/b4ba7047-3927-467f-9528-32c9b066f0d2.webp)
 
 ### [​](#collapse-tag) 折叠标签 (Collapse Tag)
 
 当你为对象添加标签时，标签名称和颜色图标通常显示在右侧。
-![标签显示效果](images/image_4.png)
+![标签显示效果](https://help.rive.app/images/image_4.png)
 你可以使用 **Collapse Tag** 选项隐藏名称（仅保留颜色点），或使用 Reveal Tag 重新显示。
 
 ### [​](#filter-tags) 过滤标签 (Filter Tags)
 
 当鼠标悬停在菜单中的某个标签上时，会出现 **Filter (过滤)** 选项。这会过滤你的层级树，仅显示拥有该标签的对象。当前激活的过滤器会显示在菜单旁。
-![过滤标签示例](images/image_5.png)
+![过滤标签示例](https://help.rive.app/images/image_5.png)
 你可以将多个标签添加到过滤器中，这在制作动画时仅显示所需的交互控制项非常有用。
 
 ### [​](#locked) 锁定 (Locked)
 
 **Locked** 选项允许你锁定带有所选标签的对象。锁定后，你无法在舞台上直接选中该对象。
-![锁定标签示例](images/image_6.png)
+![锁定标签示例](https://help.rive.app/images/image_6.png)
 当你想把文件交付给另一名动画师，且不想让他们误操作某些关键控制器时，这是一个极好的工具。该选项也可在检查器的锁定图标处找到。
 
 ### [​](#select) 选择 (Select)
 
 **Select** 选项会一键选中所有带有该标签的对象。该选项也可在检查器的目标图标处找到。
 
-[MCP 集成 (MCP Integration)](/editor/mcp/integration)
+[MCP 集成 (MCP Integration)](https://help.rive.app/editor/mcp/integration)

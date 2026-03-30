@@ -1,3 +1,12 @@
+---
+title: "Flutter - Rive 运行时"
+description: "Rive 的 Flutter 运行时。 请注意，某些 Rive 功能可能尚未在特定运行时中受支持，或者可能需要使用 Rive 渲染器。有关更多详细信息，请参阅 功能支持 和 选择渲染器 页面。"
+head:
+  - - meta
+    - name: keywords
+      content: Rive, Rive 中文文档, Rive 运行时, Flutter
+---
+
 Flutter
 
 # Flutter
@@ -12,7 +21,7 @@ Rive 的 Flutter 运行时。
 
 Rive Flutter 的最新版本目前作为开发版本 `0.14.0-dev.x` 发布。这意味着虽然该包是稳定的并可用于生产，但我们仍在积极开发新功能和改进。我们建议使用最新的开发版本以利用最新的功能和修复。
 
-已经在用 Rive Flutter 了？请参阅我们的 [迁移指南](/runtimes/flutter/migration-guide) 以获取有关采用最新 `0.14.x` 版本的信息。
+已经在用 Rive Flutter 了？请参阅我们的 [迁移指南](https://help.rive.app/runtimes/flutter/migration-guide) 以获取有关采用最新 `0.14.x` 版本的信息。
 
 ## [​](#quick-start) 快速开始
 
@@ -471,7 +480,7 @@ Rive 渲染器目前尚未通过 Flutter 在 Linux 上受支持。在 Linux 上�
 
 ### [​](#note-on-flutter-rendering) 关于 Flutter 渲染的说明
 
-[Impeller](https://docs.flutter.dev/perf/impeller) 正在取代 [Skia](/https://skia.org/) 成为所有平台的默认渲染器。因此，当在通过 Impeller 渲染器使用 Rive Flutter 运行时，可能会出现以前未出现的渲染和 [性能](https://github.com/flutter/flutter/issues/134432) 差异。如果你在运行时遇到与 Rive 编辑器中的预期行为相比的任何视觉或性能错误，我们建议尝试以下步骤进行分类：
+[Impeller](https://docs.flutter.dev/perf/impeller) 正在取代 [Skia](https://skia.org/) 成为所有平台的默认渲染器。因此，当在通过 Impeller 渲染器使用 Rive Flutter 运行时，可能会出现以前未出现的渲染和 [性能](https://github.com/flutter/flutter/issues/134432) 差异。如果你在运行时遇到与 Rive 编辑器中的预期行为相比的任何视觉或性能错误，我们建议尝试以下步骤进行分类：
 
 1.  尝试使用 `--no-enable-impeller` 标志运行 Flutter 应用以使用 Skia 渲染器。如果使用 Skia 时未出现视觉差异，则可能是 Impeller 上的渲染错误。但是，在向 Flutter 团队提交错误之前，请尝试下面的第二点👇
 
@@ -498,12 +507,12 @@ Rive 渲染器目前尚未通过 Flutter 在 Linux 上受支持。在 Linux 上�
 -   你的 `pubspec.yaml` 中有正确版本的 Rive 包。
 -   你已经运行 `flutter pub get` 来获取最新的依赖项。
 
-如果你仍然遇到问题，请参阅 Rive Native 文档中的 [故障排除部分](/runtimes/flutter/rive-native#troubleshooting)。
+如果你仍然遇到问题，请参阅 Rive Native 文档中的 [故障排除部分](https://help.rive.app/runtimes/flutter/rive-native#troubleshooting)。
 
 ## [​](#manually-building-rive-native-libraries) 手动构建 Rive 原生库
 
 Rive 会自动为你下载原生库作为 `rive_native` 插件的一部分。
-但是，如果你需要手动构建原生库，请参阅 Rive Native 文档中的 [构建部分](/runtimes/flutter/rive-native#building-rive-native)。
+但是，如果你需要手动构建原生库，请参阅 Rive Native 文档中的 [构建部分](https://help.rive.app/runtimes/flutter/rive-native#building-rive-native)。
 
 ## [​](#next-steps) 下一步
 
@@ -511,7 +520,7 @@ Rive 会自动为你下载原生库作为 `rive_native` 插件的一部分。
 
 [## 画板 (Artboards)
 
-[在运行时控制显示哪个画板。](/runtimes/artboards)[## 布局 (Layout)
+[在运行时控制显示哪个画板。](https://help.rive.app/runtimes/artboards)[## 布局 (Layout)
 
 [在运行时控制画板的布局（适应和对齐）。](/runtimes/layout)[## 状态机播放 (State Machine Playback)
 
@@ -529,11 +538,11 @@ Rive Flutter:
 
 -   [GitHub](https://github.com/rive-app/rive-flutter)
 -   [pub.dev](https://pub.dev/packages/rive)
--   [示例应用](/https://github.com/rive-app/rive-flutter/tree/master/example/)
+-   [示例应用](https://github.com/rive-app/rive-flutter/tree/master/example/)
 
 Rive Native:
 
--   [Rive Native 概览](/runtimes/flutter/rive-native)
+-   [Rive Native 概览](https://help.rive.app/runtimes/flutter/rive-native)
 -   [pub.dev](https://pub.dev/packages/rive_native)
 
-[迁移指南](/runtimes/react-native/migration-guide)[Rive Native for Flutter](/runtimes/flutter/rive-native)
+[迁移指南](https://help.rive.app/runtimes/flutter/migration-guide)[Rive Native for Flutter](https://help.rive.app/runtimes/flutter/rive-native)

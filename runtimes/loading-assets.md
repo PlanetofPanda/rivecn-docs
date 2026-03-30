@@ -1,3 +1,12 @@
+---
+title: "加载资产 (Loading Assets) - Rive 运行时"
+description: "Runtime Fundamentals 在运行时动态加载和替换资产"
+head:
+  - - meta
+    - name: keywords
+      content: Rive, Rive 中文文档, Rive 运行时, 加载资产
+---
+
 Runtime Fundamentals
 
 # 加载资产 (Loading Assets)
@@ -19,7 +28,7 @@ Runtime Fundamentals
 
 目前有三种不同的方法为你的 Rive 文件加载资产。
 在 Rive 编辑器中，从 **Assets** 选项卡中选择所需的资产，并在检查器中选择所需的导出选项：
-![Image](images/df455228-a712-4cff-a24d-0771b8575e9d.webp)
+![Image](https://help.rive.app/images/df455228-a712-4cff-a24d-0771b8575e9d.webp)
 有关更多详细信息，请参阅编辑器文档中的 **Export Options** 部分。
 
 ### [​](#embedded-assets) 嵌入式资产 (Embedded Assets)
@@ -621,4 +630,4 @@ function RiveContent({ imageUrl }: { imageUrl: string }) {
 
 ## [​](#additional-resources) 其他资源
 
-[数据绑定 (Data Binding)](/runtimes/data-binding)[字体 (Fonts)](/runtimes/fonts)
+[数据绑定 (Data Binding)](/runtimes/data-binding)[字体 (Fonts)](https://help.rive.app/runtimes/fonts)

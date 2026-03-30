@@ -1,3 +1,12 @@
+---
+title: "文本串 (Text Runs) - Rive 编辑器"
+description: "文本串 (Text Runs) 是 Rive 文本系统的基础构件。它们允许你将单个文本对象拆分为具有不同样式的独立部分。 使用文本串，你可以在同一个段落中实现："
+head:
+  - - meta
+    - name: keywords
+      content: Rive, Rive 中文文档, Rive 编辑器, 文本, 文本串
+---
+
 文本
 
 # 文本串 (Text Runs)

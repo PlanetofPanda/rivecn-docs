@@ -1,3 +1,12 @@
+---
+title: "文本修饰符 (Text Modifiers) - Rive 编辑器"
+description: "修饰符 (Modifiers) 提供了强大的方式来操作和动画化构成文本的字符（字形）。 修饰符组是包含一个或多个修饰符属性（如位移、旋转、缩放、颜色等）的容器。当你向文本对象添加修饰符时，你会先创建一个组。"
+head:
+  - - meta
+    - name: keywords
+      content: Rive, Rive 中文文档, Rive 编辑器, 文本, 文本修饰符
+---
+
 文本
 
 # 文本修饰符 (Text Modifiers)

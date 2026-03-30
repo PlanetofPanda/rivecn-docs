@@ -1,3 +1,12 @@
+---
+title: "距离约束 (Distance Constraint) - Rive 编辑器"
+description: "距离约束用于限制两个对象之间的最大或最小距离，也可以强制保持一个特定距离。 通过结合关键帧动画，距离约束可以创造出类似绳索连接、磁力吸引或排斥的动态效果。"
+head:
+  - - meta
+    - name: keywords
+      content: Rive, Rive 中文文档, Rive 编辑器, 约束, 距离约束
+---
+
 约束
 
 # 距离约束 (Distance Constraint)

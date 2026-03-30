@@ -1,3 +1,12 @@
+---
+title: "React Native - Rive 运行时"
+description: "React Native Rive 的 React Native 运行时。"
+head:
+  - - meta
+    - name: keywords
+      content: Rive, Rive 中文文档, Rive 运行时, React Native
+---
+
 React Native
 
 # React Native
@@ -13,7 +22,7 @@ Rive 的 React Native 运行时。
 
 **迁移时间表：**
 
--   **短期：** 完成新运行时，请参阅 [功能支持](/https://github.com/rive-app/rive-nitro-react-native?tab=readme-ov-file#feature-support) 和 [路线图](/https://github.com/rive-app/rive-nitro-react-native?tab=readme-ov-file#roadmap)
+-   **短期：** 完成新运行时，请参阅 [功能支持](https://github.com/rive-app/rive-nitro-react-native?tab=readme-ov-file#feature-support) 和 [路线图](https://github.com/rive-app/rive-nitro-react-native?tab=readme-ov-file#roadmap)
 -   **中期：** 解决现有旧包中的主要问题，同时支持迁移
 -   **长期：** 完全迁移到新包
 
@@ -42,7 +51,7 @@ Rive 的 React Native 运行时。
 
 [## Rive 文件
 
-[改编/下载本快速入门指南中使用的 Rive 文件](/https://rive.app/marketplace/24637-46037-health-bar-data-binding-quick-start/)[## 完整示例
+[改编/下载本快速入门指南中使用的 Rive 文件](https://rive.app/marketplace/24637-46037-health-bar-data-binding-quick-start/)[## 完整示例
 
 查看完整的快速入门示例](https://github.com/rive-app/rive-nitro-react-native/blob/main/example/src/pages/QuickStart.tsx)
 
@@ -54,7 +63,7 @@ Rive 的 React Native 运行时。
     yarn add @rive-app/react-native react-native-nitro-modules
     ```
 
-    `react-native-nitro-modules` 是必需的，因为此库依赖于 [Nitro Modules](/https://nitro.margelo.com/)。
+    `react-native-nitro-modules` 是必需的，因为此库依赖于 [Nitro Modules](https://nitro.margelo.com/)。
 
 2.  **设置**
 
@@ -388,7 +397,7 @@ const instance = useViewModelInstance(riveViewRef);
 
 本指南记录了如何开始使用旧版 React Native 运行时库。源代码可在其 [GitHub 仓库](https://github.com/rive-app/rive-react-native) 中找到。此库包含一个 API，供 React Native 应用轻松集成 Rive 资产。最低 iOS 目标版本为 **14.0**。
 
-请参阅 [我们的文档](/runtimes/react-native/adding-rive-to-expo) 以将 Rive 添加到 Expo 应用中。
+请参阅 [我们的文档](https://help.rive.app/runtimes/react-native/adding-rive-to-expo) 以将 Rive 添加到 Expo 应用中。
 
 ## [​](#getting-started) 快速开始 (旧版)
 
@@ -410,7 +419,7 @@ const instance = useViewModelInstance(riveViewRef);
 
 3.  **Android - 设置 Kotlin 依赖解析**
 
-    此步骤可能是可选的 - 但是，如果 React Native 项目中的 Android 设置没有设置 Kotlin `v1.8.0+`，你在构建项目时可能会遇到重复类问题。为了缓解这些问题，正如 [Kotlin 文档](/https://kotlinlang.org/docs/gradle-configure-project.html#versions-alignment-of-transitive-dependencies) 所建议的那样，将以下内容添加到应用程序 `build.gradle` 文件的 `dependencies` 中以处理版本对齐：
+    此步骤可能是可选的 - 但是，如果 React Native 项目中的 Android 设置没有设置 Kotlin `v1.8.0+`，你在构建项目时可能会遇到重复类问题。为了缓解这些问题，正如 [Kotlin 文档](https://kotlinlang.org/docs/gradle-configure-project.html#versions-alignment-of-transitive-dependencies) 所建议的那样，将以下内容添加到应用程序 `build.gradle` 文件的 `dependencies` 中以处理版本对齐：
 
     ```gradle
     dependencies {
@@ -438,4 +447,4 @@ const instance = useViewModelInstance(riveViewRef);
 
 [## GitHub](https://github.com/rive-app/rive-react-native)[## 示例应用](https://github.com/rive-app/rive-react-native/tree/main/example)
 
-[从 v3 迁移到 v4](/runtimes/react/migrating-from-v3-to-v4)[运行时概念](/runtimes/react-native/runtime-concepts)
+[从 v3 迁移到 v4](https://help.rive.app/runtimes/react/migrating-from-v3-to-v4)[运行时概念](https://help.rive.app/runtimes/react-native/runtime-concepts)

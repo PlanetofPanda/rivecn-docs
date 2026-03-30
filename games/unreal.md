@@ -1,3 +1,12 @@
+---
+title: "Unreal - Rive 游戏运行时"
+description: "Rive 的 Unreal 运行时。 我们要重写我们的 Unreal Engine 集成以提供显着更好的性能，并且它已经显示出 4 倍的速度提升。为了专注于这项工作，我们暂时暂停支持，并且不再推荐当前版本的 Rive Unreal 插件（作为实验性预览版发布）。更多详细信息 在此。"
+head:
+  - - meta
+    - name: keywords
+      content: Rive, Rive 中文文档, Rive 游戏运行时, Unreal
+---
+
 Unreal
 
 # Unreal
@@ -31,4 +40,4 @@ rive-unreal 运行时使用 [Rive 渲染器](https://rive.app/renderer) 并支�
 
 rive-unreal 运行时使用 [Rive C++ 运行时](https://github.com/rive-app/rive-cpp)。有关运行时支持的更多详细信息，请参阅 [功能支持](/feature-support.md) 页面。
 
-[快速开始](/game-runtimes/unreal/getting-started)
+[快速开始](https://help.rive.app/game-runtimes/unreal/getting-started)

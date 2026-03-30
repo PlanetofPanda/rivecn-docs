@@ -1,3 +1,12 @@
+---
+title: "N轴切片 (N-Slicing) - Rive 编辑器"
+description: "布局 (Layouts) N轴切片 (N-Slicing) 是一种技术，允许你将位图或矢量设计划分为多个区域，使其在某些方向上可以拉伸或重复，而其他部分保持固定尺寸。这对于创建可伸缩的 UI 组件（如按钮、面板、对话框框架）至关重要。"
+head:
+  - - meta
+    - name: keywords
+      content: Rive, Rive 中文文档, Rive 编辑器, 布局, N轴切片
+---
+
 布局 (Layouts)
 
 # N轴切片 (N-Slicing)

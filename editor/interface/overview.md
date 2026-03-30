@@ -1,3 +1,12 @@
+---
+title: "编辑器界面总览 (Interface Overview) - Rive 编辑器"
+description: "Rive 编辑器是所有创作发生的地方。它分为两大主要模式：设计模式 (Design Mode) 和 动画模式 (Animate Mode)。 在本视频中，我们将带你快速浏览 Rive 编辑器的布局和主要功能区。"
+head:
+  - - meta
+    - name: keywords
+      content: Rive, Rive 中文文档, Rive 编辑器, 编辑器界面总览
+---
+
 # 编辑器界面总览 (Interface Overview)
 
 Rive 编辑器是所有创作发生的地方。它分为两大主要模式：**设计模式 (Design Mode)** 和 **动画模式 (Animate Mode)**。
@@ -53,5 +62,5 @@ Rive 的界面主要由以下五个部分组成：
 ---
 
 ### 📚 相关阅读
-* [了解工具栏详情](editor/interface/toolbar.md)
-* [掌握层级面板](editor/interface/hierarchy.md)
+* [了解工具栏详情](https://help.rive.app./editor/interface/toolbar)
+* [掌握层级面板](https://help.rive.app./editor/interface/hierarchy)

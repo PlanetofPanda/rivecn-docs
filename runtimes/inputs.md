@@ -1,3 +1,12 @@
+---
+title: "输入 (Inputs) - Rive 运行时"
+description: "运行时 (Runtimes) > [!WARNING]"
+head:
+  - - meta
+    - name: keywords
+      content: Rive, Rive 中文文档, Rive 运行时, 输入
+---
+
 运行时 (Runtimes)
 
 # 输入 (Inputs)

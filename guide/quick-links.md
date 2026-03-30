@@ -1,3 +1,12 @@
+---
+title: "快速链接 (Quick Links) - Rive 入门指南"
+description: "获取运行时 (Runtimes) ​加入我们的 Discord​"
+head:
+  - - meta
+    - name: keywords
+      content: Rive, Rive 中文文档, Rive 入门指南, 快速链接
+---
+
 入门
 
 # 快速链接 (Quick Links)

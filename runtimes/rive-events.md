@@ -1,3 +1,12 @@
+---
+title: "Rive 事件 (Rive Events) - Rive 运行时"
+description: "运行时 (Runtimes) > [!WARNING]"
+head:
+  - - meta
+    - name: keywords
+      content: Rive, Rive 中文文档, Rive 运行时, Rive 事件
+---
+
 运行时 (Runtimes)
 
 # Rive 事件 (Rive Events)

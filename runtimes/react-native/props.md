@@ -1,3 +1,12 @@
+---
+title: "Props 参考 (Props Reference) - Rive 运行时"
+description: "运行时 (Runtimes) - React Native React Native Rive 组件的属性参考。"
+head:
+  - - meta
+    - name: keywords
+      content: Rive, Rive 中文文档, Rive 运行时, React Native, Props 参考
+---
+
 运行时 (Runtimes) - React Native
 
 # Props 参考 (Props Reference)

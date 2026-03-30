@@ -1,3 +1,12 @@
+---
+title: "基础概念概览 (Fundamentals Overview) - Rive 编辑器"
+description: "基础概念 (Fundamentals) 在本章节中，我们将逐步介绍一个典型的制作工作流：从创建画板 (Artboard) 到导出你的第一个 Rive 文件。在开始之前，请先查看我们的界面简要概览，以熟悉各个面板和模式。"
+head:
+  - - meta
+    - name: keywords
+      content: Rive, Rive 中文文档, Rive 编辑器, 基础概念, 基础概念概览
+---
+
 基础概念 (Fundamentals)
 
 # 基础概念概览 (Fundamentals Overview)

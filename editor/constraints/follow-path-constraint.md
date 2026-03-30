@@ -1,3 +1,12 @@
+---
+title: "路径跟随约束 (Follow Path Constraint) - Rive 编辑器"
+description: "约束 (Constraints) 路径跟随约束通过将对象约束到一条路径上，大大简化了复杂运动轨迹的创建。"
+head:
+  - - meta
+    - name: keywords
+      content: Rive, Rive 中文文档, Rive 编辑器, 约束, 路径跟随约束
+---
+
 约束 (Constraints)
 
 # 路径跟随约束 (Follow Path Constraint)
@@ -8,7 +17,7 @@
 
 1. 首先，你需要一个要约束的对象和一条用作路径的曲线。
 2. 选中对象，添加新约束并选择 **Follow Path Constraint**。
-![添加路径跟随约束](images/image_0.png)
+![添加路径跟随约束](https://help.rive.app/images/image_0.png)
 3. 点击 Target 按钮，选择你希望对象跟随的路径。
 
 ## [​](#follow-path-properties) 路径跟随属性
@@ -23,12 +32,12 @@
 
 #### [​](#distance) 距离 (Distance)
 该属性控制对象沿路径移动的位置。百分比增加时，对象沿路径前进。*注意：该值可以超过 100%。*
-![距离属性效果](images/image_1.png)
+![距离属性效果](https://help.rive.app/images/image_1.png)
 
 #### [​](#orient) 朝向 (Orient)
 控制受约束对象的旋转方式。
 - **开启**：对象的旋转会自动跟随路径的切线方向。此时无法手动调整对象旋转。
-![朝向开启效果](images/image_2.png)
+![朝向开启效果](https://help.rive.app/images/image_2.png)
 - **关闭**：对象旋转不受路径影响，你可以手动设置任意旋转角度。
 
 #### [​](#offset) 偏移 (Offset)

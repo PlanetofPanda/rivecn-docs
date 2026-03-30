@@ -1,3 +1,12 @@
+---
+title: "摇杆控制 (Joysticks) - Rive 编辑器"
+description: "摇杆控制 (Joysticks) 允许你通过一个简单的二维控制柄来驱动复杂的蒙皮和变形动画。 与其手动为成百上千个顶点设置复杂的关键帧，你可以将这些变形状态映射到一个摇杆上。通过移动摇杆，系统会自动在这些预设状态之间进行线性插值。"
+head:
+  - - meta
+    - name: keywords
+      content: Rive, Rive 中文文档, Rive 编辑器, 形状操控, 摇杆控制
+---
+
 操控形状
 
 # 摇杆控制 (Joysticks)
@@ -8,7 +17,7 @@
 
 与其手动为成百上千个顶点设置复杂的关键帧，你可以将这些变形状态映射到一个摇杆上。通过移动摇杆，系统会自动在这些预设状态之间进行线性插值。
 
-![摇杆示例 Pn](images/joysticks-example.gif)
+![摇杆示例 Pn](https://help.rive.app/images/joysticks-example.gif)
 
 ## [​](#setting-up) 设置摇杆
 

@@ -1,3 +1,12 @@
+---
+title: "Mat2D - Rive 脚本"
+description: "表示一个 2D 变换矩阵，包含缩放、旋转、剪切和平移分量。 从给定的 x 和 y 值或从 向量 (Vector) 位置创建一个平移矩阵。"
+head:
+  - - meta
+    - name: keywords
+      content: Rive, Rive 中文文档, Rive 脚本, Mat2D
+---
+
 脚本 API
 
 # Mat2D

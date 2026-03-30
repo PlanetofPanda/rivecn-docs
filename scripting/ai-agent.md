@@ -1,3 +1,12 @@
+---
+title: "AI 代理 (AI Agent) - Rive 脚本"
+description: "脚本 (Scripting) 在 Rive 中使用 AI 代理增强交互体验。"
+head:
+  - - meta
+    - name: keywords
+      content: Rive, Rive 中文文档, Rive 脚本, AI 代理
+---
+
 脚本 (Scripting)
 
 # AI 代理 (AI Agent)

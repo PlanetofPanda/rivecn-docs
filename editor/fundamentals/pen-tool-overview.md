@@ -1,3 +1,12 @@
+---
+title: "钢笔工具概览 (Pen Tool Overview) - Rive 编辑器"
+description: "钢笔工具 (Pen tool) 允许你创建自定义矢量路径，以及向程序化路径添加额外的顶点。你可以通过观看视频或阅读下文来了解更多关于钢笔工具的信息。 钢笔工具允许你创建自定义矢量形状。你可以通过“创建工具 (Create Tools)”菜单找到它，或者使用快捷键 来激活。"
+head:
+  - - meta
+    - name: keywords
+      content: Rive, Rive 中文文档, Rive 编辑器, 基础概念, 钢笔工具概览
+---
+
 基础概念
 
 # 钢笔工具概览 (Pen Tool Overview)
@@ -8,9 +17,9 @@
 
 钢笔工具允许你创建自定义矢量形状。你可以通过“创建工具 (Create Tools)”菜单找到它，或者使用快捷键 `P` 来激活。
 在舞台上点击即可放置顶点。
-![钢笔工具创建 Pn](images/pen-tool-create.gif)
+![钢笔工具创建 Pn](https://help.rive.app/images/pen-tool-create.gif)
 点击并拖动可创建带有贝塞尔手柄（Bezier handles）的顶点。完成后，按下键盘上的 `Esc` 键。
-![钢笔工具手柄 Pn](images/pen-tool-create-handless.gif)
+![钢笔工具手柄 Pn](https://help.rive.app/images/pen-tool-create-handless.gif)
 
 ## [​](#path-&-vertex-shortcuts) 路径与顶点快捷键
 

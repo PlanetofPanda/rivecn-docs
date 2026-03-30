@@ -1,3 +1,12 @@
+---
+title: "Android - Rive 运行时"
+description: "Rive 的 Android 运行时。 请注意，某些 Rive 功能可能尚未在特定运行时中受支持，或者可能需要使用 Rive 渲染器。有关更多详细信息，请参阅 功能支持 和 选择渲染器 页面。"
+head:
+  - - meta
+    - name: keywords
+      content: Rive, Rive 中文文档, Rive 运行时, Android
+---
+
 Android
 
 # Android
@@ -127,7 +136,7 @@ setContentView(riveView)
 
 #### [​](#using-a-rive-file) 使用 Rive 文件
 
-如果你已经加载了 Rive `File` 实例，你也可以使用它来初始化视图。有关如何以及为何加载 Rive 文件的更多详细信息，请参阅 [缓存 Rive 文件](../caching-a-rive-file)。
+如果你已经加载了 Rive `File` 实例，你也可以使用它来初始化视图。有关如何以及为何加载 Rive 文件的更多详细信息，请参阅 [缓存 Rive 文件](https://help.rive.app./../caching-a-rive-file)。
 
 ```kotlin
 // Loads bytes on the main thread for simplicity; consider loading on a background thread for production use.
@@ -202,4 +211,4 @@ setContentView(R.layout.my_layout)
 [GitHub](https://github.com/rive-app/rive-android)
 [示例](https://github.com/rive-app/rive-android/tree/master/app/src/main/java/app/rive/runtime/example)
 
-[资源使用](/runtimes/apple/resource-usage)[C#](/runtimes/community-runtimes/c-sharp)
+[资源使用](https://help.rive.app/runtimes/apple/resource-usage)[C#](https://help.rive.app/runtimes/community-runtimes/c-sharp)

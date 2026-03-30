@@ -1,3 +1,12 @@
+---
+title: "缓存 Rive 文件 (Caching a Rive File) - Rive 运行时"
+description: "运行时 (Runtimes) 在多个 Rive 实例之间缓存并复用 Rive 文件对象以提高性能。"
+head:
+  - - meta
+    - name: keywords
+      content: Rive, Rive 中文文档, Rive 运行时, 缓存 Rive 文件
+---
+
 运行时 (Runtimes)
 
 # 缓存 Rive 文件 (Caching a Rive File)

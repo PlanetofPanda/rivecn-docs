@@ -1,3 +1,12 @@
+---
+title: "最佳实践 (Best Practices) - Rive 入门指南"
+description: "编辑器与运行时性能及使用注意事项。 Rive 旨在应用和游戏中高效地播放编辑器内创建的交互式图形。然而，优化不佳的动画可能会消耗大量资源并导致性能下降，特别是在低端设备上。在接下来的章节中，我们将概述在 Rive 编辑器中进行设计/动画制作以及在应用程序运行时保持最佳性能和最小化资源占用的重要..."
+head:
+  - - meta
+    - name: keywords
+      content: Rive, Rive 中文文档, Rive 入门指南, 最佳实践
+---
+
 入门
 
 # 最佳实践 (Best Practices)
@@ -27,7 +36,7 @@ Rive 旨在应用和游戏中高效地播放编辑器内创建的交互式图形
 确保图像资产的大小适合其用途至关重要。例如，如果图像只会在画板的一个小区域显示（如 100 x 100），则应避免使用大尺寸图像（如 8192 x 7022）。
 使用大图像会迅速消耗设备内存。在内存受限的移动设备应用程序中尤其如此。即使这些图像经过压缩，它们的尺寸仍会影响应用程序内存的使用量。
 如果你有一张非常大的图像，且在任何给定时间只有一部分可见（例如滚动背景），请考虑将图像拆分为较小的块，或混合使用位图并将其一部分重新创建为矢量。
-![图像](images/breaking-up-raster-images.webp)
+![图像](https://help.rive.app/images/breaking-up-raster-images.webp)
 
 #### [​](#raster-image-compression) 位图压缩 (Raster Image Compression)
 

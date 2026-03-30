@@ -1,3 +1,12 @@
+---
+title: "Vector (矢量) - Rive 脚本"
+description: "Rive 脚本中的矢量和几何工具。 Rive 脚本提供了用于处理 2D 矢量和几何运算的 API。"
+head:
+  - - meta
+    - name: keywords
+      content: Rive, Rive 中文文档, Rive 脚本, API 参考, Vector
+---
+
 脚本 API
 
 # Vector (矢量)

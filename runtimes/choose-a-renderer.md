@@ -1,3 +1,12 @@
+---
+title: "选择渲染器 (Choose a Renderer) - Rive 运行时"
+description: "运行时 (Runtimes) 在运行时指定要使用的渲染器。"
+head:
+  - - meta
+    - name: keywords
+      content: Rive, Rive 中文文档, Rive 运行时, 选择渲染器
+---
+
 运行时 (Runtimes)
 
 # 选择渲染器 (Choose a Renderer)

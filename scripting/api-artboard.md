@@ -1,3 +1,12 @@
+---
+title: "画板 (Artboard) - Rive 脚本"
+description: "表示一个 Rive 画板实例，提供绘制、推进 (advancing)、交互处理以及访问命名节点和数据的功能。 如果为 true，画板的原点被视为帧原点。"
+head:
+  - - meta
+    - name: keywords
+      content: Rive, Rive 中文文档, Rive 脚本, 画板
+---
+
 脚本 API
 
 # 画板 (Artboard)

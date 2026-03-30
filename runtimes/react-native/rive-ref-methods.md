@@ -1,3 +1,12 @@
+---
+title: "Rive Ref 方法 (Rive Ref Methods) - Rive 运行时"
+description: "运行时 (Runtimes) - React Native 通过 ref 访问的 Rive 组件方法。"
+head:
+  - - meta
+    - name: keywords
+      content: Rive, Rive 中文文档, Rive 运行时, React Native, Rive Ref 方法
+---
+
 运行时 (Runtimes) - React Native
 
 # Rive Ref 方法 (Rive Ref Methods)

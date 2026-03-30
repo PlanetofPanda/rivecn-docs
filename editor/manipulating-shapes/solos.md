@@ -1,3 +1,12 @@
+---
+title: "单独显示 (Solos) - Rive 编辑器"
+description: "单独显示 (Solos) 类似于组（Group），但它增加了一个特殊功能：能够切换其内部嵌套对象的渲染状态，每次仅显示一个子对象。 Solo 非常适合用于处理具有多种状态或视角的对象。例如，一个角色的不同手势、不同朝向的脸部，或是一个开关的不同视觉状态。"
+head:
+  - - meta
+    - name: keywords
+      content: Rive, Rive 中文文档, Rive 编辑器, 形状操控, 单独显示
+---
+
 操控形状
 
 # 单独显示 (Solos)
@@ -8,7 +17,7 @@
 
 Solo 非常适合用于处理具有多种状态或视角的对象。例如，一个角色的不同手势、不同朝向的脸部，或是一个开关的不同视觉状态。
 
-![Solo 示例 Pn](images/solos-example.gif)
+![Solo 示例 Pn](https://help.rive.app/images/solos-example.gif)
 
 ## [​](#how-to-use) 如何使用
 

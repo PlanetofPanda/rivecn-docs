@@ -1,3 +1,12 @@
+---
+title: "Layout 脚本 (Layout Scripts) - Rive 脚本"
+description: "协议 (Protocols) Layout 脚本扩展了 Node 脚本 的行为，为你提供了对 Layout 组件的编程控制。它们允许你测量、调整大小并响应 Layout 几何形状的变化。它们非常适合构建自定义布局行为，如瀑布流网格、轮播图、间距逻辑等。"
+head:
+  - - meta
+    - name: keywords
+      content: Rive, Rive 中文文档, Rive 脚本, Layout 脚本
+---
+
 协议 (Protocols)
 
 # Layout 脚本 (Layout Scripts)

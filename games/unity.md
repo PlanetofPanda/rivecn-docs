@@ -1,10 +1,19 @@
+---
+title: "Unity - Rive 游戏运行时"
+description: "Rive 的 Unity 运行时。 Rive Unity 运行时目前处于 Unity 的 Mac 和 Windows 安装的 技术预览 (Technical Preview) 阶段。随着我们扩展平台支持，我们希望收集有关 API 和功能集的反馈。请通过我们的 社区 或 支持渠道 联系我们。"
+head:
+  - - meta
+    - name: keywords
+      content: Rive, Rive 中文文档, Rive 游戏运行时, Unity
+---
+
 Unity
 
 # Unity
 
 Rive 的 Unity 运行时。
 
-Rive Unity 运行时目前处于 Unity 的 Mac 和 Windows 安装的 **技术预览 (Technical Preview)** 阶段。随着我们扩展平台支持，我们希望收集有关 API 和功能集的反馈。请通过我们的 [社区](/https://community.rive.app/c/support/) 或 [支持渠道](https://rive.atlassian.net/servicedesk/customer/portals) 联系我们。
+Rive Unity 运行时目前处于 Unity 的 Mac 和 Windows 安装的 **技术预览 (Technical Preview)** 阶段。随着我们扩展平台支持，我们希望收集有关 API 和功能集的反馈。请通过我们的 [社区](https://community.rive.app/c/support/) 或 [支持渠道](https://rive.atlassian.net/servicedesk/customer/portals) 联系我们。
 
 有关 Unity 中 Rive 功能的更新列表，请参阅下面的 [功能支持](#feature-support)。
 
@@ -43,16 +52,16 @@ rive-unity 运行时使用最新的 Rive C++ 运行时。有关运行时支持�
 
 | **功能** | **支持** |
 | --- | --- |
-| [动画播放](/runtimes/animation-playback) | ✅ |
+| [动画播放](https://help.rive.app/runtimes/animation-playback) | ✅ |
 | [适应与对齐 (Fit & Alignment)](/runtimes/layout#fit) | ✅ |
-| [监听器 (Listeners)](/game-runtimes/unity/listeners) | ✅ |
+| [监听器 (Listeners)](https://help.rive.app/game-runtimes/unity/listeners) | ✅ |
 | [设置状态机输入 (Setting State Machine Inputs)](/runtimes/inputs) | ✅ |
 | [监听事件 (Listening to Events)](/runtimes/rive-events) | ✅ |
 | [运行时更新文本 (Updating text at runtime)](/runtimes/text) | ✅ |
 | [带外资产 (Out-of-band assets)](/runtimes/loading-assets.md) | ✅ |
-| [程序化渲染 (Procedural rendering)](/game-runtimes/unity/procedural-rendering) | ✅ |
+| [程序化渲染 (Procedural rendering)](https://help.rive.app/game-runtimes/unity/procedural-rendering) | ✅ |
 | PNG 图像 | ✅ |
 | JPEG 图像 | ✅ |
 | WEBP 图像 | ✅ |
 
-[常见用例](/game-runtimes/unreal/common-use-cases)[快速开始](/game-runtimes/unity/getting-started)
+[常见用例](https://help.rive.app/game-runtimes/unreal/common-use-cases)[快速开始](https://help.rive.app/game-runtimes/unity/getting-started)

@@ -1,3 +1,12 @@
+---
+title: "文本 (Text) - Rive 运行时"
+description: "运行时 (Runtimes) > [!WARNING]"
+head:
+  - - meta
+    - name: keywords
+      content: Rive, Rive 中文文档, Rive 运行时, 文本
+---
+
 运行时 (Runtimes)
 
 # 文本 (Text)

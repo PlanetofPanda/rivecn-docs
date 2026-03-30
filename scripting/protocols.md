@@ -1,3 +1,12 @@
+---
+title: "协议 (Protocols) - Rive 脚本"
+description: "脚本 (Scripting) Rive 脚本协议和接口定义。"
+head:
+  - - meta
+    - name: keywords
+      content: Rive, Rive 中文文档, Rive 脚本, 协议
+---
+
 脚本 (Scripting)
 
 # 协议 (Protocols)

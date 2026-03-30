@@ -1,3 +1,12 @@
+---
+title: "介绍 (Introduction) - Rive 入门指南"
+description: "欢迎来到 Rive 文档。我们将文档分成了以下几个子章节。如果你找不到所需的信息或对我们有任何疑问，请加入我们的 Twitter、Discord，或通过 填写此表单 与我们联系。 Rive 新手？这里有一些入门建议："
+head:
+  - - meta
+    - name: keywords
+      content: Rive, Rive 中文文档, Rive 入门指南, 介绍
+---
+
 入门
 
 # 介绍 (Introduction)
@@ -27,6 +36,6 @@ Rive 新手？这里有一些入门建议：
 
 [在 Rive 市场分享和重新创作作品。](/community/marketplace-overview.md)[## 管理 (Admin)
 
-[管理账号、团队和方案所需的所有信息。](/account-admin/account-overview/account-overview)[## 服务条款 (Terms of Service)
+[管理账号、团队和方案所需的所有信息。](https://help.rive.app/account-admin/account-overview/account-overview)[## 服务条款 (Terms of Service)
 
-[我们所有的法律文件，如服务条款、可接受使用政策和隐私政策。](/legal/terms-of-service)
+[我们所有的法律文件，如服务条款、可接受使用政策和隐私政策。](https://help.rive.app/legal/terms-of-service)

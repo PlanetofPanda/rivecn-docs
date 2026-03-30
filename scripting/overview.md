@@ -1,3 +1,12 @@
+---
+title: "入门指南 (Getting Started) - Rive 脚本"
+description: "脚本 (Scripting) 代码、动画和交互，尽在一个编辑器中。"
+head:
+  - - meta
+    - name: keywords
+      content: Rive, Rive 中文文档, Rive 脚本, 入门指南
+---
+
 脚本 (Scripting)
 
 # 入门指南 (Getting Started)

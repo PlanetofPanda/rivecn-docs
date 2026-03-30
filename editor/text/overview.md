@@ -1,3 +1,12 @@
+---
+title: "文本概览 (Text Overview) - Rive 编辑器"
+description: "文本串允许你将文本拆分为多个部分——通常用于向单个文本块应用多种不同的样式。 文本样式包含许多熟悉的选项，用于定义文本的外观，并可应用于一个或多个文本串。"
+head:
+  - - meta
+    - name: keywords
+      content: Rive, Rive 中文文档, Rive 编辑器, 文本, 文本概览
+---
+
 文本
 
 # 文本概览 (Text Overview)

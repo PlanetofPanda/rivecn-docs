@@ -1,3 +1,12 @@
+---
+title: "文本样式 (Text Styles) - Rive 编辑器"
+description: "文本样式 (Text Styles) 包含了定义文本外观的各种属性，如字体、大小、行高、对齐方式以及颜色。 文本样式可以被分配给一个或多个文本串 (Text Runs)。这让你能够在保持文本内容一致的同时，通过切换样式来快速改变多段文本的外观。"
+head:
+  - - meta
+    - name: keywords
+      content: Rive, Rive 中文文档, Rive 编辑器, 文本, 文本样式
+---
+
 文本
 
 # 文本样式 (Text Styles)

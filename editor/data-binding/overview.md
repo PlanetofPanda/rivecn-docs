@@ -1,3 +1,12 @@
+---
+title: "数据绑定概览 (Data Binding Overview) - Rive 编辑器"
+description: "数据绑定 (Data Binding) 通过视图模型 (View Models) 将编辑器元素连接到数据和代码。"
+head:
+  - - meta
+    - name: keywords
+      content: Rive, Rive 中文文档, Rive 编辑器, 数据绑定, 数据绑定概览
+---
+
 数据绑定 (Data Binding)
 
 # 数据绑定概览 (Data Binding Overview)
@@ -64,4 +73,4 @@
 
 要了解如何在代码中与数据绑定交互，请参阅 [运行时概览](/runtimes/data-binding) 页面。
 
-[音频事件](/editor/events/audio-events)[列表](/editor/data-binding/lists)
+[音频事件](/editor/events/audio-events)[列表](https://help.rive.app/editor/data-binding/lists)

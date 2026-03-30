@@ -1,3 +1,12 @@
+---
+title: "路径裁剪 (Trim Path) - Rive 编辑器"
+description: "路径裁剪 (Trim Path) 功能允许你只绘制矢量形状描边（Stroke）的一部分。 通过调整“开始 (Start)”、“结束 (End)”和“偏移 (Offset)”数值，你可以控制描边的可见片段。"
+head:
+  - - meta
+    - name: keywords
+      content: Rive, Rive 中文文档, Rive 编辑器, 形状操控, 路径裁剪
+---
+
 操控形状
 
 # 路径裁剪 (Trim Path)
@@ -11,7 +20,7 @@
 - **结束 (End)**：描边结束显示的百分比。
 - **偏移 (Offset)**：在路径上移动可见片段的位置。
 
-![Trim Path 示例 Pn](images/trim-path-example.gif)
+![Trim Path 示例 Pn](https://help.rive.app/images/trim-path-example.gif)
 
 ## [​](#animated-strokes) 动态描边
 

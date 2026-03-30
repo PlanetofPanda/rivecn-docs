@@ -1,9 +1,18 @@
+---
+title: "动画设置 (Animation Settings) - Rive 编辑器"
+description: "在 Rive 中，你可以为每个时间轴独立配置多种播放和显示设置。 默认情况下，Rive 动画以 60 FPS 运行。你可以通过点击时间轴上的时间标识并输入新值来修改帧率。"
+head:
+  - - meta
+    - name: keywords
+      content: Rive, Rive 中文文档, Rive 编辑器, 动画模式, 动画设置
+---
+
 动画模式
 
 # 动画设置 (Animation Settings)
 
 在 Rive 中，你可以为每个时间轴独立配置多种播放和显示设置。
-![动画设置 Pn](images/animation-settings.png)
+![动画设置 Pn](https://help.rive.app/images/animation-settings.png)
 
 ## [​](#framerate) 帧率 (Framerate)
 

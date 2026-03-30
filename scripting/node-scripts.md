@@ -1,3 +1,12 @@
+---
+title: "Node 脚本 (Node Scripts) - Rive 脚本"
+description: "协议 (Protocols) Node 脚本可用于渲染形状、图像、文本、画板等。"
+head:
+  - - meta
+    - name: keywords
+      content: Rive, Rive 中文文档, Rive 脚本, Node 脚本
+---
+
 协议 (Protocols)
 
 # Node 脚本 (Node Scripts)

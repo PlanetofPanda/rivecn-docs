@@ -1,3 +1,12 @@
+---
+title: "运行时入门 (Getting Started with Runtimes) - Rive 运行时"
+description: "运行时 (Runtimes) Rive 运行时是将你在 Rive 编辑器中创建的动画集成到应用程序、网站或游戏中的桥梁。"
+head:
+  - - meta
+    - name: keywords
+      content: Rive, Rive 中文文档, Rive 运行时, 运行时入门
+---
+
 运行时 (Runtimes)
 
 # 运行时入门 (Getting Started with Runtimes)

@@ -1,3 +1,12 @@
+---
+title: "调试面板 (Debug Panel) - Rive 脚本"
+description: "脚本 (Scripting) 使用调试面板诊断脚本问题。"
+head:
+  - - meta
+    - name: keywords
+      content: Rive, Rive 中文文档, Rive 脚本, 调试, 调试面板
+---
+
 脚本 (Scripting)
 
 # 调试面板 (Debug Panel)

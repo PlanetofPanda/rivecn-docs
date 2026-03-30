@@ -1,3 +1,12 @@
+---
+title: "加载 Rive 文件 (Loading Rive Files) - Rive 运行时"
+description: "运行时 (Runtimes) - React Native 在 React Native 中加载 Rive 文件的不同方式。"
+head:
+  - - meta
+    - name: keywords
+      content: Rive, Rive 中文文档, Rive 运行时, React Native, 加载 Rive 文件
+---
+
 运行时 (Runtimes) - React Native
 
 # 加载 Rive 文件 (Loading Rive Files)

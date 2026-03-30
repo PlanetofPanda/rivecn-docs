@@ -1,3 +1,12 @@
+---
+title: "滚动 (Scrolling) - Rive 编辑器"
+description: "布局 (Layouts) Rive 的滚动功能通过两个新约束实现：一个用于为溢出内容添加触摸滚动，另一个用于创建滚动条。这两个约束都与现有的布局组件协同工作。未来我们将提供更通用的滚动组件以简化设置。"
+head:
+  - - meta
+    - name: keywords
+      content: Rive, Rive 中文文档, Rive 编辑器, 布局, 滚动
+---
+
 布局 (Layouts)
 
 # 滚动 (Scrolling)

@@ -1,3 +1,12 @@
+---
+title: "网格 (Meshes) - Rive 编辑器"
+description: "网格允许你将点阵图像（如 PNG, JPG）或复杂的矢量形状转换为可变形的网格结构，从而实现自然且有机的动画效果。 你可以通过在图像或形状的检查器中点击“编辑网格 (Edit Mesh)”按钮来进入网格编辑模式。"
+head:
+  - - meta
+    - name: keywords
+      content: Rive, Rive 中文文档, Rive 编辑器, 形状操控, 网格
+---
+
 操控形状
 
 # 网格 (Meshes)
@@ -7,7 +16,7 @@
 ## [​](#creating-a-mesh) 创建网格
 
 你可以通过在图像或形状的检查器中点击“编辑网格 (Edit Mesh)”按钮来进入网格编辑模式。
-![编辑网格 Pn](images/edit-mesh.gif)
+![编辑网格 Pn](https://help.rive.app/images/edit-mesh.gif)
 
 ## [​](#vertex-weighting) 顶点权重
 

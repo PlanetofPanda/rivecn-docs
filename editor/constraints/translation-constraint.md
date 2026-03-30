@@ -1,3 +1,12 @@
+---
+title: "位移约束 (Translation Constraint) - Rive 编辑器"
+description: "位移约束允许受约束对象根据目标对象的位移属性来改变自身的位置。 - 目标 (Target)：作为参照的对象。"
+head:
+  - - meta
+    - name: keywords
+      content: Rive, Rive 中文文档, Rive 编辑器, 约束, 位移约束
+---
+
 约束
 
 # 位移约束 (Translation Constraint)

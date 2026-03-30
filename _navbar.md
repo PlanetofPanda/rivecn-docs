@@ -1,8 +1,0 @@
-* [Rive 官方文档](/README.md)
-* [首页](/guide/introduction.md)
-* [编辑器](/editor/interface-overview/overview.md)
-* [脚本](/scripting/overview.md)
-* [应用运行时](/runtimes/web.md)
-* [游戏运行时](/games/unity.md)
-* [功能支持](/feature-support.md)
-* [教程](/tutorials/learn-rive.md)

@@ -1,3 +1,12 @@
+---
+title: "程序化形状 (Procedural Shapes) - Rive 编辑器"
+description: "程序化形状是 Rive 中预定义的几何图形，您可以通过属性检查器轻松配置其参数。与手动绘制的路径不同，程序化形状提供了特定的属性（如矩形的圆角、星形的角数等），使得修改和动画化变得非常方便。 要创建程序化形状，请在工具栏中找到形状工具（通常是矩形图标）。点击并按住该工具可以展开菜单，查看所有可..."
+head:
+  - - meta
+    - name: keywords
+      content: Rive, Rive 中文文档, Rive 编辑器, 基础概念, 程序化形状
+---
+
 # 程序化形状 (Procedural Shapes)
 
 <div class="video-container">
@@ -10,7 +19,7 @@
 
 要创建程序化形状，请在工具栏中找到形状工具（通常是矩形图标）。点击并按住该工具可以展开菜单，查看所有可用的形状选项。
 
-![Procedural Shapes Menu](images/procedural-shapes-menu.png)
+![Procedural Shapes Menu](https://help.rive.app/images/procedural-shapes-menu.png)
 
 可用的形状包括：
 
@@ -23,7 +32,7 @@
 
 选择所需的形状后，在舞台上点击并拖动即可创建。按住 `Shift` 键可以限制比例（例如创建正方形或正圆形）。
 
-![Creating Shapes](images/procedural-shapes-create.gif)
+![Creating Shapes](https://help.rive.app/images/procedural-shapes-create.gif)
 
 ## 调整原点 (Origin)
 
@@ -31,11 +40,11 @@
 
 在属性检查器中，您可以通过 Origin 控件来设置原点。例如，如果将原点设置在左上角，可以修改宽度和高度，形状将向右下方扩展。
 
-![Origin Effect](images/procedural-shapes-origin.gif)
+![Origin Effect](https://help.rive.app/images/procedural-shapes-origin.gif)
 
 同样，原点也决定了形状缩放时的中心点。
 
-![Size Scaling](images/procedural-shapes-size.gif)
+![Size Scaling](https://help.rive.app/images/procedural-shapes-size.gif)
 
 ## 转换为自定义路径 (Convert to custom path)
 
@@ -46,4 +55,4 @@
 > [!NOTE]
 > 转换后，该形状就变成了一个普通的路径，您将失去之前的程序化属性（如星形的角数、矩形的圆角半径等）。这是一个不可逆的操作（除非撤销）。
 
-![Converting to Path](images/procedural-shapes-convert.gif)
+![Converting to Path](https://help.rive.app/images/procedural-shapes-convert.gif)

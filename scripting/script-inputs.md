@@ -1,3 +1,12 @@
+---
+title: "脚本输入 (Script Inputs) - Rive 脚本"
+description: "脚本 (Scripting) 在脚本中访问和操作状态机输入。"
+head:
+  - - meta
+    - name: keywords
+      content: Rive, Rive 中文文档, Rive 脚本, 脚本输入
+---
+
 脚本 (Scripting)
 
 # 脚本输入 (Script Inputs)

@@ -1,3 +1,12 @@
+---
+title: "键盘快捷键 (Keyboard Shortcuts) - Rive 编辑器"
+description: "编辑器 (Editor) 使用键盘快捷键快速导航"
+head:
+  - - meta
+    - name: keywords
+      content: Rive, Rive 中文文档, Rive 编辑器, 键盘快捷键
+---
+
 编辑器 (Editor)
 
 # 键盘快捷键 (Keyboard Shortcuts)

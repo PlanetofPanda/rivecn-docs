@@ -1,3 +1,12 @@
+---
+title: "图层 (Layers) - Rive 编辑器"
+description: "图层 (Layers) 允许你在状态机中构建更复杂的逻辑和动画。 状态机上的一个图层一次只能播放一个动画。因此，如果你希望混合多个动画或向状态机添加额外的交互，可以创建多个图层。"
+head:
+  - - meta
+    - name: keywords
+      content: Rive, Rive 中文文档, Rive 编辑器, 状态机, 图层
+---
+
 状态机
 
 # 图层 (Layers)
@@ -7,7 +16,7 @@
 状态机上的一个图层一次只能播放一个动画。因此，如果你希望混合多个动画或向状态机添加额外的交互，可以创建多个图层。
 
 例如，你可以使用图层来混合不同的背景动画，或者在单个画板上添加多个独立的交互逻辑。
-![多图层使用 Pn](images/image_0.png)
+![多图层使用 Pn](https://help.rive.app/images/image_0.png)
 
 ### [​](#creating-a-new-layer) 创建新图层
 
@@ -30,4 +39,4 @@
 **禁用与启用图层**
 你可以通过右键菜单或点击图层旁的图标来禁用/启用特定图层，方便调试。
 
-[监听器 (Listeners)](/editor/state-machine/listeners.md)[事件概览 (Events Overview)](/editor/events/overview.md)
+[监听器 (Listeners)](/editor/state-machine/listeners.md)[事件概览 (Events Overview)](https://help.rive.app/editor/events/overview)

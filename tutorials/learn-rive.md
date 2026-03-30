@@ -1,3 +1,12 @@
+---
+title: "学习 Rive (Learn Rive) - Rive 教程"
+description: "教程 (Tutorials) 如果你是 Rive 的新手，可以从官方的入门视频和教程开始。学习如何创建你的第一个动画，理解编辑器界面，并掌握基本概念。"
+head:
+  - - meta
+    - name: keywords
+      content: Rive, Rive 中文文档, Rive 教程, 学习 Rive
+---
+
 教程 (Tutorials)
 
 # 学习 Rive (Learn Rive)
@@ -24,4 +33,4 @@ Rive Academy: Volume 1 是使用 Rive 构建交互式动画世界的终极介绍
 **Rive: Interactive Motion**
 探索彻底改变交互式体验的基于 Web 的软件。构建充满令人惊叹的交互式设置的大型伪 3D 空间。在实践中学习所有 Rive 技术并充分利用它。
 
-[Awesome Rive 资源集合](/tutorials/awesome-rive)
+[Awesome Rive 资源集合](https://help.rive.app/tutorials/awesome-rive)

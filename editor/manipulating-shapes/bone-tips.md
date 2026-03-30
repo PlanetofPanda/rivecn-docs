@@ -1,3 +1,12 @@
+---
+title: "骨骼技巧 (Bone Tips) - Rive 编辑器"
+description: "操控形状 (Manipulating Shapes) 如何进行骨骼绑定 (Rigging) 非常重要。一个聪明的绑定方案可以让你用更少的关键帧创建动画，使你的工作流更加高效，并保持时间轴的整洁。"
+head:
+  - - meta
+    - name: keywords
+      content: Rive, Rive 中文文档, Rive 编辑器, 形状操控, 骨骼技巧
+---
+
 操控形状 (Manipulating Shapes)
 
 # 骨骼技巧 (Bone Tips)

@@ -1,3 +1,12 @@
+---
+title: "布局概览 (Layouts Overview) - Rive 编辑器"
+description: "布局 (Layouts) 布局 (Layouts) 让你能够在 Rive 中构建响应式 UI 组件。你可以根据可用空间让设计适应 (Fit)、填充 (Fill) 或重排 (Reflow) 内容。"
+head:
+  - - meta
+    - name: keywords
+      content: Rive, Rive 中文文档, Rive 编辑器, 布局, 布局概览
+---
+
 布局 (Layouts)
 
 # 布局概览 (Layouts Overview)

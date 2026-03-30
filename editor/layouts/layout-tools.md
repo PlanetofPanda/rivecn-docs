@@ -1,3 +1,12 @@
+---
+title: "布局工具 (Tools) - Rive 编辑器"
+description: "布局 (Layouts) Rive 提供了多种布局工具来构建你的响应式 UI。"
+head:
+  - - meta
+    - name: keywords
+      content: Rive, Rive 中文文档, Rive 编辑器, 布局, 布局工具
+---
+
 布局 (Layouts)
 
 # 布局工具 (Tools)

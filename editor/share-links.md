@@ -1,3 +1,12 @@
+---
+title: "分享链接概览 (Share Links Overview) - Rive 编辑器"
+description: "编辑器 (Editor) 分享链接是一种快速、无需代码的方法，可以让你的 Rive 文件在网站上运行，或向客户展示你的图形作品。"
+head:
+  - - meta
+    - name: keywords
+      content: Rive, Rive 中文文档, Rive 编辑器, 分享链接概览
+---
+
 编辑器 (Editor)
 
 # 分享链接概览 (Share Links Overview)
@@ -13,9 +22,9 @@
 ## [​](#creating-a-share-link) 创建分享链接 (Creating a share link)
 
 你可以从“导出 (Export)”菜单生成分享链接。该链接可以分享给任何人，而不仅仅是你的团队成员。
-![创建分享链接示例](images/spaces%2F-M3EXlibk6bj2FzPQW-9%2Fuploads%2FpdTtfPZWSbUO2F68xJAi%2FCleanShot%202022-08-01%20at%2015.25.06%402x.png)
+![创建分享链接示例](https://help.rive.app/images/spaces%2F-M3EXlibk6bj2FzPQW-9%2Fuploads%2FpdTtfPZWSbUO2F68xJAi%2FCleanShot%202022-08-01%20at%2015.25.06%402x.png)
 在分享链接弹窗中，选择你想要分享的画板、动画或状态机。
-![分享链接选项选择](images/spaces%2F-M3EXlibk6bj2FzPQW-9%2Fuploads%2FHboa00GCgDOCjmOMJQwu%2FScreen%20Shot%202022-05-19%20at%204.02.59%20PM.png)
+![分享链接选项选择](https://help.rive.app/images/spaces%2F-M3EXlibk6bj2FzPQW-9%2Fuploads%2FHboa00GCgDOCjmOMJQwu%2FScreen%20Shot%202022-05-19%20at%204.02.59%20PM.png)
 
 ### [​](#share-link-options) 分享链接选项 (Share link options)
 
@@ -38,13 +47,13 @@
 1. 复制 **Share link** 或 **Embed link**。
 2. 在 Notion 中粘贴链接。
 3. 在菜单中选择 **Embed** 选项。
-![Notion 嵌入示例](images/spaces%2F-M3EXlibk6bj2FzPQW-9%2Fuploads%2F1QHWSbe4L4gdwkaTLV4x%2FCleanShot%202022-08-01%20at%2015.32.03%402x.png)
+![Notion 嵌入示例](https://help.rive.app/images/spaces%2F-M3EXlibk6bj2FzPQW-9%2Fuploads%2F1QHWSbe4L4gdwkaTLV4x%2FCleanShot%202022-08-01%20at%2015.32.03%402x.png)
 
 ### [​](#webflow) Webflow
 1. 复制带有 iframe 的 **Embed code**。
 2. 在 Webflow 中添加一个 **Embed** 组件以访问 HTML 编辑器。
 3. 粘贴从 Rive 编辑器复制的代码。
-![Webflow 嵌入示例](images/spaces%2F-M3EXlibk6bj2FzPQW-9%2Fuploads%2FJUt6rSYoE1TJYJHHUHvW%2FScreen%20Shot%202022-05-19%20at%207.30.30%20PM.png)
+![Webflow 嵌入示例](https://help.rive.app/images/spaces%2F-M3EXlibk6bj2FzPQW-9%2Fuploads%2FJUt6rSYoE1TJYJHHUHvW%2FScreen%20Shot%202022-05-19%20at%207.30.30%20PM.png)
 
 ### [​](#tome) Tome
 1. 复制 **Embed link**。
@@ -55,4 +64,4 @@
 
 访问设置中的 [Share Links](https://rive.app/profile/?section=share%20links) 部分来管理你生成的链接。你可以通过关闭 **Active** 开关来禁用链接。
 
-[导出为备份](/editor/exporting/exporting-for-backup)[Framer 与 Rive](/editor/share-links/framer-and-rive)
+[导出为备份](https://help.rive.app/editor/exporting/exporting-for-backup)[Framer 与 Rive](https://help.rive.app/editor/share-links/framer-and-rive)

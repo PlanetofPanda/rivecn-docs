@@ -1,3 +1,12 @@
+---
+title: "Path (路径) - Rive 脚本"
+description: "Rive 脚本中的路径操作 API。 Path API 允许你在脚本中操作和查询路径数据。"
+head:
+  - - meta
+    - name: keywords
+      content: Rive, Rive 中文文档, Rive 脚本, API 参考, Path
+---
+
 脚本 API
 
 # Path (路径)

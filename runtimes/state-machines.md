@@ -1,3 +1,12 @@
+---
+title: "状态机播放 (State Machine Playback) - Rive 运行时"
+description: "Runtime Fundamentals 有关在 Rive 中设计和构建状态机的更多信息，请参阅：状态机 (State Machine)。"
+head:
+  - - meta
+    - name: keywords
+      content: Rive, Rive 中文文档, Rive 运行时, 状态机播放
+---
+
 Runtime Fundamentals
 
 # 状态机播放 (State Machine Playback)

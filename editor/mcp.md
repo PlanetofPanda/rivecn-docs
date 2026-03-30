@@ -1,3 +1,12 @@
+---
+title: "Rive MCP 集成 (Rive MCP Integration) - Rive 编辑器"
+description: "MCP 处于 早期访问阶段 (Early Access)，尚未公开发布。 MCP 集成目前仅在 macOS 的 Rive Early Access 桌面版应用中提供。Windows 支持即将推出。"
+head:
+  - - meta
+    - name: keywords
+      content: Rive, Rive 中文文档, Rive 编辑器, Rive MCP 集成
+---
+
 MCP
 
 # Rive MCP 集成 (Rive MCP Integration)
@@ -61,4 +70,4 @@ MCP 集成目前仅在 macOS 的 Rive Early Access 桌面版应用中提供。Wi
 
 随着工具的增加，功能列表将不断演进。
 
-[Framer 与 Rive](/editor/share-links/framer-and-rive)[标签系统 (Tagging)](/editor/tagging.md)
+[Framer 与 Rive](https://help.rive.app/editor/share-links/framer-and-rive)[标签系统 (Tagging)](/editor/tagging.md)

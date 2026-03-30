@@ -1,3 +1,12 @@
+---
+title: "裁剪 (Clipping) - Rive 编辑器"
+description: "操控形状 (Manipulating Shapes) 裁剪 (Clipping) 允许你用一个形状的轮廓来'切除'或'遮罩'另一个形状。"
+head:
+  - - meta
+    - name: keywords
+      content: Rive, Rive 中文文档, Rive 编辑器, 形状操控, 裁剪
+---
+
 操控形状 (Manipulating Shapes)
 
 # 裁剪 (Clipping)

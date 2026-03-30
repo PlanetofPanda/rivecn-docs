@@ -1,3 +1,12 @@
+---
+title: "导出为运行时文件 (Exporting for Runtime) - Rive 编辑器"
+description: "导出 (Exporting) 导出为运行时文件功能仅在付费计划中提供。"
+head:
+  - - meta
+    - name: keywords
+      content: Rive, Rive 中文文档, Rive 编辑器, 导出, 导出为运行时文件
+---
+
 导出 (Exporting)
 
 # 导出为运行时文件 (Exporting for Runtime)
@@ -16,7 +25,7 @@
 在层级面板或舞台上右键点击对象，勾选 **“Export name (导出名称)”** 选项。
 
 被设置为导出名称的对象在层级面板中会被括号 `[]` 包裹。
-![导出名称示例 Pn](images/8a147f5b-4e93-4d45-8984-64746ae1417d.webp)
+![导出名称示例 Pn](https://help.rive.app/images/8a147f5b-4e93-4d45-8984-64746ae1417d.webp)
 
 *注意：动画、状态机、事件和输入名称不需要手动操作即可导出。*
 
@@ -30,4 +39,4 @@
 1. 从工具栏菜单选择 `Export options` > `Remove name exports`。
 2. 针对需要在运行时访问的对象，手动重新勾选 `Export name`。
 
-[键盘快捷键 (Keyboard Shortcuts)](/editor/keyboard-shortcuts.md)[导出视频或静态图](/editor/exporting/exporting-for-video-and-static-design.md)
+[键盘快捷键 (Keyboard Shortcuts)](/editor/keyboard-shortcuts.md)[导出视频或静态图](https://help.rive.app/editor/exporting/exporting-for-video-and-static-design)

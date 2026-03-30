@@ -1,3 +1,12 @@
+---
+title: "约束类型 (Constraint Types) - Rive 编辑器"
+description: "约束 (Constraints) Rive 提供了多种约束类型，用于控制对象之间的关系。每种约束都有其特定的用途和配置选项。"
+head:
+  - - meta
+    - name: keywords
+      content: Rive, Rive 中文文档, Rive 编辑器, 约束, 约束类型
+---
+
 约束 (Constraints)
 
 # 约束类型 (Constraint Types)

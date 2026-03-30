@@ -1,3 +1,12 @@
+---
+title: "骨骼 (Bones) - Rive 编辑器"
+description: "操控形状 (Manipulating Shapes) 骨骼允许你为图稿创建骨架。这是一种直观自然的方式，用于动画化多个相互连接的部位，例如手臂、旗帜或树枝。"
+head:
+  - - meta
+    - name: keywords
+      content: Rive, Rive 中文文档, Rive 编辑器, 形状操控, 骨骼
+---
+
 操控形状 (Manipulating Shapes)
 
 # 骨骼 (Bones)

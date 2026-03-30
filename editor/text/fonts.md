@@ -1,3 +1,12 @@
+---
+title: "字体 (Fonts) - Rive 编辑器"
+description: "在 Rive 中，你可以在状态机中动态更改字体，也可以在检查器中为文本样式配置字体选项。 你可以调整字重 (Weight)、字宽 (Width) 等变量，前提是所选字体支持变体字体 (Variable Fonts)。"
+head:
+  - - meta
+    - name: keywords
+      content: Rive, Rive 中文文档, Rive 编辑器, 文本, 字体
+---
+
 文本
 
 # 字体 (Fonts)

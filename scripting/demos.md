@@ -1,3 +1,12 @@
+---
+title: "示例 (Demos) - Rive 脚本"
+description: "脚本 (Scripting) Rive 脚本示例和演示。"
+head:
+  - - meta
+    - name: keywords
+      content: Rive, Rive 中文文档, Rive 脚本, 示例
+---
+
 脚本 (Scripting)
 
 # 示例 (Demos)
