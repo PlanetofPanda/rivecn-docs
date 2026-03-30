@@ -180,6 +180,12 @@ export default defineConfig({
             text: '在 GitHub 上编辑此页'
         },
 
+        // 首页页脚（仅在使用默认 layout: home 时生效）
+        footer: {
+            message: 'PlanetofPanda & Rive Community',
+            copyright: '版权所有 © 2024-至今 | <a href="https://beian.miit.gov.cn/" target="_blank">备案号请在此修改 (如: 京ICP备XXXXXXXX号-1)</a>'
+        },
+
         // 文档页脚
         docFooter: {
             prev: '上一页',
