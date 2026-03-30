@@ -21,6 +21,9 @@ hero:
   name: "Rive"
   text: "官方文档中文版"
   tagline: "设计、动画、交互 - 实时渲染"
+  image:
+    src: /hero-image.svg
+    alt: Rive
   actions:
     - theme: brand
       text: 开始使用
