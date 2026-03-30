@@ -17,9 +17,9 @@ head:
 
 钢笔工具允许你创建自定义矢量形状。你可以通过“创建工具 (Create Tools)”菜单找到它，或者使用快捷键 `P` 来激活。
 在舞台上点击即可放置顶点。
-![钢笔工具创建 Pn](https://help.rive.app/images/pen-tool-create.gif)
+> *[原文档演示图由于官方服务器迁移已失效]* (描述: 钢笔工具创建 Pn)
 点击并拖动可创建带有贝塞尔手柄（Bezier handles）的顶点。完成后，按下键盘上的 `Esc` 键。
-![钢笔工具手柄 Pn](https://help.rive.app/images/pen-tool-create-handless.gif)
+> *[原文档演示图由于官方服务器迁移已失效]* (描述: 钢笔工具手柄 Pn)
 
 ## [​](#path-&-vertex-shortcuts) 路径与顶点快捷键
 

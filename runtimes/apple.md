@@ -30,7 +30,7 @@ git clone https://github.com/rive-app/rive-ios
 ```
 
 在 XCode 中打开 `Example-iOS` 应用程序，并务必选择 `Preview (iOS)` 或 `Preview (macOS)` [scheme](https://developer.apple.com/documentation/xcode/customizing-the-build-schemes-for-a-project)。其他 scheme 用于开发目的，需要额外的配置，请参阅 [CONTRIBUTING.MD](https://github.com/rive-app/rive-ios/blob/main/CONTRIBUTING.md)。
-![Image](https://help.rive.app/images/f4e4f632-f24d-47ed-b19c-0c961da458e8.webp)
+> *[原文档演示图由于官方服务器迁移已失效]* (描述: Image)
 
 ## [​](#getting-started) 快速开始
 

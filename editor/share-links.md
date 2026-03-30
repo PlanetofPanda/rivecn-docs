@@ -22,9 +22,9 @@ head:
 ## [​](#creating-a-share-link) 创建分享链接 (Creating a share link)
 
 你可以从“导出 (Export)”菜单生成分享链接。该链接可以分享给任何人，而不仅仅是你的团队成员。
-![创建分享链接示例](https://help.rive.app/images/spaces%2F-M3EXlibk6bj2FzPQW-9%2Fuploads%2FpdTtfPZWSbUO2F68xJAi%2FCleanShot%202022-08-01%20at%2015.25.06%402x.png)
+> *[原文档演示图由于官方服务器迁移已失效]* (描述: 创建分享链接示例)
 在分享链接弹窗中，选择你想要分享的画板、动画或状态机。
-![分享链接选项选择](https://help.rive.app/images/spaces%2F-M3EXlibk6bj2FzPQW-9%2Fuploads%2FHboa00GCgDOCjmOMJQwu%2FScreen%20Shot%202022-05-19%20at%204.02.59%20PM.png)
+> *[原文档演示图由于官方服务器迁移已失效]* (描述: 分享链接选项选择)
 
 ### [​](#share-link-options) 分享链接选项 (Share link options)
 
@@ -47,13 +47,13 @@ head:
 1. 复制 **Share link** 或 **Embed link**。
 2. 在 Notion 中粘贴链接。
 3. 在菜单中选择 **Embed** 选项。
-![Notion 嵌入示例](https://help.rive.app/images/spaces%2F-M3EXlibk6bj2FzPQW-9%2Fuploads%2F1QHWSbe4L4gdwkaTLV4x%2FCleanShot%202022-08-01%20at%2015.32.03%402x.png)
+> *[原文档演示图由于官方服务器迁移已失效]* (描述: Notion 嵌入示例)
 
 ### [​](#webflow) Webflow
 1. 复制带有 iframe 的 **Embed code**。
 2. 在 Webflow 中添加一个 **Embed** 组件以访问 HTML 编辑器。
 3. 粘贴从 Rive 编辑器复制的代码。
-![Webflow 嵌入示例](https://help.rive.app/images/spaces%2F-M3EXlibk6bj2FzPQW-9%2Fuploads%2FJUt6rSYoE1TJYJHHUHvW%2FScreen%20Shot%202022-05-19%20at%207.30.30%20PM.png)
+> *[原文档演示图由于官方服务器迁移已失效]* (描述: Webflow 嵌入示例)
 
 ### [​](#tome) Tome
 1. 复制 **Embed link**。

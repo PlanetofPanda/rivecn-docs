@@ -16,7 +16,7 @@ head:
 ## [​](#default-states) 默认状态 (Default States)
 
 默认状态是每个状态机创建时自动添加的状态。
-![默认状态](https://help.rive.app/images/42815967-dd47-4da1-ba8a-4fc12f64d972.webp)
+> *[原文档演示图由于官方服务器迁移已失效]* (描述: 默认状态)
 
 ### [​](#entry-state) 入口状态 (Entry State)
 入口状态是状态机的起始点。默认已关联一个动画，但你可以随时更换。你也可以将多个动画连接到入口状态（例如：需要一个开关可以从"开"或"关"任一状态启动）。
@@ -26,7 +26,7 @@ head:
 
 ### [​](#any-state) 任意状态 (Any State)
 与普通状态不同，连接到 Any State 的状态可以在状态机处于任何状态时被激活。非常适合用于"随时可触发"的场景，如更换角色皮肤。
-![使用 Any State 的评分系统](https://help.rive.app/images/image_2.png)
+> *[原文档演示图由于官方服务器迁移已失效]* (描述: 使用 Any State 的评分系统)
 
 ## [​](#animation-states) 动画状态 (Animation States)
 
@@ -43,7 +43,7 @@ head:
 
 #### [​](#1d-blend-state) 1D 混合状态
 通过单个数字输入控制多条时间轴的混合。当数值变化时，一条动画淡入同时另一条淡出。
-![血条混合状态](https://help.rive.app/images/image_5.png)
+> *[原文档演示图由于官方服务器迁移已失效]* (描述: 血条混合状态)
 配置步骤：
 1. 创建多条时间轴动画（建议只关键帧少量属性）。
 2. 添加 1D Blend State 到图表。

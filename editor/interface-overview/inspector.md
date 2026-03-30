@@ -45,7 +45,7 @@ head:
 当选中一个或多个对象（如形状或分组）时，检查器提供对当前选择进行布局 (Layout) 或 N-切片 (N-Slice) 的选项。
 ![布局和切片选项 Pn](https://help.rive.app/images/LOandN.png)
 
-[## 布局 (Layouts)
+## 布局 (Layouts)
 
 [布局让你能够构建响应式设计。](/editor/layouts/overview.md)[## N-切片 (N-Slicing)
 
@@ -66,7 +66,7 @@ head:
 在图层属性下方，你会发现许多可以添加的其他属性，例如剪裁 (Clipping)、约束 (Constraints)、自定义绘制顺序 (Custom Draw Order) 和选择颜色 (Selection Colors)。
 ![其他属性 Pn](https://help.rive.app/images/additional.png)
 
-[## 操纵形状 (Manipulating Shapes)
+## 操纵形状 (Manipulating Shapes)
 
 Rive 编辑器提供了多种方式来操纵图形，以创建所需的动画。](../manipulating-shapes/manipulating-shapes)[## 约束 (Constraints)
 
@@ -79,7 +79,7 @@ Rive 编辑器提供了多种方式来操纵图形，以创建所需的动画。
 当选中关键帧、过渡 (Transitions) 或状态 (States) 时，此部分会显示可自定义的属性。
 ![运动检查器 Pn](https://help.rive.app/images/motioninspector.png)
 
-[## 插值面板 (Interpolation Panel)
+## 插值面板 (Interpolation Panel)
 
 [选中关键帧会弹出插值面板。](https://help.rive.app/editor/animate-mode/interpolation-easing)[## 过渡属性 (Transition Properties)
 

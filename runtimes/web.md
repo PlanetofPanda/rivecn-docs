@@ -208,7 +208,7 @@ riveInstance.cleanup();
 
 了解如何在运行时与 Rive 图形进行交互。
 
-[## 画板 (Artboards)
+## 画板 (Artboards)
 
 [在运行时控制显示哪个画板。](https://help.rive.app/runtimes/artboards)[## 布局 (Layout)
 
@@ -226,7 +226,7 @@ riveInstance.cleanup();
 
 更深入的 Rive Web 文档和高级用例。
 
-[## Rive 参数 (Rive Parameters)
+## Rive 参数 (Rive Parameters)
 
 [Rive 实例的 API 文档。](https://help.rive.app/runtimes/web/rive-parameters)[## Canvas vs WebGL
 

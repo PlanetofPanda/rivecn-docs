@@ -20,7 +20,7 @@ head:
 ## [​](#absolute-vs-relative) 绝对布局与相对布局
 
 要控制行 (Row) 或列 (Column) 中子布局的流向，需要子布局为**相对 (Relative)** 模式。你可以在检查器右上角切换。
-![模式切换 Pn](https://help.rive.app/images/3412f52f-c283-4617-b6c5-f5af8ad1ddcc.webp)
+> *[原文档演示图由于官方服务器迁移已失效]* (描述: 模式切换 Pn)
 
 - **绝对布局 (Absolute)**：在画板或父布局容器中定位自己。可以将 2 条或更多边缘固定 (Pinned) 到容器。
 - **相对布局 (Relative)**：位置由父级定义。更改父级的 flex 属性将决定子布局的行为。
@@ -35,7 +35,7 @@ head:
 ## [​](#size-constraints) 尺寸约束
 
 由于可以设置最小 (Min) 和最大 (Max) 宽度/高度。
-![尺寸约束 Pn](https://help.rive.app/images/d6898bfa-62bf-4d4c-9769-5c68d439e03a.webp)
+> *[原文档演示图由于官方服务器迁移已失效]* (描述: 尺寸约束 Pn)
 
 ## [​](#clip) 裁剪 (Clip)
 开启后会隐藏布局边界之外的所有子元素。

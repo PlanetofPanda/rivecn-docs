@@ -23,11 +23,11 @@ head:
 
 一个基本的状态机由以下部分组成：图表 (Graph)、[状态 (States)](/editor/state-machine/states.md)、[过渡 (Transitions)](/editor/state-machine/transitions.md)、[输入 (Inputs)](/editor/state-machine/inputs.md) 和 [图层 (Layers)](/editor/state-machine/layers.md)。
 **图表 (Graph)** 是你添加状态并连接过渡的空间。当在动画列表中选中状态机时，它会替代时间轴显示。
-![状态机图表](https://help.rive.app/images/307461c0-2006-4fdf-bdc3-61875d40f422.webp)
+> *[原文档演示图由于官方服务器迁移已失效]* (描述: 状态机图表)
 **状态 (States)** 本质上就是可以在状态机中播放的时间轴动画。它们通常代表你的动画内容所处的某种"状态"。例如，一个按钮通常有：Idle（静止）、Hovered（悬停）和 Clicked（点击）三种状态。
-![状态预览](https://help.rive.app/images/image_1.png)
+> *[原文档演示图由于官方服务器迁移已失效]* (描述: 状态预览)
 定义好状态后，我们可以用 **过渡 (Transitions)** 将它们连接起来，创建一条状态机可以遵循的逻辑路径——这就像一张地图，指引状态机如何从一个动画切换到下一个。
-![创建过渡](https://help.rive.app/images/image_2.png)
+> *[原文档演示图由于官方服务器迁移已失效]* (描述: 创建过渡)
 
 > [!WARNING]
 > **弃用提示：** 本节涉及旧版"输入 (Inputs)"系统。
@@ -37,9 +37,9 @@ head:
 
 **输入 (Inputs)** 是控制状态机过渡的一种旧式工具。虽然仍可使用，但数据绑定 (Data Binding) 是当前的最佳实践，因为视图模型 (View Models) 更强大且在运行时更易控制。
 输入是设计师与开发者之间的"契约"。设计师用它们作为过渡发生的条件规则，开发者在运行时对其进行操控。
-![添加输入和条件](https://help.rive.app/images/state-machine-overview-inputs.gif)
+> *[原文档演示图由于官方服务器迁移已失效]* (描述: 添加输入和条件)
 
 最后，所有状态机至少有一个 **图层 (Layer)**。由于每个图层同一时间只能播放一个动画，如果需要混合不同动画或添加额外交互，我们可以添加多个图层。
-![多图层状态机](https://help.rive.app/images/image_4.png)
+> *[原文档演示图由于官方服务器迁移已失效]* (描述: 多图层状态机)
 
 [绘制顺序动画](https://help.rive.app/editor/animate-mode/animating-draw-order)[状态 (States)](/editor/state-machine/states.md)

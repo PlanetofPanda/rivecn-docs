@@ -49,7 +49,7 @@ Rive 的 React Native 运行时。
 
 按照这些快速入门步骤熟悉 Rive React Native 运行时。
 
-[## Rive 文件
+## Rive 文件
 
 [改编/下载本快速入门指南中使用的 Rive 文件](https://rive.app/marketplace/24637-46037-health-bar-data-binding-quick-start/)[## 完整示例
 
@@ -391,7 +391,11 @@ const instance = useViewModelInstance(riveViewRef);
 
 ## [​](#resources) 资源
 
-[## GitHub](https://github.com/rive-app/rive-nitro-react-native)[## NPM](https://www.npmjs.com/package/@rive-app/react-native)[## 示例应用](https://github.com/rive-app/rive-nitro-react-native/tree/main/example)
+## [GitHub](https://github.com/rive-app/rive-nitro-react-native)
+
+## [NPM](https://www.npmjs.com/package/@rive-app/react-native)
+
+## [示例应用](https://github.com/rive-app/rive-nitro-react-native/tree/main/example)
 
 旧版运行时仍然受支持，但我们建议迁移到新运行时以获得更好的性能和功能。
 
@@ -445,6 +449,8 @@ const instance = useViewModelInstance(riveViewRef);
 
 ## [​](#resources-2) 资源 (旧版)
 
-[## GitHub](https://github.com/rive-app/rive-react-native)[## 示例应用](https://github.com/rive-app/rive-react-native/tree/main/example)
+## [GitHub](https://github.com/rive-app/rive-react-native)
+
+## [示例应用](https://github.com/rive-app/rive-react-native/tree/main/example)
 
 [从 v3 迁移到 v4](https://help.rive.app/runtimes/react/migrating-from-v3-to-v4)[运行时概念](https://help.rive.app/runtimes/react-native/runtime-concepts)

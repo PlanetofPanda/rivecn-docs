@@ -34,16 +34,16 @@ Rive 支持导入 SVG（见下文限制）、JSON、PNG、PSD 和 JPG 格式。
 #### [​](#copy-and-paste-directly-from-figma) 直接从 Figma 复制并粘贴
 
 你可以使用 Figma 的“copy as SVG”功能并将其直接粘贴到 Rive 编辑器中。
-![Figma 粘贴示例](https://help.rive.app/images/image_0.png)
+> *[原文档演示图由于官方服务器迁移已失效]* (描述: Figma 粘贴示例)
 
 #### [​](#import-lottie-file) 导入 Lottie 文件
 
 导入 Lottie 文件功能在企业版 (Enterprise) 方案中提供。[了解更多关于我们的方案和定价的信息](https://rive.app/pricing)。
 
 你可以将 Lottie 动画导入到 Rive 中。开始前，将 Lottie JSON 文件拖入 Rive 编辑器。这会将其添加到你的资产面板。
-![Lottie 资产面板示例](https://help.rive.app/images/12a13a71-d5d0-4ed2-a1b1-2fe49bbbb9df.webp)
+> *[原文档演示图由于官方服务器迁移已失效]* (描述: Lottie 资产面板示例)
 然后，你可以将其拖入现有的画板，或者拖入空白区域以创建一个新画板。
-![Lottie 拖入舞台示例](https://help.rive.app/images/49c02a1d-18d9-4937-8ea1-bad52ba9ce4e.webp)
+> *[原文档演示图由于官方服务器迁移已失效]* (描述: Lottie 拖入舞台示例)
 
 如果你在运行时遇到问题，可能需要将任何 `Plus`、`Add` 或 `Hard Mix` 图层混合模式更改为 Rive 运行时支持的混合模式。
 
@@ -52,7 +52,7 @@ Rive 支持导入 SVG（见下文限制）、JSON、PNG、PSD 和 JPG 格式。
 SVG 是一种非常灵活且功能丰富的格式。我们致力于尽可能地支持 SVG；然而，目前阶段仍有一些功能不受支持。
 - 导出带有内联样式 (inline style) 而非 CSS 的 SVG 文件对我们的导入器效果最好。
 - 从其他设计工具导出时，请勾选保留形状 ID 和名称的选项。这能确保导入的文件保留相同的结构和图层名称。大多数工具（如 Figma）都有此选项。
-![Figma 导出设置](https://help.rive.app/images/9a2b2c37-c330-4323-a4c6-9928fbac8d94.webp)
+> *[原文档演示图由于官方服务器迁移已失效]* (描述: Figma 导出设置)
 
 ### [​](#photoshop) Photoshop
 

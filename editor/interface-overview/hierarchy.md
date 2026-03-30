@@ -28,13 +28,13 @@ head:
 ## [​](#parent-child-relationships) **父子关系 (Parent-child relationships)**
 
 任何类型的对象都可以是另一种类型对象的父级或子级。当一个对象是另一个对象的子级时，它会继承其父级的所有变换。例如，更改父级对象的缩放将影响子级对象。这些变换是相对于父级原点而非局部原点发生的。
-![层级父子示例](https://help.rive.app/images/image_1.png)
+> *[原文档演示图由于官方服务器迁移已失效]* (描述: 层级父子示例)
 这些父子关系的深度是无限的，因此你可以不断堆叠（或嵌套）项目，创建孙级、曾孙级等等。
 
 ### [​](#change-parent-child-relationships) **更改父子关系**
 
 要更改对象之间的关系，请将对象拖放进或拖离另一个对象。
-![更改关系示例](https://help.rive.app/images/image_2.png)
+> *[原文档演示图由于官方服务器迁移已失效]* (描述: 更改关系示例)
 
 ## [​](#draw-order) **绘制顺序 (Draw Order)**
 
@@ -42,7 +42,7 @@ head:
 
 ### [​](#change-draw-order) **更改绘制顺序**
 
-![更改绘制顺序示例](https://help.rive.app/images/image_3.png)
+> *[原文档演示图由于官方服务器迁移已失效]* (描述: 更改绘制顺序示例)
 要更改舞台上对象的绘制顺序，请在列表中将形状或分组向上或向下拖到另一个之上或之下。请注意，绘制顺序也会影响对象在布局 (Layout) 中的放置和处理方式。在此处了解更多信息：[此处](/editor/layouts/overview.md)。
 绘制顺序可以制作动画，但过程稍微深入一点。请在 [绘制顺序动画](https://help.rive.app/editor/animate-mode/animating-draw-order) 页面阅读相关内容。
 
@@ -57,7 +57,9 @@ head:
 资产面板是你的图像、Lottie 文件、音频和自定义字体的列表视图。此面板允许你添加、移除、替换和修改文件中添加的所有资产。在下文阅读有关导入和修改资产的更多信息。
 ![资产面板 Pn](https://help.rive.app/images/Assets.png)
 
-[## 导入资产 (Importing Assets)](/editor/fundamentals/importing-assets.md)[## 音频事件 (Audio Events)](/editor/events/audio-events)
+## [导入资产 (Importing Assets)](/editor/fundamentals/importing-assets.md)
+
+## [音频事件 (Audio Events)](/editor/events/audio-events)
 
 # [​](#data-panel) 数据面板 (Data Panel)
 

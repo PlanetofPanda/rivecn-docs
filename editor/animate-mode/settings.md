@@ -12,7 +12,7 @@ head:
 # 动画设置 (Animation Settings)
 
 在 Rive 中，你可以为每个时间轴独立配置多种播放和显示设置。
-![动画设置 Pn](https://help.rive.app/images/animation-settings.png)
+> *[原文档演示图由于官方服务器迁移已失效]* (描述: 动画设置 Pn)
 
 ## [​](#framerate) 帧率 (Framerate)
 

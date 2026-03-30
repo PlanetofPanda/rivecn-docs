@@ -22,7 +22,7 @@ Rive 中的大部分骨骼动画通过旋转骨骼的角度来完成。子级骨
 ### [​](#inverse-kinematics) 反向动力学 (Inverse Kinematics)
 
 反向动力学允许你在骨骼链的末端放置一个目标点，系统会自动反推计算父级骨骼需要如何旋转才能使末端到达该目标。
-![IK 示意图](https://help.rive.app/images/image_0.png)
+> *[原文档演示图由于官方服务器迁移已失效]* (描述: IK 示意图)
 常见应用包括：让角色用手指向某个物体，或让角色的脚"踩"在地面上。
 
 ## [​](#how-to-create-an-ik-constraint) 如何创建 IK 约束

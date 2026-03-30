@@ -24,7 +24,7 @@ head:
 
 使用 **组件工具 (Component Tool)**（原名为嵌套画板工具）在舞台上选择并放置组件实例。通过工具栏选择该工具或按下快捷键 `N` 激活它。
 点击舞台上的任何位置即可放置组件。界面会弹出一个菜单，显示所有可用的组件以供实例化。如果没有显示，可能是因为你的文件中没有被标记为组件的画板。
-![添加组件示例](https://help.rive.app/images/components-add.gif)
+> *[原文档演示图由于官方服务器迁移已失效]* (描述: 添加组件示例)
 
 ## [​](#configuring-a-component-instance) 配置组件实例 (Configuring a Component Instance)
 
@@ -33,27 +33,27 @@ head:
 ### [​](#state-machines) 状态机 (State Machines)
 
 分配实例后，检查器中会显示默认状态机。
-![组件状态机设置](https://help.rive.app/images/components-statemachine.gif)
+> *[原文档演示图由于官方服务器迁移已失效]* (描述: 组件状态机设置)
 如果你在源组件中暴露了任何“输入 (Inputs)”，你可以通过选项面板或是在选中状态机时的输入面板中访问它们。
-![组件嵌套输入示例](https://help.rive.app/images/components-nested_inputs.gif)
+> *[原文档演示图由于官方服务器迁移已失效]* (描述: 组件嵌套输入示例)
 
 ### [​](#adding-an-animation) 添加动画 (Adding an Animation)
 
 你可以播放与组件关联的任何动画。你需要点击检查器中的“加号”按钮将所需动画添加到实例。
-![组件添加动画示例](https://help.rive.app/images/components-animations.gif)
+> *[原文档演示图由于官方服务器迁移已失效]* (描述: 组件添加动画示例)
 这些动画可以单独使用，与状态机混合使用，或者与其他动画进行层叠。
 注意：在添加动画之前，你必须选择是使用 **Simple (简单)** 还是 **Remap (重映射)** 动画。
 
 #### [​](#simple) 简单 (Simple)
 
 简单动画是播放组件时间轴的一种便捷方式。
-![简单动画示例](https://help.rive.app/images/components-animation-simple.gif)
+> *[原文档演示图由于官方服务器迁移已失效]* (描述: 简单动画示例)
 简单动画允许你在当前时间轴上通过关键帧设定其起始点。你还可以调整动画的播放速度。
 
 #### [​](#remap) 重映射 (Remap)
 
 重映射动画允许你在时间轴上为动画的时间值设置关键帧。这让你可以拉伸、收缩，甚至倒放动画。
-![重映射动画示例](https://help.rive.app/images/components-animation-remap.gif)
+> *[原文档演示图由于官方服务器迁移已失效]* (描述: 重映射动画示例)
 注意：时间值为百分比，0% 代表时间轴起始，100% 代表结束。
 
 ### [​](#mix-value) 混合值 (Mix Value)
@@ -73,7 +73,7 @@ head:
 
 ### [​](#leaf) 叶子 (Leaf)
 
-![叶子模式示例](https://help.rive.app/images/components-leaf.png)
+> *[原文档演示图由于官方服务器迁移已失效]* (描述: 叶子模式示例)
 Leaf 模式会使组件的大小和位置始终相对于其包含的“布局 (Layout)”或“画板”进行。当你希望组件随容器缩放，但组件本身不包含内部布局逻辑时，这非常有用。
 
 #### [​](#leaf-fit) 叶子填充方式 (Leaf Fit)
@@ -93,7 +93,7 @@ Alignment 类型决定了内容在分配区域内的对齐位置。提供 3x3 �
 
 ### [​](#layout) 布局 (Layout)
 
-![布局模式示例](https://help.rive.app/images/components-layout.png)
+> *[原文档演示图由于官方服务器迁移已失效]* (描述: 布局模式示例)
 Layout 模式用于当你的组件包含需要随父级尺寸变化而保持响应的内部布局时。这是唯一一种组件内容不会被等比缩放的模式，而是通过改变画板尺寸来让内容“重新排版 (Reflow)”。
 
 #### [​](#layout-scale-type) 布局缩放类型 (Layout Scale Type)
@@ -109,17 +109,17 @@ Layout 模式用于当你的组件包含需要随父级尺寸变化而保持响�
 ### [​](#how-to-expose-an-input) 如何暴露输入
 
 暴露输入后，父画板即可访问并操纵它。操作方法：选中目标输入，在检查器中勾选 **“Expose to main artboard”**。
-![暴露输入示例](https://help.rive.app/images/image_8.png)
+> *[原文档演示图由于官方服务器迁移已失效]* (描述: 暴露输入示例)
 
 ### [​](#using-inputs-on-a-parent-artboard) 在父级画板上使用输入
 
 暴露的输入会出现在输入面板中，你可以通过监听器 (Listeners)、事件 (Event) 或在时间轴上设置关键帧来驱动它们。
-![在父级使用输入](https://help.rive.app/images/image_9.png)
+> *[原文档演示图由于官方服务器迁移已失效]* (描述: 在父级使用输入)
 
 #### [​](#via-a-listener) 通过监听器
 
 创建监听器时，你会发现所有暴露的输入都可作为“设置输入”属性。这让你能一键改变多个组件实例的属性。
-![监听器操作组件](https://help.rive.app/images/image_10.png)
+> *[原文档演示图由于官方服务器迁移已失效]* (描述: 监听器操作组件)
 
 #### [​](#using-events) 使用事件
 

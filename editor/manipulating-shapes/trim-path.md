@@ -20,7 +20,7 @@ head:
 - **结束 (End)**：描边结束显示的百分比。
 - **偏移 (Offset)**：在路径上移动可见片段的位置。
 
-![Trim Path 示例 Pn](https://help.rive.app/images/trim-path-example.gif)
+> *[原文档演示图由于官方服务器迁移已失效]* (描述: Trim Path 示例 Pn)
 
 ## [​](#animated-strokes) 动态描边
 

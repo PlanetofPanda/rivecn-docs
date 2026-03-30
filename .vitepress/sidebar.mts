@@ -37,12 +37,12 @@ function extractTitle(filePath: string): string {
     const frontmatterMatch = content.match(/^---\s*\n([\s\S]*?)\n---/)
     if (frontmatterMatch) {
       const titleMatch = frontmatterMatch[1].match(/title:\s*['"]?(.+?)['"]?\s*$/m)
-      if (titleMatch) return titleMatch[1]
+      if (titleMatch) return titleMatch[1].replace(/\s*-\s*Rive\s*编辑器\s*/gi, '')
     }
 
     // 尝试从第一个 # 标题获取
     const h1Match = content.match(/^#\s+(.+)$/m)
-    if (h1Match) return h1Match[1]
+    if (h1Match) return h1Match[1].replace(/\s*-\s*Rive\s*编辑器\s*/gi, '')
 
     // 使用文件名作为后备
     return basename(filePath, '.md')

@@ -518,7 +518,7 @@ Rive 会自动为你下载原生库作为 `rive_native` 插件的一部分。
 
 既然你已经将 Rive 集成到你的 Flutter 应用中，你可以探索更高级的功能，例如：
 
-[## 画板 (Artboards)
+## 画板 (Artboards)
 
 [在运行时控制显示哪个画板。](https://help.rive.app/runtimes/artboards)[## 布局 (Layout)
 

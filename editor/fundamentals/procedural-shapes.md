@@ -19,7 +19,7 @@ head:
 
 要创建程序化形状，请在工具栏中找到形状工具（通常是矩形图标）。点击并按住该工具可以展开菜单，查看所有可用的形状选项。
 
-![Procedural Shapes Menu](https://help.rive.app/images/procedural-shapes-menu.png)
+> *[原文档演示图由于官方服务器迁移已失效]* (描述: Procedural Shapes Menu)
 
 可用的形状包括：
 
@@ -32,7 +32,7 @@ head:
 
 选择所需的形状后，在舞台上点击并拖动即可创建。按住 `Shift` 键可以限制比例（例如创建正方形或正圆形）。
 
-![Creating Shapes](https://help.rive.app/images/procedural-shapes-create.gif)
+> *[原文档演示图由于官方服务器迁移已失效]* (描述: Creating Shapes)
 
 ## 调整原点 (Origin)
 
@@ -40,11 +40,11 @@ head:
 
 在属性检查器中，您可以通过 Origin 控件来设置原点。例如，如果将原点设置在左上角，可以修改宽度和高度，形状将向右下方扩展。
 
-![Origin Effect](https://help.rive.app/images/procedural-shapes-origin.gif)
+> *[原文档演示图由于官方服务器迁移已失效]* (描述: Origin Effect)
 
 同样，原点也决定了形状缩放时的中心点。
 
-![Size Scaling](https://help.rive.app/images/procedural-shapes-size.gif)
+> *[原文档演示图由于官方服务器迁移已失效]* (描述: Size Scaling)
 
 ## 转换为自定义路径 (Convert to custom path)
 
@@ -55,4 +55,4 @@ head:
 > [!NOTE]
 > 转换后，该形状就变成了一个普通的路径，您将失去之前的程序化属性（如星形的角数、矩形的圆角半径等）。这是一个不可逆的操作（除非撤销）。
 
-![Converting to Path](https://help.rive.app/images/procedural-shapes-convert.gif)
+> *[原文档演示图由于官方服务器迁移已失效]* (描述: Converting to Path)

@@ -16,7 +16,7 @@ head:
 ## [​](#creating-a-mesh) 创建网格
 
 你可以通过在图像或形状的检查器中点击“编辑网格 (Edit Mesh)”按钮来进入网格编辑模式。
-![编辑网格 Pn](https://help.rive.app/images/edit-mesh.gif)
+> *[原文档演示图由于官方服务器迁移已失效]* (描述: 编辑网格 Pn)
 
 ## [​](#vertex-weighting) 顶点权重
 

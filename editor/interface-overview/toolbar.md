@@ -67,7 +67,7 @@ Rive 允许你通过事件 (Events) 在文件中添加和播放不同的音效�
 **选择工具 (Select Tool)**
 选择工具允许你选择对象，并使用出现的 Gizmo 操纵它们的所有变换属性。你还可以在空白区域点击并拖动，通过框选来选择多个对象。
 在大多数情况下，你可能都会使用选择工具，不过我们目前也提供专门的平移 (Translate)、缩放 (Scale) 和旋转 (Rotate) 工具。
-![变换工具示例](https://help.rive.app/images/5cfc252a-8d52-4751-9064-4c6a1acb6f34.webp)
+> *[原文档演示图由于官方服务器迁移已失效]* (描述: 变换工具示例)
 Gizmo 允许你操纵所选内容的平移、旋转和缩放属性。
 
 **平移工具 (Translate Tool)**
@@ -88,7 +88,7 @@ Gizmo 允许你操纵所选内容的平移、旋转和缩放属性。
 了解画板 (Artboards)、组件 (Components)、布局 (Layouts) 和分组 (Groups)。
 ![画板菜单 Pn](https://help.rive.app/images/artboard.png)
 
-[## 画板 (Artboards)
+## 画板 (Artboards)
 
 画板是你在设计模式和动画模式下进行创作的基础。](../fundamentals/artboards.md)[## 组件 (Components)
 
@@ -113,7 +113,7 @@ Gizmo 允许你操纵所选内容的平移、旋转和缩放属性。
 事件和摇杆菜单允许你向文件中添加新的事件 (Events) 和摇杆 (Joysticks)。
 ![事件菜单 Pn](https://help.rive.app/images/events.png)
 
-[## 事件 (Events)
+## 事件 (Events)
 
 [事件允许你向运行时和编辑器提供额外信息。](https://help.rive.app/editor/share-links/overview)[## 摇杆 (Joysticks)
 

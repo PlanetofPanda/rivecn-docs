@@ -16,34 +16,34 @@ head:
 ## [​](#creating-a-new-transition) 创建过渡
 
 将鼠标移到某个状态附近，当出现椭圆图标时，点击并拖动到目标状态即可创建过渡。连接完成后会显示一个带箭头的椭圆，指示过渡方向。
-![创建过渡](https://help.rive.app/images/image_0.png)
+> *[原文档演示图由于官方服务器迁移已失效]* (描述: 创建过渡)
 你可以在两个状态之间创建多条过渡，每条设置不同的条件，实现"或 (OR)"逻辑。
-![创建"或"过渡](https://help.rive.app/images/image_1.png)
+> *[原文档演示图由于官方服务器迁移已失效]* (描述: 创建"或"过渡)
 
 ## [​](#configuring-a-transition) 配置过渡
 
 选中过渡的方向指示器后，可以配置三个部分：过渡属性、条件和插值。
 
 ### [​](#transition-properties) 过渡属性
-![过渡属性面板](https://help.rive.app/images/9b35e6bf-8e06-4df9-b211-10d3e1150435.webp)
+> *[原文档演示图由于官方服务器迁移已失效]* (描述: 过渡属性面板)
 
 ### [​](#duration) 持续时间 (Duration)
 描述过渡完成所需的时间。默认为 0（立即切换），增加该值会让过渡更平滑。
-![持续时间效果对比](https://help.rive.app/images/image_3.png)
+> *[原文档演示图由于官方服务器迁移已失效]* (描述: 持续时间效果对比)
 过渡本质上是一种动画：起始属性来自离开的状态，结束属性来自进入的状态，Duration 就是两者之间的插值时间。
 
 ### [​](#exit-time) 退出时间 (Exit Time)
 指定在过渡之前，当前状态必须播放多长时间或多少百分比。
-![退出时间设置](https://help.rive.app/images/image_6.png)
+> *[原文档演示图由于官方服务器迁移已失效]* (描述: 退出时间设置)
 例如：希望动画播放完整再过渡，可设置为 100%。
 
 ### [​](#pause-when-exiting) 退出时暂停 (Pause when exiting)
 过渡发生时，离开的状态是否暂停播放。
-![暂停效果](https://help.rive.app/images/image_7.png)
+> *[原文档演示图由于官方服务器迁移已失效]* (描述: 暂停效果)
 
 ### [​](#conditions) 条件 (Conditions)
 条件是触发过渡的规则。没有条件，过渡会持续触发导致混乱。条件需要定义输入 (Inputs)。
-![条件面板](https://help.rive.app/images/a5336985-e1d4-4892-a04a-deee93e6a8b1.webp)
+> *[原文档演示图由于官方服务器迁移已失效]* (描述: 条件面板)
 
 #### 添加条件
 点击 Conditions 旁的加号，选择输入类型（布尔值、数字或触发器）。

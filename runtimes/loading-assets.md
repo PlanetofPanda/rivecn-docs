@@ -28,7 +28,7 @@ Runtime Fundamentals
 
 目前有三种不同的方法为你的 Rive 文件加载资产。
 在 Rive 编辑器中，从 **Assets** 选项卡中选择所需的资产，并在检查器中选择所需的导出选项：
-![Image](https://help.rive.app/images/df455228-a712-4cff-a24d-0771b8575e9d.webp)
+> *[原文档演示图由于官方服务器迁移已失效]* (描述: Image)
 有关更多详细信息，请参阅编辑器文档中的 **Export Options** 部分。
 
 ### [​](#embedded-assets) 嵌入式资产 (Embedded Assets)

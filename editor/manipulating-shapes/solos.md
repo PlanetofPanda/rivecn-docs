@@ -17,7 +17,7 @@ head:
 
 Solo 非常适合用于处理具有多种状态或视角的对象。例如，一个角色的不同手势、不同朝向的脸部，或是一个开关的不同视觉状态。
 
-![Solo 示例 Pn](https://help.rive.app/images/solos-example.gif)
+> *[原文档演示图由于官方服务器迁移已失效]* (描述: Solo 示例 Pn)
 
 ## [​](#how-to-use) 如何使用
 

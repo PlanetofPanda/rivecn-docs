@@ -28,7 +28,7 @@ head:
 ### [​](#target) 目标 (Target)
 
 “目标”选项会在舞台上绘制一个始终可见的不同图标（通常分组只有在为空时才会显示图标）。当分组显示为“目标”时，它还会禁用[选择与导航分组](https://help.rive.app/editor/fundamentals/selecting-and-navigating-groups)章节中描述的功能。这意味着你可以直接点击选中该分组的任何子级对象（无需双击、按 Enter/Esc 或使用深层选择）。
-![分组切换为目标模式 GIF](https://help.rive.app/images/groups-targets.gif)
+> *[原文档演示图由于官方服务器迁移已失效]* (描述: 分组切换为目标模式 GIF)
 “目标”选项在处理“约束 (Constraints)”时特别有用。
 
 ### [​](#constraints) 约束 (Constraints)

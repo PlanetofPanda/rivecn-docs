@@ -15,21 +15,21 @@ head:
 
 在 Rive 中，形状 (Shapes) 和路径 (Paths) 由两种不同的图层类型组成：**形状图层 (Shape Layers)** 和 **路径图层 (Path Layers)**。
 
-![Shape Layer Overview](https://help.rive.app/images/shape-and-path-shapelayer.png)
+> *[原文档演示图由于官方服务器迁移已失效]* (描述: Shape Layer Overview)
 
 ## 形状图层 (Shape Layer)
 
-![Shape Layer Icon](https://help.rive.app/images/shape-and-path-properties.png)
+> *[原文档演示图由于官方服务器迁移已失效]* (描述: Shape Layer Icon)
 
 形状图层由**蓝色**图标表示，它是路径图层的**容器**。
 
 形状图层本身并不直接包含各种属性或顶点。相反，它作为容纳路径、填充 (Fills) 和描边 (Strokes) 的容器。您可以将多个路径图层放置在一个形状图层中，它们将共享同一套填充和描边样式。
 
-![Fill and Stroke](https://help.rive.app/images/shape-and-path-fill.png)
+> *[原文档演示图由于官方服务器迁移已失效]* (描述: Fill and Stroke)
 
 ## 路径图层 (Path Layer)
 
-![Path Layer Icon](https://help.rive.app/images/shape-and-path-pathlayer.gif)
+> *[原文档演示图由于官方服务器迁移已失效]* (描述: Path Layer Icon)
 
 路径图层由**灰色**图标表示。
 
@@ -49,4 +49,4 @@ head:
 *   **Enter**: 当选中一个形状图层时，按下 `Enter` 键可以选择其内部的第一个路径图层（进入编辑模式）。这允许您快速开始编辑顶点。
 *   **Esc**: 当选中一个路径图层或正在编辑顶点时，按下 `Esc` 键将使选择向上移动一级，选回父级的形状图层。
 
-![Move Shortcut](https://help.rive.app/images/shape-and-path-move.gif)
+> *[原文档演示图由于官方服务器迁移已失效]* (描述: Move Shortcut)

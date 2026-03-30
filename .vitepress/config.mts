@@ -22,6 +22,9 @@ export default defineConfig({
     // 开启 Clean URLs (适应 Nginx 的去 .html 配置)
     cleanUrls: true,
 
+    // 默认开启深邃发光科技模式 (Dark Mode)
+    appearance: 'dark',
+
     // ==================== SEO 配置 ====================
 
     // Sitemap 自动生成
@@ -31,6 +34,11 @@ export default defineConfig({
 
     // 全局 Head 标签
     head: [
+        // 外部字体 (Inter & Fira Code)
+        ['link', { rel: 'preconnect', href: 'https://fonts.googleapis.com' }],
+        ['link', { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' }],
+        ['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap' }],
+
         // Favicon
         ['link', { rel: 'icon', href: `${BASE_PATH}favicon.svg`, type: 'image/svg+xml' }],
 
@@ -87,6 +95,7 @@ export default defineConfig({
         heads.push(['meta', { property: 'og:title', content: title }])
         heads.push(['meta', { property: 'og:description', content: description }])
         heads.push(['meta', { property: 'og:url', content: canonicalUrl }])
+        heads.push(['meta', { property: 'og:image', content: `${SITE_URL}${BASE_PATH}og-image.jpg` }])
 
         // Twitter 动态标签
         heads.push(['meta', { name: 'twitter:title', content: title }])

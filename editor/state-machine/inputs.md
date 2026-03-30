@@ -25,20 +25,20 @@ head:
 ### [​](#creating-a-new-input) 创建新输入
 
 在输入面板中点击加号按钮，选择输入类型。有三种类型：布尔值、触发器和数字。
-![创建输入](https://help.rive.app/images/image_0.png)
+> *[原文档演示图由于官方服务器迁移已失效]* (描述: 创建输入)
 
 ## [​](#input-types) 输入类型
 
 ### [​](#boolean) 布尔值 (Boolean)
 布尔值只有两种状态：true 或 false。
-![开关的布尔输入](https://help.rive.app/images/image_1.png)
+> *[原文档演示图由于官方服务器迁移已失效]* (描述: 开关的布尔输入)
 
 ### [​](#trigger) 触发器 (Trigger)
 触发器类似布尔值，但只能短暂变为 true（一次性脉冲）。
-![攻击动画的触发器](https://help.rive.app/images/image_2.png)
+> *[原文档演示图由于官方服务器迁移已失效]* (描述: 攻击动画的触发器)
 
 ### [​](#number) 数字 (Number)
 数字输入提供一个可以是任意整数的数值框。
-![评分动画的数字输入](https://help.rive.app/images/image_3.png)
+> *[原文档演示图由于官方服务器迁移已失效]* (描述: 评分动画的数字输入)
 
 [状态 (States)](/editor/state-machine/states.md)[过渡 (Transitions)](/editor/state-machine/transitions.md)

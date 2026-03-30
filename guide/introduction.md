@@ -24,7 +24,7 @@ Rive 新手？这里有一些入门建议：
 
 ## [​](#explore-rive) 探索 Rive
 
-[## 界面概览 (Interface Overview)
+## 界面概览 (Interface Overview)
 
 [准备好开始在 Rive 中进行设计和制作动画了吗？编辑器是你创建、制作动画并利用强大的状态机 (State Machine) 构建逻辑（控制不同动画如何混合）的地方。从那里，你可以导出作品，并通过我们的运行时 (Runtimes) 之一将其放入你的应用或游戏中。](/editor/interface-overview/overview.md)[## 应用运行时 (App Runtimes)
 
@@ -32,7 +32,7 @@ Rive 新手？这里有一些入门建议：
 
 [游戏运行时是开源库，允许在 Unity、Unreal 和 Defold 中实时渲染和更新你的 Rive 文件，并且易于集成到自定义引擎中。](/games/unreal.md)
 
-[## 市场概览 (Marketplace Overview)
+## 市场概览 (Marketplace Overview)
 
 [在 Rive 市场分享和重新创作作品。](/community/marketplace-overview.md)[## 管理 (Admin)
 
