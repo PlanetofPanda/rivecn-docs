@@ -1,0 +1,159 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1050" width="1400" height="1050" style="font-family:'PingFang SC','Noto Sans SC','Microsoft YaHei','Hiragino Sans GB',sans-serif">
+<defs>
+  <marker id="arrow" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#90cdb8"/></marker>
+  <filter id="ds"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.08"/></filter>
+</defs>
+
+<!-- Background -->
+<rect width="1400" height="1050" fill="#fafcfd" rx="12"/>
+
+<!-- ===== ROOT ===== -->
+<rect x="20" y="470" width="210" height="50" rx="8" fill="#c5d5f6" stroke="#8ea8e0" stroke-width="1.5" filter="url(#ds)"/>
+<text x="125" y="501" text-anchor="middle" font-size="15" font-weight="700" fill="#2c3e6b">Rive动画设计学习路线图</text>
+
+<!-- ===== PHASE 1 ===== -->
+<line x1="230" y1="495" x2="270" y2="100" stroke="#90cdb8" stroke-width="1.5"/>
+<rect x="270" y="75" width="190" height="44" rx="8" fill="#d5e8f0" stroke="#9cc5d8" stroke-width="1.2" filter="url(#ds)"/>
+<text x="365" y="102" text-anchor="middle" font-size="13" font-weight="600" fill="#2c5e7b">阶段一：入门与基础准备</text>
+
+<!-- P1 Branch 1 -->
+<line x1="460" y1="87" x2="520" y2="50" stroke="#b5dcc8" stroke-width="1.2"/>
+<rect x="520" y="30" width="175" height="38" rx="6" fill="#d6f0e0" stroke="#a3d9b8" stroke-width="1" filter="url(#ds)"/>
+<text x="607" y="54" text-anchor="middle" font-size="12" fill="#2d6e4a">创建账户并访问文档</text>
+
+<line x1="695" y1="38" x2="740" y2="15" stroke="#cce8d8" stroke-width="1"/>
+<rect x="740" y="3" width="110" height="28" rx="5" fill="#e4f5ea" stroke="#b8dfc8" stroke-width="0.8"/><text x="795" y="22" text-anchor="middle" font-size="11" fill="#3a7a55">创建账户</text>
+<line x1="695" y1="43" x2="740" y2="38" stroke="#cce8d8" stroke-width="1"/>
+<rect x="740" y="34" width="130" height="28" rx="5" fill="#e4f5ea" stroke="#b8dfc8" stroke-width="0.8"/><text x="805" y="53" text-anchor="middle" font-size="11" fill="#3a7a55">使用Rive编辑器</text>
+<line x1="695" y1="52" x2="740" y2="65" stroke="#cce8d8" stroke-width="1"/>
+<rect x="740" y="65" width="130" height="28" rx="5" fill="#e4f5ea" stroke="#b8dfc8" stroke-width="0.8"/><text x="805" y="84" text-anchor="middle" font-size="11" fill="#3a7a55">阅读"入门"简介</text>
+<line x1="695" y1="56" x2="740" y2="96" stroke="#cce8d8" stroke-width="1"/>
+<rect x="740" y="96" width="120" height="28" rx="5" fill="#e4f5ea" stroke="#b8dfc8" stroke-width="0.8"/><text x="800" y="115" text-anchor="middle" font-size="11" fill="#3a7a55">熟悉文档结构</text>
+
+<!-- P1 Branch 2 -->
+<line x1="460" y1="105" x2="520" y2="145" stroke="#b5dcc8" stroke-width="1.2"/>
+<rect x="520" y="128" width="200" height="38" rx="6" fill="#d6f0e0" stroke="#a3d9b8" stroke-width="1" filter="url(#ds)"/>
+<text x="620" y="152" text-anchor="middle" font-size="12" fill="#2d6e4a">查看快速链接与最佳实践</text>
+
+<line x1="720" y1="140" x2="760" y2="133" stroke="#cce8d8" stroke-width="1"/>
+<rect x="760" y="120" width="120" height="28" rx="5" fill="#e4f5ea" stroke="#b8dfc8" stroke-width="0.8"/><text x="820" y="139" text-anchor="middle" font-size="11" fill="#3a7a55">查看快速链接</text>
+<line x1="720" y1="152" x2="760" y2="162" stroke="#cce8d8" stroke-width="1"/>
+<rect x="760" y="150" width="120" height="28" rx="5" fill="#e4f5ea" stroke="#b8dfc8" stroke-width="0.8"/><text x="820" y="169" text-anchor="middle" font-size="11" fill="#3a7a55">了解最佳实践</text>
+
+<!-- ===== PHASE 2 ===== -->
+<line x1="230" y1="495" x2="270" y2="360" stroke="#90cdb8" stroke-width="1.5"/>
+<rect x="270" y="338" width="230" height="44" rx="8" fill="#d5e8f0" stroke="#9cc5d8" stroke-width="1.2" filter="url(#ds)"/>
+<text x="385" y="365" text-anchor="middle" font-size="13" font-weight="600" fill="#2c5e7b">阶段二：核心设计与动画逻辑</text>
+
+<!-- P2 Branch 1: 设计与动画基础 -->
+<line x1="500" y1="348" x2="560" y2="250" stroke="#b5dcc8" stroke-width="1.2"/>
+<rect x="560" y="228" width="250" height="38" rx="6" fill="#d6f0e0" stroke="#a3d9b8" stroke-width="1" filter="url(#ds)"/>
+<text x="685" y="252" text-anchor="middle" font-size="12" fill="#2d6e4a">学习设计与动画基础（文档含视频讲解）</text>
+
+<line x1="810" y1="237" x2="860" y2="207" stroke="#cce8d8" stroke-width="1"/>
+<rect x="860" y="194" width="125" height="28" rx="5" fill="#e4f5ea" stroke="#b8dfc8" stroke-width="0.8"/><text x="922" y="213" text-anchor="middle" font-size="11" fill="#3a7a55">查看Rive文档</text>
+<line x1="810" y1="242" x2="860" y2="235" stroke="#cce8d8" stroke-width="1"/>
+<rect x="860" y="224" width="125" height="28" rx="5" fill="#e4f5ea" stroke="#b8dfc8" stroke-width="0.8"/><text x="922" y="243" text-anchor="middle" font-size="11" fill="#3a7a55">查看教程视频</text>
+<line x1="810" y1="250" x2="860" y2="262" stroke="#cce8d8" stroke-width="1"/>
+<rect x="860" y="254" width="165" height="28" rx="5" fill="#e4f5ea" stroke="#b8dfc8" stroke-width="0.8"/><text x="942" y="273" text-anchor="middle" font-size="11" fill="#3a7a55">浏览Rive iOS视频与教程</text>
+<line x1="810" y1="255" x2="860" y2="290" stroke="#cce8d8" stroke-width="1"/>
+<rect x="860" y="284" width="175" height="28" rx="5" fill="#e4f5ea" stroke="#b8dfc8" stroke-width="0.8"/><text x="947" y="303" text-anchor="middle" font-size="11" fill="#3a7a55">核心概念：层级和编辑器</text>
+
+<!-- P2 Branch 2: 状态机 -->
+<line x1="500" y1="358" x2="560" y2="340" stroke="#b5dcc8" stroke-width="1.2"/>
+<rect x="560" y="320" width="175" height="38" rx="6" fill="#d6f0e0" stroke="#a3d9b8" stroke-width="1" filter="url(#ds)"/>
+<text x="647" y="344" text-anchor="middle" font-size="12" fill="#2d6e4a">掌握强大的状态机</text>
+
+<line x1="735" y1="332" x2="785" y2="325" stroke="#cce8d8" stroke-width="1"/>
+<rect x="785" y="314" width="195" height="28" rx="5" fill="#e4f5ea" stroke="#b8dfc8" stroke-width="0.8"/><text x="882" y="333" text-anchor="middle" font-size="11" fill="#3a7a55">初步认识状态机和建模逻辑</text>
+<line x1="735" y1="344" x2="785" y2="353" stroke="#cce8d8" stroke-width="1"/>
+<rect x="785" y="344" width="195" height="28" rx="5" fill="#e4f5ea" stroke="#b8dfc8" stroke-width="0.8"/><text x="882" y="363" text-anchor="middle" font-size="11" fill="#3a7a55">实现不同的前端混合概念</text>
+
+<!-- P2 Branch 3: 应用运行时 -->
+<line x1="500" y1="370" x2="560" y2="420" stroke="#b5dcc8" stroke-width="1.2"/>
+<rect x="560" y="400" width="175" height="38" rx="6" fill="#d6f0e0" stroke="#a3d9b8" stroke-width="1" filter="url(#ds)"/>
+<text x="647" y="424" text-anchor="middle" font-size="12" fill="#2d6e4a">学习应用运行时</text>
+
+<line x1="735" y1="410" x2="785" y2="395" stroke="#cce8d8" stroke-width="1"/>
+<rect x="785" y="382" width="195" height="28" rx="5" fill="#e4f5ea" stroke="#b8dfc8" stroke-width="0.8"/><text x="882" y="401" text-anchor="middle" font-size="11" fill="#3a7a55">查看App Runtimes文档</text>
+
+<!-- Runtime platforms -->
+<line x1="980" y1="389" x2="1020" y2="383" stroke="#cce8d8" stroke-width="0.8"/>
+<rect x="1020" y="374" width="55" height="22" rx="4" fill="#c5e8d3" stroke="#8cc8a8" stroke-width="0.8"/><text x="1047" y="389" text-anchor="middle" font-size="10" font-weight="600" fill="#2d6e4a">Web</text>
+<line x1="980" y1="393" x2="1020" y2="398" stroke="#cce8d8" stroke-width="0.8"/>
+<rect x="1020" y="398" width="55" height="22" rx="4" fill="#c5e8d3" stroke="#8cc8a8" stroke-width="0.8"/><text x="1047" y="413" text-anchor="middle" font-size="10" font-weight="600" fill="#2d6e4a">iOS</text>
+<line x1="1075" y1="395" x2="1100" y2="395" stroke="#cce8d8" stroke-width="0.8"/>
+<rect x="1100" y="374" width="70" height="22" rx="4" fill="#c5e8d3" stroke="#8cc8a8" stroke-width="0.8"/><text x="1135" y="389" text-anchor="middle" font-size="10" font-weight="600" fill="#2d6e4a">Android</text>
+<rect x="1100" y="398" width="70" height="22" rx="4" fill="#c5e8d3" stroke="#8cc8a8" stroke-width="0.8"/><text x="1135" y="413" text-anchor="middle" font-size="10" font-weight="600" fill="#2d6e4a">Flutter</text>
+<rect x="1180" y="386" width="95" height="22" rx="4" fill="#c5e8d3" stroke="#8cc8a8" stroke-width="0.8"/><text x="1227" y="401" text-anchor="middle" font-size="10" font-weight="600" fill="#2d6e4a">React Native</text>
+
+<line x1="735" y1="418" x2="785" y2="422" stroke="#cce8d8" stroke-width="1"/>
+<rect x="785" y="412" width="175" height="28" rx="5" fill="#e4f5ea" stroke="#b8dfc8" stroke-width="0.8"/><text x="872" y="431" text-anchor="middle" font-size="11" fill="#3a7a55">官方中/英快速安装</text>
+<line x1="735" y1="426" x2="785" y2="450" stroke="#cce8d8" stroke-width="1"/>
+<rect x="785" y="442" width="215" height="28" rx="5" fill="#e4f5ea" stroke="#b8dfc8" stroke-width="0.8"/><text x="892" y="461" text-anchor="middle" font-size="11" fill="#3a7a55">搭建快速入门、示例和代码片段</text>
+
+<!-- ===== PHASE 3 ===== -->
+<line x1="230" y1="495" x2="270" y2="615" stroke="#90cdb8" stroke-width="1.5"/>
+<rect x="270" y="593" width="230" height="44" rx="8" fill="#d5e8f0" stroke="#9cc5d8" stroke-width="1.2" filter="url(#ds)"/>
+<text x="385" y="620" text-anchor="middle" font-size="13" font-weight="600" fill="#2c5e7b">阶段三：运行时集成与应用</text>
+
+<!-- P3 Branch 1: 游戏运行时 -->
+<line x1="500" y1="605" x2="560" y2="555" stroke="#b5dcc8" stroke-width="1.2"/>
+<rect x="560" y="535" width="165" height="38" rx="6" fill="#d6f0e0" stroke="#a3d9b8" stroke-width="1" filter="url(#ds)"/>
+<text x="642" y="559" text-anchor="middle" font-size="12" fill="#2d6e4a">学习游戏运行时</text>
+
+<line x1="725" y1="545" x2="775" y2="510" stroke="#cce8d8" stroke-width="1"/>
+<rect x="775" y="498" width="215" height="28" rx="5" fill="#e4f5ea" stroke="#b8dfc8" stroke-width="0.8"/><text x="882" y="517" text-anchor="middle" font-size="11" fill="#3a7a55">阅读Game Rive Runtimes文档</text>
+<!-- Game platforms -->
+<line x1="990" y1="505" x2="1030" y2="498" stroke="#cce8d8" stroke-width="0.8"/>
+<rect x="1030" y="490" width="55" height="22" rx="4" fill="#c5e8d3" stroke="#8cc8a8" stroke-width="0.8"/><text x="1057" y="505" text-anchor="middle" font-size="10" font-weight="600" fill="#2d6e4a">Unity</text>
+<rect x="1090" y="490" width="60" height="22" rx="4" fill="#c5e8d3" stroke="#8cc8a8" stroke-width="0.8"/><text x="1120" y="505" text-anchor="middle" font-size="10" font-weight="600" fill="#2d6e4a">Unreal</text>
+<rect x="1155" y="490" width="60" height="22" rx="4" fill="#c5e8d3" stroke="#8cc8a8" stroke-width="0.8"/><text x="1185" y="505" text-anchor="middle" font-size="10" font-weight="600" fill="#2d6e4a">Defold</text>
+
+<line x1="725" y1="550" x2="775" y2="538" stroke="#cce8d8" stroke-width="1"/>
+<rect x="775" y="528" width="145" height="28" rx="5" fill="#e4f5ea" stroke="#b8dfc8" stroke-width="0.8"/><text x="847" y="547" text-anchor="middle" font-size="11" fill="#3a7a55">支持游戏引擎</text>
+<line x1="725" y1="558" x2="775" y2="568" stroke="#cce8d8" stroke-width="1"/>
+<rect x="775" y="558" width="195" height="28" rx="5" fill="#e4f5ea" stroke="#b8dfc8" stroke-width="0.8"/><text x="872" y="577" text-anchor="middle" font-size="11" fill="#3a7a55">制千与自定义化/事件集成</text>
+<line x1="725" y1="565" x2="775" y2="595" stroke="#cce8d8" stroke-width="1"/>
+<rect x="775" y="588" width="215" height="28" rx="5" fill="#e4f5ea" stroke="#b8dfc8" stroke-width="0.8"/><text x="882" y="607" text-anchor="middle" font-size="11" fill="#3a7a55">搭建快速入门、示例和代码片段</text>
+
+<!-- P3 Branch 2: 案例研究 -->
+<line x1="500" y1="623" x2="560" y2="660" stroke="#b5dcc8" stroke-width="1.2"/>
+<rect x="560" y="640" width="185" height="38" rx="6" fill="#d6f0e0" stroke="#a3d9b8" stroke-width="1" filter="url(#ds)"/>
+<text x="652" y="664" text-anchor="middle" font-size="12" fill="#2d6e4a">实际用户与案例研究</text>
+
+<line x1="745" y1="652" x2="795" y2="645" stroke="#cce8d8" stroke-width="1"/>
+<rect x="795" y="632" width="195" height="28" rx="5" fill="#e4f5ea" stroke="#b8dfc8" stroke-width="0.8"/><text x="892" y="651" text-anchor="middle" font-size="11" fill="#3a7a55">查看多种样式使用案例页面</text>
+<line x1="745" y1="665" x2="795" y2="675" stroke="#cce8d8" stroke-width="1"/>
+<rect x="795" y="662" width="185" height="28" rx="5" fill="#e4f5ea" stroke="#b8dfc8" stroke-width="0.8"/><text x="887" y="681" text-anchor="middle" font-size="11" fill="#3a7a55">总结示例、博客和教程</text>
+
+<!-- ===== PHASE 4 ===== -->
+<line x1="230" y1="495" x2="270" y2="850" stroke="#90cdb8" stroke-width="1.5"/>
+<rect x="270" y="828" width="210" height="44" rx="8" fill="#d5e8f0" stroke="#9cc5d8" stroke-width="1.2" filter="url(#ds)"/>
+<text x="375" y="855" text-anchor="middle" font-size="13" font-weight="600" fill="#2c5e7b">阶段四：拓展、社区与管理</text>
+
+<!-- P4 Branch 1: 高级功能 -->
+<line x1="480" y1="840" x2="540" y2="770" stroke="#b5dcc8" stroke-width="1.2"/>
+<rect x="540" y="750" width="185" height="38" rx="6" fill="#d6f0e0" stroke="#a3d9b8" stroke-width="1" filter="url(#ds)"/>
+<text x="632" y="774" text-anchor="middle" font-size="12" fill="#2d6e4a">查看高级功能和脚本</text>
+
+<line x1="725" y1="762" x2="775" y2="752" stroke="#cce8d8" stroke-width="1"/>
+<rect x="775" y="740" width="140" height="28" rx="5" fill="#e4f5ea" stroke="#b8dfc8" stroke-width="0.8"/><text x="845" y="759" text-anchor="middle" font-size="11" fill="#3a7a55">脚本 (Scripting)</text>
+<line x1="725" y1="775" x2="775" y2="782" stroke="#cce8d8" stroke-width="1"/>
+<rect x="775" y="770" width="185" height="28" rx="5" fill="#e4f5ea" stroke="#b8dfc8" stroke-width="0.8"/><text x="867" y="789" text-anchor="middle" font-size="11" fill="#3a7a55">功能支持 (Feature Support)</text>
+
+<!-- P4 Branch 2: 社区 -->
+<line x1="480" y1="860" x2="540" y2="900" stroke="#b5dcc8" stroke-width="1.2"/>
+<rect x="540" y="880" width="195" height="38" rx="6" fill="#d6f0e0" stroke="#a3d9b8" stroke-width="1" filter="url(#ds)"/>
+<text x="637" y="904" text-anchor="middle" font-size="12" fill="#2d6e4a">了解社区和账户管理</text>
+
+<line x1="735" y1="888" x2="785" y2="858" stroke="#cce8d8" stroke-width="1"/>
+<rect x="785" y="845" width="100" height="28" rx="5" fill="#e4f5ea" stroke="#b8dfc8" stroke-width="0.8"/><text x="835" y="864" text-anchor="middle" font-size="11" fill="#3a7a55">社区概览</text>
+<line x1="735" y1="895" x2="785" y2="888" stroke="#cce8d8" stroke-width="1"/>
+<rect x="785" y="875" width="195" height="28" rx="5" fill="#e4f5ea" stroke="#b8dfc8" stroke-width="0.8"/><text x="882" y="894" text-anchor="middle" font-size="11" fill="#3a7a55">市场概览（分享和获取创作）</text>
+<line x1="735" y1="905" x2="785" y2="918" stroke="#cce8d8" stroke-width="1"/>
+<rect x="785" y="905" width="210" height="28" rx="5" fill="#e4f5ea" stroke="#b8dfc8" stroke-width="0.8"/><text x="890" y="924" text-anchor="middle" font-size="11" fill="#3a7a55">账户管理（管控团队和计划）</text>
+<line x1="735" y1="912" x2="785" y2="945" stroke="#cce8d8" stroke-width="1"/>
+<rect x="785" y="935" width="75" height="28" rx="5" fill="#e4f5ea" stroke="#b8dfc8" stroke-width="0.8"/><text x="822" y="954" text-anchor="middle" font-size="11" fill="#3a7a55">定价</text>
+
+</svg>

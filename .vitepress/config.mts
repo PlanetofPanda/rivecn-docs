@@ -182,8 +182,8 @@ export default defineConfig({
         },
 
         // 首页页脚（仅在使用默认 layout: home 时生效）
-            footer: {
-      message: '<a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener" style="color:var(--vp-c-text-2);text-decoration:hover:underline;">京ICP备2023007831号-7</a> <span style="margin: 0 8px;">|</span> <img src="https://beian.mps.gov.cn/web/assets/logo01.6189a29f.png" width="16" style="display:inline;vertical-align:middle;margin-top:-2px;"> <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11011502030362" target="_blank" rel="noopener" style="color:var(--vp-c-text-2);text-decoration:hover:underline;">京公网安备11011502030362号</a>',
+        footer: {
+      message: '<a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener" style="color:var(--vp-c-text-2);">京ICP备2023007831号-7</a> <span style="margin: 0 8px;">|</span> <img src="https://beian.mps.gov.cn/web/assets/logo01.6189a29f.png" width="16" style="display:inline;vertical-align:middle;margin-top:-2px;"> <a href="https://beian.mps.gov.cn/#/query/webSearch?code=11011502039362" target="_blank" rel="noopener" style="color:var(--vp-c-text-2);">京公网安备11011502039362号</a>',
       copyright: '版权所有 © 2024 Rive'
     },
 
