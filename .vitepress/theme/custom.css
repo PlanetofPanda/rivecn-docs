@@ -272,7 +272,22 @@ body {
 }
 
 /* ================== HERO IMAGE FLOAT ANIMATION ================== */
+.VPHero .image {
+  max-width: 200px !important;
+  max-height: 200px !important;
+  flex-shrink: 0;
+}
+.VPHero .image-container {
+  width: 200px !important;
+  height: 200px !important;
+  transform: none !important;
+}
+.VPHero .image-bg {
+  display: none !important;
+}
 .VPHero .image-src {
+  max-width: 280px !important;
+  max-height: 280px !important;
   filter: drop-shadow(0 0 40px rgba(59, 130, 246, 0.4));
   transition: all 0.5s ease;
   animation: float 6s ease-in-out infinite;
