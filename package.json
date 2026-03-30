@@ -75,7 +75,7 @@
   "scripts": {
     "docs:dev": "vitepress dev",
     "docs:build": "vitepress build",
-    "postdocs:build": "PUPPETEER_CACHE_DIR=/tmp/puppeteer-cache node tools/seo-optimizer.mjs",
+    "test:seo": "PUPPETEER_CACHE_DIR=/tmp/puppeteer-cache node tools/seo-optimizer.mjs",
     "docs:preview": "vitepress preview"
   },
   "repository": {
